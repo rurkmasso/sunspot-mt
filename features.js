@@ -685,17 +685,19 @@
     bar.className = 'ss-mobile-nav';
     bar.setAttribute('aria-label', 'Primary mobile navigation');
 
-    // Detect active page from pathname
+    // Detect path depth: pages inside /shop/ need '../' prefix on root links
+    var inSubdir = /\/shop\//.test(location.pathname);
+    var p = inSubdir ? '../' : '';
     var path = location.pathname.split('/').pop() || 'index.html';
     function active(href) { return path === href ? 'active' : ''; }
 
     bar.innerHTML =
       '<div class="ss-mobile-nav-grid">' +
-        '<a href="index.html" class="' + active('index.html') + '" aria-label="Browse beaches">' +
+        '<a href="' + p + 'index.html" class="' + active('index.html') + '" aria-label="Browse beaches">' +
           '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>' +
           'Browse' +
         '</a>' +
-        '<a href="experiences.html" class="' + active('experiences.html') + '" aria-label="Experiences">' +
+        '<a href="' + p + 'experiences.html" class="' + active('experiences.html') + '" aria-label="Experiences">' +
           '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h18l-2 5H5zM6 16V8l6-3 6 3v8M12 5v11"/></svg></span>' +
           'Trips' +
         '</a>' +
@@ -703,7 +705,7 @@
           '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M2 18c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2"/></svg></span>' +
           'Today' +
         '</button>' +
-        '<a href="bookings.html" class="' + active('bookings.html') + '" aria-label="My bookings">' +
+        '<a href="' + p + 'bookings.html" class="' + active('bookings.html') + '" aria-label="My bookings">' +
           '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></span>' +
           'Trips saved' +
         '</a>' +

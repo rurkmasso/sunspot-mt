@@ -339,3 +339,17 @@ h1, h2, h3, h4 { color: var(--c-deep); line-height: 1.2; letter-spacing: -.4px; 
   .product-grid { grid-template-columns: 1fr; }
   .container { padding: 0 14px; }
 }
+
+/* Mobile breadcrumb + bottom-pad for mobile nav */
+@media (max-width: 720px) {
+  body { padding-bottom: 64px; }
+  /* Breadcrumb text links at top of product/cart pages */
+  main > p:first-of-type a,
+  main > p:first-of-type span {
+    padding: 10px 6px;
+    display: inline-block;
+    min-height: 36px;
+  }
+  /* Product detail — make swatches wide enough to tap easily */
+  .pd-info .swatch { min-height: 44px; padding: 12px 16px; font-size: 14px; }
+}
