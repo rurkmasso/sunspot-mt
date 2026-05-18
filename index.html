@@ -312,36 +312,51 @@
 
       <span class="ss-finder-sep"></span>
 
-      <!-- Type segment -->
-      <label class="ss-finder-segment">
-        <span class="ss-finder-segment-label">Type</span>
-        <select id="f-category" class="ss-finder-select">
-          <option value="all">All types</option>
-          <option value="beach-club">Beach clubs</option>
-          <option value="pool-club">Pool clubs</option>
-          <option value="rooftop">Rooftops</option>
-          <option value="lido">Lidos</option>
-          <option value="floating">Floating</option>
-          <option value="sandy-beach">Sandy beaches</option>
-          <option value="rocky-bay">Rocky bays</option>
-          <option value="natural">Natural pools</option>
-        </select>
-      </label>
+      <!-- Type segment — multi-select popover -->
+      <details class="ss-finder-multi" id="f-category-multi">
+        <summary class="ss-finder-segment">
+          <span class="ss-finder-segment-label">Type</span>
+          <span class="ss-finder-multi-value" data-default="All types">All types</span>
+        </summary>
+        <div class="ss-finder-multi-panel">
+          <div class="ss-finder-multi-header">
+            <strong>Pick any types</strong>
+            <button type="button" class="ss-finder-multi-clear" data-multi-clear="cat">Clear</button>
+          </div>
+          <label><input type="checkbox" value="beach-club"  data-multi="cat"> Beach clubs</label>
+          <label><input type="checkbox" value="pool-club"   data-multi="cat"> Pool clubs</label>
+          <label><input type="checkbox" value="rooftop"     data-multi="cat"> Rooftops</label>
+          <label><input type="checkbox" value="lido"        data-multi="cat"> Lidos</label>
+          <label><input type="checkbox" value="floating"    data-multi="cat"> Floating</label>
+          <label><input type="checkbox" value="sandy-beach" data-multi="cat"> Sandy beaches</label>
+          <label><input type="checkbox" value="rocky-bay"   data-multi="cat"> Rocky bays</label>
+          <label><input type="checkbox" value="natural"     data-multi="cat"> Natural pools</label>
+        </div>
+        <!-- Compat: existing JS reads #f-category.value -->
+        <input type="hidden" id="f-category" value="all">
+      </details>
 
       <span class="ss-finder-sep"></span>
 
-      <!-- Region segment -->
-      <label class="ss-finder-segment">
-        <span class="ss-finder-segment-label">Region</span>
-        <select id="f-region" class="ss-finder-select">
-          <option value="all">Malta &amp; Gozo</option>
-          <option value="north">North coast</option>
-          <option value="central">Central (Sliema, St Julian's)</option>
-          <option value="south">South coast</option>
-          <option value="gozo">Gozo</option>
-          <option value="comino">Comino</option>
-        </select>
-      </label>
+      <!-- Region segment — multi-select popover -->
+      <details class="ss-finder-multi" id="f-region-multi">
+        <summary class="ss-finder-segment">
+          <span class="ss-finder-segment-label">Region</span>
+          <span class="ss-finder-multi-value" data-default="Malta &amp; Gozo">Malta &amp; Gozo</span>
+        </summary>
+        <div class="ss-finder-multi-panel">
+          <div class="ss-finder-multi-header">
+            <strong>Pick any regions</strong>
+            <button type="button" class="ss-finder-multi-clear" data-multi-clear="region">Clear</button>
+          </div>
+          <label><input type="checkbox" value="north"   data-multi="region"> North coast</label>
+          <label><input type="checkbox" value="central" data-multi="region"> Central (Sliema, St Julian's)</label>
+          <label><input type="checkbox" value="south"   data-multi="region"> South coast</label>
+          <label><input type="checkbox" value="gozo"    data-multi="region"> Gozo</label>
+          <label><input type="checkbox" value="comino"  data-multi="region"> Comino</label>
+        </div>
+        <input type="hidden" id="f-region" value="all">
+      </details>
 
       <span class="ss-finder-sep"></span>
 
@@ -439,6 +454,71 @@
     position: relative;
   }
   .ss-finder-segment:hover { background: #fafbfc; }
+
+  /* ----- Multi-select popover (Type, Region) ----- */
+  .ss-finder-multi { position: relative; flex: 1 1 auto; min-width: 0; }
+  .ss-finder-multi > summary {
+    list-style: none;     /* hide native disclosure triangle */
+    cursor: pointer;
+  }
+  .ss-finder-multi > summary::-webkit-details-marker { display: none; }
+  .ss-finder-multi > summary:focus-visible { outline: 2px solid var(--sun); outline-offset: -2px; border-radius: 100px; }
+  .ss-finder-multi-value {
+    font-size: 15px; font-weight: 600; color: #0a1f3a;
+    max-width: 100%;
+    white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+    padding-right: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='none' stroke='%230a1f3a' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 0 center;
+  }
+  .ss-finder-multi[open] > summary > .ss-finder-segment-label { color: var(--sun-deep); }
+  .ss-finder-multi[open] > summary > .ss-finder-multi-value { color: var(--sun-deep); }
+  .ss-finder-multi-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 260px;
+    max-width: 320px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(10,31,58,.16);
+    padding: 14px;
+    z-index: 30;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .ss-finder-multi-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 6px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .ss-finder-multi-header strong {
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--muted);
+  }
+  .ss-finder-multi-clear {
+    background: none; border: 0; color: var(--sun-deep);
+    font-size: 12px; font-weight: 600; cursor: pointer;
+    padding: 4px 6px; border-radius: 6px;
+    transition: background .15s;
+  }
+  .ss-finder-multi-clear:hover { background: #fff4e0; }
+  .ss-finder-multi-panel label {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px; color: var(--ink); font-weight: 500;
+    transition: background .12s;
+  }
+  .ss-finder-multi-panel label:hover { background: #fafbfc; }
+  .ss-finder-multi-panel input[type=checkbox] {
+    width: 18px; height: 18px;
+    accent-color: #ff9800;
+    margin: 0;
+  }
   .ss-finder-segment-label {
     font-size: 11px;
     font-weight: 700;

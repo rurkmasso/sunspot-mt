@@ -226,15 +226,19 @@ ${group('Best for', f.bestFor, 'bestFor')}
  }
 
  function applyFilters() {
- const region = document.getElementById('f-region').value;
+ // The Region + Type hidden inputs now hold comma-separated lists (multi-select)
+ // or the string "all" when nothing is checked.
+ const regionVal = document.getElementById('f-region').value;
+ const regions = (regionVal && regionVal !== 'all') ? regionVal.split(',') : null;
  const guests = parseInt(document.getElementById('f-guests').value, 10);
- const cat = document.getElementById('f-category') ? document.getElementById('f-category').value : 'all';
+ const catVal = document.getElementById('f-category') ? document.getElementById('f-category').value : 'all';
+ const cats = (catVal && catVal !== 'all') ? catVal.split(',') : null;
  const bookOnly = document.getElementById('f-bookable') && document.getElementById('f-bookable').checked;
  const qEl = document.getElementById('f-query');
  const q = qEl ? qEl.value.trim().toLowerCase() : '';
  let list = CLUBS.slice();
- if (region !== 'all') list = list.filter(function (c) { return c.region === region; });
- if (cat !== 'all') list = list.filter(function (c) { return c.category === cat; });
+ if (regions) list = list.filter(function (c) { return regions.indexOf(c.region)   !== -1; });
+ if (cats)    list = list.filter(function (c) { return cats.indexOf(c.category)    !== -1; });
  if (bookOnly) list = list.filter(function (c) { return c.hasBookableSunbeds; });
  if (guests>= 5) list = list.filter(function (c) { return c.vipFrom; });
  if (q) {
@@ -256,6 +260,48 @@ ${group('Best for', f.bestFor, 'bestFor')}
  if (catSel) catSel.addEventListener('change', applyFilters);
  const bookCb = document.getElementById('f-bookable');
  if (bookCb) bookCb.addEventListener('change', applyFilters);
+ // Multi-select wiring for Type + Region popovers
+ function wireMulti(kind, hiddenId, valueSelector, defaultLabel) {
+   const checks = document.querySelectorAll('input[data-multi="' + kind + '"]');
+   const hidden = document.getElementById(hiddenId);
+   const valueEl = document.querySelector(valueSelector);
+   const clearBtn = document.querySelector('[data-multi-clear="' + kind + '"]');
+   if (!checks.length || !hidden || !valueEl) return;
+
+   function sync() {
+     const selected = Array.from(checks).filter(c => c.checked);
+     const labels   = selected.map(c => c.parentElement.textContent.trim());
+     hidden.value = selected.length ? selected.map(c => c.value).join(',') : 'all';
+     if (selected.length === 0) {
+       valueEl.textContent = defaultLabel;
+     } else if (selected.length === 1) {
+       valueEl.textContent = labels[0];
+     } else {
+       valueEl.textContent = labels[0] + ' + ' + (selected.length - 1) + ' more';
+     }
+     applyFilters();
+   }
+   checks.forEach(c => c.addEventListener('change', sync));
+   if (clearBtn) clearBtn.addEventListener('click', () => {
+     checks.forEach(c => c.checked = false);
+     sync();
+   });
+ }
+ wireMulti('cat',    'f-category', '#f-category-multi .ss-finder-multi-value', 'All types');
+ wireMulti('region', 'f-region',   '#f-region-multi   .ss-finder-multi-value', 'Malta & Gozo');
+
+ // Close multi-select popovers when clicking outside or pressing Escape
+ document.addEventListener('click', (e) => {
+   document.querySelectorAll('details.ss-finder-multi[open]').forEach(d => {
+     if (!d.contains(e.target)) d.open = false;
+   });
+ });
+ document.addEventListener('keydown', (e) => {
+   if (e.key === 'Escape') {
+     document.querySelectorAll('details.ss-finder-multi[open]').forEach(d => d.open = false);
+   }
+ });
+
  // Live text search — debounced
  const qInput = document.getElementById('f-query');
  if (qInput) {

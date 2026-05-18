@@ -676,6 +676,70 @@
     });
   }
 
+  /* ============================================================
+     MOBILE BOTTOM NAV — primary actions in thumb reach (≤720px only)
+     ============================================================ */
+  function renderMobileBottomNav() {
+    if (document.querySelector('.ss-mobile-nav')) return;
+    var bar = document.createElement('nav');
+    bar.className = 'ss-mobile-nav';
+    bar.setAttribute('aria-label', 'Primary mobile navigation');
+
+    // Detect active page from pathname
+    var path = location.pathname.split('/').pop() || 'index.html';
+    function active(href) { return path === href ? 'active' : ''; }
+
+    bar.innerHTML =
+      '<div class="ss-mobile-nav-grid">' +
+        '<a href="index.html" class="' + active('index.html') + '" aria-label="Browse beaches">' +
+          '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>' +
+          'Browse' +
+        '</a>' +
+        '<a href="experiences.html" class="' + active('experiences.html') + '" aria-label="Experiences">' +
+          '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h18l-2 5H5zM6 16V8l6-3 6 3v8M12 5v11"/></svg></span>' +
+          'Trips' +
+        '</a>' +
+        '<button type="button" data-mobile-open="sea" aria-label="Sea conditions today">' +
+          '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M2 18c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2"/></svg></span>' +
+          'Today' +
+        '</button>' +
+        '<a href="bookings.html" class="' + active('bookings.html') + '" aria-label="My bookings">' +
+          '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></span>' +
+          'Trips saved' +
+        '</a>' +
+        '<button type="button" data-mobile-open="prefs" aria-label="Settings &amp; preferences">' +
+          '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></span>' +
+          'Me' +
+        '</button>' +
+      '</div>';
+    document.body.appendChild(bar);
+
+    // Wire the two button tabs (Today / Me)
+    bar.querySelectorAll('[data-mobile-open]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var what = btn.dataset.mobileOpen;
+        if (what === 'sea') {
+          document.body.classList.toggle('ss-sea-open');
+          document.body.classList.remove('ss-prefs-open');
+          // If the sea-state widget exists, ensure it's expanded
+          var sea = document.querySelector('.ss-sea-state');
+          if (sea) sea.classList.add('expanded');
+        } else if (what === 'prefs') {
+          document.body.classList.toggle('ss-prefs-open');
+          document.body.classList.remove('ss-sea-open');
+        }
+      });
+    });
+
+    // Close popovers when tapping outside
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('.ss-mobile-nav') ||
+          e.target.closest('.ss-pref-bar')   ||
+          e.target.closest('.ss-sea-state')) return;
+      document.body.classList.remove('ss-prefs-open', 'ss-sea-open');
+    });
+  }
+
   function addSkipLink() {
     if (document.querySelector('.ss-skip-link')) return;
     // Look for an existing landmark to skip to
@@ -695,6 +759,7 @@
   function boot() {
     addSkipLink();
     addMobileMenu();
+    renderMobileBottomNav();
     renderSea();
     renderSunset();
     renderNewsletter();
