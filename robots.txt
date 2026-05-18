@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /checkout.html
+Disallow: /confirmation.html
+Disallow: /bookings.html
+
+Sitemap: https://sunspot.mt/sitemap.xml

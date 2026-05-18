@@ -1,0 +1,16 @@
+# Sunspot site — gitignore
+.DS_Store
+*.log
+.vscode/
+.idea/
+node_modules/
+.env
+.env.*
+
+# Build artifacts (none yet, but reserved)
+dist/
+build/
+
+# Local-only screenshots and tmp
+/tmp-screenshots/
+*.tmp.*

@@ -1,0 +1,41 @@
+{
+  "name": "Sunspot — Malta beach booking",
+  "short_name": "Sunspot",
+  "description": "Book sunbeds, cabanas and floating cabanas at 112 venues across Malta, Gozo and Comino.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff8e8",
+  "theme_color": "#ff9800",
+  "lang": "en-MT",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgZmlsbD0iI2ZmZjhlOCIvPjxjaXJjbGUgY3g9Ijk2IiBjeT0iOTYiIHI9IjUyIiBmaWxsPSIjZmY5ODAwIi8+PGNpcmNsZSBjeD0iOTYiIGN5PSI5NiIgcj0iNDAiIGZpbGw9IiNmZmI3NGQiLz48Y2lyY2xlIGN4PSIxMDYiIGN5PSI4MCIgcj0iMTIiIGZpbGw9IiNmZmY1ZTEiLz48L3N2Zz4=",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgZmlsbD0iI2ZmZjhlOCIvPjxjaXJjbGUgY3g9IjI1NiIgY3k9IjI1NiIgcj0iMTQwIiBmaWxsPSIjZmY5ODAwIi8+PGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIxMDgiIGZpbGw9IiNmZmI3NGQiLz48Y2lyY2xlIGN4PSIyOTAiIGN5PSIyMTQiIHI9IjMyIiBmaWxsPSIjZmZmNWUxIi8+PC9zdmc+",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "My bookings",
+      "short_name": "Bookings",
+      "url": "/bookings.html",
+      "description": "Your upcoming sunbed bookings."
+    },
+    {
+      "name": "Browse beaches",
+      "short_name": "Beaches",
+      "url": "/index.html",
+      "description": "All 112 beaches in one place."
+    }
+  ],
+  "categories": ["travel", "lifestyle"]
+}

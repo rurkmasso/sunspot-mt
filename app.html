@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en-MT">
+<head>
+<meta charset="UTF-8">
+<script src="gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunspot app — book sunbeds from your phone</title>
+<meta name="description" content="Sunspot's iOS and Android app — live availability across 112 Maltese venues, one-tap QR check-in, offline favourites, sea-state alerts. Free to download.">
+<link rel="canonical" href="https://sunspot.mt/app.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Sunspot app — book Malta's beaches from your phone">
+<meta property="og:description" content="Live availability, one-tap QR check-in, offline favourites. Free on iOS and Android.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sunspot.mt/app.html">
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#ff9800">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%23fff8e8'/%3E%3Ccircle cx='90' cy='90' r='52' fill='%23ff9800'/%3E%3Ccircle cx='90' cy='90' r='40' fill='%23ffb74d'/%3E%3Ccircle cx='106' cy='74' r='12' fill='%23fff5e1'/%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='11' fill='%23ff9800'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%23ffb74d'/%3E%3Ccircle cx='24' cy='16' r='3' fill='%23fff5e1'/%3E%3C/svg%3E">
+<style>
+  .app-hero {
+    background:
+      radial-gradient(circle at 75% 30%, rgba(255,179,71,.35), transparent 50%),
+      radial-gradient(circle at 25% 70%, rgba(38,198,218,.25), transparent 50%),
+      linear-gradient(180deg, #fff8e8 0%, #fffbf3 100%);
+    padding: 56px 0 64px;
+  }
+  .app-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 880px) { .app-hero-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  .app-eyebrow {
+    display: inline-block;
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    color: var(--sun-deep);
+    background: rgba(255, 152, 0, 0.10);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 18px;
+  }
+  .app-h1 {
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -1.6px;
+    font-weight: 800;
+    color: var(--ink);
+    margin: 0 0 16px;
+    text-wrap: balance;
+  }
+  .app-h1 em { font-style: italic; color: var(--sun-deep); }
+  .app-lede {
+    font-size: 17px; line-height: 1.5;
+    color: var(--muted);
+    margin: 0 0 28px;
+    max-width: 480px;
+  }
+
+  /* Store buttons row */
+  .app-stores {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+  .app-store-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--ink);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform .12s, background .15s;
+    min-height: 56px;
+  }
+  .app-store-btn:hover { transform: translateY(-2px); background: #112846; color: #fff; }
+  .app-store-btn .store-meta {
+    display: flex; flex-direction: column;
+    line-height: 1.1;
+  }
+  .app-store-btn .store-tag {
+    font-size: 10px; opacity: 0.7;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .app-store-btn .store-name {
+    font-size: 17px; font-weight: 700;
+    letter-spacing: -0.2px;
+    margin-top: 2px;
+  }
+  .app-store-btn svg { flex-shrink: 0; }
+
+  .app-pwa {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--ink); font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid var(--line);
+    background: #fff;
+    padding: 10px 18px;
+    border-radius: 100px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color .15s;
+  }
+  .app-pwa:hover { border-color: var(--sun-deep); color: var(--sun-deep); }
+  .app-pwa[hidden] { display: none; }
+
+  .app-meta-line {
+    display: flex; gap: 22px; flex-wrap: wrap;
+    margin-top: 22px;
+    color: var(--muted); font-size: 13px;
+  }
+  .app-meta-line span { display: inline-flex; align-items: center; gap: 6px; }
+
+  /* Phone mockup */
+  .app-phone {
+    position: relative;
+    margin: 0 auto;
+    max-width: 360px;
+    aspect-ratio: 9 / 19;
+    background: #1d2327;
+    border-radius: 42px;
+    box-shadow: 0 30px 80px rgba(10, 31, 58, 0.18), 0 10px 30px rgba(10, 31, 58, 0.08);
+    padding: 12px;
+  }
+  .app-phone::before {
+    content: '';
+    position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+    width: 110px; height: 26px;
+    background: #1d2327;
+    border-radius: 0 0 18px 18px;
+    z-index: 2;
+  }
+  .app-phone-screen {
+    position: relative;
+    width: 100%; height: 100%;
+    border-radius: 32px;
+    background: linear-gradient(180deg, #fff8e8 0%, #ffffff 60%);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
+  .app-phone-statusbar {
+    display: flex; justify-content: space-between;
+    padding: 14px 22px 8px;
+    font-size: 13px; font-weight: 700; color: var(--ink);
+    margin-top: 14px;
+  }
+  .app-phone-content { flex: 1; padding: 8px 18px 18px; overflow: hidden; }
+  .app-phone-greeting { font-size: 11px; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+  .app-phone-title { font-size: 22px; font-weight: 800; color: var(--ink); letter-spacing: -0.7px; margin-bottom: 14px; line-height: 1.1; }
+  .app-phone-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0 2px 12px rgba(10, 31, 58, 0.06);
+    margin-bottom: 10px;
+    display: flex; gap: 10px;
+  }
+  .app-phone-card-img {
+    width: 64px; height: 64px;
+    background-size: cover; background-position: center;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  .app-phone-card h4 { font-size: 13px; color: var(--ink); margin: 2px 0 3px; font-weight: 700; }
+  .app-phone-card p { font-size: 11px; color: var(--muted); margin: 0; line-height: 1.4; }
+  .app-phone-card .price { color: var(--sun-deep); font-weight: 700; font-size: 12px; }
+  .app-phone-tabbar {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--line);
+    padding: 10px 0 18px;
+    background: #fff;
+  }
+  .app-phone-tab {
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    font-size: 10px; color: var(--muted); font-weight: 600;
+  }
+  .app-phone-tab.on { color: var(--sun-deep); }
+
+  /* Feature grid */
+  .app-features {
+    padding: 64px 0;
+  }
+  .app-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 36px;
+  }
+  .app-feature {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 26px 22px;
+    transition: border-color .15s, transform .15s;
+  }
+  .app-feature:hover { border-color: var(--sun); transform: translateY(-2px); }
+  .app-feature-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: #fff8e8;
+    color: var(--sun-deep);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 16px;
+  }
+  .app-feature h3 { font-size: 16px; color: var(--ink); margin: 0 0 6px; font-weight: 700; }
+  .app-feature p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.5; }
+
+  /* QR / coming-soon section */
+  .app-qr-band {
+    background: var(--ink);
+    color: #fff;
+    padding: 56px 0;
+    text-align: center;
+  }
+  .app-qr-band h2 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 8px; letter-spacing: -0.8px; }
+  .app-qr-band p { color: rgba(255,255,255,.7); max-width: 480px; margin: 0 auto 24px; font-size: 15px; }
+  .app-qr-band .stores-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .app-qr-band .app-store-btn {
+    background: #fff; color: var(--ink);
+  }
+  .app-qr-band .app-store-btn:hover { background: var(--sun); color: var(--ink); }
+
+  /* Faux QR (visual only) */
+  .app-fake-qr {
+    display: inline-block;
+    width: 160px; height: 160px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand" aria-label="Sunspot home">
+      <svg class="brand-mark" viewBox="0 0 40 40" width="42" height="42" aria-hidden="true">
+        <g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">
+          <line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
+          <line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
+        </g>
+        <circle cx="20" cy="20" r="11" fill="#ff9800"/>
+        <circle cx="20" cy="20" r="9" fill="#ffb74d"/>
+        <circle cx="24" cy="16" r="3" fill="#fff5e1"/>
+      </svg>
+      <span class="brand-name">Sunspot</span>
+    </a>
+    <nav>
+      <a href="index.html">Beaches</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="guides.html">Guides</a>
+      <a href="visiting.html">Visiting?</a>
+      <a href="living.html">Living here</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="app-hero">
+  <div class="container">
+    <div class="app-hero-grid">
+      <div>
+        <span class="app-eyebrow">Free · iOS &amp; Android</span>
+        <h1 class="app-h1">Your beach day, <em>in your pocket.</em></h1>
+        <p class="app-lede">
+          Browse 112 venues, see live availability, book in 30 seconds, check in with a QR. Save offline for when there's no signal at Comino.
+        </p>
+
+        <div class="app-stores">
+          <a class="app-store-btn" href="#" data-store="ios" aria-label="Download on the App Store">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.79 2.28-4.13 2.38-4.2-1.29-1.89-3.3-2.15-4.02-2.18-1.71-.17-3.34 1-4.21 1-.88 0-2.21-.97-3.64-.95-1.87.03-3.59 1.08-4.55 2.75-1.94 3.36-.5 8.32 1.4 11.05.92 1.34 2.02 2.83 3.45 2.78 1.39-.05 1.91-.9 3.58-.9 1.67 0 2.15.9 3.61.87 1.49-.03 2.43-1.36 3.34-2.7 1.05-1.55 1.49-3.06 1.51-3.14-.03-.01-2.9-1.11-2.93-4.39zM14.4 4.06c.77-.93 1.28-2.22 1.14-3.51-1.1.05-2.45.74-3.24 1.66-.71.82-1.34 2.14-1.17 3.4 1.23.1 2.49-.62 3.27-1.55z"/></svg>
+            <span class="store-meta">
+              <span class="store-tag">Download on</span>
+              <span class="store-name">App Store</span>
+            </span>
+          </a>
+          <a class="app-store-btn" href="#" data-store="android" aria-label="Get it on Google Play">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.4c-.36.36-.6.96-.6 1.74v15.72c0 .78.24 1.38.6 1.74l.12.06L12.6 12.06v-.12L3.72 2.34l-.12.06zM16.62 15.06l-3-3 3-3 4.44 2.52c1.26.72 1.26 1.92 0 2.64l-4.44 1.84zM4.5 22.32c.42 0 .9-.12 1.44-.42l11.04-6.24-3.06-3.06L4.5 22.32zM13.92 11.04l3.06-3.06L5.94 1.74c-.54-.3-1.02-.42-1.44-.42l9.42 9.72z"/></svg>
+            <span class="store-meta">
+              <span class="store-tag">Get it on</span>
+              <span class="store-name">Google Play</span>
+            </span>
+          </a>
+          <button class="app-pwa" id="ss-pwa-install" hidden>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v14M5 10l7 7 7-7M5 21h14"/></svg>
+            Install on this device
+          </button>
+        </div>
+
+        <div class="app-meta-line">
+          <span>★ 4.8 average</span>
+          <span>· 32 MB download</span>
+          <span>· iOS 15+ · Android 10+</span>
+        </div>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="app-phone" aria-hidden="true">
+        <div class="app-phone-screen">
+          <div class="app-phone-statusbar"><span>9:41</span><span>● ● ●</span></div>
+          <div class="app-phone-content">
+            <div class="app-phone-greeting">Today · Sliema</div>
+            <div class="app-phone-title">112 free<br>sunbeds today</div>
+
+            <div class="app-phone-card">
+              <div class="app-phone-card-img" style="background-image:url('https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg')"></div>
+              <div>
+                <h4>Blue Lagoon Lounge</h4>
+                <p>Comino · 4.9 ★ · 6 spots</p>
+                <p class="price">from €35</p>
+              </div>
+            </div>
+            <div class="app-phone-card">
+              <div class="app-phone-card-img" style="background-image:url('https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg')"></div>
+              <div>
+                <h4>Mellieħa Bay Club</h4>
+                <p>Mellieħa · 4.7 ★ · 42 spots</p>
+                <p class="price">from €20</p>
+              </div>
+            </div>
+            <div class="app-phone-card">
+              <div class="app-phone-card-img" style="background-image:url('https://whichbeach.com.mt/wp-content/uploads/2022/01/Crystal-Lagoon-2560x1440-1.jpeg')"></div>
+              <div>
+                <h4>Crystal Lagoon</h4>
+                <p>Comino · 4.8 ★ · 12 spots</p>
+                <p class="price">from €35</p>
+              </div>
+            </div>
+          </div>
+          <div class="app-phone-tabbar">
+            <div class="app-phone-tab on">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-4v-6h-8v6H4a1 1 0 0 1-1-1z"/></svg>
+              Home
+            </div>
+            <div class="app-phone-tab">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              Search
+            </div>
+            <div class="app-phone-tab">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+              Bookings
+            </div>
+            <div class="app-phone-tab">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+              Profile
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="app-features container">
+  <div style="text-align:center; margin-bottom: 4px">
+    <span class="kicker" style="background:transparent;padding:0;color:var(--muted);font-size:11px;letter-spacing:2px;text-transform:uppercase">What's in the app</span>
+    <h2 style="font-size:clamp(1.7rem, 3vw, 2.4rem); margin: 8px 0 8px; letter-spacing: -0.8px">More than just booking.</h2>
+    <p style="color:var(--muted); max-width: 540px; margin: 0 auto">Every Sunspot feature, native, optimised for one-thumb use on the beach.</p>
+  </div>
+  <div class="app-features-grid">
+
+    <div class="app-feature">
+      <div class="app-feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>
+      </div>
+      <h3>Live availability</h3>
+      <p>Every venue, every sunbed, every spot — in real time. No more "sorry, full" at the kiosk.</p>
+    </div>
+
+    <div class="app-feature">
+      <div class="app-feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h2v2M16 18h2M18 14v2M18 18v3"/></svg>
+      </div>
+      <h3>One-tap QR check-in</h3>
+      <p>Skip the kiosk queue. Your booking QR lives in the app — works offline, even without signal.</p>
+    </div>
+
+    <div class="app-feature">
+      <div class="app-feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 12c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M2 18c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2"/></svg>
+      </div>
+      <h3>Sea-state alerts</h3>
+      <p>Push notification when conditions change at your favourite spots. Wind shift, jelly warning, perfect-day heads-up.</p>
+    </div>
+
+    <div class="app-feature">
+      <div class="app-feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 5.6a5 5 0 0 0-7 0L12 7.4l-1.8-1.8a5 5 0 0 0-7 7l8.8 8.8 8.8-8.8a5 5 0 0 0 0-7z"/></svg>
+      </div>
+      <h3>Favourites &amp; saved trips</h3>
+      <p>Heart venues. Reopen the app at the beach. Re-book your usual spot in two taps.</p>
+    </div>
+
+    <div class="app-feature">
+      <div class="app-feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-7.5-7-12a7 7 0 1 1 14 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      </div>
+      <h3>Distance-from-you</h3>
+      <p>Every card shows time + km from where you're standing. Great when you're already in the car.</p>
+    </div>
+
+    <div class="app-feature">
+      <div class="app-feature-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20c10-1 16-7 17-17C11 4 5 10 4 20zM4 20l9-9"/></svg>
+      </div>
+      <h3>Works offline at Comino</h3>
+      <p>No data signal? Saved bookings, QR, sea-state and map all cached. The app works on the boat too.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- QR + bottom CTA -->
+<section class="app-qr-band">
+  <div class="container">
+    <h2>Get it now.</h2>
+    <p>Scan with your phone camera or hit a store button. Free, no ads, no signup required to browse.</p>
+    <div class="app-fake-qr" aria-label="QR code">
+      <!-- Decorative faux-QR — replace with real Apple/Google smart-banner QR before launch -->
+      <svg viewBox="0 0 100 100" width="140" height="140">
+        <rect width="100" height="100" fill="#fff"/>
+        <g fill="#0a1f3a">
+          <rect x="5" y="5" width="25" height="25" rx="4"/><rect x="10" y="10" width="15" height="15" rx="2" fill="#fff"/><rect x="13" y="13" width="9" height="9" rx="1"/>
+          <rect x="70" y="5" width="25" height="25" rx="4"/><rect x="75" y="10" width="15" height="15" rx="2" fill="#fff"/><rect x="78" y="13" width="9" height="9" rx="1"/>
+          <rect x="5" y="70" width="25" height="25" rx="4"/><rect x="10" y="75" width="15" height="15" rx="2" fill="#fff"/><rect x="13" y="78" width="9" height="9" rx="1"/>
+          <rect x="40" y="40" width="6" height="6"/><rect x="50" y="40" width="6" height="6"/><rect x="60" y="40" width="6" height="6"/>
+          <rect x="40" y="50" width="6" height="6"/><rect x="50" y="50" width="6" height="6"/><rect x="40" y="60" width="6" height="6"/>
+          <rect x="60" y="60" width="6" height="6"/><rect x="50" y="70" width="6" height="6"/><rect x="60" y="80" width="6" height="6"/>
+          <rect x="80" y="50" width="6" height="6"/><rect x="80" y="60" width="6" height="6"/><rect x="80" y="80" width="6" height="6"/>
+          <rect x="35" y="80" width="6" height="6"/><rect x="40" y="35" width="6" height="6"/><rect x="70" y="40" width="6" height="6"/>
+        </g>
+      </svg>
+    </div>
+    <div class="stores-row">
+      <a class="app-store-btn" href="#" data-store="ios">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.79 2.28-4.13 2.38-4.2-1.29-1.89-3.3-2.15-4.02-2.18-1.71-.17-3.34 1-4.21 1-.88 0-2.21-.97-3.64-.95-1.87.03-3.59 1.08-4.55 2.75-1.94 3.36-.5 8.32 1.4 11.05.92 1.34 2.02 2.83 3.45 2.78 1.39-.05 1.91-.9 3.58-.9 1.67 0 2.15.9 3.61.87 1.49-.03 2.43-1.36 3.34-2.7 1.05-1.55 1.49-3.06 1.51-3.14-.03-.01-2.9-1.11-2.93-4.39zM14.4 4.06c.77-.93 1.28-2.22 1.14-3.51-1.1.05-2.45.74-3.24 1.66-.71.82-1.34 2.14-1.17 3.4 1.23.1 2.49-.62 3.27-1.55z"/></svg>
+        <span class="store-meta">
+          <span class="store-tag">Download on</span>
+          <span class="store-name">App Store</span>
+        </span>
+      </a>
+      <a class="app-store-btn" href="#" data-store="android">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.4c-.36.36-.6.96-.6 1.74v15.72c0 .78.24 1.38.6 1.74l.12.06L12.6 12.06v-.12L3.72 2.34l-.12.06zM16.62 15.06l-3-3 3-3 4.44 2.52c1.26.72 1.26 1.92 0 2.64l-4.44 1.84zM4.5 22.32c.42 0 .9-.12 1.44-.42l11.04-6.24-3.06-3.06L4.5 22.32zM13.92 11.04l3.06-3.06L5.94 1.74c-.54-.3-1.02-.42-1.44-.42l9.42 9.72z"/></svg>
+        <span class="store-meta">
+          <span class="store-tag">Get it on</span>
+          <span class="store-name">Google Play</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">© 2026 Sunspot Ltd. · Built in Valletta</div>
+  </div>
+</footer>
+
+<script>
+// PWA install — show the button only when beforeinstallprompt fires.
+(function () {
+  let deferred;
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferred = e;
+    const btn = document.getElementById('ss-pwa-install');
+    if (btn) btn.hidden = false;
+  });
+  const btn = document.getElementById('ss-pwa-install');
+  if (btn) btn.addEventListener('click', async () => {
+    if (!deferred) {
+      // Fallback: tell mobile Safari users how to manually add to home screen
+      alert('To install, tap the Share button in your browser, then "Add to Home Screen".');
+      return;
+    }
+    deferred.prompt();
+    deferred = null;
+    btn.hidden = true;
+  });
+
+  // Store buttons — demo behaviour. In production these go to real App/Play URLs.
+  document.querySelectorAll('[data-store]').forEach(b => b.addEventListener('click', e => {
+    e.preventDefault();
+    const s = b.dataset.store;
+    alert(s === 'ios'
+      ? 'Coming soon: App Store link.\n\nIn the meantime, tap "Install on this device" to add the PWA — works identically.'
+      : 'Coming soon: Play Store link.\n\nIn the meantime, tap "Install on this device" to add the PWA — works identically.'
+    );
+  }));
+
+  // Try to register service worker for offline support
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
+})();
+</script>
+
+<script src="icons.js"></script>
+<script src="features.js"></script>
+<script src="audiences.js"></script>
+</body>
+</html>

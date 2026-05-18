@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en-MT">
+<head>
+<meta charset="UTF-8">
+<script src="gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary Meta -->
+<title>Sunspot — Malta beach clubs, lidos & rooftop pools booking</title>
+<meta name="description" content="Book sunbeds, cabanas and floating cabanas at 112 beach clubs, lidos and rooftop pools across Malta, Gozo and Comino. Live availability, free cancellation, 8% service fee.">
+<meta name="keywords" content="Malta beach club booking, sunbed reservation Malta, Comino Blue Lagoon booking, Mellieha Bay sunbed, Gozo beach booking, Ramla Bay reservation, cabana Malta, VIP beach Gozo, Ghajn Tuffieha, Xlendi, St Peter's Pool">
+<meta name="author" content="Sunspot Ltd">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0288d1">
+<link rel="canonical" href="https://sunspot.mt/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sunspot — Malta beach clubs, lidos & rooftop pools booking">
+<meta property="og:description" content="Book sunbeds, cabanas and floating cabanas at 112 beach clubs, lidos and rooftop pools across Malta, Gozo and Comino. Live availability, free cancellation, 8% service fee.">
+<meta property="og:url" content="https://sunspot.mt/">
+<meta property="og:site_name" content="Sunspot">
+<meta property="og:locale" content="en_MT">
+<meta property="og:image" content="https://sunspot.mt/og-cover.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sunspot — Malta beach clubs, lidos & rooftop pools booking">
+<meta name="twitter:description" content="Book sunbeds, cabanas and floating cabanas at 112 beach clubs, lidos and rooftop pools across Malta, Gozo and Comino. Live availability, free cancellation, 8% service fee.">
+<meta name="twitter:image" content="https://sunspot.mt/og-cover.png">
+
+<!-- JSON-LD: Organization -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Sunspot",
+ "url": "https://sunspot.mt",
+ "logo": "https://sunspot.mt/logo.svg",
+ "description": "Malta's beach booking platform. Reserve sunbeds, cabanas and VIP gazebos across Malta and Gozo.",
+ "address": { "@type": "PostalAddress", "addressLocality": "Valletta", "addressCountry": "MT" },
+ "sameAs": [ "https://twitter.com/sunspot_mt", "https://instagram.com/sunspot.mt" ]
+}
+</script>
+
+<!-- JSON-LD: WebSite + SearchAction -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Sunspot",
+ "url": "https://sunspot.mt",
+ "potentialAction": {
+ "@type": "SearchAction",
+ "target": "https://sunspot.mt/?q={search_term_string}",
+ "query-input": "required name=search_term_string"
+ }
+}
+</script>
+
+<!-- JSON-LD: ItemList of beach clubs (filled by JS at runtime + static for SEO) -->
+<script type="application/ld+json" id="ld-itemlist">
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Beach clubs in Malta and Gozo",
+ "numberOfItems": 12,
+ "itemListElement": []
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='11' fill='%23ff9800'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%23ffb74d'/%3E%3Ccircle cx='24' cy='16' r='3' fill='%23fff5e1'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a href="index.html" class="brand" aria-label="Sunspot home">
+<svg class="brand-mark" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+<g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">
+<line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
+<line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
+<line x1="7" y1="7" x2="10" y2="10"/><line x1="30" y1="30" x2="33" y2="33"/>
+<line x1="33" y1="7" x2="30" y2="10"/><line x1="10" y1="30" x2="7" y2="33"/>
+</g>
+<circle cx="20" cy="20" r="11" fill="#ff9800"/>
+<circle cx="20" cy="20" r="9" fill="#ffb74d"/>
+<circle cx="24" cy="16" r="3" fill="#fff5e1"/>
+</svg>
+<span class="brand-name">Sunspot</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="index.html" class="active">Beaches</a>
+<a href="guides.html">Guides</a>
+<a href="visiting.html">Visiting?</a>
+<a href="living.html">Living here</a>
+<a href="about.html">About</a>
+<a href="bookings.html">My bookings</a>
+<a href="#how-it-works">How it works</a>
+<a href="#partners">Operators</a>
+<button class="btn-ghost">Sign in</button>
+<button class="btn-solid">Get the app</button>
+</nav>
+</div>
+</header>
+
+<section class="hero-v2">
+  <div class="hero-v2-photo" aria-hidden="true">
+    <picture>
+      <source media="(min-width: 900px)" srcset="https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg">
+      <img src="https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg" alt="" loading="eager" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero-v2-scrim" aria-hidden="true"></div>
+
+  <div class="hero-v2-content">
+    <div class="hero-v2-meta">
+      <span class="hero-v2-tag">Today on the Maltese coast</span>
+      <span class="hero-v2-live" id="hero-v2-live">
+        <span class="hero-v2-dot"></span>
+        <strong id="hero-v2-bookable">—</strong> sunbeds free now ·
+        sea <strong id="hero-v2-sea">—°C</strong> ·
+        sunset <strong id="hero-v2-sunset">—</strong>
+      </span>
+    </div>
+    <h1 class="hero-v2-h1">
+      112 ways to be<br>
+      <em>in the sea</em> today.
+    </h1>
+    <p class="hero-v2-lede">
+      Beach clubs. Lidos. Rooftop pools. Wild rocky coves. Pick the actual spot — we'll save it for you.
+    </p>
+    <div class="hero-v2-cta">
+      <a href="#beaches" class="hero-v2-primary">Browse the coast</a>
+      <a href="visiting.html" class="hero-v2-secondary">First time in Malta?</a>
+    </div>
+  </div>
+
+  <a href="#beaches" class="hero-v2-scroll" aria-label="Scroll to beaches"><span></span></a>
+</section>
+
+<style>
+  /* Photo-led editorial hero — single full-bleed image, sharp type, one CTA. */
+  .hero-v2 {
+    position: relative;
+    min-height: 520px;
+    height: 56vh;
+    max-height: 560px;
+    display: flex; align-items: flex-end;
+    overflow: hidden;
+    color: #fff;
+  }
+  .hero-v2-photo {
+    position: absolute; inset: 0;
+    z-index: 0;
+  }
+  .hero-v2-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    transform: scale(1.02);
+  }
+  .hero-v2-scrim {
+    position: absolute; inset: 0; z-index: 1;
+    background:
+      linear-gradient(180deg, rgba(10,31,58,0) 30%, rgba(10,31,58,.55) 70%, rgba(10,31,58,.85) 100%),
+      linear-gradient(90deg, rgba(10,31,58,.35) 0%, transparent 60%);
+  }
+  .hero-v2-content {
+    position: relative; z-index: 2;
+    max-width: 1200px; width: 100%;
+    margin: 0 auto;
+    padding: 0 28px 52px;
+  }
+  .hero-v2-meta {
+    display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
+    margin-bottom: 22px;
+  }
+  .hero-v2-tag {
+    display: inline-block;
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2.2px;
+    background: rgba(255,255,255,.14);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 100px;
+    border: 1px solid rgba(255,255,255,.18);
+  }
+  .hero-v2-live {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,.92);
+    font-size: 13px; font-weight: 500;
+    letter-spacing: .1px;
+    padding: 7px 14px;
+    border-radius: 100px;
+    background: rgba(0,0,0,.25);
+    backdrop-filter: blur(8px);
+  }
+  .hero-v2-live strong { color: #fff; font-weight: 700; }
+  .hero-v2-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 0 rgba(74,222,128,.6);
+    animation: ssHeroPulse 1.8s infinite;
+  }
+  @keyframes ssHeroPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(74,222,128,.5); }
+    70%      { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
+  }
+  .hero-v2-h1 {
+    /* Editorial display type — keep the type sizes, just less vertical air */
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 14px;
+    text-wrap: balance;
+    text-shadow: 0 2px 18px rgba(0,0,0,.20);
+    max-width: 760px;
+  }
+  .hero-v2-h1 em {
+    font-style: italic;
+    font-weight: 700;
+    color: #ffb74d;
+    position: relative;
+  }
+  .hero-v2-lede {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    color: rgba(255,255,255,.88);
+    margin: 0 0 22px;
+    max-width: 540px;
+    line-height: 1.5;
+    text-wrap: balance;
+  }
+  .hero-v2-meta { margin-bottom: 18px; }
+  .hero-v2-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-v2-primary {
+    background: #ff9800; color: #0a1f3a;
+    padding: 16px 30px;
+    border-radius: 100px;
+    font-weight: 800; font-size: 15px;
+    text-decoration: none;
+    letter-spacing: .2px;
+    box-shadow: 0 8px 30px rgba(255,152,0,.35);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .hero-v2-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(255,152,0,.45);
+    color: #0a1f3a;
+  }
+  .hero-v2-secondary {
+    background: rgba(255,255,255,.10);
+    color: #fff;
+    padding: 16px 26px;
+    border-radius: 100px;
+    font-weight: 600; font-size: 14px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,.22);
+    backdrop-filter: blur(8px);
+    transition: background .15s;
+  }
+  .hero-v2-secondary:hover { background: rgba(255,255,255,.18); color: #fff; }
+
+  .hero-v2-scroll {
+    position: absolute; bottom: 24px; left: 50%;
+    transform: translateX(-50%);
+    width: 28px; height: 44px;
+    border: 1.5px solid rgba(255,255,255,.4);
+    border-radius: 20px;
+    z-index: 3;
+    display: flex; justify-content: center; padding-top: 8px;
+  }
+  .hero-v2-scroll span {
+    display: block;
+    width: 3px; height: 8px;
+    background: #fff;
+    border-radius: 2px;
+    animation: ssScrollHint 1.6s infinite;
+  }
+  @keyframes ssScrollHint {
+    0%   { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(14px); opacity: 0; }
+  }
+
+  @media (max-width: 720px) {
+    .hero-v2 { min-height: 460px; height: auto; max-height: none; }
+    .hero-v2-content { padding: 0 22px 32px; padding-top: 100px; }
+    .hero-v2-h1 { font-size: clamp(2rem, 9vw, 3rem); letter-spacing: -1.2px; }
+    .hero-v2-lede { font-size: 14px; margin-bottom: 18px; }
+    .hero-v2-scroll { display: none; }
+  }
+</style>
+
+<!-- Search + filter bar moved to its natural home: sticky above the venue grid -->
+<section id="beaches" class="ss-finder">
+  <div class="container">
+    <form class="ss-finder-bar" id="filter-form" onsubmit="return false;" role="search">
+
+      <!-- Search input with embedded icon -->
+      <label class="ss-finder-search" aria-label="Search">
+        <svg class="ss-finder-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+        </svg>
+        <input type="search" id="f-query"
+          placeholder="Search venues — name, location, vibe…"
+          aria-label="Search venues">
+      </label>
+
+      <span class="ss-finder-sep"></span>
+
+      <!-- Type segment -->
+      <label class="ss-finder-segment">
+        <span class="ss-finder-segment-label">Type</span>
+        <select id="f-category" class="ss-finder-select">
+          <option value="all">All types</option>
+          <option value="beach-club">Beach clubs</option>
+          <option value="pool-club">Pool clubs</option>
+          <option value="rooftop">Rooftops</option>
+          <option value="lido">Lidos</option>
+          <option value="floating">Floating</option>
+          <option value="sandy-beach">Sandy beaches</option>
+          <option value="rocky-bay">Rocky bays</option>
+          <option value="natural">Natural pools</option>
+        </select>
+      </label>
+
+      <span class="ss-finder-sep"></span>
+
+      <!-- Region segment -->
+      <label class="ss-finder-segment">
+        <span class="ss-finder-segment-label">Region</span>
+        <select id="f-region" class="ss-finder-select">
+          <option value="all">Malta &amp; Gozo</option>
+          <option value="north">North coast</option>
+          <option value="central">Central (Sliema, St Julian's)</option>
+          <option value="south">South coast</option>
+          <option value="gozo">Gozo</option>
+          <option value="comino">Comino</option>
+        </select>
+      </label>
+
+      <span class="ss-finder-sep"></span>
+
+      <!-- Guests segment -->
+      <label class="ss-finder-segment">
+        <span class="ss-finder-segment-label">Guests</span>
+        <select id="f-guests" class="ss-finder-select">
+          <option value="1">1 guest</option>
+          <option value="2" selected>2 guests</option>
+          <option value="3">3 guests</option>
+          <option value="4">4 guests</option>
+          <option value="5">5+ guests</option>
+        </select>
+      </label>
+
+      <span class="ss-finder-sep"></span>
+
+      <!-- Toggle switch -->
+      <label class="ss-finder-toggle" title="Show only venues with bookable sunbeds">
+        <input type="checkbox" id="f-bookable">
+        <span class="ss-finder-switch"></span>
+        <span class="ss-finder-toggle-label">Bookable</span>
+      </label>
+    </form>
+  </div>
+</section>
+
+<style>
+  /* ====================================================
+     Finder bar — sticky beach-search component.
+     One rounded pill: icon-search + hairline-separated
+     dropdowns + toggle switch.
+     ==================================================== */
+  .ss-finder {
+    background: var(--bg);
+    padding: 18px 0 12px;
+    position: sticky;
+    top: 0;
+    z-index: 25;
+  }
+  .ss-finder-bar {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    box-shadow: 0 1px 2px rgba(10,31,58,.04), 0 4px 16px rgba(10,31,58,.06);
+    display: flex; align-items: stretch;
+    padding: 6px;
+    gap: 0;
+    overflow: hidden;
+    transition: box-shadow .15s;
+  }
+  .ss-finder-bar:focus-within {
+    box-shadow: 0 1px 2px rgba(10,31,58,.04), 0 8px 24px rgba(10,31,58,.10);
+  }
+
+  .ss-finder-search {
+    display: flex; align-items: center;
+    flex: 1.4 1 200px;
+    padding: 0 16px;
+    color: #50575e;
+    border-radius: 100px;
+    transition: background .15s;
+    cursor: text;
+  }
+  .ss-finder-search:hover { background: #fafbfc; }
+  .ss-finder-icon { flex-shrink: 0; color: #0a1f3a; margin-right: 10px; }
+  .ss-finder-search input {
+    border: 0; background: transparent;
+    flex: 1; min-width: 0;
+    padding: 14px 0;
+    font-size: 15px;
+    color: #0a1f3a;
+    font-family: inherit;
+    font-weight: 500;
+  }
+  .ss-finder-search input::placeholder { color: #8a93a3; font-weight: 400; }
+  .ss-finder-search input:focus { outline: none; }
+
+  .ss-finder-sep {
+    width: 1px;
+    background: var(--line);
+    margin: 12px 0;
+    align-self: stretch;
+    flex-shrink: 0;
+  }
+
+  .ss-finder-segment {
+    display: flex; flex-direction: column;
+    padding: 8px 18px 8px 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background .15s;
+    min-width: 0;
+    flex: 1 1 auto;
+    position: relative;
+  }
+  .ss-finder-segment:hover { background: #fafbfc; }
+  .ss-finder-segment-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #50575e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .ss-finder-select {
+    border: 0; background: transparent;
+    padding: 0; padding-right: 16px;
+    font-size: 15px;
+    color: #0a1f3a;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='none' stroke='%230a1f3a' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .ss-finder-select:focus { outline: none; }
+
+  /* Toggle switch */
+  .ss-finder-toggle {
+    display: flex; align-items: center;
+    gap: 10px;
+    padding: 0 18px 0 14px;
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0;
+  }
+  .ss-finder-toggle input { display: none; }
+  .ss-finder-switch {
+    width: 36px; height: 22px;
+    background: #e3e8ef;
+    border-radius: 100px;
+    position: relative;
+    transition: background .2s;
+    flex-shrink: 0;
+  }
+  .ss-finder-switch::after {
+    content: '';
+    position: absolute;
+    top: 2px; left: 2px;
+    width: 18px; height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(10,31,58,.20);
+    transition: transform .2s;
+  }
+  .ss-finder-toggle input:checked + .ss-finder-switch { background: #ff9800; }
+  .ss-finder-toggle input:checked + .ss-finder-switch::after { transform: translateX(14px); }
+  .ss-finder-toggle-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a1f3a;
+    white-space: nowrap;
+  }
+
+  /* Tablet: drop region/guests labels to one line under selection */
+  @media (max-width: 1100px) {
+    .ss-finder-segment { padding: 8px 14px; }
+    .ss-finder-select  { font-size: 14px; }
+  }
+
+  /* Mobile: collapse to stacked search + horizontal-scroll chips */
+  @media (max-width: 760px) {
+    .ss-finder { padding: 12px 0; }
+    .ss-finder-bar {
+      flex-direction: column;
+      border-radius: 18px;
+      padding: 8px;
+      gap: 4px;
+    }
+    .ss-finder-search {
+      padding: 10px 14px;
+      background: #fafbfc;
+      border-radius: 14px;
+    }
+    .ss-finder-search input { padding: 8px 0; font-size: 15px; }
+    .ss-finder-sep { display: none; }
+    .ss-finder-segment {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: 14px;
+    }
+    .ss-finder-segment-label { margin-bottom: 0; }
+    .ss-finder-select { text-align: right; }
+    .ss-finder-toggle {
+      justify-content: space-between;
+      padding: 12px 14px;
+      border-radius: 14px;
+    }
+    .ss-finder-toggle:hover { background: #fafbfc; }
+  }
+</style>
+
+<script>
+// Wire the live hero ticker — pulls real numbers from clubs-data.
+(function () {
+  function paint() {
+    const c = window.SUNSPOT_CLUBS;
+    if (!c) { setTimeout(paint, 300); return; }
+    const sunbeds = c.reduce((s, v) => s + (v.spotsLeft || 0), 0);
+    const elB = document.getElementById('hero-v2-bookable');
+    if (elB) elB.textContent = sunbeds.toLocaleString('en-GB');
+    // Sea temp (deterministic per day, same algo as features.js)
+    const d = new Date(); let seed = Math.floor((d - new Date(d.getFullYear(),0,0))/86400000);
+    function r(){ seed = (seed*9301+49297)%233280; return seed/233280; }
+    r(); // skip first to match features.js sequence
+    r(); r();
+    const sea = 20 + Math.floor(r() * 7);
+    const elS = document.getElementById('hero-v2-sea');
+    if (elS) elS.textContent = sea + '°C';
+    // Sunset (monthly Malta table)
+    const SUN = {1:'17:15',2:'17:45',3:'18:25',4:'19:50',5:'20:15',6:'20:35',7:'20:30',8:'20:00',9:'19:15',10:'18:25',11:'16:55',12:'16:55'};
+    const elSun = document.getElementById('hero-v2-sunset');
+    if (elSun) elSun.textContent = SUN[d.getMonth()+1] || '—';
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', paint);
+  else paint();
+})();
+</script>
+
+<!--
+  ss-stats-strip — live platform metrics.
+  Component CSS lives in styles.css. Light cream bg, hairline-separated columns,
+  orange accent only on the "live" sunbeds-bookable metric.
+-->
+<section class="ss-stats-strip" aria-label="Sunspot live statistics" id="ss-live-stats">
+  <div class="container">
+    <header class="ss-stats-strip-head">
+      <span class="ss-stats-strip-eyebrow">
+        <span class="ss-stats-strip-dot" aria-hidden="true"></span>
+        Live · Malta &amp; Gozo
+      </span>
+      <span class="ss-stats-strip-time" id="ss-stats-time">—</span>
+    </header>
+    <div class="ss-stats-strip-grid">
+
+      <div class="ss-stats-strip-cell ss-stats-strip-primary" data-stat="sunbeds">
+        <div class="ss-stats-strip-num"><span class="num" data-count-to="0">0</span></div>
+        <div class="ss-stats-strip-label">sunbeds bookable now</div>
+        <div class="ss-stats-strip-sub" id="ss-stat-sunbeds-sub">updating…</div>
+      </div>
+
+      <div class="ss-stats-strip-cell" data-stat="venues">
+        <div class="ss-stats-strip-num"><span class="num" data-count-to="0">0</span></div>
+        <div class="ss-stats-strip-label">venues live</div>
+        <div class="ss-stats-strip-sub">Malta · Gozo · Comino</div>
+      </div>
+
+      <div class="ss-stats-strip-cell" data-stat="occupancy">
+        <div class="ss-stats-strip-num"><span class="num" data-count-to="0">0</span><span class="unit">%</span></div>
+        <div class="ss-stats-strip-label">summer occupancy</div>
+        <div class="ss-stats-strip-sub">Jun – Sep weekends</div>
+      </div>
+
+      <div class="ss-stats-strip-cell" data-stat="time">
+        <div class="ss-stats-strip-num"><span class="num" data-count-to="0">0</span><span class="unit">s</span></div>
+        <div class="ss-stats-strip-label">avg booking time</div>
+        <div class="ss-stats-strip-sub">from page to QR</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+ 'use strict';
+ // Wait for clubs-data to load (it's lower in the document on this page).
+ function whenReady(cb) {
+ if (window.SUNSPOT_CLUBS) return cb();
+ setTimeout(() =>whenReady(cb), 100);
+ }
+ function fmt(n) { return n.toLocaleString('en-GB'); }
+ function tick() {
+ const now = new Date();
+ const hh = String(now.getHours()).padStart(2, '0');
+ const mm = String(now.getMinutes()).padStart(2, '0');
+ document.getElementById('ss-stats-time').textContent = 'Updated ' + hh + ':' + mm;
+ }
+
+ function animate(numEl, to) {
+   const from = +numEl.dataset.from || 0;
+   const start = performance.now();
+   const dur = 1200;
+   function step(now) {
+     const p = Math.min(1, (now - start) / dur);
+     const ease = 1 - Math.pow(1 - p, 3);
+     const v = Math.floor(from + (to - from) * ease);
+     numEl.textContent = fmt(v);
+     if (p < 1) requestAnimationFrame(step);
+     else numEl.dataset.from = to;
+   }
+   requestAnimationFrame(step);
+ }
+
+ function paint() {
+   whenReady(() => {
+     const clubs = window.SUNSPOT_CLUBS;
+     const targets = {
+       venues:    clubs.length,
+       sunbeds:   clubs.reduce((s, c) => s + (c.spotsLeft || 0), 0),
+       occupancy: 90 + Math.round(Math.sin(new Date().getHours() / 24 * Math.PI * 2 + 1) * 5) + (new Date().getHours() >= 9 && new Date().getHours() <= 17 ? 2 : 0),
+       time:      28,
+     };
+     document.querySelectorAll('[data-stat]').forEach(el => {
+       const numEl = el.querySelector('.num');
+       if (numEl) animate(numEl, targets[el.dataset.stat]);
+     });
+     const sub = document.getElementById('ss-stat-sunbeds-sub');
+     if (sub) {
+       const delta = Math.round((Math.random() - .5) * 8);
+       sub.textContent = delta >= 0 ? '+' + delta + ' freed in last minute' : Math.abs(delta) + ' just booked';
+       sub.dataset.direction = delta >= 0 ? 'up' : 'down';
+     }
+     tick();
+   });
+ }
+
+ // First paint when in view (intersection observer for nicer reveal)
+ const sec = document.getElementById('ss-live-stats');
+ if (window.IntersectionObserver) {
+ new IntersectionObserver((entries, obs) =>{
+ entries.forEach(e =>{
+ if (e.isIntersecting) { paint(); obs.unobserve(e.target); }
+ });
+ }, { threshold: 0.25 }).observe(sec);
+ } else {
+ paint();
+ }
+ // And refresh once a minute to keep the "live" feel
+ setInterval(paint, 60000);
+})();
+</script>
+
+<main class="container">
+<header class="section-head">
+<h2>Featured beach clubs in Malta &amp; Gozo</h2>
+<p id="result-summary">All 12 beaches across the Maltese islands.</p>
+</header>
+
+<section aria-label="Beach club listings" class="listing-layout">
+<aside class="facet-sidebar" id="facet-sidebar" aria-label="Filters"></aside>
+<div class="listing-main">
+<div class="club-grid" id="club-grid"></div>
+<p id="no-results" class="empty-state" hidden>No beaches match these filters. <a href="#" id="clear-filters">Clear filters</a>.</p>
+</div>
+</section>
+</main>
+
+<section class="how-it-works" id="how-it-works" aria-label="How Sunspot works">
+<div class="container">
+<h2>How Sunspot works</h2>
+<ol class="steps">
+<li>
+<div class="step-num">1</div>
+<h3>Pick your beach</h3>
+<p>Browse 40+ beach clubs across Malta &amp; Gozo with live availability.</p>
+</li>
+<li>
+<div class="step-num">2</div>
+<h3>Choose your spot</h3>
+<p>See the actual beach layout. Click any open sunbed, cabana or VIP gazebo.</p>
+</li>
+<li>
+<div class="step-num">3</div>
+<h3>Confirm in 30 seconds</h3>
+<p>Pay securely. Show the QR at the entrance. Free cancellation up to 24 h before.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<section class="testimonials" aria-label="Customer testimonials" style="background: #fff8e8; padding: 64px 0">
+<div class="container">
+<div style="text-align:center; margin-bottom: 40px">
+<span class="kicker">From our guests</span>
+<h2 style="margin-top: 4px">2,847 happy beach days in the last month</h2>
+<div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 12px; font-size: 15px; color: #50575e">
+<span style="color: #ff9800; font-size: 22px; letter-spacing: -2px"></span>
+<strong style="color: #0a1f3a">4.8</strong>· 1,240 reviews on Sunspot
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+<figure style="background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(10,31,58,.06); margin: 0">
+<div style="color: #ff9800; font-size: 18px; letter-spacing: -1px; margin-bottom: 12px"></div>
+<blockquote style="font-size: 16px; line-height: 1.55; color: #0a1f3a; margin: 0 0 14px">
+"Booked Aqualuna at 7am, walked in at 11am, my exact sunbed in the shade was waiting. After 6 summers of arriving at 9am and being turned away — this is what we needed."
+</blockquote>
+<figcaption style="display: flex; align-items: center; gap: 10px; color: #50575e; font-size: 13px">
+<div style="width: 36px; height: 36px; background: linear-gradient(135deg, #ff9800, #ffb74d); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700">L</div>
+<div>
+<strong style="color: #0a1f3a; display: block">Lara M.</strong>
+<span>Sliema · booked Aqualuna Lido</span>
+</div>
+</figcaption>
+</figure>
+<figure style="background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(10,31,58,.06); margin: 0">
+<div style="color: #ff9800; font-size: 18px; letter-spacing: -1px; margin-bottom: 12px"></div>
+<blockquote style="font-size: 16px; line-height: 1.55; color: #0a1f3a; margin: 0 0 14px">
+"First trip to Malta. Used the itinerary planner and it built us a 5-day plan that hit Comino, Gozo and three Sliema sunsets. We saved hours of research and missed zero hidden bays."
+</blockquote>
+<figcaption style="display: flex; align-items: center; gap: 10px; color: #50575e; font-size: 13px">
+<div style="width: 36px; height: 36px; background: linear-gradient(135deg, #00838f, #26c6da); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700">J</div>
+<div>
+<strong style="color: #0a1f3a; display: block">James W.</strong>
+<span>Dublin · 5-day visitor</span>
+</div>
+</figcaption>
+</figure>
+<figure style="background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(10,31,58,.06); margin: 0">
+<div style="color: #ff9800; font-size: 18px; letter-spacing: -1px; margin-bottom: 12px"></div>
+<blockquote style="font-size: 16px; line-height: 1.55; color: #0a1f3a; margin: 0 0 14px">
+"Noma Island shut down last weekend for swell — full refund hit my Revolut within an hour. Tried again Sunday, perfect day, magical place. Sea-state widget got me to switch dates without losing money."
+</blockquote>
+<figcaption style="display: flex; align-items: center; gap: 10px; color: #50575e; font-size: 13px">
+<div style="width: 36px; height: 36px; background: linear-gradient(135deg, #5e35b1, #9c27b0); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700">A</div>
+<div>
+<strong style="color: #0a1f3a; display: block">Anya S.</strong>
+<span>Berlin · booked Noma Island</span>
+</div>
+</figcaption>
+</figure>
+</div>
+<div style="text-align: center; margin-top: 32px">
+<a href="faq.html" style="color: #50575e; font-size: 14px; text-decoration: underline">Read all reviews on TripAdvisor →</a>
+</div>
+</div>
+</section>
+
+<section class="faq" aria-label="Frequently asked questions">
+<div class="container">
+<h2>Frequently asked questions</h2>
+<div class="faq-grid">
+<details>
+<summary>How much does it cost to book a sunbed in Malta?</summary>
+<p>Sunbeds across Malta and Gozo range from €15 (St Peter's Pool) to €50 (Comino's Blue Lagoon front row). Sunspot shows live, all-in pricing — no surprise fees at the gate.</p>
+</details>
+<details>
+<summary>Can I cancel my reservation?</summary>
+<p>Yes. All Sunspot bookings include free cancellation up to 24 hours before your reservation. After that, the operator's individual policy applies.</p>
+</details>
+<details>
+<summary>Do beach clubs in Malta require booking in advance?</summary>
+<p>From mid-June to early September most popular clubs (Comino Blue Lagoon, Għajn Tuffieħa, Ramla Bay) sell out by 9am. Booking ahead with Sunspot guarantees your spot.</p>
+</details>
+<details>
+<summary>What's the difference between a sunbed, a cabana and a VIP gazebo?</summary>
+<p>A sunbed is for one person. A cabana is a shaded structure for up to 4 people, usually with side curtains and a small table. A VIP gazebo seats 6 and includes amenities like a fruit platter, bottle service and reserved access.</p>
+</details>
+<details>
+<summary>Which is the best beach club in Gozo?</summary>
+<p>Ramla Red (red-sand bay, mythological Calypso cave) and Xlendi Cove (intimate inlet between cliffs) are crowd favourites. Browse all Gozo beach clubs above.</p>
+</details>
+<details>
+<summary>Is Sunspot affiliated with the beach clubs?</summary>
+<p>Sunspot is an independent booking marketplace. We partner directly with each operator so you get instant confirmation and the same prices you'd pay at the gate.</p>
+</details>
+</div>
+</div>
+</section>
+
+<section class="cta-band" id="partners">
+<div class="container">
+<div>
+<h2>Run a beach club?</h2>
+<p>List your sunbeds on Sunspot in under an hour. We handle bookings, payments, no-shows and rebookings — you focus on guests.</p>
+</div>
+<button class="btn-solid">Become a partner →</button>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="brand">
+<svg class="brand-mark" viewBox="0 0 40 40" width="28" height="28" aria-hidden="true">
+<circle cx="20" cy="20" r="11" fill="#ff9800"/>
+<circle cx="20" cy="20" r="9" fill="#ffb74d"/>
+<circle cx="24" cy="16" r="3" fill="#fff5e1"/>
+</svg>
+<span class="brand-name">Sunspot</span>
+</div>
+<p>Malta's beach booking app.</p>
+</div>
+<div>
+<h4>For beachgoers</h4>
+<a href="index.html">Browse beaches</a>
+<a href="bookings.html">My bookings</a>
+<a href="#how-it-works">How it works</a>
+</div>
+<div>
+<h4>For operators</h4>
+<a href="#partners">Become a partner</a>
+<a href="#">Operator login</a>
+<a href="#">Pricing</a>
+</div>
+<div>
+<h4>Company</h4>
+<a href="#">About</a>
+<a href="#">Contact</a>
+<a href="#">Privacy</a>
+</div>
+</div>
+<div class="footer-bottom">
+© 2026 Sunspot Ltd. · Built in Valletta · Reservations across Malta, Gozo, Comino
+</div>
+</div>
+</footer>
+
+<script src="lightbox.js"></script>
+<script src="clubs-data.js"></script>
+<script src="club-thumbs.js"></script>
+<script src="auth.js"></script>
+<script src="nav-auth.js"></script>
+<script src="icons.js"></script>
+<script src="features.js"></script>
+<script src="audiences.js"></script>
+</body>
+</html>

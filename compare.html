@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-MT">
+<head>
+<meta charset="UTF-8">
+<script src="gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare beach clubs — Sunspot</title>
+<meta name="description" content="Side-by-side comparison of beach clubs, lidos and rooftop pools in Malta — price, capacity, vibe, amenities.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='11' fill='%23ff9800'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%23ffb74d'/%3E%3Ccircle cx='24' cy='16' r='3' fill='%23fff5e1'/%3E%3C/svg%3E">
+<style>
+.cmp-table {
+ width: 100%; border-collapse: collapse;
+ background: #fff; border: 1px solid #e8e8ec;
+ border-radius: 12px; overflow: hidden;
+ box-shadow: 0 4px 24px rgba(10,31,58,.06);
+ margin: 24px 0;
+ }
+ .cmp-table th, .cmp-table td {
+ padding: 14px 18px; text-align: left;
+ border-bottom: 1px solid #f0f0f1; vertical-align: top;
+ font-size: 14px;
+ }
+ .cmp-table thead th {
+ background: #fafafa; font-weight: 700; color: #0a1f3a;
+ }
+ .cmp-table thead .col-header {
+ text-align: center; padding-bottom: 20px;
+ }
+ .cmp-table .col-header .hero {
+ width: 100%; aspect-ratio: 4/3;
+ background-size: cover; background-position: center;
+ border-radius: 8px; margin-bottom: 10px;
+ }
+ .cmp-table .col-header h3 {
+ margin-bottom: 4px; font-size: 16px;
+ }
+ .cmp-table .col-header a.view {
+ display: inline-block; margin-top: 8px;
+ padding: 6px 14px; border-radius: 100px;
+ background: #ff9800; color: #fff; font-size: 12px; font-weight: 600;
+ text-decoration: none;
+ }
+ .cmp-table .col-header .remove {
+ background: none; border: 0; color: #b32d2e; cursor: pointer;
+ font-size: 12px; margin-top: 6px;
+ }
+ .cmp-table tbody th {
+ background: #fafafa; font-weight: 600; color: #50575e;
+ width: 180px; font-size: 12px; text-transform: uppercase; letter-spacing: .5px;
+ }
+ .cmp-table .winner {
+ background: #f0f9fa;
+ position: relative;
+ }
+ .cmp-table .winner::before {
+ content: ' best';
+ position: absolute; top: 4px; right: 6px;
+ font-size: 10px; color: #00838f; font-weight: 700;
+ }
+ .cmp-empty {
+ background: #fff; border: 2px dashed #e8e8ec;
+ border-radius: 12px; padding: 60px 20px; text-align: center;
+ color: #50575e;
+ }
+ .cmp-empty h2 { color: #0a1f3a; margin-bottom: 8px; }
+ .add-slot {
+ border: 2px dashed #e8e8ec; border-radius: 8px;
+ padding: 30px 10px; text-align: center; color: #888;
+ font-size: 13px;
+ }
+ .add-slot a { color: #ff9800; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<div class="container">
+<a href="index.html" class="brand" aria-label="Sunspot home">
+<svg class="brand-mark" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+<g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">
+<line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
+<line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
+</g>
+<circle cx="20" cy="20" r="11" fill="#ff9800"/>
+<circle cx="20" cy="20" r="9" fill="#ffb74d"/>
+<circle cx="24" cy="16" r="3" fill="#fff5e1"/>
+</svg>
+<span class="brand-name">Sunspot</span>
+</a>
+<nav>
+<a href="index.html">Beaches</a>
+<a href="experiences.html">Experiences</a>
+<a href="guides.html">Guides</a>
+<a href="visiting.html">Visiting?</a>
+<a href="living.html">Living here</a>
+<a href="faq.html">FAQ</a>
+<a href="about.html">About</a>
+<a href="bookings.html">My bookings</a>
+</nav>
+</div>
+</header>
+
+<main class="container" style="padding: 40px 20px">
+<header style="margin-bottom: 24px">
+<span class="kicker">Compare</span>
+<h1 id="cmp-title">Compare venues</h1>
+<p style="color:#50575e">Side-by-side specs. Numbers don't lie.</p>
+</header>
+
+<div id="cmp-content"></div>
+
+<p style="margin-top: 24px"><a href="index.html">← Back to all beaches</a></p>
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-bottom">© 2026 Sunspot Ltd. · Built in Valletta</div>
+</div>
+</footer>
+
+<script src="clubs-data.js"></script>
+<script>
+(function () {
+ 'use strict';
+
+ // Parse ?ids=a,b,c — fall back to localStorage compare list
+ let ids = (new URLSearchParams(location.search).get('ids') || '').split(',').filter(Boolean);
+ if (!ids.length) {
+ try {
+ const list = JSON.parse(localStorage.getItem('sunspot_compare') || '[]');
+ ids = list.map(v =>v.slug);
+ } catch (e) {}
+ }
+
+ const out = document.getElementById('cmp-content');
+ const title = document.getElementById('cmp-title');
+
+ if (!ids.length) {
+ out.innerHTML = '<div class="cmp-empty">' +
+ '<h2>Nothing to compare yet</h2>' +
+ '<p>Click the ⇄ button on any venue card to add it to compare. You can add up to 3.</p>' +
+ '<p style="margin-top:16px"><a href="index.html" style="background:#ff9800;color:#fff;padding:12px 24px;border-radius:100px;text-decoration:none;font-weight:600">Browse venues →</a></p>' +
+ '</div>';
+ return;
+ }
+
+ const venues = ids.map(id =>(window.SUNSPOT_CLUBS || []).find(v =>v.id === id)).filter(Boolean);
+ if (!venues.length) {
+ out.innerHTML = '<div class="cmp-empty"><h2>Venues not found</h2><p><a href="index.html">← Browse venues</a></p></div>';
+ return;
+ }
+
+ title.textContent = 'Compare: ' + venues.map(v =>v.name).join(' vs ');
+
+ // Determine "winner" cell per row (higher is better for some, lower for price)
+ function winners(values, dir) {
+ if (values.every(v =>v == null || v === '')) return [];
+ if (dir === 'high') {
+ const max = Math.max.apply(null, values.filter(v =>v != null && !isNaN(v)));
+ return values.map(v =>+v === max);
+ }
+ if (dir === 'low') {
+ const min = Math.min.apply(null, values.filter(v =>v != null && !isNaN(v) && +v>0));
+ return values.map(v =>+v === min && +v>0);
+ }
+ return [];
+ }
+
+ function arr(x) { return Array.isArray(x) ? x : x ? [x] : []; }
+ function bool(x) { return x ? '' : '—'; }
+
+ const rows = [
+ { label: 'Category', get: v =>v.regionLabel ? (v.category + ' · ' + v.regionLabel) : v.category },
+ { label: 'Region', get: v =>v.region },
+ { label: 'Location', get: v =>v.location },
+ { label: 'Rating', get: v =>v.rating ? ' ' + v.rating : '—', dir: 'high', num: v =>v.rating || 0 },
+ { label: 'Reviews', get: v =>v.reviews ? v.reviews.toLocaleString() : '—', dir: 'high', num: v =>v.reviews || 0 },
+ { label: 'Bookable?', get: v =>bool(v.hasBookableSunbeds) },
+ { label: 'Sunbed from', get: v =>v.sunbedFrom ? '€' + v.sunbedFrom : (v.hasBookableSunbeds ? '—' : 'Free'), dir: 'low', num: v =>v.sunbedFrom || (v.hasBookableSunbeds ? 999 : 0) },
+ { label: 'Cabana from', get: v =>v.cabanaFrom ? '€' + v.cabanaFrom : '—', dir: 'low', num: v =>v.cabanaFrom || 999 },
+ { label: 'VIP from', get: v =>v.vipFrom ? '€' + v.vipFrom : '—', dir: 'low', num: v =>v.vipFrom || 999 },
+ { label: 'Spots today', get: v =>v.spotsLeft != null ? v.spotsLeft : '—', dir: 'high', num: v =>v.spotsLeft || 0 },
+ { label: 'Capacity', get: v =>v.capacity ? (v.capacity.sunbeds || 0) + ' sunbeds · ' + (v.capacity.total || 0) + ' total' : '—', dir: 'high', num: v =>v.capacity?.total || 0 },
+ { label: 'Hours', get: v =>v.hours || '—' },
+ { label: 'Season', get: v =>v.season || '—' },
+ { label: 'Pool type', get: v =>v.poolType || '—' },
+ { label: 'Dress code', get: v =>v.dressCode || '—' },
+ { label: 'Parking', get: v =>v.parking || '—' },
+ { label: 'Vibe / best for', get: v =>arr(v.bestFor).join(' · ') || '—' },
+ { label: 'Features', get: v =>arr(v.features).slice(0, 5).join(' · ') || '—' },
+ { label: 'Amenities', get: v =>arr(v.amenities).slice(0, 6).join(' · ') || '—' },
+ { label: 'Website', get: v =>v.website ? '<a href="' + v.website + '" rel="noopener" target="_blank">visit ↗</a>' : '—' },
+ { label: 'Phone', get: v =>v.phone ? '<a href="tel:' + v.phone + '">' + v.phone + '</a>' : '—' },
+ ];
+
+ let html = '<table class="cmp-table">';
+ // Header row with each venue
+ html += '<thead><tr><th></th>';
+ venues.forEach(v =>{
+ html += '<th class="col-header">';
+ html += '<div class="hero" style="background-image:url(\'' + ((v.photos||[])[0] || '') + '\')"></div>';
+ html += '<h3>' + v.name + '</h3>';
+ html += '<div style="color:#50575e;font-size:12px">' + v.regionLabel + '</div>';
+ html += '<a class="view" href="club.html?club=' + v.id + '">View →</a><br>';
+ html += '<button class="remove" data-rm="' + v.id + '">remove from compare</button>';
+ html += '</th>';
+ });
+ html += '</tr></thead><tbody>';
+
+ rows.forEach(row =>{
+ let winnerFlags = [];
+ if (row.dir && row.num) {
+ winnerFlags = winners(venues.map(row.num), row.dir);
+ }
+ html += '<tr><th>' + row.label + '</th>';
+ venues.forEach((v, i) =>{
+ const val = row.get(v);
+ const cls = winnerFlags[i] ? ' class="winner"' : '';
+ html += '<td' + cls + '>' + (val == null || val === '' ? '—' : val) + '</td>';
+ });
+ html += '</tr>';
+ });
+
+ html += '</tbody></table>';
+
+ // Empty slot suggestion
+ if (venues.length < 3) {
+ html += '<div style="display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0">' +
+ '<div class="add-slot">+ <a href="index.html">Add another venue to compare</a>(you can pick up to 3 in total)</div>' +
+ '</div>';
+ }
+
+ out.innerHTML = html;
+
+ // Remove handler — drops from localStorage and rebuilds URL
+ out.querySelectorAll('[data-rm]').forEach(btn =>btn.addEventListener('click', () =>{
+ const id = btn.dataset.rm;
+ try {
+ const list = JSON.parse(localStorage.getItem('sunspot_compare') || '[]').filter(v =>v.slug !== id);
+ localStorage.setItem('sunspot_compare', JSON.stringify(list));
+ } catch (e) {}
+ const remaining = ids.filter(x =>x !== id);
+ location.href = remaining.length ? 'compare.html?ids=' + remaining.join(',') : 'compare.html';
+ }));
+})();
+</script>
+<script src="auth.js"></script>
+<script src="nav-auth.js"></script>
+<script src="icons.js"></script>
+<script src="features.js"></script>
+<script src="audiences.js"></script>
+</body>
+</html>

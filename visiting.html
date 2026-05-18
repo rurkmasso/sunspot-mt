@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en-MT">
+<head>
+<meta charset="UTF-8">
+<script src="gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visiting Malta? Plan your beach days — Sunspot</title>
+<meta name="description" content="First time in Malta? Get a personalised beach itinerary based on where you're staying, how long you have, and what you like. Comino, Gozo, Blue Lagoon and more.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://sunspot.mt/visiting.html">
+<meta property="og:title" content="Visiting Malta? Plan your beach days — Sunspot">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='11' fill='%23ff9800'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%23ffb74d'/%3E%3Ccircle cx='24' cy='16' r='3' fill='%23fff5e1'/%3E%3C/svg%3E">
+<style>
+.audience-hero {
+ background:
+ radial-gradient(circle at 20% 30%, rgba(255,179,71,.35), transparent 45%),
+ radial-gradient(circle at 80% 60%, rgba(38,198,218,.30), transparent 45%),
+ linear-gradient(180deg, #fff8e8 0%, #fff 100%);
+ padding: 40px 0 28px;
+ }
+ .audience-hero h1 {
+ font-size: clamp(1.8rem, 4.4vw, 2.8rem);
+ letter-spacing: -1.5px;
+ margin-bottom: 12px;
+ }
+ .audience-hero .lede {
+ font-size: clamp(1.05rem, 2vw, 1.25rem);
+ color: #50575e;
+ max-width: 640px;
+ }
+ .planner {
+ background: #fff;
+ border: 1px solid #e8e8ec;
+ border-radius: 16px;
+ padding: 32px;
+ margin: 40px 0;
+ box-shadow: 0 8px 32px rgba(10,31,58,.06);
+ }
+ .planner h2 { font-size: 22px; margin-bottom: 6px; }
+ .planner .sub { color: #50575e; font-size: 14px; margin-bottom: 24px; }
+ .planner-grid {
+ display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+ gap: 16px; margin-bottom: 20px;
+ }
+ .planner-field { display: flex; flex-direction: column; gap: 6px; }
+ .planner-field label { font-size: 12px; font-weight: 700; color: #50575e; text-transform: uppercase; letter-spacing: .5px; }
+ .planner-field select, .planner-field input {
+ padding: 10px 14px; border: 1px solid #e8e8ec; border-radius: 8px;
+ font-size: 15px; background: #fff;
+ }
+ .planner-field select:focus, .planner-field input:focus {
+ outline: none; border-color: #ff9800;
+ box-shadow: 0 0 0 3px rgba(255,152,0,.15);
+ }
+ .interest-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+ .interest-tag {
+ padding: 6px 14px; border: 1.5px solid #e8e8ec;
+ border-radius: 100px; font-size: 13px; cursor: pointer;
+ transition: all .15s; background: #fff;
+ }
+ .interest-tag.on {
+ background: #ff9800; color: #fff; border-color: #ff9800;
+ }
+ .planner button.go {
+ background: #ff9800; color: #fff; border: 0;
+ padding: 14px 32px; border-radius: 100px;
+ font-weight: 700; font-size: 15px; cursor: pointer;
+ box-shadow: 0 4px 20px rgba(255,152,0,.25);
+ }
+ .planner button.go:hover { background: #ef6c00; transform: translateY(-1px); }
+
+ .itinerary { margin-top: 30px; }
+ .itin-day {
+ background: #fafafa;
+ border-left: 4px solid #ff9800;
+ padding: 18px 22px;
+ border-radius: 0 12px 12px 0;
+ margin-bottom: 12px;
+ }
+ .itin-day h3 { font-size: 18px; margin-bottom: 6px; color: #0a1f3a; }
+ .itin-day .when { font-size: 12px; color: #ef6c00; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+ .itin-day p { color: #50575e; font-size: 14px; margin: 8px 0; }
+ .itin-day .picks { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+ .itin-pick {
+ background: #fff; border: 1px solid #e8e8ec; padding: 4px 10px;
+ border-radius: 100px; font-size: 12px; color: #0a1f3a;
+ text-decoration: none;
+ }
+ .itin-pick:hover { background: #fff4e0; border-color: #ff9800; color: #ef6c00; }
+
+ .essentials {
+ display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 20px; margin: 40px 0;
+ }
+ .essentials .card {
+ background: #fff; border: 1px solid #e8e8ec;
+ border-radius: 12px; padding: 24px;
+ }
+ .essentials .card .icon { font-size: 32px; margin-bottom: 12px; }
+ .essentials .card h3 { font-size: 16px; margin-bottom: 8px; color: #0a1f3a; }
+ .essentials .card p { color: #50575e; font-size: 14px; line-height: 1.5; }
+ .essentials .card ul { padding-left: 18px; color: #50575e; font-size: 14px; line-height: 1.7; }
+
+ .transport-table {
+ width: 100%; border-collapse: collapse; margin-top: 12px;
+ }
+ .transport-table th, .transport-table td {
+ text-align: left; padding: 10px 12px;
+ border-bottom: 1px solid #e8e8ec; font-size: 14px;
+ }
+ .transport-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: #50575e; background: #fafafa; }
+ .transport-table td:first-child { font-weight: 600; }
+ .transport-table .bus { color: #ef6c00; font-weight: 700; }
+</style>
+  <meta property="og:description" content="First time in Malta? Get a personalised beach itinerary based on where you're staying, how long you have, and what you like. Comino, Gozo, Blue Lagoon and more.">
+  <meta property="og:url" content="https://sunspot.mt/visiting.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Visiting Malta? Plan your beach days — Sunspot">
+  <meta name="twitter:description" content="First time in Malta? Get a personalised beach itinerary based on where you're staying, how long you have, and what you like. Comino, Gozo, Blue Lagoon and more.">
+</head>
+<body data-no-mode-bar>
+
+<header class="site-header">
+<div class="container">
+<a href="index.html" class="brand" aria-label="Sunspot home">
+<svg class="brand-mark" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+<g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">
+<line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
+<line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
+</g>
+<circle cx="20" cy="20" r="11" fill="#ff9800"/>
+<circle cx="20" cy="20" r="9" fill="#ffb74d"/>
+<circle cx="24" cy="16" r="3" fill="#fff5e1"/>
+</svg>
+<span class="brand-name">Sunspot</span>
+</a>
+<nav>
+<a href="index.html">Beaches</a>
+<a href="experiences.html">Experiences</a>
+<a href="guides.html">Guides</a>
+<a href="faq.html">FAQ</a>
+<a href="about.html">About</a>
+<a href="bookings.html">My bookings</a>
+</nav>
+</div>
+</header>
+
+<section class="audience-hero">
+<div class="container">
+<span class="kicker">Visiting Malta</span>
+<h1>Plan your beach days the smart way.</h1>
+<p class="lede">
+You've come a long way. Don't waste it driving to a sold-out lido at 11am or queueing two hours for the Blue Lagoon ferry.
+ Tell us a few things and we'll build you a beach itinerary.
+</p>
+</div>
+</section>
+
+<!-- Cruise-mode experiences rail — only visible when ?mode=cruise -->
+<section id="cruise-rail" hidden style="background:#0a1f3a;color:#fff;padding:32px 0">
+<div class="container">
+<div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:18px;flex-wrap:wrap;gap:8px">
+<div>
+<span class="kicker" style="color:#ff9800">Cruise day-trip — popular</span>
+<h2 style="color:#fff;margin-top:4px">Half-day experiences near the port</h2>
+<p style="color:#c3c4c7;margin-top:4px;font-size:14px">Stay close to Valletta. Be back on board before sailaway.</p>
+</div>
+<a href="experiences.html" style="color:#ffb74d;font-weight:700;text-decoration:none;font-size:14px">See all experiences →</a>
+</div>
+<div id="cruise-rail-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px"></div>
+</div>
+</section>
+
+<main class="container">
+
+<!-- ===== DAY-TRIP PLANNER ===== -->
+<div class="planner">
+<h2> Build your beach itinerary</h2>
+<p class="sub">Personalised picks based on your stay. Takes 20 seconds.</p>
+
+<div class="planner-grid">
+<div class="planner-field">
+<label>Where are you staying?</label>
+<select id="p-base">
+<option value="sliema">Sliema</option>
+<option value="paceville">St Julian's / Paceville</option>
+<option value="valletta">Valletta / Three Cities</option>
+<option value="mellieha">Mellieħa</option>
+<option value="qawra">Bugibba / Qawra / St Paul's Bay</option>
+<option value="gozo-port">Gozo</option>
+<option value="airport">Airport area (transit)</option>
+<option value="cruise">Cruise ship (Valletta day-stop)</option>
+</select>
+</div>
+<div class="planner-field">
+<label>How many days?</label>
+<select id="p-days">
+<option value="1">1 day (cruise stop)</option>
+<option value="3" selected>3 days (long weekend)</option>
+<option value="5">5 days</option>
+<option value="7">1 week</option>
+<option value="14">2 weeks</option>
+</select>
+</div>
+<div class="planner-field">
+<label>Travelling with</label>
+<select id="p-group">
+<option value="couple">Couple</option>
+<option value="family">Family with kids</option>
+<option value="friends">Friends group</option>
+<option value="solo">Solo</option>
+<option value="business">Business + leisure</option>
+</select>
+</div>
+<div class="planner-field">
+<label>Budget per day</label>
+<select id="p-budget">
+<option value="low">€20–40 (budget)</option>
+<option value="mid" selected>€40–100 (mid)</option>
+<option value="high">€100+ (premium)</option>
+</select>
+</div>
+</div>
+
+<div class="planner-field" style="margin-bottom: 24px">
+<label>What do you like? (pick any)</label>
+<div class="interest-tags" id="p-interests">
+<button class="interest-tag" data-v="sunset">Sunsets</button>
+<button class="interest-tag" data-v="snorkel">Snorkelling</button>
+<button class="interest-tag" data-v="pool">Pool clubs</button>
+<button class="interest-tag" data-v="rooftop">Rooftops</button>
+<button class="interest-tag" data-v="natural">Natural pools</button>
+<button class="interest-tag" data-v="gozo">Gozo / Comino day-trip</button>
+<button class="interest-tag" data-v="party">DJ / party</button>
+<button class="interest-tag" data-v="quiet">Quiet / wild</button>
+<button class="interest-tag" data-v="food">Foodie</button>
+</div>
+</div>
+
+<button class="go" id="p-go">Build my itinerary →</button>
+
+<div class="itinerary" id="itinerary"></div>
+</div>
+
+<!-- ===== ESSENTIAL TOURIST INFO ===== -->
+<h2 style="margin-top: 60px; margin-bottom: 8px">First time in Malta? Read this.</h2>
+<p style="color:#50575e">The basics nobody tells you on the flight in.</p>
+
+<div class="essentials">
+<div class="card">
+<div class="icon"></div>
+<h3>Public transport from the airport</h3>
+<p><strong>Tallinja</strong>is Malta's bus network. A single ride is €2 in summer (€1.50 off-peak), or get an unlimited <strong>Explore Card</strong>for €21 / 7 days.</p>
+<table class="transport-table">
+<thead><tr><th>From airport to</th><th>Bus</th><th>Time</th></tr></thead>
+<tbody>
+<tr><td>Sliema</td><td class="bus">X2</td><td>35 min</td></tr>
+<tr><td>St Julian's</td><td class="bus">X2</td><td>40 min</td></tr>
+<tr><td>Valletta</td><td class="bus">X4</td><td>20 min</td></tr>
+<tr><td>Mellieha</td><td class="bus">X1</td><td>55 min</td></tr>
+<tr><td>Bugibba</td><td class="bus">X3</td><td>50 min</td></tr>
+</tbody>
+</table>
+<p style="margin-top:10px;font-size:12px;color:#888">Taxi from airport: €18–25 to Sliema/St Julian's, €30–35 to Mellieha. Use the official airport taxi desk for fixed fares.</p>
+</div>
+
+<div class="card">
+<div class="icon"></div>
+<h3>Getting to Comino & Gozo</h3>
+<p><strong>Comino (Blue Lagoon):</strong>Boats from <strong>Ċirkewwa</strong>(€10–15 return) or <strong>Sliema</strong>(€25 return, includes other stops). First boat 09:00. Get there early — by noon it's chaos.</p>
+<p><strong>Gozo:</strong>Car ferry from <strong>Ċirkewwa</strong>. Foot passenger: free. With car: €15.70 return (you only pay coming back). Crossing 25 min, runs every 45 min.</p>
+<p style="margin-top:8px;font-size:12px;color:#888"><strong>Pro tip:</strong>for the Blue Lagoon, leave by 09:30 latest. By 11am the parking at Ċirkewwa fills up and tour boats jam the bay.</p>
+</div>
+
+<div class="card">
+<div class="icon"></div>
+<h3>Sun & sea by season</h3>
+<p>Malta is <strong>swimmable June–October</strong>. Sea hits 26°C in August, drops to 19°C by November.</p>
+<ul>
+<li><strong>May:</strong>warm air (25°C), brisk sea (20°C). Pool clubs only.</li>
+<li><strong>Jun–Sep:</strong>peak. Beaches sell out weekends.</li>
+<li><strong>Oct:</strong>still warm (23°C air, 24°C sea), no crowds.</li>
+</ul>
+<p style="margin-top:8px;font-size:12px;color:#888"><strong>UV warning:</strong>11am–3pm in July/August is brutal. SPF 50, shade, hydrate.</p>
+</div>
+
+<div class="card">
+<div class="icon"></div>
+<h3>What to bring</h3>
+<ul>
+<li>Reef-safe sunscreen (boutique pharmacies sell it for €15+; bring your own)</li>
+<li>Water shoes — Malta's pretty bays are rocky</li>
+<li>Refillable water bottle (tap water is desalinated and safe but tastes off; refill stations everywhere)</li>
+<li>Light cover-up (shoulders covered for churches, even St John's Co-Cathedral)</li>
+<li>Cash for tiny seafood shacks (cards rare in Mġarr ix-Xini, Wied iż-Żurrieq)</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon"></div>
+<h3>Money & tipping</h3>
+<p>Malta uses the <strong>Euro (€)</strong>. Cards work nearly everywhere — even at sunbed kiosks. ATMs at every village.</p>
+<p>Tipping isn't expected; round up at restaurants. Sunbed staff: €1–2 if they helped with umbrellas.</p>
+<p>Sunspot bookings are 8% above operator price — clearly shown at checkout. <strong>No hidden fees.</strong></p>
+</div>
+
+<div class="card">
+<div class="icon"></div>
+<h3>Language</h3>
+<p>Everyone speaks <strong>English</strong>(an official language). Maltese (a Semitic-Latin hybrid) is also official. Italian is widely understood — many TV channels are Italian.</p>
+<p>Useful phrases:</p>
+<ul style="font-style:italic">
+<li><strong>Bonġu</strong>— good morning</li>
+<li><strong>Bonswa</strong>— good evening</li>
+<li><strong>Grazzi</strong>— thank you</li>
+<li><strong>Mela</strong>— yeah / OK / sure (filler word, you'll hear it 50× a day)</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon"></div>
+<h3>Local quirks worth knowing</h3>
+<ul>
+<li><strong>Sunday traditions:</strong>some restaurants & shops close. Beach clubs are busiest.</li>
+<li><strong>Feast days (festas):</strong>June–September every village has one. Fireworks, brass bands, late nights. Check the local calendar.</li>
+<li><strong>Driving:</strong>on the left (UK side). Roundabouts everywhere. Parking in Sliema/Valletta is brutal — public transport often faster.</li>
+<li><strong>Siesta:</strong>shops in villages close 13:00–16:00. Big retail in Sliema stays open.</li>
+<li><strong>Mosquitoes:</strong>bring repellent for evenings, especially near sea.</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon"></div>
+<h3>Eat like a local</h3>
+<ul>
+<li><strong>Pastizzi</strong>— flaky pastries with ricotta or peas. €0.50 each. Breakfast of champions.</li>
+<li><strong>Ftira</strong>— Maltese flatbread with tuna, olives, capers. A meal.</li>
+<li><strong>Lampuki</strong>— dorado fish, in season Aug–Nov. Try at Marsaxlokk Sunday market.</li>
+<li><strong>Aljotta</strong>— garlicky fish soup. Best at Mġarr ix-Xini's Rew Rew shack.</li>
+<li><strong>Kinnie</strong>— Malta's national soft drink, bitter-orange. Try it once.</li>
+</ul>
+</div>
+</div>
+
+<!-- ===== SHORTCUTS ===== -->
+<section style="background:#0a1f3a; color:#fff; padding:48px; border-radius:16px; margin: 40px 0; text-align:center">
+<h2 style="color:#fff">Ready to book?</h2>
+<p style="color:#c3c4c7; margin: 12px 0 24px; font-size: 16px">All 112 venues in one place. Live availability. Free cancellation.</p>
+<div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap">
+<a href="index.html" class="btn-primary" style="background:#ff9800; color:#fff; padding:14px 28px; border-radius:100px; font-weight:600; text-decoration:none">Browse all beaches →</a>
+<a href="index.html?region=comino" style="background:transparent; color:#fff; padding:14px 28px; border-radius:100px; font-weight:600; text-decoration:none; border:1.5px solid rgba(255,255,255,.3)">Comino / Blue Lagoon</a>
+<a href="index.html?region=gozo" style="background:transparent; color:#fff; padding:14px 28px; border-radius:100px; font-weight:600; text-decoration:none; border:1.5px solid rgba(255,255,255,.3)">Gozo coast</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-bottom">© 2026 Sunspot Ltd. · Built in Valletta · For visitors from across the world</div>
+</div>
+</footer>
+
+<script src="clubs-data.js"></script>
+<script src="experiences-data.js"></script>
+<script>
+// Cruise-mode experiences rail
+(function () {
+ if (new URLSearchParams(location.search).get('mode') !== 'cruise') return;
+ const EXP = window.SUNSPOT_EXPERIENCES || [];
+ const CATS = window.SUNSPOT_EXPERIENCE_CATEGORIES || {};
+ // Cruise visitors want: short, near-port, no jet-ski to Comino
+ const picks = EXP.filter(e =>
+e.duration_h <= 4 &&
+ (e.region === 'central' || e.region === 'south' || e.departs_from === 'valletta' || e.departs_from === 'sliema' || e.departs_from === 'paceville')
+ ).slice(0, 6);
+ if (!picks.length) return;
+ document.getElementById('cruise-rail').hidden = false;
+ document.getElementById('cruise-rail-grid').innerHTML = picks.map(e =>{
+ const cat = CATS[e.cat] || { label: e.cat, icon: '' };
+ const dur = e.duration_h < 1 ? Math.round(e.duration_h * 60) + ' min' : e.duration_h + 'h';
+ return '<a href="experiences.html?cat=' + e.cat + '" style="text-decoration:none;color:inherit;background:#fff;border-radius:12px;overflow:hidden;display:flex;flex-direction:column">' +
+ '<div style="aspect-ratio:16/10;background:url(\'' + e.photo + '\') center/cover;position:relative">' +
+ '<span style="position:absolute;top:10px;left:10px;background:rgba(255,255,255,.92);padding:3px 9px;border-radius:100px;font-size:11px;font-weight:700;color:#0a1f3a">' + cat.icon + ' ' + cat.label + '</span>' +
+ '<span style="position:absolute;bottom:10px;right:10px;background:rgba(10,31,58,.85);color:#fff;padding:2px 9px;border-radius:100px;font-size:11px;font-weight:600">' + dur + '</span>' +
+ '</div>' +
+ '<div style="padding:14px 16px;flex:1;display:flex;flex-direction:column">' +
+ '<h4 style="font-size:14px;margin-bottom:4px;color:#0a1f3a;font-weight:700">' + e.name + '</h4>' +
+ '<p style="color:#50575e;font-size:12px;margin:0 0 10px;flex:1;line-height:1.4">' + e.summary.split('.')[0] + '.</p>' +
+ '<div style="font-size:13px;color:#50575e">from <strong data-eur="' + e.price + '" style="color:#0a1f3a;font-size:15px">€' + e.price + '</strong>/ pp</div>' +
+ '</div>' +
+ '</a>';
+ }).join('');
+})();
+</script>
+<script>
+(function () {
+ 'use strict';
+
+ // Interest tag toggles
+ document.querySelectorAll('#p-interests .interest-tag').forEach(b =>{
+ b.addEventListener('click', () =>b.classList.toggle('on'));
+ });
+
+ // Auto-set "cruise" mode if ?mode=cruise
+ if (new URLSearchParams(location.search).get('mode') === 'cruise') {
+ document.getElementById('p-base').value = 'cruise';
+ document.getElementById('p-days').value = '1';
+ }
+
+ // Pre-tick interests common to first-timers
+ ['snorkel','sunset','gozo'].forEach(v =>{
+ const el = document.querySelector('[data-v="'+v+'"]');
+ if (el) el.classList.add('on');
+ });
+
+ // ============================================================
+ // Itinerary generator
+ // ============================================================
+ const TEMPLATES = {
+ 1: [ // Cruise day-trip — one perfect day
+ { when: 'Morning', title: 'Valletta walk → easy swim', why: 'Skip the long drive — stay near the cruise port and dip at a city-adjacent rocky bay.',
+ match: ['rocky-bay','lido','central','south'], max: 2 },
+ { when: 'Lunch', title: 'Seafood near the water', why: 'Half the joy is the food. Marsaxlokk or Senglea for the best harbour-side meal.', match: ['cugo-gran-macina'], anchors: true, max: 1 },
+ { when: 'Afternoon', title: 'Sunset rooftop', why: 'Cocktail with a view before the ship sails. Valletta rooftops are 10 min from the port.',
+ match: ['rooftop','central'], max: 2 },
+ ],
+ 3: [ // 3-day long weekend
+ { when: 'Day 1 — Settle in', title: 'Sliema / St Julian\'s lido', why: 'Acclimatise without driving. Sea ladder, ice cream, sunset on the promenade.',
+ match: ['lido','pool-club','central'], max: 3 },
+ { when: 'Day 2 — Comino', title: 'Blue Lagoon + Crystal Lagoon', why: "Malta's must-see. Catch the 9am boat from Ċirkewwa to beat the crowds.",
+ match: ['comino'], max: 2 },
+ { when: 'Day 3 — Wild Malta', title: 'A bay you\'ll remember', why: 'Now that you know the rhythm, go further: Għajn Tuffieħa, Anchor Bay, or St Peter\'s Pool.',
+ match: ['sandy-beach','natural','rocky-bay'], regionsNot: ['comino','central'], max: 3 },
+ ],
+ 5: [
+ { when: 'Day 1', title: 'Sliema lido + Valletta sunset rooftop', why: 'Easy first day with everything in walking distance.', match: ['lido','rooftop','central'], max: 3 },
+ { when: 'Day 2', title: 'Comino — Blue Lagoon + Crystal Lagoon', why: 'Take the early boat.', match: ['comino'], max: 2 },
+ { when: 'Day 3', title: 'North bays — pick one', why: 'Mellieha, Golden Bay, Għajn Tuffieħa. Pre-book a sunbed.', match: ['sandy-beach','beach-club','north'], max: 4 },
+ { when: 'Day 4', title: 'Gozo day-trip', why: 'Take the 8am ferry. Ramla, Wied il-Għasri, Marsalforn.', match: ['gozo'], max: 4 },
+ { when: 'Day 5', title: 'South coast hidden bays', why: 'St Peter\'s Pool, Kalanka, Ġnejna. Quietest day.', match: ['rocky-bay','natural','south'], max: 3 },
+ ],
+ 7: [
+ { when: 'Days 1-2', title: 'Slow start — Sliema & rooftops', why: 'Find your favourite breakfast spot.', match: ['lido','rooftop','central'], max: 4 },
+ { when: 'Day 3', title: 'Comino — early ferry', why: 'Blue + Crystal Lagoon. Bring water shoes.', match: ['comino'], max: 2 },
+ { when: 'Day 4', title: 'North coast bays', why: 'Mellieha + nearby. Sunbed pre-book essential.', match: ['sandy-beach','beach-club','north'], max: 4 },
+ { when: 'Day 5', title: 'Gozo day-trip', why: 'Or stay a night in Marsalforn.', match: ['gozo'], max: 4 },
+ { when: 'Day 6', title: 'South coast wild swim', why: 'St Peter\'s Pool, Blue Grotto boat trip.', match: ['rocky-bay','natural','south'], max: 4 },
+ { when: 'Day 7', title: 'One last sunset', why: 'Pick your favourite rooftop and toast the trip.', match: ['rooftop'], max: 3 },
+ ],
+ 14: [
+ { when: 'Week 1', title: 'Cover the headlines', why: 'Comino, Gozo, top rooftops, north bays.', match: ['comino','gozo','rooftop','sandy-beach'], max: 6 },
+ { when: 'Week 2', title: 'Go off the map', why: 'Hidden bays, local lidos, second-tier Gozo coast.', match: ['rocky-bay','natural','lido'], max: 6 },
+ ],
+ };
+
+ function buildItinerary() {
+ if (!window.SUNSPOT_CLUBS) return alert('Loading…');
+ const base = document.getElementById('p-base').value;
+ const days = +document.getElementById('p-days').value;
+ const group = document.getElementById('p-group').value;
+ const budget = document.getElementById('p-budget').value;
+ const interests = Array.from(document.querySelectorAll('#p-interests .interest-tag.on')).map(b =>b.dataset.v);
+
+ const tpl = TEMPLATES[days] || TEMPLATES[3];
+ const out = document.getElementById('itinerary');
+ out.innerHTML = '<h3 style="font-size:22px; margin: 30px 0 16px; color: #0a1f3a">Your ' + days + '-day itinerary</h3>';
+
+ const usedIds = new Set();
+ tpl.forEach(slot =>{
+ // Filter venues
+ const cats = slot.match.filter(m =>['floating','rooftop','pool-club','lido','beach-club','sandy-beach','rocky-bay','natural'].includes(m));
+ const regs = slot.match.filter(m =>['north','central','south','gozo','comino'].includes(m));
+ const slugs = slot.match.filter(m =>!cats.includes(m) && !regs.includes(m));
+ const notReg = slot.regionsNot || [];
+
+ let pool = window.SUNSPOT_CLUBS.filter(v =>{
+ if (usedIds.has(v.id)) return false;
+ if (slugs.length && !slugs.includes(v.id)) return false;
+ if (cats.length && !cats.includes(v.category)) return false;
+ if (regs.length && !regs.includes(v.region)) return false;
+ if (notReg.length && notReg.includes(v.region)) return false;
+ return true;
+ });
+
+ // Interest boost: prefer venues whose bestFor matches selected interests
+ pool.sort((a, b) =>{
+ const score = (v) =>{
+ let s = (v.rating || 4) * 10;
+ const tags = [].concat(v.bestFor||[], v.features||[]).join(' ').toLowerCase();
+ interests.forEach(i =>{
+ if (i === 'sunset' && tags.includes('sunset')) s += 10;
+ if (i === 'snorkel' && tags.includes('snorkel')) s += 10;
+ if (i === 'pool' && /pool/.test(v.category)) s += 8;
+ if (i === 'rooftop' && v.category === 'rooftop') s += 12;
+ if (i === 'natural' && v.category === 'natural') s += 12;
+ if (i === 'gozo' && (v.region === 'gozo' || v.region === 'comino')) s += 8;
+ if (i === 'party' && tags.includes('party')) s += 10;
+ if (i === 'quiet' && tags.includes('quiet')) s += 10;
+ if (i === 'food' && tags.includes('food')) s += 8;
+ });
+ // Budget shaping
+ const sf = v.sunbedFrom || 0;
+ if (budget === 'low' && sf>0 && sf < 20) s += 4;
+ if (budget === 'mid' && sf>= 15 && sf <= 40) s += 4;
+ if (budget === 'high' && sf>= 30) s += 4;
+ // Family-friendliness if group is "family"
+ if (group === 'family' && tags.includes('family')) s += 6;
+ if (group === 'family' && tags.includes('adults only')) s -= 20;
+ if (group === 'couple' && (tags.includes('romantic') || tags.includes('sunset'))) s += 5;
+ return s;
+ };
+ return score(b) - score(a);
+ });
+
+ const picks = pool.slice(0, slot.max || 3);
+ picks.forEach(p =>usedIds.add(p.id));
+
+ out.insertAdjacentHTML('beforeend',
+ '<div class="itin-day">' +
+ '<div class="when">' + slot.when + '</div>' +
+ '<h3>' + slot.title + '</h3>' +
+ '<p>' + slot.why + '</p>' +
+ (picks.length ? '<div class="picks">' +
+ picks.map(p =>'<a class="itin-pick" href="club.html?club=' + p.id + '">' + p.name + '</a>').join('') +
+ '</div>' : '<p style="color:#888;font-size:12px;font-style:italic">No matches — try different interests</p>') +
+ '</div>'
+ );
+ });
+
+ // Distance hint from chosen base
+ if (window.SunspotAudiences && base !== 'cruise') {
+ const ORIG = { sliema:{lat:35.9131,lng:14.5042}, paceville:{lat:35.9244,lng:14.4905}, valletta:{lat:35.8957,lng:14.5147}, mellieha:{lat:35.9572,lng:14.3623}, qawra:{lat:35.9580,lng:14.4220}, airport:{lat:35.8575,lng:14.4775}, 'gozo-port':{lat:36.0245,lng:14.2992} };
+ window.SunspotAudiences.setPref('origin', { id: base, name: base, coords: ORIG[base] });
+ }
+
+ out.insertAdjacentHTML('beforeend',
+ '<p style="margin-top:24px; color:#50575e; font-size:13px">' +
+ ' <strong>Tip:</strong>tap any venue to see live availability and book. ' +
+ 'Distances now showing on the homepage are from <strong>' + base + '</strong>.' +
+ '</p>'
+ );
+
+ out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+ }
+
+ document.getElementById('p-go').addEventListener('click', buildItinerary);
+})();
+</script>
+<script src="auth.js"></script>
+<script src="nav-auth.js"></script>
+<script src="icons.js"></script>
+<script src="features.js"></script>
+<script src="audiences.js"></script>
+</body>
+</html>

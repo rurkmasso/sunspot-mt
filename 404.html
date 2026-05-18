@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-MT">
+<head>
+<meta charset="UTF-8">
+<script src="gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page lost at sea — Sunspot</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='11' fill='%23ff9800'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%23ffb74d'/%3E%3Ccircle cx='24' cy='16' r='3' fill='%23fff5e1'/%3E%3C/svg%3E">
+<style>
+.notfound {
+ min-height: calc(100vh - 80px);
+ display: flex; flex-direction: column; align-items: center; justify-content: center;
+ text-align: center; padding: 40px 20px;
+ background:
+ radial-gradient(circle at 20% 20%, rgba(255,179,71,.20), transparent 50%),
+ radial-gradient(circle at 80% 60%, rgba(38,198,218,.20), transparent 50%);
+ }
+ .nf-emoji {
+ font-size: clamp(80px, 18vw, 140px);
+ line-height: 1; margin-bottom: 24px;
+ animation: ssWave 3s ease-in-out infinite;
+ }
+ @keyframes ssWave {
+ 0%, 100% { transform: translateY(0) rotate(-3deg); }
+ 50% { transform: translateY(-10px) rotate(3deg); }
+ }
+ .notfound h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 8px; letter-spacing: -1.5px; }
+ .notfound p { color: #50575e; font-size: 17px; max-width: 520px; margin-bottom: 32px; }
+ .nf-search {
+ width: 100%; max-width: 480px;
+ display: flex; gap: 8px; margin-bottom: 32px;
+ }
+ .nf-search input {
+ flex: 1; padding: 14px 18px;
+ border: 1px solid #e8e8ec; border-radius: 100px;
+ font-size: 15px; background: #fff;
+ box-shadow: 0 4px 20px rgba(10,31,58,.06);
+ }
+ .nf-search button {
+ background: #ff9800; color: #fff; border: 0;
+ padding: 0 28px; border-radius: 100px;
+ font-weight: 700; cursor: pointer; font-size: 15px;
+ }
+ .nf-search button:hover { background: #ef6c00; }
+ .nf-shortcuts {
+ display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+ max-width: 600px;
+ }
+ .nf-chip {
+ background: #fff; border: 1px solid #e8e8ec;
+ padding: 10px 18px; border-radius: 100px;
+ font-size: 14px; color: #0a1f3a; text-decoration: none;
+ transition: all .15s;
+ }
+ .nf-chip:hover { background: #fff4e0; border-color: #ff9800; color: #ef6c00; }
+ .nf-popular {
+ margin-top: 56px; max-width: 720px;
+ }
+ .nf-popular h2 { font-size: 16px; color: #50575e; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
+ .nf-popular-grid {
+ display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+ gap: 10px;
+ }
+ .nf-pop {
+ background: #fff; border: 1px solid #e8e8ec; border-radius: 12px;
+ padding: 12px 16px; text-decoration: none; color: inherit;
+ display: block;
+ }
+ .nf-pop:hover { border-color: #ff9800; }
+ .nf-pop strong { display: block; color: #0a1f3a; font-size: 14px; }
+ .nf-pop small { color: #50575e; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+<div class="container">
+<a href="index.html" class="brand" aria-label="Sunspot home">
+<svg class="brand-mark" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+<g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">
+<line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
+<line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
+</g>
+<circle cx="20" cy="20" r="11" fill="#ff9800"/>
+<circle cx="20" cy="20" r="9" fill="#ffb74d"/>
+<circle cx="24" cy="16" r="3" fill="#fff5e1"/>
+</svg>
+<span class="brand-name">Sunspot</span>
+</a>
+<nav>
+<a href="index.html">Beaches</a>
+<a href="guides.html">Guides</a>
+<a href="visiting.html">Visiting?</a>
+<a href="living.html">Living here</a>
+<a href="about.html">About</a>
+<a href="bookings.html">My bookings</a>
+</nav>
+</div>
+</header>
+
+<main class="notfound">
+<h1>Page lost at sea.</h1>
+<p>This URL doesn't exist (or has drifted off in the current). Search below or jump to a popular venue.</p>
+
+<form class="nf-search" action="index.html" method="get">
+<input type="search" name="q" id="nf-q" placeholder="Search venues — try 'Sliema' or 'Comino'" aria-label="Search venues">
+<button type="submit">Search</button>
+</form>
+
+<div class="nf-shortcuts">
+<a class="nf-chip" href="index.html">All 112 beaches →</a>
+<a class="nf-chip" href="visiting.html">Visiting Malta?</a>
+<a class="nf-chip" href="living.html">Living here</a>
+<a class="nf-chip" href="index.html?region=comino">Comino & Blue Lagoon</a>
+<a class="nf-chip" href="index.html?region=gozo">Gozo coast</a>
+<a class="nf-chip" href="guides.html">Read the guides</a>
+</div>
+
+<div class="nf-popular" id="nf-popular">
+<h2>Or try these popular venues</h2>
+<div class="nf-popular-grid" id="nf-grid"></div>
+</div>
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-bottom">© 2026 Sunspot Ltd. · Built in Valletta</div>
+</div>
+</footer>
+
+<script src="clubs-data.js"></script>
+<script>
+(function () {
+ // Show top 8 most-reviewed bookable venues as suggestions
+ const venues = (window.SUNSPOT_CLUBS || [])
+ .filter(v =>v.hasBookableSunbeds)
+ .sort((a, b) =>(b.reviews || 0) - (a.reviews || 0))
+ .slice(0, 8);
+ document.getElementById('nf-grid').innerHTML = venues.map(v =>{
+ return '<a class="nf-pop" href="club.html?club=' + v.id + '">' +
+ '<strong>' + v.name + '</strong>' +
+ '<small>' + v.location + ' · ' + v.rating + '</small>' +
+ '</a>';
+ }).join('');
+ // Pre-fill search if there's a referrer query
+ const referrer = location.search.slice(1);
+ if (referrer && referrer.length < 60) {
+ const q = decodeURIComponent(referrer.replace(/^q=/, '')).replace(/\+/g, ' ');
+ if (q) document.getElementById('nf-q').value = q;
+ }
+})();
+</script>
+<script src="icons.js"></script>
+<script src="features.js"></script>
+<script src="audiences.js"></script>
+</body>
+</html>

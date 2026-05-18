@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-MT">
+<head>
+<meta charset="UTF-8">
+<script src="../gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunspot Shop — beach essentials</title>
+<meta name="description" content="Beach essentials by Sunspot. Quick-dry Turkish cotton towels, insulated stainless bottles, swim goggles, masks, dry bags and minimal apparel.">
+<link rel="canonical" href="https://shop.sunspot.mt/">
+<link rel="stylesheet" href="shop.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='13' fill='%23ff9800'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="shop-header">
+<div class="container">
+<a href="index.html" class="shop-brand">
+<span class="shop-brand-mark"></span>
+<span>Sunspot <small>Shop</small></span>
+</a>
+<nav class="shop-nav">
+<a href="index.html">Shop</a>
+<a href="../index.html">Beaches</a>
+<a href="../experiences.html">Experiences</a>
+<a href="../about.html">About</a>
+<a href="cart.html" class="cart" id="cart-link">
+<span id="cart-icon"></span>Cart <span class="cart-count" id="cart-count">0</span>
+</a>
+</nav>
+</div>
+</header>
+
+<section class="shop-hero">
+<div class="container">
+<span class="kicker">Sunspot Shop</span>
+<h1>Beach essentials. Nothing else.</h1>
+<p>Quick-dry towels. Insulated bottles. Goggles. The few things you actually need on a Maltese beach day. Subtle branding, made to last.</p>
+</div>
+</section>
+
+<main class="container" id="main-content">
+
+<div class="shop-cats" id="shop-cats" role="tablist"></div>
+
+<p style="color:#50575e;font-size:13px;margin-bottom:8px"><span id="prod-count">0</span> products</p>
+
+<div class="product-grid" id="product-grid"></div>
+
+<section class="shop-banner">
+<div>
+<h2>Free shipping anywhere in Malta</h2>
+<p>Orders over €40 ship free. Standard delivery in 1–2 days from our Valletta warehouse.</p>
+</div>
+<a href="cart.html">View cart</a>
+</section>
+
+</main>
+
+<footer class="shop-footer">
+<div class="container">
+<div class="links">
+<a href="../index.html">Beaches</a>
+<a href="../experiences.html">Experiences</a>
+<a href="../faq.html">FAQ</a>
+<a href="../about.html">About</a>
+</div>
+<div>© 2026 Sunspot Ltd. · Made in Valletta · Shipping across Malta + EU</div>
+</div>
+</footer>
+
+<script src="../icons.js"></script>
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script>
+(function () {
+ 'use strict';
+ const PRODUCTS = window.SUNSPOT_PRODUCTS || [];
+ const CATS = window.SUNSPOT_PRODUCT_CATEGORIES || [];
+ let activeCat = new URLSearchParams(location.search).get('cat') || 'all';
+
+ // Wire icons
+ document.getElementById('cart-icon').innerHTML = SS_ICONS.bag(15);
+
+ function renderCats() {
+ const counts = {};
+ PRODUCTS.forEach(p =>counts[p.cat] = (counts[p.cat] || 0) + 1);
+ document.getElementById('shop-cats').innerHTML = CATS.map(c =>{
+ const n = c.id === 'all' ? PRODUCTS.length : (counts[c.id] || 0);
+ if (!n) return '';
+ return '<button class="shop-cat ' + (activeCat===c.id?'on':'') + '" data-cat="' + c.id + '">' +
+ c.label + ' <span style="opacity:.6;font-weight:500;margin-left:2px">' + n + '</span>' +
+ '</button>';
+ }).join('');
+ document.querySelectorAll('.shop-cat').forEach(b =>b.addEventListener('click', () =>{
+ activeCat = b.dataset.cat;
+ renderCats(); renderGrid();
+ history.replaceState({}, '', activeCat === 'all' ? 'index.html' : 'index.html?cat=' + activeCat);
+ }));
+ }
+
+ function renderGrid() {
+ const filtered = activeCat === 'all' ? PRODUCTS : PRODUCTS.filter(p =>p.cat === activeCat);
+ document.getElementById('prod-count').textContent = filtered.length;
+ document.getElementById('product-grid').innerHTML = filtered.map(p =>{
+ const tagCls = (p.tag === 'Save 15%' || p.tag === 'Save €11') ? 'save'
+ : (p.tag === 'EU-made') ? 'eu' : '';
+ const tagHtml = p.tag ? '<span class="tag ' + tagCls + '">' + p.tag + '</span>' : '';
+ return '<a class="product-card" href="product.html?p=' + p.id + '">' +
+ '<div class="img" style="background-image:url(\'' + p.photo + '\')">' + tagHtml + '</div>' +
+ '<div class="info">' +
+ '<h3>' + p.name + '</h3>' +
+ '<p class="summary">' + p.summary + '</p>' +
+ '<div class="row">' +
+ '<span class="price">€' + p.price + '</span>' +
+ '<button class="add" data-add="' + p.id + '">Add</button>' +
+ '</div>' +
+ '</div>' +
+ '</a>';
+ }).join('');
+
+ // Wire add buttons
+ document.querySelectorAll('[data-add]').forEach(btn =>{
+ btn.addEventListener('click', (e) =>{
+ e.preventDefault(); e.stopPropagation();
+ const id = btn.dataset.add;
+ const product = PRODUCTS.find(p =>p.id === id);
+ if (!product) return;
+ // Default to first colour/size if any
+ SunspotCart.add({
+ id: product.id,
+ name: product.name,
+ price: product.price,
+ color: (product.colors||[])[0]?.name || null,
+ size: (product.sizes||[])[0] || null,
+ photo: product.photo,
+ });
+ btn.textContent = 'Added';
+ btn.classList.add('added');
+ setTimeout(() =>{ btn.textContent = 'Add'; btn.classList.remove('added'); }, 1400);
+ });
+ });
+ }
+
+ renderCats();
+ renderGrid();
+ SunspotCart.refreshHeader();
+})();
+</script>
+</body>
+</html>

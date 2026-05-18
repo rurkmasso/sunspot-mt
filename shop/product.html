@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-MT">
+<head>
+<meta charset="UTF-8">
+<script src="../gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — Sunspot Shop</title>
+<meta name="description" content="Beach essential from Sunspot.">
+<link rel="stylesheet" href="shop.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='13' fill='%23ff9800'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="shop-header">
+<div class="container">
+<a href="index.html" class="shop-brand">
+<span class="shop-brand-mark"></span>
+<span>Sunspot <small>Shop</small></span>
+</a>
+<nav class="shop-nav">
+<a href="index.html">Shop</a>
+<a href="../index.html">Beaches</a>
+<a href="../experiences.html">Experiences</a>
+<a href="cart.html" class="cart" id="cart-link">
+<span id="cart-icon"></span>Cart <span class="cart-count" id="cart-count">0</span>
+</a>
+</nav>
+</div>
+</header>
+
+<main class="container" id="main-content">
+<p style="padding:18px 0 0;font-size:13px;color:#50575e">
+<a href="index.html">Shop</a><span style="color:#c3c4c7;margin:0 6px">/</span>
+<span id="bc-cat">Category</span><span style="color:#c3c4c7;margin:0 6px">/</span>
+<span id="bc-name">Product</span>
+</p>
+
+<div class="pd-layout" id="pd-layout"></div>
+
+<section style="padding:48px 0 16px;border-top:1px solid #e8e8ec;margin-top:32px">
+<h2 style="margin-bottom:18px;font-size:20px">You might also like</h2>
+<div class="product-grid" id="related"></div>
+</section>
+</main>
+
+<footer class="shop-footer">
+<div class="container">
+<div class="links">
+<a href="../index.html">Beaches</a>
+<a href="../experiences.html">Experiences</a>
+<a href="../faq.html">FAQ</a>
+<a href="../about.html">About</a>
+</div>
+<div>© 2026 Sunspot Ltd. · Made in Valletta</div>
+</div>
+</footer>
+
+<script src="../icons.js"></script>
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script>
+(function () {
+ 'use strict';
+ const id = new URLSearchParams(location.search).get('p');
+ const PRODUCTS = window.SUNSPOT_PRODUCTS || [];
+ const CATS = window.SUNSPOT_PRODUCT_CATEGORIES || [];
+ const p = PRODUCTS.find(x =>x.id === id);
+
+ document.getElementById('cart-icon').innerHTML = SS_ICONS.bag(15);
+
+ if (!p) {
+ document.getElementById('pd-layout').innerHTML =
+ '<div style="grid-column:1/-1;text-align:center;padding:60px;color:#50575e">' +
+ '<h2 style="color:#0a1f3a">Product not found</h2>' +
+ '<p style="margin:8px 0 16px">It may have been discontinued or moved.</p>' +
+ '<a href="index.html" style="background:#ff9800;color:#fff;padding:12px 24px;border-radius:100px;text-decoration:none;font-weight:700">Browse all products</a>' +
+ '</div>';
+ SunspotCart.refreshHeader();
+ return;
+ }
+
+ document.title = p.name + ' — Sunspot Shop';
+ document.getElementById('bc-cat').textContent = (CATS.find(c =>c.id === p.cat) || {}).label || p.cat;
+ document.getElementById('bc-name').textContent = p.name;
+
+ let selectedColor = (p.colors || [])[0];
+ let selectedSize = (p.sizes || [])[0];
+ let qty = 1;
+
+ function render() {
+ const photo = p.photo;
+ const sizes = p.sizes || [];
+ const colors = p.colors || [];
+
+ document.getElementById('pd-layout').innerHTML =
+ '<div class="pd-gallery"><div class="main" style="background-image:url(\'' + photo + '\')"></div></div>' +
+ '<div class="pd-info">' +
+ (p.tag ? '<span style="display:inline-block;background:#ff9800;color:#fff;padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px">' + p.tag + '</span>' : '') +
+ '<h1>' + p.name + '</h1>' +
+ '<p class="summary">' + p.summary + '</p>' +
+ '<div class="price">€' + p.price + '</div>' +
+ (colors.length ? '<div class="picker">' +
+ '<label>Colour: <strong style="color:#0a1f3a;text-transform:none;letter-spacing:0;font-weight:700" id="sel-color">' + selectedColor.name + '</strong></label>' +
+ '<div class="swatches">' +
+ colors.map((c, i) =>
+'<button class="swatch ' + (c.name===selectedColor.name?'on':'') + '" data-color="' + c.name + '">' +
+ '<span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:' + c.hex + ';border:1px solid rgba(0,0,0,.1);vertical-align:middle;margin-right:6px"></span>' +
+ c.name +
+ '</button>'
+ ).join('') +
+ '</div>' +
+ '</div>' : '') +
+ (sizes.length ? '<div class="picker">' +
+ '<label>Size: <strong style="color:#0a1f3a;text-transform:none;letter-spacing:0;font-weight:700" id="sel-size">' + selectedSize + '</strong></label>' +
+ '<div class="swatches">' +
+ sizes.map(s =>'<button class="swatch ' + (s===selectedSize?'on':'') + '" data-size="' + s + '">' + s + '</button>').join('') +
+ '</div>' +
+ '</div>' : '') +
+ '<div class="picker" style="margin-bottom:18px">' +
+ '<label>Quantity</label>' +
+ '<div style="display:inline-flex;align-items:center;gap:0;border:1.5px solid #e8e8ec;border-radius:100px;padding:4px">' +
+ '<button id="q-minus" style="background:#fff;border:1px solid #e8e8ec;width:32px;height:32px;border-radius:50%;font-weight:700;color:#0a1f3a">−</button>' +
+ '<span id="q-val" style="padding:0 16px;font-weight:700">' + qty + '</span>' +
+ '<button id="q-plus" style="background:#fff;border:1px solid #e8e8ec;width:32px;height:32px;border-radius:50%;font-weight:700;color:#0a1f3a">+</button>' +
+ '</div>' +
+ '</div>' +
+ '<button class="add-cta" id="add-cta">Add to cart — €' + (p.price * qty) + '</button>' +
+ '<div class="desc">' + p.desc + '</div>' +
+ '<div class="perks">' +
+ '<div class="perk"><span id="p-truck"></span>Free MT shipping over €40</div>' +
+ '<div class="perk"><span id="p-leaf"></span>Reef-safe / EU-made</div>' +
+ '<div class="perk"><span id="p-refresh"></span>30-day returns</div>' +
+ '<div class="perk"><span id="p-lock"></span>Secure checkout</div>' +
+ '</div>' +
+ '</div>';
+
+ document.getElementById('p-truck').innerHTML = SS_ICONS.truck(14);
+ document.getElementById('p-leaf').innerHTML = SS_ICONS.leaf(14);
+ document.getElementById('p-refresh').innerHTML = SS_ICONS.refresh(14);
+ document.getElementById('p-lock').innerHTML = SS_ICONS.lock(14);
+
+ // Color swatches
+ document.querySelectorAll('[data-color]').forEach(b =>b.addEventListener('click', () =>{
+ selectedColor = colors.find(c =>c.name === b.dataset.color);
+ render();
+ }));
+ // Sizes
+ document.querySelectorAll('[data-size]').forEach(b =>b.addEventListener('click', () =>{
+ selectedSize = b.dataset.size;
+ render();
+ }));
+ // Qty
+ document.getElementById('q-plus').addEventListener('click', () =>{ qty++; render(); });
+ document.getElementById('q-minus').addEventListener('click', () =>{ if (qty>1) { qty--; render(); } });
+
+ // Add to cart
+ document.getElementById('add-cta').addEventListener('click', () =>{
+ SunspotCart.add({
+ id: p.id, name: p.name, price: p.price,
+ color: selectedColor?.name || null,
+ size: selectedSize || null,
+ photo: p.photo,
+ qty: qty,
+ });
+ const btn = document.getElementById('add-cta');
+ btn.textContent = 'Added to cart '.replace('', ''); // belt & braces no emoji
+ btn.textContent = 'Added to cart';
+ btn.style.background = '#00837a';
+ setTimeout(() =>{ btn.style.background = ''; btn.textContent = 'Add to cart — €' + (p.price * qty); }, 1600);
+ });
+ }
+ render();
+
+ // Related — 4 random others
+ const others = PRODUCTS.filter(x =>x.id !== p.id).sort(() =>0.5 - Math.random()).slice(0, 4);
+ document.getElementById('related').innerHTML = others.map(o =>
+'<a class="product-card" href="product.html?p=' + o.id + '">' +
+ '<div class="img" style="background-image:url(\'' + o.photo + '\')"></div>' +
+ '<div class="info">' +
+ '<h3>' + o.name + '</h3>' +
+ '<p class="summary">' + o.summary + '</p>' +
+ '<div class="row"><span class="price">€' + o.price + '</span></div>' +
+ '</div>' +
+ '</a>'
+ ).join('');
+
+ SunspotCart.refreshHeader();
+})();
+</script>
+</body>
+</html>

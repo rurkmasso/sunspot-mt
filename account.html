@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-MT">
+<head>
+<meta charset="UTF-8">
+<script src="gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My account — Sunspot</title>
+<meta name="description" content="Your Sunspot account: bookings, favourites, payment methods, and profile.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='11' fill='%23ff9800'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%23ffb74d'/%3E%3Ccircle cx='24' cy='16' r='3' fill='%23fff5e1'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a href="index.html" class="brand">
+<svg class="brand-mark" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+<g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">
+<line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
+<line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
+</g>
+<circle cx="20" cy="20" r="11" fill="#ff9800"/>
+<circle cx="20" cy="20" r="9" fill="#ffb74d"/>
+<circle cx="24" cy="16" r="3" fill="#fff5e1"/>
+</svg>
+<span class="brand-name">Sunspot</span>
+</a>
+<nav>
+<a href="index.html">Beaches</a>
+<a href="experiences.html">Experiences</a>
+<a href="guides.html">Guides</a>
+<a href="account.html" class="active">My account</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<div id="account-root">Loading…</div>
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-bottom">© 2026 Sunspot Ltd. · Built in Valletta</div>
+</div>
+</footer>
+
+<script src="clubs-data.js"></script>
+<script src="auth.js"></script>
+<script>
+(function () {
+ const root = document.getElementById('account-root');
+ const user = window.SunspotAuth.currentUser();
+ if (!user) {
+ root.innerHTML = `
+ <div class="empty-card" style="margin-top:60px">
+<h2>You're not signed in</h2>
+<p style="color:var(--muted);margin:12px 0 20px">Sign in to see your bookings, favourites, and account.</p>
+<a href="signin.html" class="btn-primary" style="text-decoration:none;display:inline-block">Sign in or create account →</a>
+</div>`;
+ return;
+ }
+
+ const params = new URLSearchParams(window.location.search);
+ const isWelcome = params.get('welcome') === '1';
+ const bookings = JSON.parse(localStorage.getItem('sunspot_bookings') || '[]');
+ const favourites = (user.favourites || []).map(id =>(window.SUNSPOT_CLUBS || []).find(c =>c.id === id)).filter(Boolean);
+
+ const tabs = [
+ { id: 'bookings', label: ' My bookings', count: bookings.length },
+ { id: 'favourites', label: ' Favourites', count: favourites.length },
+ { id: 'payment', label: ' Payment', count: null },
+ { id: 'profile', label: ' Profile', count: null },
+ ];
+
+ function tabContent(id) {
+ if (id === 'bookings') {
+ if (!bookings.length) {
+ return '<div class="empty-card"><div class="empty-icon"></div><h2>No bookings yet</h2><p>Reserve your first sunbed.</p><a href="index.html" class="btn-primary" style="text-decoration:none;display:inline-block;margin-top:14px">Browse beaches →</a></div>';
+ }
+ return '<div class="bookings-list">' + bookings.map(b =>`
+ <article class="booking-card">
+<div class="bc-header">
+<div>
+<div class="bc-club">${b.clubName}</div>
+<div class="bc-loc">${b.clubLocation}</div>
+</div>
+<span class="badge" style="position:static">${b.ref}</span>
+</div>
+<div class="bc-body">
+<div class="bc-pill">${b.date}</div>
+<div class="bc-pill">${b.guests} guests</div>
+<div class="bc-pill bc-paid">€${b.total}</div>
+</div>
+</article>`).join('') + '</div>';
+ }
+ if (id === 'favourites') {
+ if (!favourites.length) {
+ return '<div class="empty-card"><div class="empty-icon"></div><h2>No favourites yet</h2><p>Tap the heart on any venue to save it here.</p><a href="index.html" class="btn-primary" style="text-decoration:none;display:inline-block;margin-top:14px">Browse beaches →</a></div>';
+ }
+ return '<div class="bookings-list">' + favourites.map(c =>`
+ <a class="booking-card" href="club.html?club=${c.id}" style="text-decoration:none;color:inherit;display:flex;gap:16px;align-items:center">
+<div style="width:100px;height:100px;background-size:cover;background-position:center;border-radius:8px;flex-shrink:0;background-image:url('${c.photos[0] || ''}')"></div>
+<div style="flex:1">
+<div class="bc-club">${c.name}</div>
+<div class="bc-loc">${c.location}</div>
+<p style="color:var(--muted);font-size:13px;margin-top:6px">${c.rating} · from €${c.sunbedFrom}</p>
+</div>
+</a>`).join('') + '</div>';
+ }
+ if (id === 'payment') {
+ return `<div class="account-section">
+<div class="payment-card">
+<div class="card-row">
+<div class="card-brand">VISA</div>
+<div>•••• •••• •••• 4242</div>
+<div style="color:var(--muted)">Expires 12/27</div>
+</div>
+<button class="btn-ghost" style="margin-top:10px">Remove</button>
+</div>
+<button class="btn-primary" style="margin-top:14px">+ Add payment method</button>
+</div>`;
+ }
+ if (id === 'profile') {
+ return `<div class="account-section">
+<form id="profile-form" style="display:grid;gap:14px;max-width:480px">
+<div class="form-row">
+<label>First name <input type="text" id="pf-first" value="${user.firstName || ''}"></label>
+<label>Last name <input type="text" id="pf-last" value="${user.lastName || ''}"></label>
+</div>
+<label>Email <input type="email" id="pf-email" value="${user.email}" disabled></label>
+<label>Phone <input type="tel" id="pf-phone" value="${user.phone || ''}"></label>
+<label class="checkbox"><input type="checkbox" id="pf-marketing" ${user.marketing?'checked':''}>Send me deals &amp; availability alerts</label>
+<button class="btn-primary" type="submit">Save profile</button>
+</form>
+<hr style="margin:30px 0;border:0;border-top:1px solid var(--line)">
+<button class="btn-ghost" onclick="window.SunspotAuth.logout();location='index.html'">Log out</button>
+</div>`;
+ }
+ }
+
+ const initialTab = params.get('tab') || 'bookings';
+
+ root.innerHTML = `
+ ${isWelcome ? '<div class="notice-success">Welcome to Sunspot, ' + user.firstName + '! Your account is ready.</div>' : ''}
+ <div class="account-header">
+<div class="account-avatar">${(user.firstName||'?').charAt(0).toUpperCase()}</div>
+<div>
+<h1>${user.firstName} ${user.lastName}</h1>
+<p class="muted">${user.email} · Member since ${user.joinedAt}</p>
+</div>
+</div>
+<nav class="account-tabs">
+${tabs.map(t =>`<button class="account-tab ${t.id===initialTab?'active':''}" data-tab="${t.id}">${t.label}${t.count!=null?` <span class="ct">${t.count}</span>`:''}</button>`).join('')}
+</nav>
+<div id="tab-content">${tabContent(initialTab)}</div>
+`;
+
+ document.querySelectorAll('.account-tab').forEach(t =>{
+ t.addEventListener('click', () =>{
+ document.querySelectorAll('.account-tab').forEach(x =>x.classList.toggle('active', x === t));
+ document.getElementById('tab-content').innerHTML = tabContent(t.dataset.tab);
+ if (t.dataset.tab === 'profile') wireProfile();
+ const url = new URL(window.location.href);
+ url.searchParams.set('tab', t.dataset.tab);
+ window.history.replaceState({}, '', url);
+ });
+ });
+ if (initialTab === 'profile') wireProfile();
+
+ function wireProfile() {
+ const f = document.getElementById('profile-form');
+ if (!f) return;
+ f.addEventListener('submit', e =>{
+ e.preventDefault();
+ window.SunspotAuth.updateProfile({
+ firstName: document.getElementById('pf-first').value,
+ lastName: document.getElementById('pf-last').value,
+ phone: document.getElementById('pf-phone').value,
+ marketing: document.getElementById('pf-marketing').checked,
+ });
+ alert('Profile saved ');
+ });
+ }
+})();
+</script>
+<script src="icons.js"></script>
+<script src="features.js"></script>
+<script src="audiences.js"></script>
+</body>
+</html>
