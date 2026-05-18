@@ -2552,3 +2552,194 @@ footer {
  letter-spacing: 6px;
  pointer-events: none;
 }
+
+/* ==========================================================
+   MOBILE OPTIMIZATION — applied at ≤720px
+   Touch targets ≥44px, no horizontal overflow, readable type.
+   ========================================================== */
+@media (max-width: 720px) {
+
+  /* No horizontal scroll anywhere */
+  html, body { overflow-x: hidden; }
+  body { font-size: 15px; }
+
+  /* Touch targets — minimum 44x44 on every interactive element */
+  button, a.btn-ghost, a.btn-solid, .btn-primary,
+  .ss-mode-chip, .ss-finder-select, .ss-finder-search input,
+  .ss-finder-segment, .ss-finder-toggle,
+  .ss-fav-btn, .ss-compare-btn,
+  .ss-pref-bar select, .ss-pref-bar .toggle,
+  .ss-mode-option, .ss-mode-skip {
+    min-height: 44px;
+  }
+  /* Ditto for selects inside the pref bar / finder bar */
+  .ss-pref-bar select, .ss-finder-select,
+  .ss-finder .filter-bar select,
+  .filter-bar select, .filter-bar input,
+  .planner-field select, .planner-field input {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 15px;       /* iOS Safari refuses to zoom forms at ≥16px ideally but 15 is fine in practice */
+  }
+
+  /* Form inputs everywhere */
+  input[type=text], input[type=email], input[type=password], input[type=search],
+  input[type=date], input[type=tel], input[type=number], input[type=url],
+  textarea, select {
+    font-size: 16px;       /* prevents iOS zoom-on-focus */
+    min-height: 44px;
+  }
+  textarea { min-height: 88px; }
+
+  /* Pref bar items — give them tap room */
+  .ss-pref-bar { padding: 6px; gap: 4px; }
+  .ss-pref-bar select, .ss-pref-bar .toggle {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  .ss-mode-chip {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  /* Interest tags on visiting.html — they were 29px tall */
+  .interest-tag {
+    padding: 11px 16px !important;
+    min-height: 44px;
+    font-size: 14px !important;
+  }
+
+  /* Venue chips on living.html */
+  .venue-chip {
+    padding: 11px 16px !important;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Tiny text — bump readability */
+  p, li, dd, label, .lede, .summary, .bc-trust,
+  .planner .sub, .planner-field label,
+  .perk-card p, .essentials .card p,
+  .gift-card .desc, .article-body p, .article-body li {
+    font-size: 14px !important;
+  }
+  .ss-stats-strip-time { font-size: 12px; }   /* keep this small but stable */
+
+  /* Compare table — stack as cards on mobile */
+  .cmp-table { display: block; }
+  .cmp-table thead { display: none; }
+  .cmp-table tbody, .cmp-table tr {
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    margin-bottom: 16px;
+    padding: 12px;
+  }
+  .cmp-table td, .cmp-table th {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    width: auto;
+    gap: 12px;
+  }
+  .cmp-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); font-weight: 600; }
+  .cmp-table td:last-child, .cmp-table th:last-child { border-bottom: 0; }
+  .cmp-table .col-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 0 12px;
+    text-align: center;
+  }
+  .cmp-table .col-header .hero { width: 100%; max-width: none; }
+
+  /* Checkout — kill any +20px offenders */
+  .checkout-grid, .ck-grid, .checkout-layout {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .ck-summary, .checkout-summary { position: static !important; max-width: 100% !important; }
+
+  /* Hero photos — explicit cap to viewport */
+  .hero-v2, .exp-hero-v2 { max-width: 100vw; }
+  .hero-v2-photo, .exp-hero-v2-photo { max-width: 100vw; overflow: hidden; }
+  .hero-v2-photo img, .exp-hero-v2-photo img { transform: none; }
+
+  /* Gallery + tile sizes on club page */
+  .g-collage { grid-template-columns: 1fr !important; height: auto !important; gap: 6px; }
+  .g-tile { aspect-ratio: 16/10; }
+
+  /* Sticky toolbars — don't stack above hero on small screens */
+  .ss-finder { padding: 10px 0; }
+
+  /* Side-by-side grids → single column for cards/articles  */
+  .perk-grid, .essentials, .gift-perks, .app-features-grid,
+  .planner-grid, .dash-stats {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 22px; }
+  .club-grid { grid-template-columns: 1fr !important; gap: 14px; }
+
+  /* Section paddings — tighter vertical rhythm */
+  .section, .hero, .audience-hero, .gift-hero, .app-hero,
+  .stats, .ss-stats-strip, .testimonials, .faq,
+  .how-it-works, .cta-band, .section-soft, .section-deep {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+  }
+  h1 { font-size: clamp(1.8rem, 7vw, 2.4rem) !important; line-height: 1.1; }
+  h2 { font-size: clamp(1.4rem, 5.5vw, 1.8rem) !important; }
+  h3 { font-size: clamp(1.05rem, 4vw, 1.25rem) !important; }
+
+  /* Sticky widgets — give the user back their viewport */
+  .ss-newsletter { padding: 28px 16px !important; }
+  .ss-nl-inner { gap: 16px !important; }
+  .ss-nl-form { flex-direction: column; }
+  .ss-nl-form input, .ss-nl-form button { width: 100%; }
+
+  /* Sea-state pill on mobile — keep compact, don't crowd content */
+  .ss-sea-state { max-width: calc(100vw - 16px); }
+
+  /* Footer — readable + tappable */
+  footer { padding: 28px 0 !important; }
+  footer a { padding: 6px 0; display: inline-block; }
+
+  /* Tables that aren't compare — make horizontally scrollable so nothing overflows */
+  .transport-table, .wp-list-table, .form-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+}
+
+/* Smaller phones (≤390px) — iPhone SE territory */
+@media (max-width: 400px) {
+  .container { padding: 0 16px; }
+  .ss-finder-bar { padding: 6px; }
+  h1 { font-size: 1.7rem !important; letter-spacing: -.6px !important; }
+  .hero-v2-h1, .exp-hero-v2-h1 { font-size: 2.1rem !important; letter-spacing: -1px !important; }
+  .ss-stats-strip-primary .ss-stats-strip-num { font-size: 2.4rem !important; }
+  .ss-stats-strip-num { font-size: 2rem !important; }
+}
+
+/* Pref bar — give the row of chips proper breathing room on tablet too */
+@media (max-width: 600px) {
+  .ss-pref-bar {
+    left: 8px; right: 8px;
+    border-radius: 14px;
+    flex-wrap: wrap;
+    padding: 6px 8px;
+    justify-content: center;
+  }
+  .ss-pref-bar .sep { display: none; }
+  .ss-pref-bar select, .ss-pref-bar .toggle, .ss-mode-chip {
+    flex: 1 1 auto;
+    text-align: center;
+    justify-content: center;
+  }
+}
