@@ -691,6 +691,8 @@
     var path = location.pathname.split('/').pop() || 'index.html';
     function active(href) { return path === href ? 'active' : ''; }
 
+    // Tab order (mobile-first, thumb-priority): Browse · Experiences · Sea · Bookings · Account.
+    // No duplicate labels, no confusion between 'Today' the section and 'Today' the weather.
     bar.innerHTML =
       '<div class="ss-mobile-nav-grid">' +
         '<a href="' + p + 'index.html" class="' + active('index.html') + '" aria-label="Browse beaches">' +
@@ -699,19 +701,19 @@
         '</a>' +
         '<a href="' + p + 'experiences.html" class="' + active('experiences.html') + '" aria-label="Experiences">' +
           '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h18l-2 5H5zM6 16V8l6-3 6 3v8M12 5v11"/></svg></span>' +
-          'Trips' +
+          'Experiences' +
         '</a>' +
         '<button type="button" data-mobile-open="sea" aria-label="Sea conditions today">' +
           '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M2 18c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2"/></svg></span>' +
-          'Today' +
+          'Sea today' +
         '</button>' +
         '<a href="' + p + 'bookings.html" class="' + active('bookings.html') + '" aria-label="My bookings">' +
           '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></span>' +
-          'Trips saved' +
+          'My trips' +
         '</a>' +
         '<button type="button" data-mobile-open="prefs" aria-label="Settings &amp; preferences">' +
           '<span class="ss-mobile-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></span>' +
-          'Me' +
+          'Account' +
         '</button>' +
       '</div>';
     document.body.appendChild(bar);

@@ -174,12 +174,13 @@
         '</div>';
       }
 
-      return '<article class="op-booking" data-status="' + action + '">' +
+      const realTag = b.isReal ? ' <span class="op-booking-tag real" title="From customer funnel">new</span>' : '';
+      return '<article class="op-booking ' + (b.isReal ? 'is-real' : '') + '" data-status="' + action + '">' +
         '<div class="op-booking-head">' +
           '<div class="op-booking-meta">' +
             '<strong>' + b.guest_name + '</strong>' +
             '<span class="ref">' + b.ref + ' · ' + time + '</span>' +
-            '<span class="op-booking-tag ' + action + '">' + action + '</span>' +
+            '<span class="op-booking-tag ' + action + '">' + action + '</span>' + realTag +
           '</div>' +
           '<div class="op-booking-amount">€' + Math.round(b.total) + '</div>' +
         '</div>' +
@@ -352,6 +353,10 @@
     } catch (e) {
       state.bookings = []; state.seatmap = null;
     }
+    // Show today's date prominently in the section title
+    const today = new Date();
+    const el = document.getElementById('op-today-date');
+    if (el) el.textContent = today.toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'long' });
     renderBookings();
     renderStats();
     renderChipCounts();

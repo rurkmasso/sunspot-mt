@@ -68,25 +68,44 @@
     padding-right: 28px;
   }
 
-  /* === Tabs (Today / Seatmap / Stats) === */
-  .op-tabs {
-    display: flex; gap: 0;
-    background: #fff;
-    border-bottom: 1px solid var(--line);
-    position: sticky; top: 60px; z-index: 15;
+  /* === Tabs: hidden on mobile (bottom nav is source of truth),
+         visible only on tablet+ for keyboard / desktop ergonomics === */
+  .op-tabs { display: none; }
+  @media (min-width: 720px) {
+    .op-tabs {
+      display: flex; gap: 0;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+      position: sticky; top: 60px; z-index: 15;
+    }
+    .op-tab {
+      flex: 1; background: none; border: 0;
+      padding: 14px 10px;
+      font-size: 13px; font-weight: 600;
+      color: var(--muted);
+      border-bottom: 3px solid transparent;
+      min-height: 48px;
+    }
+    .op-tab.active {
+      color: var(--ink);
+      border-bottom-color: var(--sun);
+    }
   }
-  .op-tab {
-    flex: 1; background: none; border: 0;
-    padding: 14px 10px;
-    font-size: 13px; font-weight: 600;
-    color: var(--muted);
-    border-bottom: 3px solid transparent;
-    min-height: 48px;
+
+  /* === Section title on each panel (replaces the redundant top tabs on mobile) === */
+  .op-section-title {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 16px 16px 4px;
+    background: var(--bg);
   }
-  .op-tab.active {
+  .op-section-title h1 {
+    font-size: 22px; font-weight: 800; letter-spacing: -.4px;
     color: var(--ink);
-    border-bottom-color: var(--sun);
   }
+  .op-section-title .date {
+    font-size: 12px; color: var(--muted); font-weight: 500;
+  }
+  @media (min-width: 720px) { .op-section-title { display: none; } }
 
   /* === Panels === */
   .op-panel { display: none; padding: 18px 16px 24px; }
@@ -212,6 +231,11 @@
   .op-booking-tag.accept  { background: #e8f5e9; color: var(--green); }
   .op-booking-tag.decline { background: #ffebee; color: var(--red); }
   .op-booking-tag.arrived { background: #e3f2fd; color: #0d47a1; }
+  .op-booking-tag.real    { background: var(--sun); color: #fff; animation: opPulse 1.4s infinite; }
+  @keyframes opPulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+  .op-booking.is-real {
+    box-shadow: 0 0 0 2px var(--sun);
+  }
 
   /* === Seatmap === */
   .op-seatmap {
@@ -351,6 +375,10 @@
 
 <!-- TODAY panel -->
 <section class="op-panel active" id="panel-today">
+  <header class="op-section-title">
+    <h1>Today's bookings</h1>
+    <span class="date" id="op-today-date">—</span>
+  </header>
   <div class="op-stats">
     <div><div class="num" id="op-stat-bookings">—</div><div class="label">bookings</div></div>
     <div><div class="num money" id="op-stat-revenue">—</div><div class="label">revenue</div></div>
@@ -369,6 +397,10 @@
 
 <!-- SEATMAP panel -->
 <section class="op-panel" id="panel-seatmap">
+  <header class="op-section-title">
+    <h1>Your sunbed layout</h1>
+    <span class="date">tap to close for maintenance</span>
+  </header>
   <div class="op-seatmap">
     <h3>Sunbed layout · <span id="op-seatmap-date">today</span></h3>
     <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Tap a sunbed to toggle availability. Use this for maintenance or VIP holds.</p>
@@ -391,6 +423,10 @@
 
 <!-- STATS panel -->
 <section class="op-panel" id="panel-stats">
+  <header class="op-section-title">
+    <h1>This week</h1>
+    <span class="date">last 7 days</span>
+  </header>
   <div class="op-stats" style="margin-bottom:16px">
     <div><div class="num" id="op-week-bookings">—</div><div class="label">7-day bookings</div></div>
     <div><div class="num money" id="op-week-revenue">—</div><div class="label">7-day revenue</div></div>
