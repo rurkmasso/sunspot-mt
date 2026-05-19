@@ -700,7 +700,9 @@
 
   function boot() {
     renderPrefBar();
-    maybeAutoShowMode();
+    // Don't interrupt first-time visitors with a modal — they can open it
+    // anytime via the "Context" chip in the pref bar.
+    // maybeAutoShowMode();
     setTimeout(injectOriginSelector, 200);   // after features.js has rendered sea-state
     applyTranslations();
     applyFamilyMarks();

@@ -45,7 +45,8 @@
  alert('Please accept the terms.');
  return;
  }
- const ref = 'BJ' + Date.now().toString(36).toUpperCase().slice(-6);
+ // Friendlier booking ref: BJ-1234 (4-digit, easy to read over the phone)
+ const ref = 'BJ-' + String(Math.floor(1000 + Math.random() * 9000));
  const guest = {
  firstName: document.getElementById('first-name').value,
  lastName: document.getElementById('last-name').value,
