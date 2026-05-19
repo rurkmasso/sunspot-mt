@@ -77,8 +77,8 @@
 
   // ----- Replace the static catalog before consumer code reads it -----
   // We override the IIFE assignment in clubs-data.js by waiting for it,
-  // then refreshing both globals from the API.
-  let triedAt = 0;
+  // then refreshing both globals from the API. Listeners of the
+  // sunspot:clubs-updated / sunspot:experiences-updated events re-render.
   async function refreshFromApi() {
     try {
       const venues = await fetchAll('/wp/v2/sunspot_venue?per_page=200&_embed=wp:term');

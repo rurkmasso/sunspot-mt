@@ -9,6 +9,13 @@
 (function () {
   'use strict';
 
+  // Honor demo override BEFORE we capture API/TOKEN. Without this, clicking
+  // "Open demo" reloaded the page but DEMO was already computed against the
+  // pre-override values, so the demo never actually kicked in.
+  if (sessionStorage.getItem('sunspot_op_demo') === '1') {
+    window.SUNSPOT_API_BASE = null;
+  }
+
   const API   = window.SUNSPOT_API_BASE || null;
   const TOKEN = (() => { try { return localStorage.getItem('sunspot_op_jwt'); } catch { return null; } })();
   const DEMO  = !API || !TOKEN;
@@ -175,12 +182,13 @@
       }
 
       const realTag = b.isReal ? ' <span class="op-booking-tag real" title="From customer funnel">new</span>' : '';
+      const labels = { pending: 'Pending', accept: 'Accepted', arrived: 'Arrived', decline: 'Declined', noshow: 'No-show' };
       return '<article class="op-booking ' + (b.isReal ? 'is-real' : '') + '" data-status="' + action + '">' +
         '<div class="op-booking-head">' +
           '<div class="op-booking-meta">' +
             '<strong>' + b.guest_name + '</strong>' +
             '<span class="ref">' + b.ref + ' · ' + time + '</span>' +
-            '<span class="op-booking-tag ' + action + '">' + action + '</span>' + realTag +
+            '<span class="op-booking-tag ' + action + '">' + (labels[action] || action) + '</span>' + realTag +
           '</div>' +
           '<div class="op-booking-amount">€' + Math.round(b.total) + '</div>' +
         '</div>' +
@@ -361,11 +369,6 @@
     renderStats();
     renderChipCounts();
     renderSeatmap();
-  }
-
-  // Honor demo override
-  if (sessionStorage.getItem('sunspot_op_demo') === '1') {
-    window.SUNSPOT_API_BASE = null;
   }
 
   boot();

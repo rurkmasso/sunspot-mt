@@ -709,8 +709,18 @@
  const clubId = params.get('club') || 'azure-bay';
  const club = CLUBS[clubId] || CLUBS['azure-bay'];
 
+ // Date defaults to today; URL ?date=YYYY-MM-DD or ?guests=N override it.
+ const today = new Date();
+ const requestedDate = params.get('date');
+ const bookingDate = requestedDate && /^\d{4}-\d{2}-\d{2}$/.test(requestedDate)
+  ? new Date(requestedDate + 'T00:00:00')
+  : today;
+ const bookingDateLabel = bookingDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+ const bookingDateISO = bookingDate.toISOString().slice(0, 10);
+ const bookingGuests = Math.max(1, Math.min(20, parseInt(params.get('guests'), 10) || 2));
+
  document.getElementById('club-name').textContent = club.name;
- document.getElementById('club-subtitle').textContent = club.location + ' · Wed, 13 May 2026';
+ document.getElementById('club-subtitle').textContent = club.location + ' · ' + bookingDateLabel;
  document.title = club.name + ' — Reserve a sunbed | Sunspot';
  const bcLink = document.getElementById('bc-club-link');
  if (bcLink) {
@@ -955,14 +965,16 @@
  clubName: club.name,
  clubLocation: club.location,
  photo: photo,
- date: 'Wed, 13 May 2026',
- guests: 2,
+ date: bookingDateLabel,
+ dateISO: bookingDateISO,
+ guests: bookingGuests,
  seats: seats,
  subtotal: subtotal,
  fee: fee,
  total: subtotal + fee,
  };
- localStorage.setItem('sunspot_pending', JSON.stringify(pending));
+ try { localStorage.setItem('sunspot_pending', JSON.stringify(pending)); }
+ catch (e) { alert('Could not save your selection — please try again.'); return; }
  window.location.href = 'checkout.html';
  });
 

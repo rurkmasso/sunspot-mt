@@ -1171,7 +1171,30 @@ footer {
  border-radius: var(--r-md);
  padding: 22px 24px;
  box-shadow: var(--shadow-sm);
+ border-left: 4px solid var(--line);
 }
+.booking-card.is-pending { border-left-color: #f5b400; }
+.booking-card.is-accept  { border-left-color: #2e7d32; }
+.booking-card.is-arrived { border-left-color: #0288d1; }
+.booking-card.is-decline,
+.booking-card.is-noshow  { border-left-color: #c62828; opacity: .85; }
+
+.bc-status {
+ display: inline-block;
+ margin: 4px 0 14px;
+ padding: 4px 10px;
+ border-radius: 999px;
+ font-size: 12px;
+ font-weight: 600;
+ letter-spacing: .2px;
+ background: #fff8e8;
+ color: #0a1f3a;
+}
+.is-pending .bc-status { background: #fff4d4; color: #8a6500; }
+.is-accept  .bc-status { background: #e6f4ea; color: #1e5d23; }
+.is-arrived .bc-status { background: #e3f2fd; color: #015384; }
+.is-decline .bc-status,
+.is-noshow  .bc-status { background: #fdecea; color: #8a1c14; }
 .bc-header {
  display: flex;
  justify-content: space-between;
