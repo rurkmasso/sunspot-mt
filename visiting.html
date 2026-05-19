@@ -159,19 +159,56 @@ You've come a long way. Don't waste it driving to a sold-out lido at 11am or que
 </section>
 
 <!-- Cruise-mode experiences rail — only visible when ?mode=cruise -->
-<section id="cruise-rail" hidden style="background:#0a1f3a;color:#fff;padding:32px 0">
-<div class="container">
-<div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:18px;flex-wrap:wrap;gap:8px">
-<div>
-<span class="kicker" style="color:#ff9800">Cruise day-trip — popular</span>
-<h2 style="color:#fff;margin-top:4px">Half-day experiences near the port</h2>
-<p style="color:#c3c4c7;margin-top:4px;font-size:14px">Stay close to Valletta. Be back on board before sailaway.</p>
-</div>
-<a href="experiences.html" style="color:#ffb74d;font-weight:700;text-decoration:none;font-size:14px">See all experiences →</a>
-</div>
-<div id="cruise-rail-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px"></div>
-</div>
+<section id="cruise-rail" hidden class="ss-cruise-rail">
+  <div class="container">
+    <div class="ss-cruise-rail-head">
+      <div>
+        <span class="kicker" style="color:#ff9800">Cruise day-trip — popular</span>
+        <h2>Half-day experiences near the port</h2>
+        <p>Stay close to Valletta. Be back on board before sailaway.</p>
+      </div>
+      <a href="experiences.html" class="ss-cruise-rail-all">See all experiences →</a>
+    </div>
+    <div id="cruise-rail-grid" class="ss-cruise-rail-grid"></div>
+  </div>
 </section>
+
+<style>
+  .ss-cruise-rail { background: #0a1f3a; color: #fff; padding: 28px 0; }
+  .ss-cruise-rail-head {
+    display: flex; justify-content: space-between; align-items: end;
+    margin-bottom: 18px; flex-wrap: wrap; gap: 8px;
+  }
+  .ss-cruise-rail-head h2 { color: #fff; margin-top: 4px; font-size: 22px; }
+  .ss-cruise-rail-head p { color: #c3c4c7; margin-top: 4px; font-size: 14px; }
+  .ss-cruise-rail-all { color: #ffb74d; font-weight: 700; text-decoration: none; font-size: 14px; }
+  .ss-cruise-rail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  /* Mobile: convert grid → horizontal swipe rail */
+  @media (max-width: 720px) {
+    .ss-cruise-rail { padding: 22px 0; }
+    .ss-cruise-rail-head h2 { font-size: 18px; }
+    .ss-cruise-rail-head p  { font-size: 13px; }
+    .ss-cruise-rail-grid {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 2px 24px 12px 24px;
+      margin: 0 -24px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .ss-cruise-rail-grid::-webkit-scrollbar { display: none; }
+    .ss-cruise-rail-grid > * {
+      flex: 0 0 270px;
+      scroll-snap-align: start;
+    }
+  }
+</style>
 
 <main class="container">
 

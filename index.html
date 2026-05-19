@@ -300,7 +300,7 @@
   <div class="container">
     <form class="ss-finder-bar" id="filter-form" onsubmit="return false;" role="search">
 
-      <!-- Search input with embedded icon -->
+      <!-- Search input with embedded icon + mobile Filters toggle -->
       <label class="ss-finder-search" aria-label="Search">
         <svg class="ss-finder-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
           <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
@@ -308,6 +308,14 @@
         <input type="search" id="f-query"
           placeholder="Search venues — name, location, vibe…"
           aria-label="Search venues">
+        <button type="button" class="ss-finder-filters-btn" aria-label="Show filters"
+          onclick="document.body.classList.toggle('ss-filters-open')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M4 6h7M16 6h4M4 12h2M11 12h9M4 18h13M19 18h1"/>
+            <circle cx="13" cy="6" r="1.6" fill="currentColor"/><circle cx="8" cy="12" r="1.6" fill="currentColor"/><circle cx="18" cy="18" r="1.6" fill="currentColor"/>
+          </svg>
+          <span class="ss-finder-filters-label">Filters</span>
+        </button>
       </label>
 
       <span class="ss-finder-sep"></span>
@@ -420,9 +428,29 @@
     border-radius: 100px;
     transition: background .15s;
     cursor: text;
+    min-height: 44px;
+    align-self: center;     /* don't stretch when sibling popovers are taller */
   }
   .ss-finder-search:hover { background: #fafbfc; }
   .ss-finder-icon { flex-shrink: 0; color: #0a1f3a; margin-right: 10px; }
+
+  /* Filters icon-button — hidden on desktop, visible on mobile */
+  .ss-finder-filters-btn {
+    display: none;
+    background: none; border: 0; cursor: pointer;
+    align-items: center; gap: 6px;
+    padding: 8px 10px;
+    margin-left: 8px;
+    border-radius: 100px;
+    color: #0a1f3a; font-weight: 600;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: rgba(255,152,0,.18);
+  }
+  .ss-finder-filters-label { font-size: 13px; }
+  @media (max-width: 760px) {
+    .ss-finder-filters-btn { display: inline-flex; }
+    body.ss-filters-open .ss-finder-filters-btn { color: #ef6c00; background: #fff8e8; }
+  }
   .ss-finder-search input {
     border: 0; background: transparent;
     flex: 1; min-width: 0;
@@ -473,6 +501,7 @@
   }
   .ss-finder-multi[open] > summary > .ss-finder-segment-label { color: var(--sun-deep); }
   .ss-finder-multi[open] > summary > .ss-finder-multi-value { color: var(--sun-deep); }
+  .ss-finder-multi:not([open]) .ss-finder-multi-panel { display: none; }
   .ss-finder-multi-panel {
     position: absolute;
     top: calc(100% + 8px);
@@ -591,30 +620,44 @@
     .ss-finder-select  { font-size: 14px; }
   }
 
-  /* Mobile: collapse to stacked search + horizontal-scroll chips */
+  /* Mobile: collapse to a single search pill — filters live behind a "Filters" details. */
   @media (max-width: 760px) {
-    .ss-finder { padding: 12px 0; }
+    .ss-finder { padding: 10px 0; }
     .ss-finder-bar {
       flex-direction: column;
-      border-radius: 18px;
-      padding: 8px;
-      gap: 4px;
+      align-items: stretch;
+      border-radius: 14px;
+      padding: 6px;
+      gap: 0;
     }
+    .ss-finder-bar > * { flex: 0 0 auto; height: auto; }
     .ss-finder-search {
       padding: 10px 14px;
       background: #fafbfc;
-      border-radius: 14px;
+      border-radius: 12px;
+      min-height: 48px;
     }
-    .ss-finder-search input { padding: 8px 0; font-size: 15px; }
+    .ss-finder-search input { padding: 6px 0; font-size: 15px; }
     .ss-finder-sep { display: none; }
-    .ss-finder-segment {
+
+    /* Hide all filter segments + toggle by default; show only when Filters details is open */
+    .ss-finder-bar > details.ss-finder-multi,
+    .ss-finder-bar > .ss-finder-segment,
+    .ss-finder-bar > .ss-finder-toggle { display: none; }
+    body.ss-filters-open .ss-finder-bar > details.ss-finder-multi,
+    body.ss-filters-open .ss-finder-bar > .ss-finder-segment,
+    body.ss-filters-open .ss-finder-bar > .ss-finder-toggle { display: flex; }
+
+    body.ss-filters-open .ss-finder-segment {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       padding: 12px 14px;
-      border-radius: 14px;
+      border-radius: 12px;
+      margin-top: 4px;
     }
-    .ss-finder-segment-label { margin-bottom: 0; }
+    body.ss-filters-open .ss-finder-segment-label { margin-bottom: 0; }
+    body.ss-finder-multi summary { padding: 12px 14px; border-radius: 12px; margin-top: 4px; }
     .ss-finder-select { text-align: right; }
     .ss-finder-toggle {
       justify-content: space-between;

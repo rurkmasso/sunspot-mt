@@ -2854,8 +2854,10 @@ footer {
     z-index: 26;
   }
   .ss-finder-bar { gap: 4px; }
-  .ss-finder-multi-panel {
-    /* On phone, popover snaps to full width and bottom of segment */
+  /* Belt-and-braces: hide popover unless details is open. position:fixed
+     defeats the native <details>display:none auto-hide. */
+  .ss-finder-multi:not([open]) .ss-finder-multi-panel { display: none !important; }
+  .ss-finder-multi[open] .ss-finder-multi-panel {
     position: fixed !important;
     top: auto !important;
     left: 12px !important;
