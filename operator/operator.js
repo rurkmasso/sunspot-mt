@@ -20,25 +20,53 @@
     { id: 'cafe-del-mar', name: 'Café del Mar',  rating: 4.6, spots_left: 19, sunbed_from: 25, today_bookings: 11 },
   ];
   function demoBookings(venueId) {
+    // First — surface any REAL customer bookings the user just made via the
+    // customer funnel (booking.html → checkout.html). Same browser, same
+    // localStorage, so an end-to-end demo story works.
+    let real = [];
+    try {
+      const stored = JSON.parse(localStorage.getItem('sunspot_bookings') || '[]');
+      real = stored
+        .filter(b => !venueId || b.clubId === venueId || (b.clubName || '').toLowerCase().includes((venueId || '').replace(/-/g, ' ')))
+        .map(b => ({
+          id:              b.ref,
+          ref:             b.ref,
+          venue:           b.clubId || venueId,
+          date:            b.date,
+          spots:           (b.seats || []).map(s => s.id),
+          total:           +b.total || 0,
+          currency:        'EUR',
+          guest_name:      b.guest ? (b.guest.firstName + ' ' + b.guest.lastName).trim() : 'Guest',
+          guest_email:     b.guest ? b.guest.email : '',
+          status:          'confirmed',
+          operator_action: b.operator_action || 'pending',  // every new booking starts pending operator-side
+          created_at:      b.createdAt || new Date().toISOString(),
+          isReal:          true,
+        }));
+    } catch (e) {}
+
+    // Then add seeded demo bookings (so the panel feels populated)
     const guests = ['Anya Schmidt','James Walsh','Marco Rossi','Lara Mifsud','Sven Eriksson','Sophie Laurent','David Kim','Tara Nolan'];
-    return Array.from({ length: 12 }, (_, i) => {
-      const states = ['pending','pending','pending','accept','accept','accept','arrived','arrived','pending','accept','arrived','pending'];
-      const total = [40, 50, 25, 80, 30, 130, 25, 50, 280, 40, 25, 75][i];
+    const seeded = Array.from({ length: 10 }, (_, i) => {
+      const states = ['pending','pending','accept','accept','accept','arrived','arrived','accept','arrived','pending'];
+      const total = [40, 50, 25, 80, 30, 130, 25, 50, 280, 40][i];
       return {
-        id: i+1,
+        id: 'demo-' + i,
         ref: 'SS' + Math.random().toString(36).slice(2, 10).toUpperCase(),
         venue: venueId,
         date: new Date().toISOString().slice(0,10),
         spots: ['A' + (i+3), 'A' + (i+4)].slice(0, (i%3)+1),
-        total: total,
+        total,
         currency: 'EUR',
         guest_name: guests[i % guests.length],
         guest_email: guests[i % guests.length].toLowerCase().replace(/\s+/g, '.') + '@example.com',
         status: 'confirmed',
         operator_action: states[i],
-        created_at: new Date(Date.now() - i*900000).toISOString(),
+        created_at: new Date(Date.now() - (i+1)*900000).toISOString(),
       };
     });
+    // Real bookings first (newest)
+    return real.concat(seeded);
   }
   function demoSeatmap(venueId) {
     // Deterministic per-venue "taken" pattern
@@ -173,6 +201,21 @@
         renderBookings();
         renderStats();
         renderChipCounts();
+        // If this is a REAL customer booking (came via the customer funnel),
+        // persist the operator action back into sunspot_bookings so the
+        // customer sees it too (their Bookings page reflects the status).
+        if (target.isReal) {
+          try {
+            const list = JSON.parse(localStorage.getItem('sunspot_bookings') || '[]');
+            const idx = list.findIndex(b => b.ref === target.ref);
+            if (idx >= 0) {
+              list[idx].operator_action = act;
+              list[idx].operator_action_at = new Date().toISOString();
+              localStorage.setItem('sunspot_bookings', JSON.stringify(list));
+            }
+          } catch (e) {}
+        }
+        // Always send to backend if wired
         await apiPost('/sunspot/v1/operator/bookings/' + id + '/action', { action: act });
       });
     });
