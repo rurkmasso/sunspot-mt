@@ -1,0 +1,324 @@
+/* ============================================================
+   Sunspot Operator — bookings + sunbed/pool setup.
+
+   In production:   reads window.SUNSPOT_API_BASE (e.g. https://sunspot.mt/wp-json)
+                    + a JWT from localStorage (sunspot_op_jwt).
+   In demo mode:    falls back to deterministic sample data so the
+                    app is browsable on github.io without a backend.
+   ============================================================ */
+(function () {
+  'use strict';
+
+  const API   = window.SUNSPOT_API_BASE || null;
+  const TOKEN = (() => { try { return localStorage.getItem('sunspot_op_jwt'); } catch { return null; } })();
+  const DEMO  = !API || !TOKEN;
+
+  // ----- DEMO DATA (used when no real backend is wired) -----
+  const DEMO_VENUES = [
+    { id: 'aqualuna',     name: 'Aqualuna Lido', rating: 4.5, spots_left: 21, sunbed_from: 25, today_bookings: 14 },
+    { id: 'noma',         name: 'Noma Island',   rating: 4.8, spots_left:  8, sunbed_from: 40, today_bookings:  6 },
+    { id: 'cafe-del-mar', name: 'Café del Mar',  rating: 4.6, spots_left: 19, sunbed_from: 25, today_bookings: 11 },
+  ];
+  function demoBookings(venueId) {
+    const guests = ['Anya Schmidt','James Walsh','Marco Rossi','Lara Mifsud','Sven Eriksson','Sophie Laurent','David Kim','Tara Nolan'];
+    return Array.from({ length: 12 }, (_, i) => {
+      const states = ['pending','pending','pending','accept','accept','accept','arrived','arrived','pending','accept','arrived','pending'];
+      const total = [40, 50, 25, 80, 30, 130, 25, 50, 280, 40, 25, 75][i];
+      return {
+        id: i+1,
+        ref: 'SS' + Math.random().toString(36).slice(2, 10).toUpperCase(),
+        venue: venueId,
+        date: new Date().toISOString().slice(0,10),
+        spots: ['A' + (i+3), 'A' + (i+4)].slice(0, (i%3)+1),
+        total: total,
+        currency: 'EUR',
+        guest_name: guests[i % guests.length],
+        guest_email: guests[i % guests.length].toLowerCase().replace(/\s+/g, '.') + '@example.com',
+        status: 'confirmed',
+        operator_action: states[i],
+        created_at: new Date(Date.now() - i*900000).toISOString(),
+      };
+    });
+  }
+  function demoSeatmap(venueId) {
+    // Deterministic per-venue "taken" pattern
+    const seed = venueId.charCodeAt(0) + venueId.length;
+    function r(n) { return (Math.sin(seed * (n+1)) + 1) / 2; }
+    const taken = [];
+    for (let i = 0; i < 40; i++) if (r(i) > 0.65) taken.push('A' + (i+1));
+    return {
+      venue_id: venueId,
+      date: new Date().toISOString().slice(0,10),
+      capacity: { sunbeds: 40, cabanas: 8, vip: 3 },
+      taken_spots: taken,
+      inactive_spots: [],
+    };
+  }
+
+  // ----- DOM helpers -----
+  const $  = (s, root) => (root || document).querySelector(s);
+  const $$ = (s, root) => Array.from((root || document).querySelectorAll(s));
+
+  let state = {
+    venue:    null,
+    venues:   [],
+    bookings: [],
+    seatmap:  null,
+    filter:   'all',
+    inactive: new Set(),
+  };
+
+  // ----- API layer (real OR demo) -----
+  async function apiGet(path) {
+    if (DEMO) return demoFor(path);
+    const r = await fetch(API + path, {
+      headers: { 'Authorization': 'Bearer ' + TOKEN, 'Accept': 'application/json' },
+    });
+    if (!r.ok) throw new Error('API ' + r.status);
+    return r.json();
+  }
+  async function apiPost(path, body) {
+    if (DEMO) return { ok: true };
+    const r = await fetch(API + path, {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    return r.json();
+  }
+  async function apiPut(path, body) {
+    if (DEMO) return { ok: true };
+    const r = await fetch(API + path, {
+      method: 'PUT',
+      headers: { 'Authorization': 'Bearer ' + TOKEN, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    return r.json();
+  }
+  function demoFor(path) {
+    if (path === '/sunspot/v1/operator/venues') return Promise.resolve(DEMO_VENUES);
+    if (/operator\/bookings/.test(path)) return Promise.resolve(demoBookings(state.venue || 'aqualuna'));
+    if (/operator\/venues\/[^/]+\/seatmap/.test(path)) {
+      const id = path.match(/venues\/([^/]+)\/seatmap/)[1];
+      return Promise.resolve(demoSeatmap(id));
+    }
+    return Promise.resolve(null);
+  }
+
+  // ----- Rendering -----
+  function renderVenues() {
+    const sel = $('#op-venue');
+    sel.innerHTML = state.venues.map(v =>
+      '<option value="' + v.id + '"' + (v.id === state.venue ? ' selected' : '') + '>' + v.name + '</option>'
+    ).join('');
+  }
+
+  function renderBookings() {
+    const filtered = state.bookings.filter(b =>
+      state.filter === 'all' ? true : (b.operator_action || 'pending') === state.filter
+    );
+    const list = $('#op-bookings-list');
+    if (!filtered.length) {
+      list.innerHTML = '<div class="op-empty"><h3>Nothing for this filter</h3><p>Try another tab above.</p></div>';
+      return;
+    }
+    list.innerHTML = filtered.map(b => {
+      const action = b.operator_action || 'pending';
+      const spots = (b.spots || []).join(' · ') || '—';
+      const time = new Date(b.created_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+
+      let actionsHtml;
+      if (action === 'pending') {
+        actionsHtml = '<div class="op-booking-actions">' +
+          '<button class="decline" data-action="decline" data-id="' + b.id + '">Decline</button>' +
+          '<button class="accept"  data-action="accept"  data-id="' + b.id + '">Accept</button>' +
+        '</div>';
+      } else if (action === 'accept') {
+        actionsHtml = '<div class="op-booking-actions">' +
+          '<button data-action="noshow"  data-id="' + b.id + '">No-show</button>' +
+          '<button class="scan" data-action="arrived" data-id="' + b.id + '">Mark arrived</button>' +
+        '</div>';
+      } else {
+        actionsHtml = '<div class="op-booking-actions done">' +
+          (action === 'arrived'  ? 'Arrived' :
+           action === 'decline'  ? 'Declined' :
+           action === 'noshow'   ? 'No-show recorded' : '') +
+        '</div>';
+      }
+
+      return '<article class="op-booking" data-status="' + action + '">' +
+        '<div class="op-booking-head">' +
+          '<div class="op-booking-meta">' +
+            '<strong>' + b.guest_name + '</strong>' +
+            '<span class="ref">' + b.ref + ' · ' + time + '</span>' +
+            '<span class="op-booking-tag ' + action + '">' + action + '</span>' +
+          '</div>' +
+          '<div class="op-booking-amount">€' + Math.round(b.total) + '</div>' +
+        '</div>' +
+        '<div class="op-booking-body">' +
+          '<span>' + spots + '</span>' +
+          '<span>' + (b.guest_email || '—') + '</span>' +
+        '</div>' +
+        actionsHtml +
+      '</article>';
+    }).join('');
+
+    list.querySelectorAll('[data-action]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const id = btn.dataset.id;
+        const act = btn.dataset.action;
+        const target = state.bookings.find(x => x.id == id);
+        if (!target) return;
+        target.operator_action = act;
+        renderBookings();
+        renderStats();
+        renderChipCounts();
+        await apiPost('/sunspot/v1/operator/bookings/' + id + '/action', { action: act });
+      });
+    });
+  }
+
+  function renderStats() {
+    $('#op-stat-bookings').textContent = state.bookings.length;
+    $('#op-stat-revenue').textContent = '€' +
+      Math.round(state.bookings.reduce((s, b) => s + (b.total || 0), 0));
+    $('#op-stat-arrived').textContent =
+      state.bookings.filter(b => b.operator_action === 'arrived').length;
+
+    // Week panel (synthesized from demo)
+    const weekBookings = state.bookings.length * 6;
+    const weekRev = state.bookings.reduce((s, b) => s + (b.total || 0), 0) * 6;
+    $('#op-week-bookings').textContent = weekBookings;
+    $('#op-week-revenue').textContent = '€' + weekRev.toLocaleString('en-GB');
+    $('#op-week-occupancy').textContent = '87%';
+    $('#op-payout-amount').textContent = '€' + Math.round(weekRev * 0.92).toLocaleString('en-GB');
+    $('#op-top-days').innerHTML = ['Saturday','Sunday','Friday','Wednesday','Thursday'].map(d =>
+      '<div style="display:flex;justify-content:space-between"><span>' + d + '</span><strong>' + Math.round(Math.random() * 40 + 30) + ' bookings</strong></div>'
+    ).join('');
+  }
+
+  function renderChipCounts() {
+    $('#cnt-all').textContent      = state.bookings.length;
+    $('#cnt-pending').textContent  = state.bookings.filter(b => (b.operator_action||'pending') === 'pending').length;
+    $('#cnt-accept').textContent   = state.bookings.filter(b => b.operator_action === 'accept').length;
+    $('#cnt-arrived').textContent  = state.bookings.filter(b => b.operator_action === 'arrived').length;
+  }
+
+  function renderSeatmap() {
+    const s = state.seatmap;
+    if (!s) return;
+    const date = new Date(s.date).toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'short' });
+    $('#op-seatmap-date').textContent = date;
+    const taken = new Set(s.taken_spots);
+    const inactive = new Set(s.inactive_spots);
+    state.inactive = inactive;
+
+    function cell(id) {
+      let st = 'free';
+      if (taken.has(id)) st = 'taken';
+      else if (inactive.has(id)) st = 'inactive';
+      return '<button class="op-seat" data-spot="' + id + '" data-state="' + st + '">' + id + '</button>';
+    }
+    $('#op-seatmap-grid').innerHTML  = Array.from({ length: s.capacity.sunbeds }, (_, i) => cell('A' + (i+1))).join('');
+    $('#op-cabana-grid').innerHTML   = Array.from({ length: s.capacity.cabanas },  (_, i) => cell('C' + (i+1))).join('');
+    $('#op-vip-grid').innerHTML      = Array.from({ length: s.capacity.vip },      (_, i) => cell('V' + (i+1))).join('');
+
+    document.querySelectorAll('.op-seat').forEach(seat => {
+      seat.addEventListener('click', async () => {
+        const id = seat.dataset.spot;
+        if (taken.has(id)) return;   // can't toggle a booked spot
+        const wasInactive = inactive.has(id);
+        if (wasInactive) inactive.delete(id); else inactive.add(id);
+        seat.dataset.state = wasInactive ? 'free' : 'inactive';
+        await apiPut('/sunspot/v1/operator/venues/' + state.venue + '/spots/' + id, { active: wasInactive });
+      });
+    });
+  }
+
+  // ----- Tab + bottom-nav wiring -----
+  function showPanel(name) {
+    $$('.op-tab').forEach(t => t.classList.toggle('active', t.dataset.panel === name));
+    $$('.op-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + name));
+    $$('.op-bottom-nav a').forEach(a => a.classList.toggle('active', a.dataset.nav === name));
+  }
+  $$('.op-tab').forEach(t => t.addEventListener('click', () => showPanel(t.dataset.panel)));
+  $$('.op-bottom-nav a').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    showPanel(a.dataset.nav);
+  }));
+  $('#op-scan-btn').addEventListener('click', () => {
+    if (!('mediaDevices' in navigator)) {
+      alert('Camera not available. Open the booking and ask the guest to read out the ref.');
+      return;
+    }
+    alert('Demo: this opens the phone camera and looks for a Sunspot QR. On scan the booking is flipped to "arrived" instantly. (Real implementation uses BarcodeDetector API.)');
+  });
+  $$('.op-chip').forEach(chip => chip.addEventListener('click', () => {
+    state.filter = chip.dataset.filter;
+    $$('.op-chip').forEach(c => c.classList.toggle('active', c === chip));
+    renderBookings();
+  }));
+  $('#op-venue').addEventListener('change', async () => {
+    state.venue = $('#op-venue').value;
+    await loadVenueData();
+  });
+
+  // ----- Boot -----
+  async function boot() {
+    try { state.venues = await apiGet('/sunspot/v1/operator/venues') || []; }
+    catch (e) { state.venues = []; }
+    if (!state.venues.length) {
+      document.body.innerHTML =
+        '<div class="op-setup">' +
+          '<h2>Connect your venue</h2>' +
+          '<p>This is the Sunspot Operator console. You need a venue assigned to your account before you can take bookings.</p>' +
+          '<label>WP site URL</label>' +
+          '<input id="op-api-url" placeholder="https://sunspot.mt" type="url">' +
+          '<label>Operator app password</label>' +
+          '<input id="op-api-key" placeholder="xxxx xxxx xxxx xxxx" type="text">' +
+          '<button id="op-connect-btn">Connect</button>' +
+          '<div class="demo-row">No backend yet? Try the demo with sample bookings — see how the flow works before going live.' +
+            '<button id="op-demo-btn">Open demo</button>' +
+          '</div>' +
+        '</div>';
+      document.getElementById('op-demo-btn').addEventListener('click', () => {
+        // Force demo mode for one tab
+        sessionStorage.setItem('sunspot_op_demo', '1');
+        location.reload();
+      });
+      document.getElementById('op-connect-btn').addEventListener('click', () => {
+        const url = document.getElementById('op-api-url').value.trim().replace(/\/$/, '');
+        const key = document.getElementById('op-api-key').value.trim();
+        if (!url || !key) { alert('Both fields required'); return; }
+        // In production we'd POST /jwt-auth/v1/token. For now stash and reload.
+        localStorage.setItem('sunspot_op_api', url + '/wp-json');
+        localStorage.setItem('sunspot_op_jwt', key);
+        location.reload();
+      });
+      return;
+    }
+    state.venue = state.venues[0].id;
+    renderVenues();
+    await loadVenueData();
+  }
+
+  async function loadVenueData() {
+    try {
+      state.bookings = await apiGet('/sunspot/v1/operator/bookings?venue=' + state.venue) || [];
+      state.seatmap  = await apiGet('/sunspot/v1/operator/venues/' + state.venue + '/seatmap');
+    } catch (e) {
+      state.bookings = []; state.seatmap = null;
+    }
+    renderBookings();
+    renderStats();
+    renderChipCounts();
+    renderSeatmap();
+  }
+
+  // Honor demo override
+  if (sessionStorage.getItem('sunspot_op_demo') === '1') {
+    window.SUNSPOT_API_BASE = null;
+  }
+
+  boot();
+})();
