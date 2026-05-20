@@ -4,19 +4,36 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
- /* Brand palette */
+ /* Brand palette — Mediterranean Malta. Refined to feel like late-afternoon
+    sun on Sliema limestone: warm honey base, deep navy ink, sea-glass cool
+    accents. Stays away from generic "tourism orange" by leaning amber-honey. */
  --sea-1: #0288d1;
  --sea-2: #01579b;
  --sea-pale: #e1f5fe;
  --sun: #ffb74d;
  --sun-deep: #f57c00;
+ --honey: #e89d3a;         /* signature honey-amber, used sparingly */
+ --terracotta: #c0563b;    /* Maltese rooftop terracotta */
+ --limestone: #f5ecd9;     /* Sliema limestone — replaces stark white in cards */
+ --balcony-green: #2f6e5b; /* Maltese painted-balcony green, accent only */
  --coral: #ff7043;
  --sand: #fff5e1;
  --sand-2: #ffe9c4;
  --ink: #0a1f3a;
+ --ink-soft: #1d2842;
  --muted: #5d6a82;
  --line: #e3e8ef;
  --bg: #fafbfc;
+
+ /* Signature gradients */
+ --grad-sun: linear-gradient(135deg, #ffb74d 0%, #f57c00 60%, #c0563b 100%);
+ --grad-ink: linear-gradient(180deg, #0a1f3a 0%, #1d2842 100%);
+ --grad-sea: linear-gradient(180deg, #0288d1 0%, #01579b 100%);
+
+ /* Type pairing — Inter for body, Fraunces (humanist serif) for display.
+    Loaded below via Google Fonts. Tightens the brand without going touristy. */
+ --font-display: 'Fraunces', 'Iowan Old Style', 'Georgia', serif;
+ --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
  /* Seat states */
  --available: #2e7d32;
@@ -39,11 +56,119 @@
 }
 
 body {
- font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+ font-family: var(--font-body);
  color: var(--ink);
  background: var(--bg);
  line-height: 1.55;
  -webkit-font-smoothing: antialiased;
+ text-rendering: optimizeLegibility;
+}
+
+/* Display type — used on hero headlines, section heads, prices. The serif
+   contrast against Inter body type is what makes the brand feel premium
+   rather than generic SaaS. */
+h1, h2, .ss-display {
+ font-family: var(--font-display);
+ font-weight: 600;
+ font-style: normal;
+ letter-spacing: -0.015em;
+ font-variation-settings: 'opsz' 36, 'SOFT' 30;
+}
+h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.1; }
+h2 { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.15; }
+
+/* ─── Signature brand mark — animated sun ───
+   Used in headers and loading states. The CSS-only sun pulses subtly
+   so the brand has a heartbeat without being noisy. */
+@keyframes ssSunPulse {
+ 0%, 100% { transform: scale(1);   opacity: 1; }
+ 50%      { transform: scale(1.06); opacity: .92; }
+}
+.ss-brand-mark-anim circle:nth-child(2) {
+ transform-origin: center;
+ animation: ssSunPulse 3.6s ease-in-out infinite;
+}
+
+/* ─── Section ornament — sun-ray divider ───
+   Drop <div class="ss-ornament"></div> between sections for a small ✦-style
+   centred SVG rule. Replaces generic <hr> with something brand-specific. */
+.ss-ornament {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 16px;
+ margin: 36px auto;
+ color: var(--honey);
+}
+.ss-ornament::before,
+.ss-ornament::after {
+ content: "";
+ flex: 0 1 80px;
+ height: 1px;
+ background: linear-gradient(90deg, transparent, var(--line) 50%, transparent);
+}
+.ss-ornament::before { background: linear-gradient(90deg, transparent, var(--line)); }
+.ss-ornament::after  { background: linear-gradient(90deg, var(--line), transparent); }
+.ss-ornament-icon {
+ width: 18px; height: 18px;
+ background: var(--grad-sun);
+ mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='5'/><g stroke='black' stroke-width='1.6' stroke-linecap='round'><line x1='12' y1='1' x2='12' y2='4'/><line x1='12' y1='20' x2='12' y2='23'/><line x1='1' y1='12' x2='4' y2='12'/><line x1='20' y1='12' x2='23' y2='12'/><line x1='4' y1='4' x2='6' y2='6'/><line x1='18' y1='18' x2='20' y2='20'/><line x1='20' y1='4' x2='18' y2='6'/><line x1='6' y1='18' x2='4' y2='20'/></g></svg>") center / contain no-repeat;
+ -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='5'/><g stroke='black' stroke-width='1.6' stroke-linecap='round'><line x1='12' y1='1' x2='12' y2='4'/><line x1='12' y1='20' x2='12' y2='23'/><line x1='1' y1='12' x2='4' y2='12'/><line x1='20' y1='12' x2='23' y2='12'/><line x1='4' y1='4' x2='6' y2='6'/><line x1='18' y1='18' x2='20' y2='20'/><line x1='20' y1='4' x2='18' y2='6'/><line x1='6' y1='18' x2='4' y2='20'/></g></svg>") center / contain no-repeat;
+}
+
+/* ─── Signature primary button ───
+   Sun-gradient pill with a soft glow on hover. Distinctive vs the flat
+   Bootstrap-esque buttons most booking sites use. */
+.btn-primary {
+ background: var(--grad-sun);
+ color: #fff;
+ border: none;
+ border-radius: 999px;
+ padding: 12px 24px;
+ font-weight: 700;
+ letter-spacing: 0.01em;
+ box-shadow: 0 4px 14px rgba(232,157,58,.38);
+ transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn-primary:hover {
+ transform: translateY(-1px);
+ box-shadow: 0 8px 22px rgba(232,157,58,.45), 0 0 30px rgba(255,183,77,.35);
+ filter: brightness(1.04);
+}
+.btn-primary:active { transform: translateY(0); }
+.btn-primary:disabled {
+ background: #cfd5e0;
+ color: #fff;
+ box-shadow: none;
+ cursor: not-allowed;
+ filter: none;
+ transform: none;
+}
+
+/* ─── Card lift on hover — for venue cards ─── */
+.club-card { transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s; }
+.club-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+
+/* ─── Honey-amber accent badge ───
+   For category chips, badges, "new" markers. */
+.ss-accent-pill {
+ display: inline-flex;
+ align-items: center;
+ gap: 6px;
+ padding: 4px 12px;
+ border-radius: 999px;
+ background: var(--limestone);
+ color: var(--ink);
+ font-size: 12px;
+ font-weight: 600;
+ border: 1px solid rgba(192, 86, 59, .15);
+}
+
+/* ─── Selection style — when something is "your pick" ───
+   Used on selected sunbeds, selected filters, etc. */
+.is-picked {
+ outline: 2px solid var(--honey);
+ outline-offset: 2px;
 }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }

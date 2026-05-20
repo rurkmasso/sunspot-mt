@@ -206,10 +206,35 @@
         const act = btn.dataset.action;
         const target = state.bookings.find(x => x.id == id);
         if (!target) return;
+        // Destructive actions use the friendly bottom sheet instead of confirm()
+        if ((act === 'decline' || act === 'noshow') && window.opConfirm) {
+          const ok = await window.opConfirm({
+            title: act === 'decline' ? 'Decline this booking?' : 'Mark as no-show?',
+            body:  act === 'decline'
+              ? 'The guest will be refunded in 3-5 business days and the spot returns to inventory.'
+              : 'The booking will be recorded as a no-show. The spot returns to inventory.',
+            ok: act === 'decline' ? 'Yes, decline' : 'Yes, no-show',
+            cancel: 'Keep it',
+            danger: true,
+          });
+          if (!ok) return;
+        }
         target.operator_action = act;
         renderBookings();
         renderStats();
         renderChipCounts();
+        // Friendly per-action toast
+        if (window.opToast) {
+          const messages = {
+            accept:  'Booking accepted',
+            decline: 'Booking declined · refund issued',
+            arrived: 'Guest checked in',
+            noshow:  'Recorded as no-show',
+            refund:  'Refund issued',
+          };
+          const kinds = { decline: 'warn', noshow: 'warn', refund: 'warn' };
+          window.opToast(messages[act] || 'Updated', kinds[act] || 'success');
+        }
         // If this is a REAL customer booking (came via the customer funnel),
         // persist the operator action back into sunspot_bookings so the
         // customer sees it too (their Bookings page reflects the status).

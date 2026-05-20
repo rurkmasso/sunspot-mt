@@ -216,15 +216,21 @@
    }
 
    // ─── Click behaviour per mode ───
-   function handleSpotClick(spot, marker) {
+   async function handleSpotClick(spot, marker) {
      if (mode === 'edit') {
-       // Tap to remove (after confirm)
-       if (confirm('Remove spot ' + spot.id + '?')) {
-         spots = spots.filter(s => s.id !== spot.id);
-         saveLayout(venue.id, spots);
-         drawSpots();
-         if (opts.onChange) opts.onChange(spots);
-       }
+       const ok = window.opConfirm
+         ? await window.opConfirm({
+             title: 'Remove spot ' + spot.id + '?',
+             body: 'You can drop it back later by tapping the map.',
+             ok: 'Remove', cancel: 'Keep', danger: true,
+           })
+         : confirm('Remove spot ' + spot.id + '?');
+       if (!ok) return;
+       spots = spots.filter(s => s.id !== spot.id);
+       saveLayout(venue.id, spots);
+       drawSpots();
+       if (opts.onChange) opts.onChange(spots);
+       if (window.opToast) window.opToast('Removed ' + spot.id, 'warn');
      } else if (mode === 'book') {
        if (taken.has(spot.id)) return;
        if (opts.onSelect) opts.onSelect(spot);
@@ -236,7 +242,6 @@
      map.on('click', e => {
        const type = (document.getElementById('vm-add-type') || {}).value || 'sunbed';
        const prefix = { sunbed: 'A', cabana: 'C', vip: 'V' }[type];
-       // Next id within type
        const used = spots.filter(s => s.id.startsWith(prefix)).map(s => parseInt(s.id.slice(1), 10));
        const next = used.length ? Math.max.apply(null, used) + 1 : 1;
        const spot = { id: prefix + next, type, lat: e.latlng.lat, lng: e.latlng.lng };
@@ -244,6 +249,7 @@
        saveLayout(venue.id, spots);
        drawSpots();
        if (opts.onChange) opts.onChange(spots);
+       if (window.opToast) window.opToast('Added ' + spot.id);
      });
 
      // Toolbar floating in the top-right of the map
@@ -264,12 +270,20 @@
        'background:rgba(255,255,255,.95);padding:10px 12px;border-radius:10px;' +
        'box-shadow:0 2px 12px rgba(10,31,58,.18);max-width:260px;';
      container.appendChild(toolbar);
-     toolbar.querySelector('.vm-clear').addEventListener('click', () => {
-       if (!confirm('Clear ALL spots from this venue?')) return;
+     toolbar.querySelector('.vm-clear').addEventListener('click', async () => {
+       const ok = window.opConfirm
+         ? await window.opConfirm({
+             title: 'Clear all spots?',
+             body: 'This removes every sunbed, cabana and VIP from this venue. You can rebuild from scratch.',
+             ok: 'Yes, clear all', cancel: 'Keep them', danger: true,
+           })
+         : confirm('Clear ALL spots from this venue?');
+       if (!ok) return;
        spots = [];
        saveLayout(venue.id, spots);
        drawSpots();
        if (opts.onChange) opts.onChange(spots);
+       if (window.opToast) window.opToast('Layout cleared', 'warn');
      });
    }
 
