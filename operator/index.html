@@ -107,6 +107,12 @@
   }
   @media (min-width: 720px) { .op-section-title { display: none; } }
 
+  /* On phone, the live hero already shows the headline numbers — hide the
+     redundant daily stats strip. On desktop we show both. */
+  @media (max-width: 719px) {
+    #panel-today .op-stats { display: none; }
+  }
+
   /* === Panels === */
   .op-panel { display: none; padding: 18px 16px 24px; }
   .op-panel.active { display: block; }
@@ -375,16 +381,17 @@
 
 <!-- TODAY panel -->
 <section class="op-panel active" id="panel-today">
-  <header class="op-section-title">
-    <h1>Today's bookings</h1>
-    <span class="date" id="op-today-date">—</span>
-  </header>
-  <div class="op-stats">
+  <!-- operator-live.js renders greeting + live hero + activity feed above this -->
+
+  <!-- Compact stats strip — kept for the daily snapshot. Hidden on phone
+       because the live hero already shows the headline numbers. -->
+  <div class="op-stats" style="margin-top:4px">
     <div><div class="num" id="op-stat-bookings">—</div><div class="label">bookings</div></div>
     <div><div class="num money" id="op-stat-revenue">—</div><div class="label">revenue</div></div>
     <div><div class="num" id="op-stat-arrived">—</div><div class="label">arrived</div></div>
   </div>
 
+  <h3 style="font-size:13px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin:18px 16px 10px;font-weight:700;">Bookings queue</h3>
   <div class="op-filter-chips" id="op-chips">
     <button class="op-chip active" data-filter="all">All <span class="count" id="cnt-all">0</span></button>
     <button class="op-chip" data-filter="pending">Pending <span class="count" id="cnt-pending">0</span></button>
@@ -472,5 +479,6 @@
 <script src="operator.js"></script>
 <script src="operator-aerial.js"></script>
 <script src="operator-polish.js"></script>
+<script src="operator-live.js"></script>
 </body>
 </html>

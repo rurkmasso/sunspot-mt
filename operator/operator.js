@@ -21,10 +21,16 @@
   const DEMO  = !API || !TOKEN;
 
   // ----- DEMO DATA (used when no real backend is wired) -----
+  // In demo mode we simulate ONE operator account — "AX Resorts Group" —
+  // who owns just 2 venues. Critically: they DO NOT see Aqualuna or Noma
+  // (competitors). In production, /sunspot/v1/operator/venues already
+  // returns only the logged-in operator's own venues (server-side scoped
+  // by sunspot_my_venue_slugs in operator-rest.php). This demo mirrors
+  // that isolation so what you see here = what a real operator would see.
+  const DEMO_OPERATOR = { name: 'AX Resorts Group', initial: 'A' };
   const DEMO_VENUES = [
-    { id: 'aqualuna',     name: 'Aqualuna Lido', rating: 4.5, spots_left: 21, sunbed_from: 25, today_bookings: 14 },
-    { id: 'noma',         name: 'Noma Island',   rating: 4.8, spots_left:  8, sunbed_from: 40, today_bookings:  6 },
-    { id: 'cafe-del-mar', name: 'Café del Mar',  rating: 4.6, spots_left: 19, sunbed_from: 25, today_bookings: 11 },
+    { id: 'bonita-beach-club', name: 'Bonita Beach Club', rating: 4.5, spots_left: 28, sunbed_from: 15, today_bookings: 11, capacity: 80, location: 'Mellieha Bay' },
+    { id: 'solas-rooftop',     name: 'Solas Rooftop',     rating: 4.4, spots_left: 14, sunbed_from: 22, today_bookings:  7, capacity: 40, location: 'Qawra' },
   ];
   function demoBookings(venueId) {
     // First — surface any REAL customer bookings the user just made via the
@@ -101,7 +107,14 @@
     seatmap:  null,
     filter:   'all',
     inactive: new Set(),
+    operator: DEMO_OPERATOR,  // exposed for the header/greeting
   };
+  // Expose so other modules (operator-polish, operator-live) can read
+  // the same source of truth without re-querying.
+  window.opState = state;
+  function emitStateChange() {
+    document.dispatchEvent(new CustomEvent('op:state-change', { detail: state }));
+  }
 
   // ----- API layer (real OR demo) -----
   async function apiGet(path) {
@@ -251,6 +264,7 @@
         }
         // Always send to backend if wired
         await apiPost('/sunspot/v1/operator/bookings/' + id + '/action', { action: act });
+        emitStateChange();
       });
     });
   }
@@ -398,6 +412,7 @@
     renderStats();
     renderChipCounts();
     renderSeatmap();
+    emitStateChange();
   }
 
   boot();
