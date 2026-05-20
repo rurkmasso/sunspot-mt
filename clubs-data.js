@@ -47,9 +47,9 @@
  parking: 'At Sliema Ferries (paid public parking, €1.40/hour)',
  accessibility: 'Boat boarding requires ~3 steps; not wheelchair accessible',
  photos: [
-        'https://picsum.photos/seed/sunspot-noma/1600/1067',
-        'https://picsum.photos/seed/sunspot-noma-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-noma-b/1600/1067',
+        'https://nomaisland.com/wp-content/uploads/2026/02/Untitled-design-1.jpg',
+        'https://nomaisland.com/wp-content/uploads/2026/02/Screenshot-2026-02-12-at-21.59.52-scaled.png',
+        'https://nomaisland.com/wp-content/uploads/2026/03/noma_table_women-768x895.jpg',
       ],
  },
  {
@@ -75,9 +75,9 @@
  gettingThere: '5 min walk from Paceville bus stop. Lift directly to 9th floor.',
  parking: 'Free parking included', accessibility: 'Lift access · Wheelchair accessible',
  photos: [
-        'https://picsum.photos/seed/sunspot-flo/1600/1067',
-        'https://picsum.photos/seed/sunspot-flo-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-flo-b/1600/1067',
+        'https://floskypool.com/wp-content/uploads/2024/05/about2.jpg',
+        'https://floskypool.com/wp-content/uploads/2026/05/floskypool2.jpg',
+        'https://floskypool.com/wp-content/uploads/2024/05/about2-768x571.jpg',
       ],
  },
  {
@@ -103,9 +103,9 @@
  gettingThere: 'Bus 12, 13 to Bugibba/Qawra. 30 min from Sliema.',
  parking: 'Free parking (rooftop & street)', accessibility: 'Lift to rooftop · Wheelchair accessible',
  photos: [
-        'https://picsum.photos/seed/sunspot-cafe-del-mar/1600/1067',
-        'https://picsum.photos/seed/sunspot-cafe-del-mar-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-cafe-del-mar-b/1600/1067',
+        'https://cafedelmar.com.mt/wp-content/uploads/2026/01/Cafe-Del-Mar-Wide-Shots-2nd-May-2025-95-scaled.jpg',
+        'https://cafedelmar.com.mt/wp-content/uploads/2025/12/work-1024x474.jpg',
+        'https://cafedelmar.com.mt/wp-content/uploads/2026/01/Cafe-Del-Mar-Sundays-15th-June-2025-Harry-256-1024x683.jpg',
       ],
  },
  {
@@ -131,9 +131,9 @@
  parking: 'Limited street parking · Public car park 200m',
  accessibility: 'Step-free entry · Wheelchair accessible to pool deck',
  photos: [
-        'https://picsum.photos/seed/sunspot-aqualuna/1600/1067',
-        'https://picsum.photos/seed/sunspot-aqualuna-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-aqualuna-b/1600/1067',
+        'https://aqualuna.mt/wp-content/uploads/2021/08/fbshare-aqualuna-malta.jpg',
+        'https://aqualuna.mt/wp-content/uploads/2021/06/Horizontal-Beige@3x.png',
+        'https://aqualuna.mt/wp-content/uploads/2021/06/Horizontal-Beige@2x.png',
       ],
  },
  {
@@ -161,9 +161,8 @@
  parking: 'Hotel valet €15/day · Public car park 100m',
  accessibility: 'Lift access · Wheelchair accessible',
  photos: [
-        'https://picsum.photos/seed/sunspot-1926-la-plage/1600/1067',
-        'https://picsum.photos/seed/sunspot-1926-la-plage-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-1926-la-plage-b/1600/1067',
+        'https://1926lesoleil.com/wp-content/uploads/2023/05/fbshare.jpg',
+        'https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2024_L.png',
       ],
  },
  {
@@ -188,9 +187,9 @@
  gettingThere: 'Tigné Point seafront · 8 min walk from Sliema Ferries',
  parking: 'Tigné underground car park · €2/hour', accessibility: 'Step-free access',
  photos: [
-        'https://picsum.photos/seed/sunspot-manta/1600/1067',
-        'https://picsum.photos/seed/sunspot-manta-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-manta-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Tas-Sliema._Tign%C3%A9_Seafront_1.jpg/1920px-Tas-Sliema._Tign%C3%A9_Seafront_1.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tas-Sliema._Tign%C3%A9_Seafront_2.jpg/1920px-Tas-Sliema._Tign%C3%A9_Seafront_2.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tas-Sliema._Tign%C3%A9_Seafront_3.jpg/1920px-Tas-Sliema._Tign%C3%A9_Seafront_3.jpg',
       ],
  },
  {
@@ -216,9 +215,9 @@
  gettingThere: 'Portomaso Tower lift to 22nd floor · 10 min walk from Paceville',
  parking: 'Portomaso underground car park · €4/hour', accessibility: 'Lift to 22nd floor',
  photos: [
-        'https://picsum.photos/seed/sunspot-twentytwo/1600/1067',
-        'https://picsum.photos/seed/sunspot-twentytwo-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-twentytwo-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Malta_-_St._Julian%27s_-_Portomaso_Marina_07.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_07.jpg',
       ],
  },
  {
@@ -243,8 +242,6 @@
  parking: 'Ċirkewwa free car park', accessibility: 'Boat boarding · not wheelchair accessible',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-blue-lagoon-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-blue-lagoon-b/1600/1067',
       ],
  },
  {
@@ -269,8 +266,6 @@
  parking: 'Free large car park', accessibility: 'Step-free · Beach wheelchair on request',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-azure-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-azure-bay-b/1600/1067',
       ],
  },
  {
@@ -293,8 +288,6 @@
  parking: 'Free car park at top', accessibility: 'Stairs only · not wheelchair accessible',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Golden-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-golden-sands-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-golden-sands-b/1600/1067',
       ],
  },
  {
@@ -319,8 +312,6 @@
  accessibility: 'Rocky terrain · not wheelchair accessible',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Peters-Pool-2560x14403-2.jpg',
-        'https://picsum.photos/seed/sunspot-st-peters-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-st-peters-b/1600/1067',
       ],
  },
  {
@@ -345,8 +336,6 @@
  accessibility: 'Stone steps to water · partial wheelchair access',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Xlendi-2560x14401-1.jpeg',
-        'https://picsum.photos/seed/sunspot-xlendi-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-xlendi-b/1600/1067',
       ],
  },
  {
@@ -394,8 +383,6 @@
  parking: 'Free large car park', accessibility: 'Stone staircase · not wheelchair accessible',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Paradise-Bay-2560x14405-1.jpeg',
-        'https://picsum.photos/seed/sunspot-paradise-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-paradise-bay-b/1600/1067',
       ],
  },
  {
@@ -418,8 +405,6 @@
  parking: 'Free car park', accessibility: 'Rocky terrain · partial accessibility',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-dwejra-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-dwejra-b/1600/1067',
       ],
  },
  {
@@ -442,8 +427,6 @@
  parking: 'Free car park', accessibility: 'Sand path · partial accessibility',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Hondoq-Ir-Rummien-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-hondoq-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-hondoq-b/1600/1067',
       ],
  },
 
@@ -467,8 +450,8 @@
  accessibility: 'Steep stairs · not wheelchair accessible',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Anchor-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-anchor-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-anchor-bay-b/1600/1067',
+        'https://popeyemalta.com/assets/galleries/6/IMG_5597film_set_sm_res_.jpg',
+        'https://popeyemalta.com/assets/images/Untitled-4.png',
       ],
  },
  {
@@ -526,8 +509,6 @@
  parking: 'Free rough parking', accessibility: 'Pebble surface · not wheelchair accessible',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mistra-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-mistra-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-mistra-bay-b/1600/1067',
       ],
  },
  {
@@ -549,8 +530,6 @@
  parking: 'Free rough parking at top', accessibility: 'Steep stairs · not accessible',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-wied-il-ghasri-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-wied-il-ghasri-b/1600/1067',
       ],
  },
  {
@@ -572,8 +551,6 @@
  parking: 'Free rough parking', accessibility: 'Pebble surface · not accessible',
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mgarr-Ix-xini-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-mgarr-ix-xini-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-mgarr-ix-xini-b/1600/1067',
       ],
  },
 
@@ -581,433 +558,328 @@
  // ===== AUTO-GENERATED EXTRA VENUES (~95 entries) =====
  { id: "crystal-lagoon", name: "Crystal Lagoon Floating Deck", category: "floating", region: "comino", location: "West Comino, 100m from Blue Lagoon", regionLabel: "Comino", coords: { lat: 35.9876, lng: 14.3287 }, hasBookableSunbeds: true, rating: 4.8, reviews: 609, summary: "Floating sun deck moored in Crystal Lagoon — Blue Lagoon's quieter, glass-clear neighbour.", amenities: ["Floating platform", "Boat shuttle", "Bar service", "Glass-bottom swim platform", "Snorkel rental", "Cold drinks only"], website: "", socials: { }, phone: "", email: "", hours: "10:00–18:00 (sea-state dependent)", season: "June–September", features: ["Floating venue", "Boat access", "Unique experience"], bestFor: ["Special occasions", "Photo-worthy", "Adventurers"], dressCode: "Swimwear · Cover-up at bar", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Crystal-Lagoon-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-crystal-lagoon-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-crystal-lagoon-b/1600/1067',
       ], sunbedFrom: 35, cabanaFrom: 140, vipFrom: 350, spotsLeft: 12, capacity: { sunbeds: 69, cabanas: 7, vip: 4, total: 159 } },
  { id: "hugos-terrace", name: "Hugo's Terrace & Rooftop", category: "rooftop", region: "central", location: "Level 8, Hugo's Lounge, St Julian's", regionLabel: "St Julian's", coords: { lat: 35.922, lng: 14.4928 }, hasBookableSunbeds: true, rating: 4.6, reviews: 593, summary: "Open-air rooftop above Hugo's Lounge — small pool, big sound system, sunset DJ sets.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "Live DJs", "Pan-Asian kitchen", "Adults only after 19:00"], website: "", socials: { }, phone: "", email: "", hours: "12:00–02:00 daily", season: "Year-round", features: ["Rooftop pool", "Sunset DJ", "Pan-Asian kitchen", "Adults only"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-hugos-terrace/1600/1067',
-        'https://picsum.photos/seed/sunspot-hugos-terrace-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-hugos-terrace-b/1600/1067',
+        'https://static.hugedomains.com/images/hdv3-img/og_hugedomains.png',
+        'https://static.hugedomains.com/images/hdv3-img/favorite-header.png',
+        'https://static.hugedomains.com/images/hdv3-img/cart.png',
       ], sunbedFrom: 25, cabanaFrom: 150, vipFrom: 280, spotsLeft: 9, capacity: { sunbeds: 53, cabanas: 7, vip: 4, total: 143 }, poolType: "Heated pool", surface: "Pool deck" },
  { id: "mint-sky-bar", name: "Mint Sky Bar", category: "rooftop", region: "central", location: "Top floor, DoubleTree by Hilton, Qawra", regionLabel: "Qawra", coords: { lat: 35.9618, lng: 14.4302 }, hasBookableSunbeds: true, rating: 4.6, reviews: 512, summary: "Top-floor cocktail bar with a long shallow pool, harbour views toward St Paul's islands.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "Adults only after 18:00", "Tapas menu", "Sunset cocktails"], website: "", socials: { }, phone: "", email: "", hours: "11:00–01:00 daily", season: "Year-round", features: ["Rooftop views", "Cocktail bar", "Sunset spot"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-mint-sky-bar/1600/1067',
-        'https://picsum.photos/seed/sunspot-mint-sky-bar-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-mint-sky-bar-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/DBY465%2C_Bedford_bus%2C_Qawra_Bus_Station%2C_Malta._-_Flickr_-_sludgegulper.jpg/1920px-DBY465%2C_Bedford_bus%2C_Qawra_Bus_Station%2C_Malta._-_Flickr_-_sludgegulper.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Dwejra_Inland_Sea_Tunnel_1.jpg/1920px-Dwejra_Inland_Sea_Tunnel_1.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/EBY529%2C_route_58%2C_Qawra_Bus_station%2C_Malta._-_Flickr_-_sludgegulper.jpg/1920px-EBY529%2C_route_58%2C_Qawra_Bus_station%2C_Malta._-_Flickr_-_sludgegulper.jpg',
       ], sunbedFrom: 20, cabanaFrom: 100, vipFrom: 250, spotsLeft: 16, capacity: { sunbeds: 32, cabanas: 6, vip: 3, total: 62 }, poolType: "Heated pool", surface: "Pool deck" },
  { id: "the-embassy-rooftop", name: "The Embassy Roof Garden", category: "rooftop", region: "central", location: "Embassy Shopping Complex, Valletta", regionLabel: "Valletta", coords: { lat: 35.8978, lng: 14.5103 }, hasBookableSunbeds: false, rating: 4.4, reviews: 543, summary: "Hidden rooftop garden above Valletta — no pool, but a tucked-away cocktail terrace with grand harbour views.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "Cocktails", "Wine list", "Aperitivo plates", "Garden plants for shade"], website: "", socials: { }, phone: "", email: "", hours: "17:00–01:00 Wed–Sun", season: "May–October", features: ["Cocktail terrace", "Garden plants", "Grand harbour views", "Wine list"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-the-embassy-rooftop/1600/1067',
-        'https://picsum.photos/seed/sunspot-the-embassy-rooftop-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-the-embassy-rooftop-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/c/cc/Clouds_on_the_cupola.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Fort_Saint_Elmo_in_2018_38.jpg/1920px-Fort_Saint_Elmo_in_2018_38.jpg',
       ], poolType: "Heated pool", surface: "Pool deck" },
  { id: "westin-pool-deck", name: "Westin Dragonara Pool Deck", category: "rooftop", region: "central", location: "Westin Dragonara Resort, Dragonara Point", regionLabel: "St Julian's", coords: { lat: 35.9258, lng: 14.4928 }, hasBookableSunbeds: true, rating: 4.3, reviews: 331, summary: "Cliffside pool deck on Dragonara peninsula — saltwater pool, day-pass admission for non-guests.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "Saltwater pool", "Cabana service", "Spa access", "Day-pass €40"], website: "", socials: { }, phone: "", email: "", hours: "08:00–20:00 daily", season: "May–October", features: ["Cliffside saltwater pool", "Day pass for non-guests", "Five-star service"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-westin-pool-deck/1600/1067',
-        'https://picsum.photos/seed/sunspot-westin-pool-deck-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-westin-pool-deck-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_01.jpg/1920px-Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_01.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_02_Dragonara_Palace_arch_%28Triq_id-Dragunara%29.jpg/1920px-Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_02_Dragonara_Palace_arch_%28Triq_id-Dragunara%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_03_-_View_on_Dragonara_Palace.jpg/1920px-Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_03_-_View_on_Dragonara_Palace.jpg',
       ], sunbedFrom: 40, cabanaFrom: 200, vipFrom: 380, spotsLeft: 22, capacity: { sunbeds: 31, cabanas: 9, vip: 2, total: 121 }, poolType: "Heated pool", surface: "Pool deck" },
  { id: "hilton-pool-deck", name: "Hilton Malta Pool Deck", category: "rooftop", region: "central", location: "Hilton Malta, Portomaso, St Julian's", regionLabel: "St Julian's", coords: { lat: 35.9275, lng: 14.4905 }, hasBookableSunbeds: true, rating: 4.3, reviews: 133, summary: "Three-tier pool deck overlooking Portomaso marina — adults pool, family pool, indoor pool.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "Three pools", "Pool concierge", "Cabana lunch service", "Spa access"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "Year-round (heated)", features: ["3-tier pool complex", "Adults pool", "Marina views", "Day pass"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-hilton-pool-deck/1600/1067',
-        'https://picsum.photos/seed/sunspot-hilton-pool-deck-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-hilton-pool-deck-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Casino_Portomaso%2C_San_Juli%C3%A1n%2C_isla_de_Malta%2C_Malta%2C_2021-08-25%2C_DD_10.jpg/1920px-Casino_Portomaso%2C_San_Juli%C3%A1n%2C_isla_de_Malta%2C_Malta%2C_2021-08-25%2C_DD_10.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg',
       ], sunbedFrom: 35, cabanaFrom: 180, vipFrom: 350, spotsLeft: 30, capacity: { sunbeds: 73, cabanas: 11, vip: 4, total: 163 }, poolType: "Heated pool", surface: "Pool deck" },
  { id: "intercontinental-beach-club", name: "InterContinental Beach Club", category: "rooftop", region: "central", location: "InterContinental Malta, Paceville", regionLabel: "Paceville", coords: { lat: 35.9277, lng: 14.491 }, hasBookableSunbeds: true, rating: 4.3, reviews: 538, summary: "Beach club rooftop on the InterContinental — heated pool, day-pass access.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "Heated pool", "Tapas menu", "Sunbed service"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Rooftop views", "Cocktail bar", "Sunset spot"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-intercontinental-beach-club/1600/1067',
-        'https://picsum.photos/seed/sunspot-intercontinental-beach-club-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-intercontinental-beach-club-b/1600/1067',
+        'https://malta.intercontinental.com/wp-content/uploads/2024/02/winter.webp',
+        'https://www.facebook.com/tr?id=1056984394787089&ev=PageView&noscript=1',
+        'https://malta.intercontinental.com/wp-content/uploads/2021/06/links.png.pagespeed.ce.9HRR4QVkth.png',
       ], sunbedFrom: 28, cabanaFrom: 140, vipFrom: 250, spotsLeft: 18, capacity: { sunbeds: 58, cabanas: 8, vip: 1, total: 88 }, poolType: "Heated pool", surface: "Pool deck" },
  { id: "trabuxu-rooftop", name: "Trabuxu Wine Bar Rooftop", category: "rooftop", region: "central", location: "Republic Street, Valletta", regionLabel: "Valletta", coords: { lat: 35.8983, lng: 14.5118 }, hasBookableSunbeds: false, rating: 4.5, reviews: 79, summary: "Rooftop wine bar in the heart of Valletta — small, intimate, no pool, just wine and cured meats.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "200+ wines", "Cheese boards", "Live jazz Thu"], website: "", socials: { }, phone: "", email: "", hours: "18:00–01:00 Tue–Sun", season: "Year-round", features: ["Cocktail terrace", "Wine list", "Cured meats", "Intimate"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-trabuxu-rooftop/1600/1067',
-        'https://picsum.photos/seed/sunspot-trabuxu-rooftop-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-trabuxu-rooftop-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Malta_-_Valletta_-_Republic_Street_%26_Republic_Square.jpg/1920px-Malta_-_Valletta_-_Republic_Street_%26_Republic_Square.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Malta_-_Valletta_-_Republic_Street_-_Courts_of_Justice_Building.jpg/1920px-Malta_-_Valletta_-_Republic_Street_-_Courts_of_Justice_Building.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Malta_-_Valletta_-_Republic_Street_-_Maltese_Knights_Souvenirs.jpg/1920px-Malta_-_Valletta_-_Republic_Street_-_Maltese_Knights_Souvenirs.jpg',
       ], poolType: "Heated pool", surface: "Pool deck" },
  { id: "bridge-bar-valletta", name: "Bridge Bar Rooftop", category: "rooftop", region: "central", location: "St Christopher Street, Valletta", regionLabel: "Valletta", coords: { lat: 35.8965, lng: 14.5152 }, hasBookableSunbeds: false, rating: 4.4, reviews: 64, summary: "Valletta's most photogenic open-air bar with a 360° city skyline. Friday jazz nights are an institution.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "Cocktail menu", "Live jazz Fri", "Tapas"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["City views", "Friday jazz", "Cocktails"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-bridge-bar-valletta/1600/1067',
-        'https://picsum.photos/seed/sunspot-bridge-bar-valletta-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-bridge-bar-valletta-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/3840px-St_Sebastian_Curtain_%28cropped%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/330px-St_Sebastian_Curtain_%28cropped%29.jpg',
       ], poolType: "Heated pool", surface: "Pool deck" },
  { id: "solas-rooftop", name: "Solas at AX Sunny Coast", category: "rooftop", region: "north", location: "Qawra Coast Road, AX Sunny Coast Resort", regionLabel: "Qawra", coords: { lat: 35.958, lng: 14.422 }, hasBookableSunbeds: true, rating: 4.4, reviews: 460, summary: "Adults-only sky pool on the rooftop of AX Sunny Coast — sea views over the bay.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "Adults only", "Heated pool", "Tapas menu"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Adults only", "Sky pool", "Sea views"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-solas-rooftop/1600/1067',
-        'https://picsum.photos/seed/sunspot-solas-rooftop-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-solas-rooftop-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/DBY465%2C_Bedford_bus%2C_Qawra_Bus_Station%2C_Malta._-_Flickr_-_sludgegulper.jpg/1920px-DBY465%2C_Bedford_bus%2C_Qawra_Bus_Station%2C_Malta._-_Flickr_-_sludgegulper.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Dwejra_Inland_Sea_Tunnel_1.jpg/1920px-Dwejra_Inland_Sea_Tunnel_1.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/EBY529%2C_route_58%2C_Qawra_Bus_station%2C_Malta._-_Flickr_-_sludgegulper.jpg/1920px-EBY529%2C_route_58%2C_Qawra_Bus_station%2C_Malta._-_Flickr_-_sludgegulper.jpg',
       ], sunbedFrom: 22, cabanaFrom: 110, vipFrom: 250, spotsLeft: 14, capacity: { sunbeds: 40, cabanas: 10, vip: 3, total: 130 }, poolType: "Heated pool", surface: "Pool deck" },
  { id: "ion-harbour-sky", name: "ION Harbour Sky Lounge", category: "rooftop", region: "central", location: "IƎ ION Harbour, Valletta Waterfront", regionLabel: "Valletta", coords: { lat: 35.8915, lng: 14.5103 }, hasBookableSunbeds: false, rating: 4.5, reviews: 579, summary: "Michelin-starred restaurant's terrace with the best Grand Harbour view in Malta — no pool, all view.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "Cocktails", "Tasting plates", "Sunset hour"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Grand Harbour view", "Michelin terrace", "Cocktails"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-ion-harbour-sky/1600/1067',
-        'https://picsum.photos/seed/sunspot-ion-harbour-sky-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-ion-harbour-sky-b/1600/1067',
+        'https://ionharbour.com/wp-content/uploads/2023/03/Simon-Rogan-ION-Harbour-Terrace-scaled.jpg',
+        'https://www.facebook.com/tr?id=4083412418409457&ev=PageView&noscript=1',
+        'https://px.ads.linkedin.com/collect/?pid=4252017&fmt=gif',
       ], poolType: "Heated pool", surface: "Pool deck" },
  { id: "skipper-bar", name: "Skipper Bar Rooftop", category: "rooftop", region: "central", location: "The Strand, Sliema", regionLabel: "Sliema", coords: { lat: 35.9135, lng: 14.5045 }, hasBookableSunbeds: false, rating: 4.6, reviews: 593, summary: "Casual rooftop bar above Skipper Sliema — pool-less but a great place to catch the sea breeze.", amenities: ["Heated pool", "Cocktail lounge", "City views", "DJ on weekends", "Bar food menu", "Craft beers", "Burger menu"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Casual", "Sea breeze", "Beer list"], bestFor: ["Couples", "Cocktails", "Photo-worthy"], dressCode: "Swimwear at pool · Smart casual elsewhere", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-skipper-bar/1600/1067',
-        'https://picsum.photos/seed/sunspot-skipper-bar-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-skipper-bar-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png',
       ], poolType: "Heated pool", surface: "Pool deck" },
  { id: "brittannia-cafe", name: "Brittannia Cafe Lido", category: "pool-club", region: "north", location: "Bugibba Promenade, Triq il-Korp tal-Pijunieri", regionLabel: "Bugibba", coords: { lat: 35.958, lng: 14.4119 }, hasBookableSunbeds: true, rating: 4.5, reviews: 413, summary: "Classic family pool lido on Bugibba's seafront — three pools including a kiddie pool.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Family-friendly", "Kiddie pool", "Direct beach access"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-brittannia-cafe/1600/1067',
-        'https://picsum.photos/seed/sunspot-brittannia-cafe-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-brittannia-cafe-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/e/ee/Bugibba_-_Malta_-_panoramio.jpg',
       ], sunbedFrom: 12, cabanaFrom: 60, vipFrom: 220, spotsLeft: 40, capacity: { sunbeds: 53, cabanas: 11, vip: 4, total: 83 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "bonita-beach-club", name: "Bonita Beach Club", category: "pool-club", region: "north", location: "Tunara Street, Mellieha", regionLabel: "Mellieha", coords: { lat: 35.9588, lng: 14.3645 }, hasBookableSunbeds: true, rating: 4.5, reviews: 320, summary: "Pool club at the AX Mellieha Bay Hotel — large freshwater pool with adjacent beach access.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Pool deck", "Day passes", "Family-friendly"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-bonita-beach-club/1600/1067',
-        'https://picsum.photos/seed/sunspot-bonita-beach-club-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-bonita-beach-club-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_01_ies.jpg/1920px-Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_01_ies.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_02_ies.jpg/1920px-Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_02_ies.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_03_ies.jpg/1920px-Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_03_ies.jpg',
       ], sunbedFrom: 15, cabanaFrom: 80, vipFrom: 220, spotsLeft: 28, capacity: { sunbeds: 80, cabanas: 6, vip: 3, total: 110 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "tortuga-bugibba", name: "Tortuga Beach Club", category: "pool-club", region: "north", location: "Triq it-Turisti, Bugibba", regionLabel: "Bugibba", coords: { lat: 35.9572, lng: 14.4148 }, hasBookableSunbeds: true, rating: 4.2, reviews: 451, summary: "Pirate-themed family pool club at the Topaz Hotel — slides, splash pool, surf-style decor.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Family-friendly", "Water slides", "Pirate theme"], bestFor: ["Families with kids", "Day-trippers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-tortuga-bugibba/1600/1067',
-        'https://picsum.photos/seed/sunspot-tortuga-bugibba-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-tortuga-bugibba-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bugibba_in_2018_04.jpg/1920px-Bugibba_in_2018_04.jpg',
       ], sunbedFrom: 14, cabanaFrom: 75, vipFrom: 220, spotsLeft: 35, capacity: { sunbeds: 31, cabanas: 9, vip: 2, total: 121 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "surfside-sliema", name: "Surfside Pool Club", category: "pool-club", region: "central", location: "Tower Road, Sliema", regionLabel: "Sliema", coords: { lat: 35.9152, lng: 14.5042 }, hasBookableSunbeds: true, rating: 4.5, reviews: 619, summary: "Sliema seafront pool club opposite the rocks — California surf aesthetic, kid-friendly with adults' section.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Pool deck", "Day passes", "Family-friendly"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-surfside-sliema/1600/1067',
-        'https://picsum.photos/seed/sunspot-surfside-sliema-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-surfside-sliema-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Edward_Lear_-_Sliema_-_Google_Art_Project.jpg/1920px-Edward_Lear_-_Sliema_-_Google_Art_Project.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Detalle_de_Fond_G%C4%A7adir_Baths.jpg/1920px-Detalle_de_Fond_G%C4%A7adir_Baths.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Fond_Ghadir_Beach_in_Sliema.jpg/1920px-Fond_Ghadir_Beach_in_Sliema.jpg',
       ], sunbedFrom: 18, cabanaFrom: 95, vipFrom: 220, spotsLeft: 22, capacity: { sunbeds: 79, cabanas: 9, vip: 2, total: 169 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "db-seabank", name: "db Seabank Pool Complex", category: "pool-club", region: "north", location: "db Seabank Resort, Mellieha Bay", regionLabel: "Mellieha", coords: { lat: 35.9695, lng: 14.358 }, hasBookableSunbeds: true, rating: 4.2, reviews: 349, summary: "Massive resort pool complex — five pools, water slides, beach access. Day-pass available off-season.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["5 pools", "Water slides", "Beach access", "All-day food"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-db-seabank/1600/1067',
-        'https://picsum.photos/seed/sunspot-db-seabank-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-db-seabank-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_01_ies.jpg/1920px-Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_01_ies.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_02_ies.jpg/1920px-Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_02_ies.jpg',
       ], sunbedFrom: 30, cabanaFrom: 150, vipFrom: 280, spotsLeft: 60, capacity: { sunbeds: 49, cabanas: 11, vip: 4, total: 139 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "radisson-golden-sands", name: "Radisson Blu Golden Sands Pool", category: "pool-club", region: "north", location: "Radisson Blu Resort, Golden Bay", regionLabel: "Golden Bay", coords: { lat: 35.9388, lng: 14.3413 }, hasBookableSunbeds: true, rating: 4.5, reviews: 405, summary: "Cliffside pool deck above Golden Bay — cabana service, infinity-style pool.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Cliffside pool", "Cabana service", "Bay views"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-radisson-golden-sands/1600/1067',
-        'https://picsum.photos/seed/sunspot-radisson-golden-sands-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-radisson-golden-sands-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/02005_002_Golden_Bay_%28Mellie%C4%A7a%29.jpg/1920px-02005_002_Golden_Bay_%28Mellie%C4%A7a%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/02005_009_Golden_Bay_%28Mellie%C4%A7a%29.jpg/1920px-02005_009_Golden_Bay_%28Mellie%C4%A7a%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Bah%C3%ADa_dorada%2C_isla_de_Malta%2C_Malta%2C_2021-08-23%2C_DD_62.jpg/1920px-Bah%C3%ADa_dorada%2C_isla_de_Malta%2C_Malta%2C_2021-08-23%2C_DD_62.jpg',
       ], sunbedFrom: 30, cabanaFrom: 160, vipFrom: 320, spotsLeft: 25, capacity: { sunbeds: 45, cabanas: 11, vip: 4, total: 75 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "westin-pool-cabanas", name: "Westin Cabana Pool", category: "pool-club", region: "central", location: "Westin Dragonara, St Julian's", regionLabel: "St Julian's", coords: { lat: 35.926, lng: 14.4922 }, hasBookableSunbeds: true, rating: 4.5, reviews: 602, summary: "Lower-deck pool at the Westin with private cabanas and direct rock-beach access.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Pool deck", "Day passes", "Family-friendly"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-westin-pool-cabanas/1600/1067',
-        'https://picsum.photos/seed/sunspot-westin-pool-cabanas-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-westin-pool-cabanas-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg',
       ], sunbedFrom: 35, cabanaFrom: 200, vipFrom: 220, spotsLeft: 18, capacity: { sunbeds: 62, cabanas: 8, vip: 1, total: 152 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "corinthia-st-george", name: "Corinthia St George's Pool", category: "pool-club", region: "central", location: "Corinthia Hotel, St George's Bay", regionLabel: "St Julian's", coords: { lat: 35.9272, lng: 14.4878 }, hasBookableSunbeds: true, rating: 4.3, reviews: 575, summary: "Two-tier pool at the Corinthia — saltwater lower pool with sea steps, freshwater upper pool.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Pool deck", "Day passes", "Family-friendly"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-corinthia-st-george/1600/1067',
-        'https://picsum.photos/seed/sunspot-corinthia-st-george-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-corinthia-st-george-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg',
       ], sunbedFrom: 28, cabanaFrom: 140, vipFrom: 220, spotsLeft: 30, capacity: { sunbeds: 35, cabanas: 5, vip: 2, total: 125 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "marina-hotel-pool", name: "Marina Hotel Pool Deck", category: "pool-club", region: "central", location: "Marina Hotel Corinthia Beach Resort, St George's Bay", regionLabel: "St Julian's", coords: { lat: 35.9282, lng: 14.4883 }, hasBookableSunbeds: true, rating: 4.3, reviews: 171, summary: "Quiet pool deck at the Marina Hotel — shared with the Corinthia next door but less crowded.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Pool deck", "Day passes", "Family-friendly"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-marina-hotel-pool/1600/1067',
-        'https://picsum.photos/seed/sunspot-marina-hotel-pool-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-marina-hotel-pool-b/1600/1067',
+        'https://verdihotels.com/wp-content/uploads/sites/4/2024/05/Verdi-Prague-JKI-202-e1715330130137.jpg',
+        'https://verdihotels.com/wp-content/uploads/sites/4/2024/05/Verdi-Prague-JKI-202-e1715330130137-1400x1059.webp',
+        'https://verdihotels.com/wp-content/uploads/sites/4/2024/05/Verdi-Prague-JKI-202-e1715330130137.webp',
       ], sunbedFrom: 22, cabanaFrom: 110, vipFrom: 220, spotsLeft: 25, capacity: { sunbeds: 51, cabanas: 9, vip: 2, total: 81 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "cavalieri-pool", name: "Cavalieri Pool Club", category: "pool-club", region: "central", location: "Cavalieri Art Hotel, Spinola Bay", regionLabel: "St Julian's", coords: { lat: 35.9217, lng: 14.4925 }, hasBookableSunbeds: true, rating: 4.2, reviews: 456, summary: "Compact pool club perched above Spinola Bay — day pass €25.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Pool deck", "Day passes", "Family-friendly"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-cavalieri-pool/1600/1067',
-        'https://picsum.photos/seed/sunspot-cavalieri-pool-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-cavalieri-pool-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg',
       ], sunbedFrom: 20, cabanaFrom: 100, vipFrom: 220, spotsLeft: 16, capacity: { sunbeds: 36, cabanas: 6, vip: 3, total: 126 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "meridien-balluta", name: "Le Méridien Pool", category: "pool-club", region: "central", location: "Le Méridien St Julian's, Balluta Bay", regionLabel: "St Julian's", coords: { lat: 35.9192, lng: 14.4983 }, hasBookableSunbeds: true, rating: 4.5, reviews: 119, summary: "Bayside pool at Le Méridien overlooking Balluta — adults pool + family pool.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Pool deck", "Day passes", "Family-friendly"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-meridien-balluta/1600/1067',
-        'https://picsum.photos/seed/sunspot-meridien-balluta-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-meridien-balluta-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg',
       ], sunbedFrom: 26, cabanaFrom: 130, vipFrom: 220, spotsLeft: 20, capacity: { sunbeds: 59, cabanas: 5, vip: 2, total: 149 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "cugo-gran-macina", name: "Cugò Gran Macina Harbour Pool", category: "pool-club", region: "south", location: "Cugò Gran Macina, Senglea", regionLabel: "Three Cities", coords: { lat: 35.8862, lng: 14.5183 }, hasBookableSunbeds: true, rating: 4.4, reviews: 591, summary: "Boutique harbour-side pool inside a converted 1700s harbour bastion — Grand Harbour views.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Historic bastion setting", "Grand Harbour views", "Boutique"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-cugo-gran-macina/1600/1067',
-        'https://picsum.photos/seed/sunspot-cugo-gran-macina-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-cugo-gran-macina-b/1600/1067',
+        'https://cugogranmacina.com/wp-content/uploads/2023/07/CGM-Hero-Image-Night.jpg',
+        'https://cugogranmacina.com/wp-content/uploads/2024/09/IBB-MACINA-01444.jpg',
+        'https://cugogranmacina.com/wp-content/uploads/2024/09/IBB-MACINA-00704-HDR-Editar.jpg',
       ], sunbedFrom: 35, cabanaFrom: 175, vipFrom: 220, spotsLeft: 12, capacity: { sunbeds: 51, cabanas: 5, vip: 2, total: 141 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "odycy-pool", name: "AX ODYCY Beach Club", category: "pool-club", region: "north", location: "AX ODYCY Hotel, Qawra Coast", regionLabel: "Qawra", coords: { lat: 35.9598, lng: 14.4258 }, hasBookableSunbeds: true, rating: 4.6, reviews: 524, summary: "Resort-style beach club on the Qawra coast — three pools, swim-up bar, sunset shows.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["3 pools", "Swim-up bar", "Sunset shows", "Day pass"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-odycy-pool/1600/1067',
-        'https://picsum.photos/seed/sunspot-odycy-pool-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-odycy-pool-b/1600/1067',
+        'https://www.odycy.com/_next/image?url=%2Fimages%2Fbook-service-landing-hero.png&w=3840&q=75',
       ], sunbedFrom: 22, cabanaFrom: 120, vipFrom: 250, spotsLeft: 45, capacity: { sunbeds: 44, cabanas: 10, vip: 3, total: 74 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "salini-resort-pool", name: "Salini Resort Pool", category: "pool-club", region: "north", location: "Salini Resort, Salina Bay", regionLabel: "Salina", coords: { lat: 35.9495, lng: 14.4172 }, hasBookableSunbeds: true, rating: 4.3, reviews: 465, summary: "Quiet adults-leaning pool overlooking the Salina saltpans bay.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Pool deck", "Day passes", "Family-friendly"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-salini-resort-pool-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-salini-resort-pool-b/1600/1067',
       ], sunbedFrom: 18, cabanaFrom: 90, vipFrom: 220, spotsLeft: 18, capacity: { sunbeds: 45, cabanas: 7, vip: 4, total: 135 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "marquee-pool", name: "Marquee Pool Club", category: "pool-club", region: "central", location: "Marquee Mall Roof, Triq il-Maskri, Tigne", regionLabel: "Sliema", coords: { lat: 35.9088, lng: 14.5072 }, hasBookableSunbeds: true, rating: 4.1, reviews: 39, summary: "Members-leaning pool club on the Marquee Mall roof — sleek, all-white aesthetic.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Members club vibe", "All-white aesthetic", "Adults only"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-marquee-pool/1600/1067',
-        'https://picsum.photos/seed/sunspot-marquee-pool-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-marquee-pool-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Malta_-_Marsaskala_-_Triq_is-Salini%2BMarsaskala_Bay%2BTriq_Zonqor_02_ies.jpg/1920px-Malta_-_Marsaskala_-_Triq_is-Salini%2BMarsaskala_Bay%2BTriq_Zonqor_02_ies.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/5/5e/MarsascalaMalta.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Marsascala_Church%2C_2019.jpg/1920px-Marsascala_Church%2C_2019.jpg',
       ], sunbedFrom: 22, cabanaFrom: 115, vipFrom: 220, spotsLeft: 14, capacity: { sunbeds: 39, cabanas: 5, vip: 2, total: 69 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "exiles-lido", name: "Exiles Bay Lido", category: "lido", region: "central", location: "Tower Road, Sliema", regionLabel: "Sliema", coords: { lat: 35.9163, lng: 14.5023 }, hasBookableSunbeds: true, rating: 4.2, reviews: 65, summary: "Sliema's traditional rock lido — concrete platforms with sea ladders, daily-swimmer haunt.", amenities: ["Sun loungers", "Showers", "Toilets", "Sea access ladders", "Snack kiosk"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Rock platform", "Daily swimmers", "Local institution"], bestFor: ["Locals", "Casual visits", "Daily swimmers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-exiles-lido/1600/1067',
-        'https://picsum.photos/seed/sunspot-exiles-lido-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-exiles-lido-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png',
       ], sunbedFrom: 10, cabanaFrom: 60, vipFrom: 150, spotsLeft: 35, capacity: { sunbeds: 65, cabanas: 7, vip: 4, total: 95 }, poolType: "Sea access (rock platform)", surface: "Concrete platform" },
  { id: "fond-ghadir-lido", name: "Fond Għadir Lido", category: "lido", region: "central", location: "Sliema Promenade, between Exiles and Surfside", regionLabel: "Sliema", coords: { lat: 35.9148, lng: 14.504 }, hasBookableSunbeds: true, rating: 4.2, reviews: 168, summary: "Classic Sliema lido with rock platforms and ladders into the sea. Family of regulars since the 1960s.", amenities: ["Sun loungers", "Showers", "Toilets", "Sea access ladders", "Snack kiosk"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Rock lido", "Local regulars", "Snack kiosk"], bestFor: ["Locals", "Casual visits", "Daily swimmers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-fond-ghadir-lido/1600/1067',
-        'https://picsum.photos/seed/sunspot-fond-ghadir-lido-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-fond-ghadir-lido-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png',
       ], sunbedFrom: 8, cabanaFrom: 60, vipFrom: 150, spotsLeft: 40, capacity: { sunbeds: 48, cabanas: 6, vip: 3, total: 78 }, poolType: "Sea access (rock platform)", surface: "Concrete platform" },
  { id: "qui-si-sana-lido", name: "Qui-Si-Sana Lido", category: "lido", region: "central", location: "Qui-Si-Sana Seafront, Sliema", regionLabel: "Sliema", coords: { lat: 35.9097, lng: 14.5067 }, hasBookableSunbeds: true, rating: 4.4, reviews: 308, summary: "South-Sliema lido facing Manoel Island. Calmer waters, less wind, popular with families.", amenities: ["Sun loungers", "Showers", "Toilets", "Sea access ladders", "Snack kiosk"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Family-friendly", "Sheltered swim"], bestFor: ["Locals", "Casual visits", "Daily swimmers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-qui-si-sana-lido/1600/1067',
-        'https://picsum.photos/seed/sunspot-qui-si-sana-lido-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-qui-si-sana-lido-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png',
       ], sunbedFrom: 12, cabanaFrom: 60, vipFrom: 150, spotsLeft: 28, capacity: { sunbeds: 68, cabanas: 10, vip: 3, total: 98 }, poolType: "Sea access (rock platform)", surface: "Concrete platform" },
  { id: "tigne-lido", name: "Tigne Point Lido", category: "lido", region: "central", location: "Tigne Point, Sliema", regionLabel: "Sliema", coords: { lat: 35.9098, lng: 14.5097 }, hasBookableSunbeds: true, rating: 4.4, reviews: 516, summary: "Newest of Sliema's lidos — built into the Tigne Point regeneration. Manicured and quiet.", amenities: ["Sun loungers", "Showers", "Toilets", "Sea access ladders", "Snack kiosk"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Direct sea access", "Ladders into sea", "Snack kiosk"], bestFor: ["Locals", "Casual visits", "Daily swimmers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-tigne-lido/1600/1067',
-        'https://picsum.photos/seed/sunspot-tigne-lido-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-tigne-lido-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Malta_-_Sliema_-_Triq_Ix-Xatt_-_Sliema_Harbour_01.jpg/1920px-Malta_-_Sliema_-_Triq_Ix-Xatt_-_Sliema_Harbour_01.jpg',
       ], sunbedFrom: 18, cabanaFrom: 90, vipFrom: 150, spotsLeft: 22, capacity: { sunbeds: 36, cabanas: 10, vip: 3, total: 66 }, poolType: "Sea access (rock platform)", surface: "Concrete platform" },
  { id: "famous-five-lido", name: "Famous Five Lido", category: "lido", region: "central", location: "Sliema Promenade (between Surfside and Exiles)", regionLabel: "Sliema", coords: { lat: 35.9155, lng: 14.5031 }, hasBookableSunbeds: true, rating: 4.1, reviews: 547, summary: "Tiny local lido known by its retro yellow umbrellas. Cash only, no website, no fuss.", amenities: ["Sun loungers", "Showers", "Toilets", "Sea access ladders", "Snack kiosk"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Retro aesthetic", "Cash only", "Local secret"], bestFor: ["Locals", "Casual visits", "Daily swimmers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-famous-five-lido/1600/1067',
-        'https://picsum.photos/seed/sunspot-famous-five-lido-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-famous-five-lido-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png',
       ], sunbedFrom: 7, cabanaFrom: 60, vipFrom: 150, spotsLeft: 24, capacity: { sunbeds: 67, cabanas: 9, vip: 2, total: 97 }, poolType: "Sea access (rock platform)", surface: "Concrete platform" },
  { id: "roy-lido", name: "Roy Lido", category: "lido", region: "central", location: "St Julian's Tower Road, near Independence Garden", regionLabel: "St Julian's", coords: { lat: 35.918, lng: 14.4992 }, hasBookableSunbeds: true, rating: 4.4, reviews: 109, summary: "Small rocky lido at the St Julian's–Sliema border — daily swimmers, sunbeds €10.", amenities: ["Sun loungers", "Showers", "Toilets", "Sea access ladders", "Snack kiosk"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Direct sea access", "Ladders into sea", "Snack kiosk"], bestFor: ["Locals", "Casual visits", "Daily swimmers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-roy-lido/1600/1067',
-        'https://picsum.photos/seed/sunspot-roy-lido-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-roy-lido-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Edward_Lear_-_Sliema_-_Google_Art_Project.jpg/1920px-Edward_Lear_-_Sliema_-_Google_Art_Project.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Malta_-_Sliema_-_Triq_Ix-Xatt_ta%27_Tign%C3%A9%2BGzira_%28Tign%C3%A9_Pedestrian_Bridge%29_01_ies.jpg/1920px-Malta_-_Sliema_-_Triq_Ix-Xatt_ta%27_Tign%C3%A9%2BGzira_%28Tign%C3%A9_Pedestrian_Bridge%29_01_ies.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Malta_-_Sliema_-_Triq_Ix-Xatt_ta%27_Tign%C3%A9_%28Tign%C3%A9_Pedestrian_Bridge%29_01_ies.jpg/1920px-Malta_-_Sliema_-_Triq_Ix-Xatt_ta%27_Tign%C3%A9_%28Tign%C3%A9_Pedestrian_Bridge%29_01_ies.jpg',
       ], sunbedFrom: 10, cabanaFrom: 60, vipFrom: 150, spotsLeft: 30, capacity: { sunbeds: 49, cabanas: 11, vip: 4, total: 139 }, poolType: "Sea access (rock platform)", surface: "Concrete platform" },
  { id: "brittannia-rocks-lido", name: "Brittannia Rocks Lido", category: "lido", region: "north", location: "Bugibba Seafront", regionLabel: "Bugibba", coords: { lat: 35.9574, lng: 14.4101 }, hasBookableSunbeds: true, rating: 4.0, reviews: 32, summary: "Public lido area in Bugibba — limited sunbeds, mostly free rocks.", amenities: ["Sun loungers", "Showers", "Toilets", "Sea access ladders", "Snack kiosk"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Public", "Rocky shelf"], bestFor: ["Locals", "Casual visits", "Daily swimmers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-brittannia-rocks-lido/1600/1067',
-        'https://picsum.photos/seed/sunspot-brittannia-rocks-lido-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-brittannia-rocks-lido-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_01.jpg/1920px-Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_01.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_02.jpg/1920px-Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_02.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_03.jpg/1920px-Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_03.jpg',
       ], sunbedFrom: 8, cabanaFrom: 60, vipFrom: 150, spotsLeft: 50, capacity: { sunbeds: 32, cabanas: 6, vip: 3, total: 62 }, poolType: "Sea access (rock platform)", surface: "Concrete platform" },
  { id: "marsalforn-lido", name: "Marsalforn Bay Lido", category: "lido", region: "gozo", location: "Marsalforn Seafront, Gozo", regionLabel: "Gozo", coords: { lat: 36.0712, lng: 14.2596 }, hasBookableSunbeds: true, rating: 4.1, reviews: 57, summary: "Tiny sandy beach in Marsalforn village with adjoining lido area — Gozo's busiest summer spot.", amenities: ["Sun loungers", "Showers", "Toilets", "Sea access ladders", "Snack kiosk"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Direct sea access", "Ladders into sea", "Snack kiosk"], bestFor: ["Locals", "Casual visits", "Daily swimmers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Marsalforn-2560x14402-1.jpeg',
-        'https://picsum.photos/seed/sunspot-marsalforn-lido-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-marsalforn-lido-b/1600/1067',
       ], sunbedFrom: 12, cabanaFrom: 60, vipFrom: 150, spotsLeft: 22, capacity: { sunbeds: 57, cabanas: 7, vip: 4, total: 87 }, poolType: "Sea access (rock platform)", surface: "Concrete platform" },
  { id: "ghar-id-dud-rocks", name: "Għar id-Dud Rocks", category: "lido", region: "central", location: "Tower Road, Sliema (north end)", regionLabel: "Sliema", coords: { lat: 35.921, lng: 14.5005 }, hasBookableSunbeds: true, rating: 4.4, reviews: 619, summary: "Sliema rocky bathing area named after the small sea-eroded cave at the cliff base.", amenities: ["Sun loungers", "Showers", "Toilets", "Sea access ladders", "Snack kiosk"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Rock platform", "Snorkelling", "Sunset spot"], bestFor: ["Locals", "Casual visits", "Daily swimmers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-ghar-id-dud-rocks/1600/1067',
-        'https://picsum.photos/seed/sunspot-ghar-id-dud-rocks-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-ghar-id-dud-rocks-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png',
       ], sunbedFrom: 8, cabanaFrom: 60, vipFrom: 150, spotsLeft: 60, capacity: { sunbeds: 79, cabanas: 9, vip: 2, total: 169 }, poolType: "Sea access (rock platform)", surface: "Concrete platform" },
  { id: "marsascala-lido", name: "Marsascala Lido", category: "lido", region: "south", location: "Marsascala Seafront", regionLabel: "Marsascala", coords: { lat: 35.8645, lng: 14.5667 }, hasBookableSunbeds: true, rating: 4.5, reviews: 626, summary: "Quiet south-coast lido — locals' favourite, Marsascala village calm.", amenities: ["Sun loungers", "Showers", "Toilets", "Sea access ladders", "Snack kiosk"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Direct sea access", "Ladders into sea", "Snack kiosk"], bestFor: ["Locals", "Casual visits", "Daily swimmers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg',
-        'https://picsum.photos/seed/sunspot-marsascala-lido-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-marsascala-lido-b/1600/1067',
       ], sunbedFrom: 10, cabanaFrom: 50, vipFrom: 150, spotsLeft: 30, capacity: { sunbeds: 86, cabanas: 8, vip: 1, total: 176 }, poolType: "Sea access (rock platform)", surface: "Concrete platform" },
  { id: "riviera-resort", name: "Riviera Resort Beach Club", category: "beach-club", region: "north", location: "Marfa, Mellieha (Paradise Bay end)", regionLabel: "Marfa", coords: { lat: 35.9982, lng: 14.3478 }, hasBookableSunbeds: true, rating: 4.3, reviews: 355, summary: "Resort beach club at Marfa with bay access — sunbeds, watersports, kid pool.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-riviera-resort/1600/1067',
-        'https://picsum.photos/seed/sunspot-riviera-resort-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-riviera-resort-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/f/fe/MALTA_-_INTRODUCTION_%284308717706%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Panoramic_View_of_G%C4%A7ajn_Tuffie%C4%A7a_Bay.jpg/1920px-Panoramic_View_of_G%C4%A7ajn_Tuffie%C4%A7a_Bay.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Playa_de_Riviera%2C_isla_de_Malta%2C_Malta%2C_2021-08-23%2C_DD_63-65_HDR.jpg/1920px-Playa_de_Riviera%2C_isla_de_Malta%2C_Malta%2C_2021-08-23%2C_DD_63-65_HDR.jpg',
       ], sunbedFrom: 18, cabanaFrom: 90, vipFrom: 200, spotsLeft: 35, capacity: { sunbeds: 55, cabanas: 9, vip: 2, total: 145 }, poolType: "Beach", surface: "Sand" },
  { id: "seabank-beach-club", name: "Seabank Beach Club", category: "beach-club", region: "north", location: "db Seabank, Mellieha Bay", regionLabel: "Mellieha", coords: { lat: 35.9691, lng: 14.3593 }, hasBookableSunbeds: true, rating: 4.5, reviews: 500, summary: "Sandy-beach club fronting Mellieha Bay — sunbed service, watersports.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-seabank-beach-club-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-seabank-beach-club-b/1600/1067',
       ], sunbedFrom: 20, cabanaFrom: 100, vipFrom: 200, spotsLeft: 30, capacity: { sunbeds: 80, cabanas: 10, vip: 3, total: 170 }, poolType: "Beach", surface: "Sand" },
  { id: "paradise-bay-resort", name: "Paradise Bay Resort Beach Club", category: "beach-club", region: "north", location: "Cirkewwa, behind Paradise Bay", regionLabel: "Cirkewwa", coords: { lat: 36.0028, lng: 14.3375 }, hasBookableSunbeds: true, rating: 4.6, reviews: 512, summary: "Beach club at the Paradise Bay Resort — the only sunbed service at Paradise Bay.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Paradise-Bay-2560x14405-1.jpeg',
-        'https://picsum.photos/seed/sunspot-paradise-bay-resort-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-paradise-bay-resort-b/1600/1067',
       ], sunbedFrom: 16, cabanaFrom: 85, vipFrom: 200, spotsLeft: 25, capacity: { sunbeds: 32, cabanas: 6, vip: 3, total: 62 }, poolType: "Beach", surface: "Sand" },
  { id: "westin-beach", name: "Westin Beach Cabanas", category: "beach-club", region: "central", location: "Dragonara Point, St Julian's", regionLabel: "St Julian's", coords: { lat: 35.9248, lng: 14.4932 }, hasBookableSunbeds: true, rating: 4.7, reviews: 324, summary: "Cabana-only beach service at the Westin lower rock beach — sea access via steps.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-westin-beach/1600/1067',
-        'https://picsum.photos/seed/sunspot-westin-beach-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-westin-beach-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg',
       ], sunbedFrom: 0, cabanaFrom: 200, vipFrom: 350, spotsLeft: 10, capacity: { sunbeds: 84, cabanas: 10, vip: 3, total: 114 }, poolType: "Beach", surface: "Sand" },
- { id: "ramla-beach-club", name: "Ramla Beach Cabana Co.", category: "beach-club", region: "gozo", location: "Ramla l-Ħamra, Nadur, Gozo", regionLabel: "Gozo", coords: { lat: 36.0613, lng: 14.2933 }, hasBookableSunbeds: true, rating: 4.3, reviews: 443, summary: "Modern beach service operating on Gozo's famous red sand — sunbeds, parasols, food and beer to your spot.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: ["https://picsum.photos/seed/sunspot-ramla-beach-club/1600/1067", "https://picsum.photos/seed/sunspot-ramla-beach-club-a/1600/1067", "https://picsum.photos/seed/sunspot-ramla-beach-club-b/1600/1067"], sunbedFrom: 15, cabanaFrom: 70, vipFrom: 200, spotsLeft: 28, capacity: { sunbeds: 83, cabanas: 9, vip: 2, total: 113 }, poolType: "Beach", surface: "Sand" },
+ { id: "ramla-beach-club", name: "Ramla Beach Cabana Co.", category: "beach-club", region: "gozo", location: "Ramla l-Ħamra, Nadur, Gozo", regionLabel: "Gozo", coords: { lat: 36.0613, lng: 14.2933 }, hasBookableSunbeds: true, rating: 4.3, reviews: 443, summary: "Modern beach service operating on Gozo's famous red sand — sunbeds, parasols, food and beer to your spot.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ir-Ramla_l-Hamra.jpg/1920px-Ir-Ramla_l-Hamra.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Ir-Ramla_l-Hamra_in_winter.jpg/1920px-Ir-Ramla_l-Hamra_in_winter.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Lis_de_mer_de_la_baie_de_Ramla.jpg/1920px-Lis_de_mer_de_la_baie_de_Ramla.jpg',
+      ], sunbedFrom: 15, cabanaFrom: 70, vipFrom: 200, spotsLeft: 28, capacity: { sunbeds: 83, cabanas: 9, vip: 2, total: 113 }, poolType: "Beach", surface: "Sand" },
  { id: "mellieha-bay-bar", name: "Mellieha Bay Beach Bar Co.", category: "beach-club", region: "north", location: "Tunara Street, Mellieha Bay (Għadira)", regionLabel: "Mellieha", coords: { lat: 35.9658, lng: 14.3625 }, hasBookableSunbeds: true, rating: 4.4, reviews: 368, summary: "Beach service operating sunbeds and a kiosk bar along the central section of Mellieha Bay.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-mellieha-bay-bar-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-mellieha-bay-bar-b/1600/1067',
       ], sunbedFrom: 13, cabanaFrom: 80, vipFrom: 200, spotsLeft: 60, capacity: { sunbeds: 68, cabanas: 6, vip: 3, total: 158 }, poolType: "Beach", surface: "Sand" },
  { id: "golden-bay-club", name: "Golden Bay Sunbed Co.", category: "beach-club", region: "north", location: "Golden Bay (Ramla tal-Mixquqa)", regionLabel: "Golden Bay", coords: { lat: 35.9385, lng: 14.3408 }, hasBookableSunbeds: true, rating: 4.4, reviews: 63, summary: "Independent sunbed and parasol operator at Golden Bay — pre-bookable spots in the front rows.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Golden-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-golden-bay-club-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-golden-bay-club-b/1600/1067',
       ], sunbedFrom: 12, cabanaFrom: 80, vipFrom: 200, spotsLeft: 35, capacity: { sunbeds: 63, cabanas: 5, vip: 2, total: 93 }, poolType: "Beach", surface: "Sand" },
- { id: "ghajn-tuffieha-sunbeds", name: "Għajn Tuffieħa Sunbeds", category: "beach-club", region: "north", location: "Għajn Tuffieħa Bay", regionLabel: "Għajn Tuffieħa", coords: { lat: 35.9298, lng: 14.3422 }, hasBookableSunbeds: true, rating: 4.3, reviews: 445, summary: "The only sunbed operator at protected Għajn Tuffieħa — strict spot limits to preserve the bay.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Strict capacity", "Protected bay"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: ["https://picsum.photos/seed/sunspot-ghajn-tuffieha-sunbeds/1600/1067", "https://picsum.photos/seed/sunspot-ghajn-tuffieha-sunbeds-a/1600/1067", "https://picsum.photos/seed/sunspot-ghajn-tuffieha-sunbeds-b/1600/1067"], sunbedFrom: 18, cabanaFrom: 80, vipFrom: 200, spotsLeft: 14, capacity: { sunbeds: 85, cabanas: 11, vip: 4, total: 115 }, poolType: "Beach", surface: "Sand" },
+ { id: "ghajn-tuffieha-sunbeds", name: "Għajn Tuffieħa Sunbeds", category: "beach-club", region: "north", location: "Għajn Tuffieħa Bay", regionLabel: "Għajn Tuffieħa", coords: { lat: 35.9298, lng: 14.3422 }, hasBookableSunbeds: true, rating: 4.3, reviews: 445, summary: "The only sunbed operator at protected Għajn Tuffieħa — strict spot limits to preserve the bay.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Strict capacity", "Protected bay"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Ghajn_Tuffieha_Bay_%2880472p%292.jpg/1920px-Ghajn_Tuffieha_Bay_%2880472p%292.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/G%C4%A7ajn_Tuffie%C4%A7a_Bay_%2801%29.jpg/1920px-G%C4%A7ajn_Tuffie%C4%A7a_Bay_%2801%29.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/G%C4%A7ajn_Tuffie%C4%A7a_Tower.jpg/1920px-G%C4%A7ajn_Tuffie%C4%A7a_Tower.jpg',
+      ], sunbedFrom: 18, cabanaFrom: 80, vipFrom: 200, spotsLeft: 14, capacity: { sunbeds: 85, cabanas: 11, vip: 4, total: 115 }, poolType: "Beach", surface: "Sand" },
  { id: "comino-beach-co", name: "Santa Marija Beach Co.", category: "beach-club", region: "comino", location: "Santa Marija Bay, Comino (north)", regionLabel: "Comino", coords: { lat: 35.9928, lng: 14.3417 }, hasBookableSunbeds: true, rating: 4.7, reviews: 521, summary: "Comino's quiet north-side bay — sunbed service, away from Blue Lagoon crowds.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Maria-Bay-2560x1440-1.jpg',
-        'https://picsum.photos/seed/sunspot-comino-beach-co-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-comino-beach-co-b/1600/1067',
       ], sunbedFrom: 15, cabanaFrom: 70, vipFrom: 200, spotsLeft: 20, capacity: { sunbeds: 41, cabanas: 7, vip: 4, total: 71 }, poolType: "Beach", surface: "Sand" },
- { id: "birzebbuga-beach-club", name: "Pretty Bay Beach Service", category: "beach-club", region: "south", location: "Pretty Bay, Birzebbuga", regionLabel: "Birzebbuga", coords: { lat: 35.8203, lng: 14.5358 }, hasBookableSunbeds: true, rating: 4.3, reviews: 359, summary: "South-coast sunbed service at Birzebbuga's Pretty Bay — quieter than the north.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: ["https://picsum.photos/seed/sunspot-birzebbuga-beach-club/1600/1067", "https://picsum.photos/seed/sunspot-birzebbuga-beach-club-a/1600/1067", "https://picsum.photos/seed/sunspot-birzebbuga-beach-club-b/1600/1067"], sunbedFrom: 12, cabanaFrom: 80, vipFrom: 200, spotsLeft: 40, capacity: { sunbeds: 59, cabanas: 5, vip: 2, total: 149 }, poolType: "Beach", surface: "Sand" },
+ { id: "birzebbuga-beach-club", name: "Pretty Bay Beach Service", category: "beach-club", region: "south", location: "Pretty Bay, Birzebbuga", regionLabel: "Birzebbuga", coords: { lat: 35.8203, lng: 14.5358 }, hasBookableSunbeds: true, rating: 4.3, reviews: 359, summary: "South-coast sunbed service at Birzebbuga's Pretty Bay — quieter than the north.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg',
+      ], sunbedFrom: 12, cabanaFrom: 80, vipFrom: 200, spotsLeft: 40, capacity: { sunbeds: 59, cabanas: 5, vip: 2, total: 149 }, poolType: "Beach", surface: "Sand" },
  { id: "imgiebah-bay", name: "Imġiebaħ Bay", category: "sandy-beach", region: "north", location: "Selmun, Mellieha", regionLabel: "Selmun", coords: { lat: 35.9572, lng: 14.3878 }, hasBookableSunbeds: false, rating: 4.5, reviews: 400, summary: "Remote sandy cove reached via a rough 4×4 track or 25-min hike. No facilities, big payoff.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Remote", "Sandy", "No facilities", "Hike-in"], bestFor: ["Adventurers", "Quiet days", "Couples"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Imgiebah-2560x14402-1.jpeg',
-        'https://picsum.photos/seed/sunspot-imgiebah-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-imgiebah-bay-b/1600/1067',
       ] },
  { id: "armier-bay", name: "Armier Bay", category: "sandy-beach", region: "north", location: "Armier, Mellieha (NE coast)", regionLabel: "Armier", coords: { lat: 35.9928, lng: 14.3818 }, hasBookableSunbeds: false, rating: 4.3, reviews: 572, summary: "Family beach popular with locals — boathouses, calm shallow water, casual snack bars.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Family-friendly", "Calm water", "Snack bars"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Armier-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-armier-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-armier-bay-b/1600/1067',
       ] },
  { id: "little-armier", name: "Little Armier", category: "sandy-beach", region: "north", location: "Little Armier, Mellieha", regionLabel: "Armier", coords: { lat: 35.9905, lng: 14.3863 }, hasBookableSunbeds: false, rating: 4.6, reviews: 214, summary: "Smaller, sandier neighbour to Armier — slightly clearer water, fewer crowds.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Quiet", "Sandy", "Clear water"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Armier-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-little-armier-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-little-armier-b/1600/1067',
       ] },
  { id: "riviera-bay-beach", name: "Riviera Bay", category: "sandy-beach", region: "north", location: "Below Għajn Tuffieħa (10-min walk)", regionLabel: "Għajn Tuffieħa", coords: { lat: 35.9335, lng: 14.337 }, hasBookableSunbeds: false, rating: 4.3, reviews: 466, summary: "Hidden sandy bay accessible by a steep walk down from the Għajn Tuffieħa cliffs.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Sandy", "Off-the-beaten-path", "Snorkelling"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Riviera-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-riviera-bay-beach-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-riviera-bay-beach-b/1600/1067',
       ] },
  { id: "slugs-bay", name: "Slugs Bay (White Tower)", category: "sandy-beach", region: "north", location: "White Tower Bay, Armier", regionLabel: "Armier", coords: { lat: 35.9938, lng: 14.3795 }, hasBookableSunbeds: false, rating: 4.1, reviews: 348, summary: "Tiny sandy cove next to White Tower — locals' secret, walk-in only.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Tiny", "Sandy", "Hidden"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Slugs-Bay-2560x14402-1.jpeg',
-        'https://picsum.photos/seed/sunspot-slugs-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-slugs-bay-b/1600/1067',
       ] },
  { id: "fomm-ir-rih", name: "Fomm ir-Riħ", category: "sandy-beach", region: "north", location: "Bahrija valley, west coast", regionLabel: "Bahrija", coords: { lat: 35.9135, lng: 14.3328 }, hasBookableSunbeds: false, rating: 4.5, reviews: 203, summary: "Wild west-coast bay below dramatic cliffs — reached by hiking 1km down a steep path.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Wild", "Cliffs", "Hike-in", "No facilities"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Fomm-ir-Rih-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-fomm-ir-rih-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-fomm-ir-rih-b/1600/1067',
       ] },
  { id: "gnejna-bay", name: "Ġnejna Bay", category: "sandy-beach", region: "north", location: "Mġarr, west coast", regionLabel: "Mġarr", coords: { lat: 35.9258, lng: 14.3408 }, hasBookableSunbeds: false, rating: 4.4, reviews: 594, summary: "Sandy bay between cliffs and boathouses, popular with Maltese families.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Sandy", "Boathouses", "Family-friendly"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Gnejna-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-gnejna-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-gnejna-bay-b/1600/1067',
       ] },
  { id: "bahar-ic-caghaq", name: "Baħar iċ-Ċagħaq", category: "sandy-beach", region: "central", location: "Coast Road, between Sliema and Bugibba", regionLabel: "Coast Road", coords: { lat: 35.9472, lng: 14.4612 }, hasBookableSunbeds: false, rating: 4.6, reviews: 513, summary: "Coastal beach belt with sandy patches and rocky platforms. Splash & Fun water park is here too.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Sandy patches", "Splash & Fun nearby"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-bahar-ic-caghaq-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-bahar-ic-caghaq-b/1600/1067',
       ] },
  { id: "salina-bay", name: "Salina Bay", category: "sandy-beach", region: "north", location: "Salina, between Bugibba and Coast Road", regionLabel: "Salina", coords: { lat: 35.9472, lng: 14.4178 }, hasBookableSunbeds: false, rating: 4.1, reviews: 449, summary: "Bird reserve and historic saltpans wrap around this shallow sandy bay. Good for kids.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Shallow", "Saltpans", "Bird reserve", "Family-friendly"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-salina-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-salina-bay-b/1600/1067',
       ] },
  { id: "balluta-bay", name: "Balluta Bay", category: "sandy-beach", region: "central", location: "Balluta Square, St Julian's", regionLabel: "St Julian's", coords: { lat: 35.9193, lng: 14.4988 }, hasBookableSunbeds: false, rating: 4.6, reviews: 419, summary: "Tiny urban sandy patch in central St Julian's, framed by the Balluta Buildings. More postcard than beach.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Urban", "Tiny", "Iconic backdrop"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Balluta-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-balluta-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-balluta-bay-b/1600/1067',
       ] },
  { id: "spinola-bay", name: "Spinola Bay", category: "sandy-beach", region: "central", location: "Spinola, St Julian's", regionLabel: "St Julian's", coords: { lat: 35.9225, lng: 14.4943 }, hasBookableSunbeds: false, rating: 4.3, reviews: 71, summary: "Postcard fishing harbour with a tiny sand strip — more for the views than swimming.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Postcard", "Tiny sand strip", "Fishing harbour"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Balluta-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-spinola-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-spinola-bay-b/1600/1067',
       ] },
- { id: "birzebbuga-pretty", name: "Pretty Bay (Birżebbuġa)", category: "sandy-beach", region: "south", location: "Pretty Bay, Birżebbuga", regionLabel: "Birżebbuga", coords: { lat: 35.8197, lng: 14.5345 }, hasBookableSunbeds: false, rating: 4.5, reviews: 207, summary: "Long sandy beach beside Malta Freeport — surprisingly clean swim, busy summer atmosphere.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Sandy", "Busy in summer", "Easy access"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: ["https://picsum.photos/seed/sunspot-birzebbuga-pretty/1600/1067", "https://picsum.photos/seed/sunspot-birzebbuga-pretty-a/1600/1067", "https://picsum.photos/seed/sunspot-birzebbuga-pretty-b/1600/1067"] },
+ { id: "birzebbuga-pretty", name: "Pretty Bay (Birżebbuġa)", category: "sandy-beach", region: "south", location: "Pretty Bay, Birżebbuga", regionLabel: "Birżebbuga", coords: { lat: 35.8197, lng: 14.5345 }, hasBookableSunbeds: false, rating: 4.5, reviews: 207, summary: "Long sandy beach beside Malta Freeport — surprisingly clean swim, busy summer atmosphere.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Sandy", "Busy in summer", "Easy access"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg',
+      ] },
  { id: "ghar-lapsi", name: "Għar Lapsi", category: "rocky-bay", region: "south", location: "Siġġiewi, south coast", regionLabel: "Siġġiewi", coords: { lat: 35.8237, lng: 14.4135 }, hasBookableSunbeds: false, rating: 4.6, reviews: 323, summary: "Sheltered rocky cove popular with snorkellers and divers — the south coast's swimming spot.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Snorkelling", "Diving", "Sheltered"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Ghar-Lapsi-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-ghar-lapsi-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-ghar-lapsi-b/1600/1067',
       ] },
  { id: "wied-iz-zurrieq", name: "Wied iż-Żurrieq", category: "rocky-bay", region: "south", location: "Żurrieq, south coast (Blue Grotto pier)", regionLabel: "Żurrieq", coords: { lat: 35.823, lng: 14.4505 }, hasBookableSunbeds: false, rating: 4.3, reviews: 588, summary: "Tiny rocky inlet at the Blue Grotto boat departure — quiet swim spot between boat trips.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Snorkelling", "Boat trips depart here", "Quiet swim"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Ghar-Lapsi-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-wied-iz-zurrieq-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-wied-iz-zurrieq-b/1600/1067',
       ] },
  { id: "hofra-l-kbira", name: "Hofra l-Kbira", category: "rocky-bay", region: "south", location: "Delimara peninsula, Marsaxlokk", regionLabel: "Delimara", coords: { lat: 35.8268, lng: 14.5697 }, hasBookableSunbeds: false, rating: 4.3, reviews: 380, summary: "Hidden rocky cove on the Delimara peninsula — clear deep water, no facilities.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Hidden", "Deep water", "Snorkelling"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-hofra-l-kbira-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-hofra-l-kbira-b/1600/1067',
       ] },
  { id: "hofra-z-zghira", name: "Ħofra ż-Żgħira", category: "rocky-bay", region: "south", location: "Delimara peninsula", regionLabel: "Delimara", coords: { lat: 35.8285, lng: 14.5712 }, hasBookableSunbeds: false, rating: 4.6, reviews: 224, summary: "Smaller sister to Hofra l-Kbira — even quieter, deeper, more dramatic.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Hidden", "Cliff diving", "Snorkelling"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-hofra-z-zghira-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-hofra-z-zghira-b/1600/1067',
       ] },
  { id: "kalanka-bay", name: "Kalanka Bay", category: "rocky-bay", region: "south", location: "Delimara, near Peter's Pool", regionLabel: "Delimara", coords: { lat: 35.826, lng: 14.5685 }, hasBookableSunbeds: false, rating: 4.3, reviews: 486, summary: "Compact rocky bay next to St Peter's Pool — easier access, similar clarity.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Snorkelling", "Quiet", "Clear water"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-kalanka-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-kalanka-bay-b/1600/1067',
       ] },
  { id: "white-rocks-pembroke", name: "White Rocks", category: "rocky-bay", region: "central", location: "Pembroke coast, behind Westin", regionLabel: "Pembroke", coords: { lat: 35.9322, lng: 14.4842 }, hasBookableSunbeds: false, rating: 4.4, reviews: 90, summary: "Abandoned military pools now used as a free rocky bathing area — favoured by locals.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Free", "Historic", "Rock pools"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-white-rocks-pembroke-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-white-rocks-pembroke-b/1600/1067',
       ] },
  { id: "independence-garden-rocks", name: "Independence Garden Rocks", category: "rocky-bay", region: "central", location: "Sliema Promenade (Independence Garden, St Julian's border)", regionLabel: "Sliema", coords: { lat: 35.9197, lng: 14.5012 }, hasBookableSunbeds: false, rating: 4.4, reviews: 605, summary: "Slated rocky shelf along the promenade — daily-swimmer haunt with sea ladders.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Free", "Daily swimmers", "Sunset spot"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-independence-garden-rocks/1600/1067',
-        'https://picsum.photos/seed/sunspot-independence-garden-rocks-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-independence-garden-rocks-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png',
       ] },
  { id: "exiles-rocks", name: "Exiles Rocks", category: "rocky-bay", region: "central", location: "Tower Road, Sliema (north end)", regionLabel: "Sliema", coords: { lat: 35.9165, lng: 14.5018 }, hasBookableSunbeds: false, rating: 4.2, reviews: 359, summary: "Free public section of Exiles Bay rocks — adjacent to the paid lido.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Free", "Snorkelling", "Daily swimmers"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://picsum.photos/seed/sunspot-exiles-rocks/1600/1067',
-        'https://picsum.photos/seed/sunspot-exiles-rocks-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-exiles-rocks-b/1600/1067',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png',
       ] },
  { id: "bahar-ic-caghaq-rocks", name: "Baħar iċ-Ċagħaq Rocks", category: "rocky-bay", region: "central", location: "Coast Road, opposite Splash & Fun", regionLabel: "Coast Road", coords: { lat: 35.9482, lng: 14.4625 }, hasBookableSunbeds: false, rating: 4.1, reviews: 242, summary: "Flat rocky platform stretching along the coast road — good snorkelling, plenty of space.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Free", "Snorkelling", "Quiet"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-bahar-ic-caghaq-rocks-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-bahar-ic-caghaq-rocks-b/1600/1067',
       ] },
  { id: "rinella-bay", name: "Rinella Bay", category: "rocky-bay", region: "south", location: "Kalkara harbour", regionLabel: "Kalkara", coords: { lat: 35.8895, lng: 14.5358 }, hasBookableSunbeds: false, rating: 4.4, reviews: 489, summary: "Tiny rocky cove on the Kalkara side of the Grand Harbour — quiet inner-harbour swim.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Inner harbour", "Quiet", "Snorkelling"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-rinella-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-rinella-bay-b/1600/1067',
       ] },
  { id: "st-thomas-bay", name: "St Thomas Bay", category: "rocky-bay", region: "south", location: "Marsascala southwest end", regionLabel: "Marsascala", coords: { lat: 35.8568, lng: 14.5728 }, hasBookableSunbeds: false, rating: 4.5, reviews: 208, summary: "Long rocky bay south of Marsascala — local swimmers' choice, dramatic cliffs.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Cliffs", "Free", "Snorkelling"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg',
-        'https://picsum.photos/seed/sunspot-st-thomas-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-st-thomas-bay-b/1600/1067',
       ] },
  { id: "ras-il-hekka", name: "Ras il-Ħekka", category: "rocky-bay", region: "gozo", location: "Eastern Gozo cliffs", regionLabel: "Gozo", coords: { lat: 36.0532, lng: 14.3168 }, hasBookableSunbeds: false, rating: 4.2, reviews: 59, summary: "Gozo east-coast rock platform with grand views and no crowds.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Cliffs", "Quiet", "Snorkelling"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-ras-il-hekka-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-ras-il-hekka-b/1600/1067',
       ] },
  { id: "qbajjar-bay", name: "Qbajjar Bay", category: "rocky-bay", region: "gozo", location: "Marsalforn coast (saltpans end), Gozo", regionLabel: "Gozo", coords: { lat: 36.0728, lng: 14.247 }, hasBookableSunbeds: false, rating: 4.1, reviews: 143, summary: "Shallow rocky bay next to the Marsalforn saltpans — kid-friendly snorkelling.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Saltpans", "Family-friendly", "Snorkelling"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Marsalforn-2560x14402-1.jpeg',
-        'https://picsum.photos/seed/sunspot-qbajjar-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-qbajjar-bay-b/1600/1067',
       ] },
  { id: "xwejni-bay", name: "Xwejni Bay", category: "rocky-bay", region: "gozo", location: "Marsalforn east end, near saltpans", regionLabel: "Gozo", coords: { lat: 36.0735, lng: 14.2455 }, hasBookableSunbeds: false, rating: 4.4, reviews: 293, summary: "Saltpan beach with a famous mushroom rock — Gozo's most photogenic rocky swim spot.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Mushroom Rock", "Saltpans", "Photo-worthy"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2021/12/Xwejni-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-xwejni-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-xwejni-bay-b/1600/1067',
       ] },
  { id: "tas-salvatur", name: "Tas-Salvatur Rocks", category: "rocky-bay", region: "gozo", location: "Above Marsalforn village, Gozo", regionLabel: "Gozo", coords: { lat: 36.0742, lng: 14.2598 }, hasBookableSunbeds: false, rating: 4.3, reviews: 374, summary: "Higher rocky shelf above Marsalforn — quiet, sunset views over the bay.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Sunset spot", "Quiet"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2021/12/Xwejni-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-tas-salvatur-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-tas-salvatur-b/1600/1067',
       ] },
  { id: "blue-grotto", name: "Blue Grotto", category: "natural", region: "south", location: "Wied iż-Żurrieq, south coast", regionLabel: "Żurrieq", coords: { lat: 35.8222, lng: 14.4498 }, hasBookableSunbeds: false, rating: 4.4, reviews: 56, summary: "Iconic sea cave complex — visit by boat trip, with swim stops in the caves themselves.", amenities: ["Free public access", "Natural rock pool", "Dramatic scenery"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Sea caves", "Boat trips", "Photo-worthy"], bestFor: ["Adventurers", "Snorkellers", "Photo-worthy"], dressCode: "Swimwear · Water shoes recommended", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Ghar-Lapsi-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-blue-grotto-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-blue-grotto-b/1600/1067',
       ] },
  { id: "coral-lagoon", name: "Coral Lagoon", category: "natural", region: "north", location: "Armier headland, north coast", regionLabel: "Armier", coords: { lat: 35.9968, lng: 14.3815 }, hasBookableSunbeds: false, rating: 4.8, reviews: 624, summary: "Collapsed sea cave forming a circular natural pool — reached by 4×4 track + short scramble.", amenities: ["Free public access", "Natural rock pool", "Dramatic scenery"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Hidden", "Collapsed cave", "Photo-worthy"], bestFor: ["Adventurers", "Snorkellers", "Photo-worthy"], dressCode: "Swimwear · Water shoes recommended", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Crystal-Lagoon-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-coral-lagoon-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-coral-lagoon-b/1600/1067',
       ] },
  { id: "salt-pans-marsalforn", name: "Marsalforn Salt Pans", category: "natural", region: "gozo", location: "Coast between Marsalforn and Xwejni, Gozo", regionLabel: "Gozo", coords: { lat: 36.0738, lng: 14.251 }, hasBookableSunbeds: false, rating: 4.7, reviews: 110, summary: "350-year-old saltpan grid carved into the cliffs — swim in the rock pools when tide allows.", amenities: ["Free public access", "Natural rock pool", "Dramatic scenery"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Historic saltpans", "Rock pools", "Photo-worthy"], bestFor: ["Adventurers", "Snorkellers", "Photo-worthy"], dressCode: "Swimwear · Water shoes recommended", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2021/12/Xwejni-Bay-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-salt-pans-marsalforn-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-salt-pans-marsalforn-b/1600/1067',
       ] },
  { id: "inland-sea-dwejra-2", name: "Dwejra Inland Sea (pool)", category: "natural", region: "gozo", location: "Dwejra Bay, San Lawrenz, Gozo", regionLabel: "Gozo", coords: { lat: 36.0497, lng: 14.1893 }, hasBookableSunbeds: false, rating: 4.8, reviews: 627, summary: "Lagoon connected to the open sea by a 60m tunnel — swim into the tunnel for a unique experience.", amenities: ["Free public access", "Natural rock pool", "Dramatic scenery"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Lagoon", "Tunnel swim", "Photo-worthy"], bestFor: ["Adventurers", "Snorkellers", "Photo-worthy"], dressCode: "Swimwear · Water shoes recommended", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-inland-sea-dwejra-2-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-inland-sea-dwejra-2-b/1600/1067',
       ] },
  { id: "munxar-pools", name: "Munxar Cliff Pools", category: "natural", region: "south", location: "Below Marsascala cliffs, near St Thomas Bay", regionLabel: "Marsascala", coords: { lat: 35.8615, lng: 14.574 }, hasBookableSunbeds: false, rating: 4.4, reviews: 443, summary: "Natural rock pools below the Munxar cliffs — reached by scramble. Calm in any wind.", amenities: ["Free public access", "Natural rock pool", "Dramatic scenery"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Cliffs", "Sheltered pools", "Adventurer-only"], bestFor: ["Adventurers", "Snorkellers", "Photo-worthy"], dressCode: "Swimwear · Water shoes recommended", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg',
-        'https://picsum.photos/seed/sunspot-munxar-pools-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-munxar-pools-b/1600/1067',
       ] },
  { id: "cumnija-pools", name: "Ic-Cumnija Pools", category: "natural", region: "north", location: "Northern Mellieha coast (below Selmun Palace)", regionLabel: "Mellieha", coords: { lat: 35.9612, lng: 14.4015 }, hasBookableSunbeds: false, rating: 4.5, reviews: 374, summary: "Small natural rock pools at the foot of the Selmun cliffs — total seclusion when the wind is right.", amenities: ["Free public access", "Natural rock pool", "Dramatic scenery"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Hidden", "Cliffs", "Quiet"], bestFor: ["Adventurers", "Snorkellers", "Photo-worthy"], dressCode: "Swimwear · Water shoes recommended", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-cumnija-pools-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-cumnija-pools-b/1600/1067',
       ] },
  { id: "wied-il-mielah-cove", name: "Wied il-Mielaħ Cove", category: "natural", region: "gozo", location: "NW Gozo cliffs near Gharb", regionLabel: "Gozo", coords: { lat: 36.0832, lng: 14.2143 }, hasBookableSunbeds: false, rating: 4.5, reviews: 371, summary: "Replacement arch for the collapsed Azure Window — natural arch over a swimmable cove.", amenities: ["Free public access", "Natural rock pool", "Dramatic scenery"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Natural arch", "Cliffs", "Photo-worthy"], bestFor: ["Adventurers", "Snorkellers", "Photo-worthy"], dressCode: "Swimwear · Water shoes recommended", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-wied-il-mielah-cove-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-wied-il-mielah-cove-b/1600/1067',
       ] },
  { id: "san-blas-cove", name: "San Blas Cove", category: "natural", region: "gozo", location: "Nadur, NE Gozo (red sand cove)", regionLabel: "Gozo", coords: { lat: 36.0608, lng: 14.305 }, hasBookableSunbeds: false, rating: 4.8, reviews: 627, summary: "Tiny red-sand cove framed by terraced fields — Gozo's most postcard-worthy. Steep walk in.", amenities: ["Free public access", "Natural rock pool", "Dramatic scenery"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Red sand", "Hike-in", "Photo-worthy"], bestFor: ["Adventurers", "Snorkellers", "Photo-worthy"], dressCode: "Swimwear · Water shoes recommended", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/San-Blas-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-san-blas-cove-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-san-blas-cove-b/1600/1067',
       ] },
  { id: "marsalforn-bay", name: "Marsalforn Bay", category: "sandy-beach", region: "gozo", location: "Marsalforn village, north Gozo", regionLabel: "Gozo", coords: { lat: 36.07, lng: 14.26 }, hasBookableSunbeds: false, rating: 4.4, reviews: 483, summary: "Main holiday village in north Gozo — small sandy beach with restaurants on the promenade.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Sandy", "Restaurants", "Family-friendly"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Marsalforn-2560x14402-1.jpeg',
-        'https://picsum.photos/seed/sunspot-marsalforn-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-marsalforn-bay-b/1600/1067',
       ] },
  { id: "dahlet-qorrot", name: "Daħlet Qorrot", category: "rocky-bay", region: "gozo", location: "East Gozo, between Nadur and Qala", regionLabel: "Gozo", coords: { lat: 36.0508, lng: 14.3145 }, hasBookableSunbeds: false, rating: 4.1, reviews: 445, summary: "Boathouse-lined rocky inlet — locals' weekend escape. Good snorkelling.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Boathouses", "Snorkelling", "Local"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Dahlet-Qorot-2560x14404-1.jpeg',
-        'https://picsum.photos/seed/sunspot-dahlet-qorrot-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-dahlet-qorrot-b/1600/1067',
       ] },
  { id: "san-blas-bay", name: "San Blas Bay", category: "sandy-beach", region: "gozo", location: "Nadur, NE Gozo", regionLabel: "Gozo", coords: { lat: 36.0612, lng: 14.3052 }, hasBookableSunbeds: false, rating: 4.0, reviews: 31, summary: "Tiny red-sand bay reached by a steep 10-min walk. Worth every step.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Red sand", "Hidden", "Steep access"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/San-Blas-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-san-blas-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-san-blas-bay-b/1600/1067',
       ] },
  { id: "san-niklaw-bay", name: "San Niklaw Bay", category: "rocky-bay", region: "comino", location: "East Comino, walk from Comino Hotel", regionLabel: "Comino", coords: { lat: 35.9892, lng: 14.3473 }, hasBookableSunbeds: false, rating: 4.0, reviews: 133, summary: "Comino's quietest swim spot — walk 10 min from the Blue Lagoon crowds.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Quiet", "Snorkelling", "Comino"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Maria-Bay-2560x1440-1.jpg',
-        'https://picsum.photos/seed/sunspot-san-niklaw-bay-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-san-niklaw-bay-b/1600/1067',
       ] },
  { id: "comino-cliffs", name: "Comino South Cliffs", category: "natural", region: "comino", location: "South side of Comino (boat access)", regionLabel: "Comino", coords: { lat: 35.9852, lng: 14.3322 }, hasBookableSunbeds: false, rating: 4.8, reviews: 228, summary: "Dramatic south-Comino cliffs with sea caves — accessible only by boat.", amenities: ["Free public access", "Natural rock pool", "Dramatic scenery"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Cliffs", "Sea caves", "Boat access"], bestFor: ["Adventurers", "Snorkellers", "Photo-worthy"], dressCode: "Swimwear · Water shoes recommended", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Maria-Bay-2560x1440-1.jpg',
-        'https://picsum.photos/seed/sunspot-comino-cliffs-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-comino-cliffs-b/1600/1067',
       ] },
  { id: "qala-creek", name: "Qala Creek", category: "rocky-bay", region: "gozo", location: "East Gozo, Qala village", regionLabel: "Gozo", coords: { lat: 36.0418, lng: 14.3198 }, hasBookableSunbeds: false, rating: 4.1, reviews: 248, summary: "Sheltered rocky inlet near the Mġarr ferry — surprisingly quiet for its accessibility.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Sheltered", "Family-friendly"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Dahlet-Qorot-2560x14404-1.jpeg',
-        'https://picsum.photos/seed/sunspot-qala-creek-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-qala-creek-b/1600/1067',
       ] },
- { id: "ramla-extension", name: "Ramla l-Ħamra (East End)", category: "sandy-beach", region: "gozo", location: "Eastern end of Ramla Bay, Nadur side", regionLabel: "Gozo", coords: { lat: 36.061, lng: 14.2945 }, hasBookableSunbeds: false, rating: 4.4, reviews: 590, summary: "Quieter eastern end of Gozo's famous red beach — no operators, just sand.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Red sand", "Quiet", "No facilities"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: ["https://picsum.photos/seed/sunspot-ramla-extension/1600/1067", "https://picsum.photos/seed/sunspot-ramla-extension-a/1600/1067", "https://picsum.photos/seed/sunspot-ramla-extension-b/1600/1067"] },
+ { id: "ramla-extension", name: "Ramla l-Ħamra (East End)", category: "sandy-beach", region: "gozo", location: "Eastern end of Ramla Bay, Nadur side", regionLabel: "Gozo", coords: { lat: 36.061, lng: 14.2945 }, hasBookableSunbeds: false, rating: 4.4, reviews: 590, summary: "Quieter eastern end of Gozo's famous red beach — no operators, just sand.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Red sand", "Quiet", "No facilities"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bah%C3%ADa_de_Ramla_desde_la_cueva_de_Calipso%2C_isla_de_Gozo%2C_Malta%2C_2021-08-22%2C_DD_02.jpg/1920px-Bah%C3%ADa_de_Ramla_desde_la_cueva_de_Calipso%2C_isla_de_Gozo%2C_Malta%2C_2021-08-22%2C_DD_02.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bah%C3%ADa_de_Ramla_desde_la_cueva_de_Calipso%2C_isla_de_Gozo%2C_Malta%2C_2021-08-22%2C_DD_03.jpg/1920px-Bah%C3%ADa_de_Ramla_desde_la_cueva_de_Calipso%2C_isla_de_Gozo%2C_Malta%2C_2021-08-22%2C_DD_03.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Gozo_-_Rambla_Bay.jpg/1920px-Gozo_-_Rambla_Bay.jpg',
+      ] },
  { id: "mgarr-harbour-rocks", name: "Mġarr Harbour Rocks", category: "rocky-bay", region: "gozo", location: "Mġarr ferry port, Gozo", regionLabel: "Gozo", coords: { lat: 36.0245, lng: 14.2992 }, hasBookableSunbeds: false, rating: 4.6, reviews: 327, summary: "Easy-access rocky swim spot next to the Gozo ferry port — great if you're waiting for the boat.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Easy access", "Ferry port", "Snorkelling"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mgarr-Ix-xini-2560x1440-1.jpeg',
-        'https://picsum.photos/seed/sunspot-mgarr-harbour-rocks-a/1600/1067',
-        'https://picsum.photos/seed/sunspot-mgarr-harbour-rocks-b/1600/1067',
       ] },
 
  ];
