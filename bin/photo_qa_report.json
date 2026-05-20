@@ -1,10 +1,10 @@
 {
   "summary": {
     "total": 184,
-    "high": 71,
-    "ok": 74,
-    "suspect": 26,
-    "bad": 13
+    "high": 72,
+    "ok": 84,
+    "suspect": 28,
+    "bad": 0
   },
   "suspect": [
     {
@@ -131,6 +131,20 @@
       "notes": []
     },
     {
+      "venue": "marquee-pool",
+      "category": "pool-club",
+      "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St-Thomas-Bay-2560x1440-1.jpeg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "marquee-pool",
+      "category": "pool-club",
+      "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St-Thomas-Bay-2560x1440-1.jpeg",
+      "score": 0,
+      "notes": []
+    },
+    {
       "venue": "brittannia-rocks-lido",
       "category": "lido",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_01.jpg/1920px-Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_01.jpg",
@@ -198,138 +212,7 @@
       "notes": []
     }
   ],
-  "bad": [
-    {
-      "venue": "noma",
-      "category": "floating",
-      "url": "https://nomaisland.com/wp-content/uploads/2026/02/Untitled-design-1.jpg",
-      "score": -1,
-      "notes": [
-        "red-flag:sign",
-        "own-domain"
-      ]
-    },
-    {
-      "venue": "skipper-bar",
-      "category": "rooftop",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    },
-    {
-      "venue": "skipper-bar",
-      "category": "rooftop",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    },
-    {
-      "venue": "marquee-pool",
-      "category": "pool-club",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Marsascala_Church%2C_2019.jpg/1920px-Marsascala_Church%2C_2019.jpg",
-      "score": -1,
-      "notes": [
-        "loc-match:marsascala",
-        "red-flag:church"
-      ]
-    },
-    {
-      "venue": "exiles-lido",
-      "category": "lido",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    },
-    {
-      "venue": "exiles-lido",
-      "category": "lido",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    },
-    {
-      "venue": "fond-ghadir-lido",
-      "category": "lido",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    },
-    {
-      "venue": "fond-ghadir-lido",
-      "category": "lido",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    },
-    {
-      "venue": "qui-si-sana-lido",
-      "category": "lido",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    },
-    {
-      "venue": "famous-five-lido",
-      "category": "lido",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    },
-    {
-      "venue": "ghar-id-dud-rocks",
-      "category": "lido",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    },
-    {
-      "venue": "independence-garden-rocks",
-      "category": "rocky-bay",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    },
-    {
-      "venue": "exiles-rocks",
-      "category": "rocky-bay",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-      "score": -1,
-      "notes": [
-        "loc-match:sliema",
-        "red-flag:montage"
-      ]
-    }
-  ],
+  "bad": [],
   "by_venue": {
     "noma": {
       "name": "Noma Island",
@@ -337,9 +220,8 @@
       "photos": [
         {
           "url": "https://nomaisland.com/wp-content/uploads/2026/02/Untitled-design-1.jpg",
-          "score": -1,
+          "score": 2,
           "notes": [
-            "red-flag:sign",
             "own-domain"
           ]
         },
@@ -653,7 +535,7 @@
           "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Hondoq-Ir-Rummien-2560x1440-1.jpeg",
           "score": 8,
           "notes": [
-            "name-match:rummien,hondoq",
+            "name-match:ondoq,hondoq",
             "loc-match:",
             "own-domain"
           ]
@@ -735,7 +617,7 @@
           "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg",
           "score": 8,
           "notes": [
-            "name-match:asri,ghasri",
+            "name-match:ghasri,wied",
             "loc-match:",
             "own-domain"
           ]
@@ -843,7 +725,7 @@
           "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_01.jpg/1920px-Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_01.jpg",
           "score": 8,
           "notes": [
-            "name-match:westin,dragonara",
+            "name-match:dragonara,westin",
             "loc-match:",
             "own-domain"
           ]
@@ -852,7 +734,7 @@
           "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_02_Dragonara_Palace_arch_%28Triq_id-Dragunara%29.jpg/1920px-Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_02_Dragonara_Palace_arch_%28Triq_id-Dragunara%29.jpg",
           "score": 8,
           "notes": [
-            "name-match:westin,dragonara",
+            "name-match:dragonara,westin",
             "loc-match:",
             "own-domain"
           ]
@@ -861,7 +743,7 @@
           "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_03_-_View_on_Dragonara_Palace.jpg/1920px-Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_03_-_View_on_Dragonara_Palace.jpg",
           "score": 9,
           "notes": [
-            "name-match:westin,dragonara",
+            "name-match:dragonara,westin",
             "loc-match:",
             "cat-match:view",
             "own-domain"
@@ -1028,19 +910,17 @@
       "category": "rooftop",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Exiles-Bay-2560x1440-1.jpeg",
+          "score": 2,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "loc-match:exiles"
           ]
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Fond-Ghadir-2560x1440-1.jpeg",
+          "score": 2,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "loc-match:fond_ghadir"
           ]
         }
       ]
@@ -1105,12 +985,10 @@
       "category": "pool-club",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Edward_Lear_-_Sliema_-_Google_Art_Project.jpg/1920px-Edward_Lear_-_Sliema_-_Google_Art_Project.jpg",
-          "score": 8,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Fond-Ghadir-2560x1440-1.jpeg",
+          "score": 2,
           "notes": [
-            "name-match:sliema",
-            "loc-match:",
-            "own-domain"
+            "loc-match:fond_ghadir"
           ]
         },
         {
@@ -1350,19 +1228,14 @@
           ]
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/MarsascalaMalta.jpg",
-          "score": 2,
-          "notes": [
-            "loc-match:marsascala"
-          ]
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St-Thomas-Bay-2560x1440-1.jpeg",
+          "score": 0,
+          "notes": []
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Marsascala_Church%2C_2019.jpg/1920px-Marsascala_Church%2C_2019.jpg",
-          "score": -1,
-          "notes": [
-            "loc-match:marsascala",
-            "red-flag:church"
-          ]
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St-Thomas-Bay-2560x1440-1.jpeg",
+          "score": 0,
+          "notes": []
         }
       ]
     },
@@ -1371,19 +1244,19 @@
       "category": "lido",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Sliema-Pitch-2560x1440-1.jpeg",
+          "score": 2,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "loc-match:sliema"
           ]
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Exiles-Bay-2560x1440-1.jpeg",
+          "score": 8,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "name-match:exiles",
+            "loc-match:",
+            "own-domain"
           ]
         }
       ]
@@ -1393,19 +1266,19 @@
       "category": "lido",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Fond-Ghadir-2560x1440-1.jpeg",
+          "score": 8,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "name-match:ghadir,adir",
+            "loc-match:fond_ghadir",
+            "own-domain"
           ]
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Sliema-Pitch-2560x1440-1.jpeg",
+          "score": 2,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "loc-match:sliema"
           ]
         }
       ]
@@ -1415,11 +1288,10 @@
       "category": "lido",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Exiles-Bay-2560x1440-1.jpeg",
+          "score": 2,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "loc-match:exiles"
           ]
         }
       ]
@@ -1442,11 +1314,10 @@
       "category": "lido",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Fond-Ghadir-2560x1440-1.jpeg",
+          "score": 2,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "loc-match:fond_ghadir"
           ]
         }
       ]
@@ -1456,10 +1327,10 @@
       "category": "lido",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Edward_Lear_-_Sliema_-_Google_Art_Project.jpg/1920px-Edward_Lear_-_Sliema_-_Google_Art_Project.jpg",
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Fond-Ghadir-2560x1440-1.jpeg",
           "score": 2,
           "notes": [
-            "loc-match:sliema"
+            "loc-match:fond_ghadir"
           ]
         },
         {
@@ -1519,11 +1390,10 @@
       "category": "lido",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Sliema-Pitch-2560x1440-1.jpeg",
+          "score": 2,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "loc-match:sliema"
           ]
         }
       ]
@@ -1689,7 +1559,7 @@
           "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Ghajn_Tuffieha_Bay_%2880472p%292.jpg/1920px-Ghajn_Tuffieha_Bay_%2880472p%292.jpg",
           "score": 9,
           "notes": [
-            "name-match:ghajn,tuffieha",
+            "name-match:ghajn,tuffie",
             "loc-match:ghajn_tuffieha",
             "cat-match:bay",
             "own-domain"
@@ -1706,11 +1576,10 @@
         },
         {
           "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/G%C4%A7ajn_Tuffie%C4%A7a_Tower.jpg/1920px-G%C4%A7ajn_Tuffie%C4%A7a_Tower.jpg",
-          "score": 3,
+          "score": 6,
           "notes": [
             "name-match:tuffie",
-            "loc-match:g\u0127ajn",
-            "red-flag:tower"
+            "loc-match:g\u0127ajn"
           ]
         }
       ]
@@ -1734,32 +1603,28 @@
       "category": "beach-club",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg",
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg",
+          "score": 4,
+          "notes": [
+            "loc-match:kalanka",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Pretty-Bay-2560x1440-1.jpeg",
           "score": 9,
           "notes": [
-            "name-match:pretty,birzebbuga",
+            "name-match:pretty",
             "loc-match:pretty_bay",
             "cat-match:bay",
             "own-domain"
           ]
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg",
-          "score": 9,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg",
+          "score": 4,
           "notes": [
-            "name-match:pretty,birzebbuga",
-            "loc-match:pretty_bay",
-            "cat-match:bay",
-            "own-domain"
-          ]
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg",
-          "score": 9,
-          "notes": [
-            "name-match:pretty,birzebbuga",
-            "loc-match:pretty_bay",
-            "cat-match:bay",
+            "loc-match:kalanka",
             "own-domain"
           ]
         }
@@ -1861,7 +1726,7 @@
           "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Gnejna-2560x1440-1.jpeg",
           "score": 6,
           "notes": [
-            "name-match:gnejna,nejna",
+            "name-match:nejna,gnejna",
             "own-domain"
           ]
         }
@@ -1927,30 +1792,27 @@
       "category": "sandy-beach",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg",
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Pretty-Bay-2560x1440-1.jpeg",
           "score": 9,
           "notes": [
-            "name-match:ebbu,birzebbuga",
+            "name-match:pretty",
             "loc-match:pretty_bay",
             "cat-match:bay",
             "own-domain"
           ]
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg",
-          "score": 9,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg",
+          "score": 2,
           "notes": [
-            "name-match:ebbu,birzebbuga",
-            "loc-match:pretty_bay",
-            "cat-match:bay",
-            "own-domain"
+            "loc-match:kalanka"
           ]
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg",
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Pretty-Bay-2560x1440-1.jpeg",
           "score": 9,
           "notes": [
-            "name-match:ebbu,birzebbuga",
+            "name-match:pretty",
             "loc-match:pretty_bay",
             "cat-match:bay",
             "own-domain"
@@ -2045,11 +1907,11 @@
       "category": "rocky-bay",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Exiles-Bay-2560x1440-1.jpeg",
+          "score": 3,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "loc-match:exiles",
+            "cat-match:bay"
           ]
         }
       ]
@@ -2059,11 +1921,10 @@
       "category": "rocky-bay",
       "photos": [
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
-          "score": -1,
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Fond-Ghadir-2560x1440-1.jpeg",
+          "score": 2,
           "notes": [
-            "loc-match:sliema",
-            "red-flag:montage"
+            "loc-match:fond_ghadir"
           ]
         }
       ]

@@ -107,8 +107,9 @@ def score_photo(url, venue):
         score += 1
         notes.append("cat-match:" + ",".join(matched_cat))
 
-    # Red flags
-    flags = [w for w in RED_FLAGS if w in fname]
+    # Red flags — word-boundary match so "design" doesn't trigger "sign"
+    flag_re = re.compile(r"\b(" + "|".join(re.escape(w) for w in RED_FLAGS) + r")\b")
+    flags = list(set(flag_re.findall(fname)))
     if flags:
         score -= 3
         notes.append("red-flag:" + ",".join(flags))
