@@ -477,14 +477,16 @@
   </a>
 </nav>
 
-<script src="../clubs-data.js"></script>
-<script src="../venue-map.js"></script>
-<script src="../floorplan-editor.js"></script>
-<script src="operator.js"></script>
-<script src="operator-aerial.js"></script>
-<script src="operator-polish.js"></script>
-<script src="operator-live.js"></script>
-<script src="operator-shell.js"></script>
-<script src="operator-brand.js"></script>
+<!-- Cache-bust query string — bumped on every layout change so browsers
+     don't serve stale JS while we iterate. Hard-refresh isn't needed. -->
+<script src="../clubs-data.js?v=20260521b"></script>
+<script src="../venue-map.js?v=20260521b"></script>
+<script src="../floorplan-editor.js?v=20260521b"></script>
+<script src="operator.js?v=20260521b"></script>
+<script src="operator-aerial.js?v=20260521b"></script>
+<script src="operator-polish.js?v=20260521b"></script>
+<script src="operator-live.js?v=20260521b"></script>
+<script src="operator-shell.js?v=20260521b"></script>
+<script src="operator-brand.js?v=20260521b"></script>
 </body>
 </html>

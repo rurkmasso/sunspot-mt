@@ -3,7 +3,7 @@
    Minimal offline-first shell. Caches the core HTML + assets on
    first install, serves them from cache on subsequent visits.
    ============================================================ */
-const CACHE = 'sunspot-shell-v1';
+const CACHE = 'sunspot-shell-v3';
 const SHELL = [
   '/sunspot-mt/',
   '/sunspot-mt/index.html',
