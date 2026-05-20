@@ -1,0 +1,2406 @@
+{
+  "summary": {
+    "total": 184,
+    "high": 71,
+    "ok": 74,
+    "suspect": 26,
+    "bad": 13
+  },
+  "suspect": [
+    {
+      "venue": "flo",
+      "category": "rooftop",
+      "url": "https://floskypool.com/wp-content/uploads/2024/05/about2.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "flo",
+      "category": "rooftop",
+      "url": "https://floskypool.com/wp-content/uploads/2024/05/about2-768x571.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "1926-la-plage",
+      "category": "lido",
+      "url": "https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2024_L.png",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "anchor-bay",
+      "category": "sandy-beach",
+      "url": "https://popeyemalta.com/assets/galleries/6/IMG_5597film_set_sm_res_.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "anchor-bay",
+      "category": "sandy-beach",
+      "url": "https://popeyemalta.com/assets/images/Untitled-4.png",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "hugos-terrace",
+      "category": "rooftop",
+      "url": "https://static.hugedomains.com/images/hdv3-img/og_hugedomains.png",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "hugos-terrace",
+      "category": "rooftop",
+      "url": "https://static.hugedomains.com/images/hdv3-img/favorite-header.png",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "hugos-terrace",
+      "category": "rooftop",
+      "url": "https://static.hugedomains.com/images/hdv3-img/cart.png",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "the-embassy-rooftop",
+      "category": "rooftop",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Clouds_on_the_cupola.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "the-embassy-rooftop",
+      "category": "rooftop",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Fort_Saint_Elmo_in_2018_38.jpg/1920px-Fort_Saint_Elmo_in_2018_38.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "intercontinental-beach-club",
+      "category": "rooftop",
+      "url": "https://www.facebook.com/tr?id=1056984394787089&ev=PageView&noscript=1",
+      "score": 1,
+      "notes": [
+        "cat-match:view"
+      ]
+    },
+    {
+      "venue": "bridge-bar-valletta",
+      "category": "rooftop",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/3840px-St_Sebastian_Curtain_%28cropped%29.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "bridge-bar-valletta",
+      "category": "rooftop",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/330px-St_Sebastian_Curtain_%28cropped%29.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "ion-harbour-sky",
+      "category": "rooftop",
+      "url": "https://www.facebook.com/tr?id=4083412418409457&ev=PageView&noscript=1",
+      "score": 1,
+      "notes": [
+        "cat-match:view"
+      ]
+    },
+    {
+      "venue": "ion-harbour-sky",
+      "category": "rooftop",
+      "url": "https://px.ads.linkedin.com/collect/?pid=4252017&fmt=gif",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "surfside-sliema",
+      "category": "pool-club",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Detalle_de_Fond_G%C4%A7adir_Baths.jpg/1920px-Detalle_de_Fond_G%C4%A7adir_Baths.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "radisson-golden-sands",
+      "category": "pool-club",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Bah%C3%ADa_dorada%2C_isla_de_Malta%2C_Malta%2C_2021-08-23%2C_DD_62.jpg/1920px-Bah%C3%ADa_dorada%2C_isla_de_Malta%2C_Malta%2C_2021-08-23%2C_DD_62.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "brittannia-rocks-lido",
+      "category": "lido",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_01.jpg/1920px-Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_01.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "brittannia-rocks-lido",
+      "category": "lido",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_02.jpg/1920px-Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_02.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "brittannia-rocks-lido",
+      "category": "lido",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_03.jpg/1920px-Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_03.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "marsascala-lido",
+      "category": "lido",
+      "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "riviera-resort",
+      "category": "beach-club",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/MALTA_-_INTRODUCTION_%284308717706%29.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "st-thomas-bay",
+      "category": "rocky-bay",
+      "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg",
+      "score": 1,
+      "notes": [
+        "cat-match:bay"
+      ]
+    },
+    {
+      "venue": "munxar-pools",
+      "category": "natural",
+      "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg",
+      "score": 0,
+      "notes": []
+    },
+    {
+      "venue": "san-niklaw-bay",
+      "category": "rocky-bay",
+      "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Maria-Bay-2560x1440-1.jpg",
+      "score": 1,
+      "notes": [
+        "cat-match:bay"
+      ]
+    },
+    {
+      "venue": "comino-cliffs",
+      "category": "natural",
+      "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Maria-Bay-2560x1440-1.jpg",
+      "score": 0,
+      "notes": []
+    }
+  ],
+  "bad": [
+    {
+      "venue": "noma",
+      "category": "floating",
+      "url": "https://nomaisland.com/wp-content/uploads/2026/02/Untitled-design-1.jpg",
+      "score": -1,
+      "notes": [
+        "red-flag:sign",
+        "own-domain"
+      ]
+    },
+    {
+      "venue": "skipper-bar",
+      "category": "rooftop",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    },
+    {
+      "venue": "skipper-bar",
+      "category": "rooftop",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    },
+    {
+      "venue": "marquee-pool",
+      "category": "pool-club",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Marsascala_Church%2C_2019.jpg/1920px-Marsascala_Church%2C_2019.jpg",
+      "score": -1,
+      "notes": [
+        "loc-match:marsascala",
+        "red-flag:church"
+      ]
+    },
+    {
+      "venue": "exiles-lido",
+      "category": "lido",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    },
+    {
+      "venue": "exiles-lido",
+      "category": "lido",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    },
+    {
+      "venue": "fond-ghadir-lido",
+      "category": "lido",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    },
+    {
+      "venue": "fond-ghadir-lido",
+      "category": "lido",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    },
+    {
+      "venue": "qui-si-sana-lido",
+      "category": "lido",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    },
+    {
+      "venue": "famous-five-lido",
+      "category": "lido",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    },
+    {
+      "venue": "ghar-id-dud-rocks",
+      "category": "lido",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    },
+    {
+      "venue": "independence-garden-rocks",
+      "category": "rocky-bay",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    },
+    {
+      "venue": "exiles-rocks",
+      "category": "rocky-bay",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+      "score": -1,
+      "notes": [
+        "loc-match:sliema",
+        "red-flag:montage"
+      ]
+    }
+  ],
+  "by_venue": {
+    "noma": {
+      "name": "Noma Island",
+      "category": "floating",
+      "photos": [
+        {
+          "url": "https://nomaisland.com/wp-content/uploads/2026/02/Untitled-design-1.jpg",
+          "score": -1,
+          "notes": [
+            "red-flag:sign",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://nomaisland.com/wp-content/uploads/2026/02/Screenshot-2026-02-12-at-21.59.52-scaled.png",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://nomaisland.com/wp-content/uploads/2026/03/noma_table_women-768x895.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:noma",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "flo": {
+      "name": "FLO Skypool",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://floskypool.com/wp-content/uploads/2024/05/about2.jpg",
+          "score": 0,
+          "notes": []
+        },
+        {
+          "url": "https://floskypool.com/wp-content/uploads/2026/05/floskypool2.jpg",
+          "score": 5,
+          "notes": [
+            "name-match:skypool",
+            "cat-match:sky"
+          ]
+        },
+        {
+          "url": "https://floskypool.com/wp-content/uploads/2024/05/about2-768x571.jpg",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "cafe-del-mar": {
+      "name": "Caf\u00e9 del Mar Malta",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://cafedelmar.com.mt/wp-content/uploads/2026/01/Cafe-Del-Mar-Wide-Shots-2nd-May-2025-95-scaled.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:cafe",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://cafedelmar.com.mt/wp-content/uploads/2025/12/work-1024x474.jpg",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://cafedelmar.com.mt/wp-content/uploads/2026/01/Cafe-Del-Mar-Sundays-15th-June-2025-Harry-256-1024x683.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:cafe",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "aqualuna": {
+      "name": "Aqualuna Lido",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://aqualuna.mt/wp-content/uploads/2021/08/fbshare-aqualuna-malta.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:aqualuna",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://aqualuna.mt/wp-content/uploads/2021/06/Horizontal-Beige@3x.png",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://aqualuna.mt/wp-content/uploads/2021/06/Horizontal-Beige@2x.png",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "1926-la-plage": {
+      "name": "1926 La Plage",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://1926lesoleil.com/wp-content/uploads/2023/05/fbshare.jpg",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2024_L.png",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "manta": {
+      "name": "Manta Beach Club",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Tas-Sliema._Tign%C3%A9_Seafront_1.jpg/1920px-Tas-Sliema._Tign%C3%A9_Seafront_1.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:sliema"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tas-Sliema._Tign%C3%A9_Seafront_2.jpg/1920px-Tas-Sliema._Tign%C3%A9_Seafront_2.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:sliema"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Tas-Sliema._Tign%C3%A9_Seafront_3.jpg/1920px-Tas-Sliema._Tign%C3%A9_Seafront_3.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:sliema"
+          ]
+        }
+      ]
+    },
+    "twentytwo": {
+      "name": "Twenty Two",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Malta_-_St._Julian%27s_-_Portomaso_Marina_07.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_07.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        }
+      ]
+    },
+    "blue-lagoon": {
+      "name": "Blue Lagoon Lounge",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:blue,lagoon",
+            "loc-match:blue_lagoon",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "azure-bay": {
+      "name": "Mellie\u0127a Bay Club",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg",
+          "score": 7,
+          "notes": [
+            "name-match:mellie",
+            "loc-match:mellieha",
+            "cat-match:bay"
+          ]
+        }
+      ]
+    },
+    "golden-sands": {
+      "name": "Golden Sands Beach Club",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Golden-Bay-2560x1440-1.jpeg",
+          "score": 7,
+          "notes": [
+            "name-match:golden",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "st-peters": {
+      "name": "St. Peter",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Peters-Pool-2560x14403-2.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:peters,peter",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "xlendi": {
+      "name": "Xlendi Cove Resort",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Xlendi-2560x14401-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:xlendi",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "ramla": {
+      "name": "Ramla Red Beach Club",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Ramla-il-Hamra-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:ramla",
+            "loc-match:",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/San-Blas-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:san_blas"
+          ]
+        },
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Dahlet-Qorot-2560x14404-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:dahlet"
+          ]
+        }
+      ]
+    },
+    "paradise-bay": {
+      "name": "Paradise Bay Club",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Paradise-Bay-2560x14405-1.jpeg",
+          "score": 9,
+          "notes": [
+            "name-match:paradise",
+            "loc-match:",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "dwejra": {
+      "name": "Dwejra Inland Sea Club",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:wied"
+          ]
+        }
+      ]
+    },
+    "hondoq": {
+      "name": "\u0126ondoq ir-Rummien",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Hondoq-Ir-Rummien-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:rummien,hondoq",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "anchor-bay": {
+      "name": "Anchor Bay (Popeye Village)",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Anchor-Bay-2560x1440-1.jpeg",
+          "score": 9,
+          "notes": [
+            "name-match:anchor",
+            "loc-match:",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://popeyemalta.com/assets/galleries/6/IMG_5597film_set_sm_res_.jpg",
+          "score": 0,
+          "notes": []
+        },
+        {
+          "url": "https://popeyemalta.com/assets/images/Untitled-4.png",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "gnejna": {
+      "name": "G\u0127ajn Tuffie\u0127a Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Gnejna-2560x1440-1.jpeg",
+          "score": 6,
+          "notes": [
+            "name-match:gnejna",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "pretty-bay": {
+      "name": "Pretty Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:kalanka"
+          ]
+        }
+      ]
+    },
+    "mistra-bay": {
+      "name": "Mistra Bay",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Mistra-2560x1440-1.jpeg",
+          "score": 6,
+          "notes": [
+            "name-match:mistra",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "wied-il-ghasri": {
+      "name": "Wied il-G\u0127asri",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:asri,ghasri",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "mgarr-ix-xini": {
+      "name": "M\u0121arr ix-Xini",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Mgarr-Ix-xini-2560x1440-1.jpeg",
+          "score": 6,
+          "notes": [
+            "name-match:xini,mgarr",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "crystal-lagoon": {
+      "name": "Crystal Lagoon Floating Deck",
+      "category": "floating",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Crystal-Lagoon-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:crystal,lagoon",
+            "loc-match:crystal_lagoon",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "hugos-terrace": {
+      "name": "Hugo",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://static.hugedomains.com/images/hdv3-img/og_hugedomains.png",
+          "score": 0,
+          "notes": []
+        },
+        {
+          "url": "https://static.hugedomains.com/images/hdv3-img/favorite-header.png",
+          "score": 0,
+          "notes": []
+        },
+        {
+          "url": "https://static.hugedomains.com/images/hdv3-img/cart.png",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "mint-sky-bar": {
+      "name": "Mint Sky Bar",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/DBY465%2C_Bedford_bus%2C_Qawra_Bus_Station%2C_Malta._-_Flickr_-_sludgegulper.jpg/1920px-DBY465%2C_Bedford_bus%2C_Qawra_Bus_Station%2C_Malta._-_Flickr_-_sludgegulper.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:qawra"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Dwejra_Inland_Sea_Tunnel_1.jpg/1920px-Dwejra_Inland_Sea_Tunnel_1.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:dwejra"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/EBY529%2C_route_58%2C_Qawra_Bus_station%2C_Malta._-_Flickr_-_sludgegulper.jpg/1920px-EBY529%2C_route_58%2C_Qawra_Bus_station%2C_Malta._-_Flickr_-_sludgegulper.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:qawra"
+          ]
+        }
+      ]
+    },
+    "the-embassy-rooftop": {
+      "name": "The Embassy Roof Garden",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Clouds_on_the_cupola.jpg",
+          "score": 0,
+          "notes": []
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Fort_Saint_Elmo_in_2018_38.jpg/1920px-Fort_Saint_Elmo_in_2018_38.jpg",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "westin-pool-deck": {
+      "name": "Westin Dragonara Pool Deck",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_01.jpg/1920px-Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_01.jpg",
+          "score": 8,
+          "notes": [
+            "name-match:westin,dragonara",
+            "loc-match:",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_02_Dragonara_Palace_arch_%28Triq_id-Dragunara%29.jpg/1920px-Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_02_Dragonara_Palace_arch_%28Triq_id-Dragunara%29.jpg",
+          "score": 8,
+          "notes": [
+            "name-match:westin,dragonara",
+            "loc-match:",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_03_-_View_on_Dragonara_Palace.jpg/1920px-Malta_-_St._Julian%27s_-_Triq_id-Dragunara_-_The_Westin_Dragonara_Resort_03_-_View_on_Dragonara_Palace.jpg",
+          "score": 9,
+          "notes": [
+            "name-match:westin,dragonara",
+            "loc-match:",
+            "cat-match:view",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "hilton-pool-deck": {
+      "name": "Hilton Malta Pool Deck",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Casino_Portomaso%2C_San_Juli%C3%A1n%2C_isla_de_Malta%2C_Malta%2C_2021-08-25%2C_DD_10.jpg/1920px-Casino_Portomaso%2C_San_Juli%C3%A1n%2C_isla_de_Malta%2C_Malta%2C_2021-08-25%2C_DD_10.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:malta",
+            "loc-match:portomaso"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:malta",
+            "loc-match:portomaso"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:malta",
+            "loc-match:portomaso"
+          ]
+        }
+      ]
+    },
+    "intercontinental-beach-club": {
+      "name": "InterContinental Beach Club",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://malta.intercontinental.com/wp-content/uploads/2024/02/winter.webp",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://www.facebook.com/tr?id=1056984394787089&ev=PageView&noscript=1",
+          "score": 1,
+          "notes": [
+            "cat-match:view"
+          ]
+        },
+        {
+          "url": "https://malta.intercontinental.com/wp-content/uploads/2021/06/links.png.pagespeed.ce.9HRR4QVkth.png",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "trabuxu-rooftop": {
+      "name": "Trabuxu Wine Bar Rooftop",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Malta_-_Valletta_-_Republic_Street_%26_Republic_Square.jpg/1920px-Malta_-_Valletta_-_Republic_Street_%26_Republic_Square.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:valletta"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Malta_-_Valletta_-_Republic_Street_-_Courts_of_Justice_Building.jpg/1920px-Malta_-_Valletta_-_Republic_Street_-_Courts_of_Justice_Building.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:valletta"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Malta_-_Valletta_-_Republic_Street_-_Maltese_Knights_Souvenirs.jpg/1920px-Malta_-_Valletta_-_Republic_Street_-_Maltese_Knights_Souvenirs.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:valletta"
+          ]
+        }
+      ]
+    },
+    "bridge-bar-valletta": {
+      "name": "Bridge Bar Rooftop",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/3840px-St_Sebastian_Curtain_%28cropped%29.jpg",
+          "score": 0,
+          "notes": []
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/St_Sebastian_Curtain_%28cropped%29.jpg/330px-St_Sebastian_Curtain_%28cropped%29.jpg",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "solas-rooftop": {
+      "name": "Solas at AX Sunny Coast",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/DBY465%2C_Bedford_bus%2C_Qawra_Bus_Station%2C_Malta._-_Flickr_-_sludgegulper.jpg/1920px-DBY465%2C_Bedford_bus%2C_Qawra_Bus_Station%2C_Malta._-_Flickr_-_sludgegulper.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:qawra"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Dwejra_Inland_Sea_Tunnel_1.jpg/1920px-Dwejra_Inland_Sea_Tunnel_1.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:dwejra"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/EBY529%2C_route_58%2C_Qawra_Bus_station%2C_Malta._-_Flickr_-_sludgegulper.jpg/1920px-EBY529%2C_route_58%2C_Qawra_Bus_station%2C_Malta._-_Flickr_-_sludgegulper.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:qawra"
+          ]
+        }
+      ]
+    },
+    "ion-harbour-sky": {
+      "name": "ION Harbour Sky Lounge",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://ionharbour.com/wp-content/uploads/2023/03/Simon-Rogan-ION-Harbour-Terrace-scaled.jpg",
+          "score": 7,
+          "notes": [
+            "name-match:harbour",
+            "cat-match:terrace",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://www.facebook.com/tr?id=4083412418409457&ev=PageView&noscript=1",
+          "score": 1,
+          "notes": [
+            "cat-match:view"
+          ]
+        },
+        {
+          "url": "https://px.ads.linkedin.com/collect/?pid=4252017&fmt=gif",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "skipper-bar": {
+      "name": "Skipper Bar Rooftop",
+      "category": "rooftop",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        }
+      ]
+    },
+    "brittannia-cafe": {
+      "name": "Brittannia Cafe Lido",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Bugibba_-_Malta_-_panoramio.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:bugibba"
+          ]
+        }
+      ]
+    },
+    "bonita-beach-club": {
+      "name": "Bonita Beach Club",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_01_ies.jpg/1920px-Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_01_ies.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:mellieha"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_02_ies.jpg/1920px-Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_02_ies.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:mellieha"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_03_ies.jpg/1920px-Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_03_ies.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:mellieha"
+          ]
+        }
+      ]
+    },
+    "tortuga-bugibba": {
+      "name": "Tortuga Beach Club",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bugibba_in_2018_04.jpg/1920px-Bugibba_in_2018_04.jpg",
+          "score": 8,
+          "notes": [
+            "name-match:bugibba",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "surfside-sliema": {
+      "name": "Surfside Pool Club",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Edward_Lear_-_Sliema_-_Google_Art_Project.jpg/1920px-Edward_Lear_-_Sliema_-_Google_Art_Project.jpg",
+          "score": 8,
+          "notes": [
+            "name-match:sliema",
+            "loc-match:",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Detalle_de_Fond_G%C4%A7adir_Baths.jpg/1920px-Detalle_de_Fond_G%C4%A7adir_Baths.jpg",
+          "score": 0,
+          "notes": []
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Fond_Ghadir_Beach_in_Sliema.jpg/1920px-Fond_Ghadir_Beach_in_Sliema.jpg",
+          "score": 8,
+          "notes": [
+            "name-match:sliema",
+            "loc-match:fond_ghadir",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "db-seabank": {
+      "name": "db Seabank Pool Complex",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_01_ies.jpg/1920px-Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_01_ies.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:mellieha"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_02_ies.jpg/1920px-Malta_-_Mellieha_%2B_Mellieha_Bay_%28Keppel%29_02_ies.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:mellieha"
+          ]
+        }
+      ]
+    },
+    "radisson-golden-sands": {
+      "name": "Radisson Blu Golden Sands Pool",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/02005_002_Golden_Bay_%28Mellie%C4%A7a%29.jpg/1920px-02005_002_Golden_Bay_%28Mellie%C4%A7a%29.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:golden",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/02005_009_Golden_Bay_%28Mellie%C4%A7a%29.jpg/1920px-02005_009_Golden_Bay_%28Mellie%C4%A7a%29.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:golden",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Bah%C3%ADa_dorada%2C_isla_de_Malta%2C_Malta%2C_2021-08-23%2C_DD_62.jpg/1920px-Bah%C3%ADa_dorada%2C_isla_de_Malta%2C_Malta%2C_2021-08-23%2C_DD_62.jpg",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "westin-pool-cabanas": {
+      "name": "Westin Cabana Pool",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        }
+      ]
+    },
+    "corinthia-st-george": {
+      "name": "Corinthia St George",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        }
+      ]
+    },
+    "marina-hotel-pool": {
+      "name": "Marina Hotel Pool Deck",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://verdihotels.com/wp-content/uploads/sites/4/2024/05/Verdi-Prague-JKI-202-e1715330130137.jpg",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://verdihotels.com/wp-content/uploads/sites/4/2024/05/Verdi-Prague-JKI-202-e1715330130137-1400x1059.webp",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://verdihotels.com/wp-content/uploads/sites/4/2024/05/Verdi-Prague-JKI-202-e1715330130137.webp",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "cavalieri-pool": {
+      "name": "Cavalieri Pool Club",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        }
+      ]
+    },
+    "meridien-balluta": {
+      "name": "Le M\u00e9ridien Pool",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        }
+      ]
+    },
+    "cugo-gran-macina": {
+      "name": "Cug\u00f2 Gran Macina Harbour Pool",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://cugogranmacina.com/wp-content/uploads/2023/07/CGM-Hero-Image-Night.jpg",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://cugogranmacina.com/wp-content/uploads/2024/09/IBB-MACINA-01444.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:macina",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://cugogranmacina.com/wp-content/uploads/2024/09/IBB-MACINA-00704-HDR-Editar.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:macina",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "odycy-pool": {
+      "name": "AX ODYCY Beach Club",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://www.odycy.com/_next/image?url=%2Fimages%2Fbook-service-landing-hero.png&w=3840&q=75",
+          "score": 2,
+          "notes": [
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "salini-resort-pool": {
+      "name": "Salini Resort Pool",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:mellieha"
+          ]
+        }
+      ]
+    },
+    "marquee-pool": {
+      "name": "Marquee Pool Club",
+      "category": "pool-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Malta_-_Marsaskala_-_Triq_is-Salini%2BMarsaskala_Bay%2BTriq_Zonqor_02_ies.jpg/1920px-Malta_-_Marsaskala_-_Triq_is-Salini%2BMarsaskala_Bay%2BTriq_Zonqor_02_ies.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:marsaskala"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/MarsascalaMalta.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:marsascala"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Marsascala_Church%2C_2019.jpg/1920px-Marsascala_Church%2C_2019.jpg",
+          "score": -1,
+          "notes": [
+            "loc-match:marsascala",
+            "red-flag:church"
+          ]
+        }
+      ]
+    },
+    "exiles-lido": {
+      "name": "Exiles Bay Lido",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        }
+      ]
+    },
+    "fond-ghadir-lido": {
+      "name": "Fond G\u0127adir Lido",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        }
+      ]
+    },
+    "qui-si-sana-lido": {
+      "name": "Qui-Si-Sana Lido",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        }
+      ]
+    },
+    "tigne-lido": {
+      "name": "Tigne Point Lido",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Malta_-_Sliema_-_Triq_Ix-Xatt_-_Sliema_Harbour_01.jpg/1920px-Malta_-_Sliema_-_Triq_Ix-Xatt_-_Sliema_Harbour_01.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:sliema"
+          ]
+        }
+      ]
+    },
+    "famous-five-lido": {
+      "name": "Famous Five Lido",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        }
+      ]
+    },
+    "roy-lido": {
+      "name": "Roy Lido",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Edward_Lear_-_Sliema_-_Google_Art_Project.jpg/1920px-Edward_Lear_-_Sliema_-_Google_Art_Project.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:sliema"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Malta_-_Sliema_-_Triq_Ix-Xatt_ta%27_Tign%C3%A9%2BGzira_%28Tign%C3%A9_Pedestrian_Bridge%29_01_ies.jpg/1920px-Malta_-_Sliema_-_Triq_Ix-Xatt_ta%27_Tign%C3%A9%2BGzira_%28Tign%C3%A9_Pedestrian_Bridge%29_01_ies.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:sliema"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Malta_-_Sliema_-_Triq_Ix-Xatt_ta%27_Tign%C3%A9_%28Tign%C3%A9_Pedestrian_Bridge%29_01_ies.jpg/1920px-Malta_-_Sliema_-_Triq_Ix-Xatt_ta%27_Tign%C3%A9_%28Tign%C3%A9_Pedestrian_Bridge%29_01_ies.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:sliema"
+          ]
+        }
+      ]
+    },
+    "brittannia-rocks-lido": {
+      "name": "Brittannia Rocks Lido",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_01.jpg/1920px-Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_01.jpg",
+          "score": 0,
+          "notes": []
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_02.jpg/1920px-Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_02.jpg",
+          "score": 0,
+          "notes": []
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_03.jpg/1920px-Malta_-_St._Paul%27s_Bay_-_Dawret_Il-Gzejjer_03.jpg",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "marsalforn-lido": {
+      "name": "Marsalforn Bay Lido",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Marsalforn-2560x14402-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:marsalforn",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "ghar-id-dud-rocks": {
+      "name": "G\u0127ar id-Dud Rocks",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        }
+      ]
+    },
+    "marsascala-lido": {
+      "name": "Marsascala Lido",
+      "category": "lido",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "riviera-resort": {
+      "name": "Riviera Resort Beach Club",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/MALTA_-_INTRODUCTION_%284308717706%29.jpg",
+          "score": 0,
+          "notes": []
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Panoramic_View_of_G%C4%A7ajn_Tuffie%C4%A7a_Bay.jpg/1920px-Panoramic_View_of_G%C4%A7ajn_Tuffie%C4%A7a_Bay.jpg",
+          "score": 3,
+          "notes": [
+            "loc-match:g\u0127ajn",
+            "cat-match:bay"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Playa_de_Riviera%2C_isla_de_Malta%2C_Malta%2C_2021-08-23%2C_DD_63-65_HDR.jpg/1920px-Playa_de_Riviera%2C_isla_de_Malta%2C_Malta%2C_2021-08-23%2C_DD_63-65_HDR.jpg",
+          "score": 6,
+          "notes": [
+            "name-match:riviera",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "seabank-beach-club": {
+      "name": "Seabank Beach Club",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg",
+          "score": 5,
+          "notes": [
+            "loc-match:mellieha",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "paradise-bay-resort": {
+      "name": "Paradise Bay Resort Beach Club",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Paradise-Bay-2560x14405-1.jpeg",
+          "score": 9,
+          "notes": [
+            "name-match:paradise",
+            "loc-match:",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "westin-beach": {
+      "name": "Westin Beach Cabanas",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_03.jpg",
+          "score": 2,
+          "notes": [
+            "loc-match:portomaso"
+          ]
+        }
+      ]
+    },
+    "ramla-beach-club": {
+      "name": "Ramla Beach Cabana Co.",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ir-Ramla_l-Hamra.jpg/1920px-Ir-Ramla_l-Hamra.jpg",
+          "score": 8,
+          "notes": [
+            "name-match:ramla",
+            "loc-match:",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Ir-Ramla_l-Hamra_in_winter.jpg/1920px-Ir-Ramla_l-Hamra_in_winter.jpg",
+          "score": 8,
+          "notes": [
+            "name-match:ramla",
+            "loc-match:",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Lis_de_mer_de_la_baie_de_Ramla.jpg/1920px-Lis_de_mer_de_la_baie_de_Ramla.jpg",
+          "score": 8,
+          "notes": [
+            "name-match:ramla",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "mellieha-bay-bar": {
+      "name": "Mellieha Bay Beach Bar Co.",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg",
+          "score": 9,
+          "notes": [
+            "name-match:mellieha",
+            "loc-match:",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "golden-bay-club": {
+      "name": "Golden Bay Sunbed Co.",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Golden-Bay-2560x1440-1.jpeg",
+          "score": 7,
+          "notes": [
+            "name-match:golden",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "ghajn-tuffieha-sunbeds": {
+      "name": "G\u0127ajn Tuffie\u0127a Sunbeds",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Ghajn_Tuffieha_Bay_%2880472p%292.jpg/1920px-Ghajn_Tuffieha_Bay_%2880472p%292.jpg",
+          "score": 9,
+          "notes": [
+            "name-match:ghajn,tuffieha",
+            "loc-match:ghajn_tuffieha",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/G%C4%A7ajn_Tuffie%C4%A7a_Bay_%2801%29.jpg/1920px-G%C4%A7ajn_Tuffie%C4%A7a_Bay_%2801%29.jpg",
+          "score": 7,
+          "notes": [
+            "name-match:tuffie",
+            "loc-match:g\u0127ajn",
+            "cat-match:bay"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/G%C4%A7ajn_Tuffie%C4%A7a_Tower.jpg/1920px-G%C4%A7ajn_Tuffie%C4%A7a_Tower.jpg",
+          "score": 3,
+          "notes": [
+            "name-match:tuffie",
+            "loc-match:g\u0127ajn",
+            "red-flag:tower"
+          ]
+        }
+      ]
+    },
+    "comino-beach-co": {
+      "name": "Santa Marija Beach Co.",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Maria-Bay-2560x1440-1.jpg",
+          "score": 3,
+          "notes": [
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "birzebbuga-beach-club": {
+      "name": "Pretty Bay Beach Service",
+      "category": "beach-club",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg",
+          "score": 9,
+          "notes": [
+            "name-match:pretty,birzebbuga",
+            "loc-match:pretty_bay",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg",
+          "score": 9,
+          "notes": [
+            "name-match:pretty,birzebbuga",
+            "loc-match:pretty_bay",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg",
+          "score": 9,
+          "notes": [
+            "name-match:pretty,birzebbuga",
+            "loc-match:pretty_bay",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "imgiebah-bay": {
+      "name": "Im\u0121ieba\u0127 Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Imgiebah-2560x14402-1.jpeg",
+          "score": 6,
+          "notes": [
+            "name-match:ieba,imgiebah",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "armier-bay": {
+      "name": "Armier Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Armier-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:armier",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "little-armier": {
+      "name": "Little Armier",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Armier-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:armier",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "riviera-bay-beach": {
+      "name": "Riviera Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Riviera-2560x1440-1.jpeg",
+          "score": 6,
+          "notes": [
+            "name-match:riviera",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "slugs-bay": {
+      "name": "Slugs Bay (White Tower)",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Slugs-Bay-2560x14402-1.jpeg",
+          "score": 7,
+          "notes": [
+            "name-match:slugs",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "fomm-ir-rih": {
+      "name": "Fomm ir-Ri\u0127",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Fomm-ir-Rih-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:fomm",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "gnejna-bay": {
+      "name": "\u0120nejna Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Gnejna-2560x1440-1.jpeg",
+          "score": 6,
+          "notes": [
+            "name-match:gnejna,nejna",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "bahar-ic-caghaq": {
+      "name": "Ba\u0127ar i\u010b-\u010aag\u0127aq",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:rinella"
+          ]
+        }
+      ]
+    },
+    "salina-bay": {
+      "name": "Salina Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg",
+          "score": 3,
+          "notes": [
+            "loc-match:mellieha",
+            "cat-match:bay"
+          ]
+        }
+      ]
+    },
+    "balluta-bay": {
+      "name": "Balluta Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Balluta-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:balluta",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "spinola-bay": {
+      "name": "Spinola Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Balluta-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:balluta"
+          ]
+        }
+      ]
+    },
+    "birzebbuga-pretty": {
+      "name": "Pretty Bay (Bir\u017cebbu\u0121a)",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_01_ies.jpg",
+          "score": 9,
+          "notes": [
+            "name-match:ebbu,birzebbuga",
+            "loc-match:pretty_bay",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg/1920px-Malta_-_Birzebbuga_-_Birzebbuga_Pier_%28Pretty_Bay%29_02_ies.jpg",
+          "score": 9,
+          "notes": [
+            "name-match:ebbu,birzebbuga",
+            "loc-match:pretty_bay",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg/1920px-Malta_-_Birzebbuga_-_Triq_il-Bajja_s-Sabiha_-_Pretty_Bay_%2B_Waterpolo_01_ies.jpg",
+          "score": 9,
+          "notes": [
+            "name-match:ebbu,birzebbuga",
+            "loc-match:pretty_bay",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "ghar-lapsi": {
+      "name": "G\u0127ar Lapsi",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Ghar-Lapsi-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:ghar,lapsi",
+            "loc-match:ghar_lapsi",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "wied-iz-zurrieq": {
+      "name": "Wied i\u017c-\u017burrieq",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Ghar-Lapsi-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:ghar_lapsi"
+          ]
+        }
+      ]
+    },
+    "hofra-l-kbira": {
+      "name": "Hofra l-Kbira",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:kalanka"
+          ]
+        }
+      ]
+    },
+    "hofra-z-zghira": {
+      "name": "\u0126ofra \u017c-\u017bg\u0127ira",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:kalanka"
+          ]
+        }
+      ]
+    },
+    "kalanka-bay": {
+      "name": "Kalanka Bay",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:kalanka",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "white-rocks-pembroke": {
+      "name": "White Rocks",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:rinella"
+          ]
+        }
+      ]
+    },
+    "independence-garden-rocks": {
+      "name": "Independence Garden Rocks",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        }
+      ]
+    },
+    "exiles-rocks": {
+      "name": "Exiles Rocks",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sliema_montage.png/330px-Sliema_montage.png",
+          "score": -1,
+          "notes": [
+            "loc-match:sliema",
+            "red-flag:montage"
+          ]
+        }
+      ]
+    },
+    "bahar-ic-caghaq-rocks": {
+      "name": "Ba\u0127ar i\u010b-\u010aag\u0127aq Rocks",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:rinella"
+          ]
+        }
+      ]
+    },
+    "rinella-bay": {
+      "name": "Rinella Bay",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:rinella",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "st-thomas-bay": {
+      "name": "St Thomas Bay",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg",
+          "score": 1,
+          "notes": [
+            "cat-match:bay"
+          ]
+        }
+      ]
+    },
+    "ras-il-hekka": {
+      "name": "Ras il-\u0126ekka",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:wied"
+          ]
+        }
+      ]
+    },
+    "qbajjar-bay": {
+      "name": "Qbajjar Bay",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Marsalforn-2560x14402-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:marsalforn"
+          ]
+        }
+      ]
+    },
+    "xwejni-bay": {
+      "name": "Xwejni Bay",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2021/12/Xwejni-Bay-2560x1440-1.jpeg",
+          "score": 9,
+          "notes": [
+            "name-match:xwejni",
+            "loc-match:",
+            "cat-match:bay",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "tas-salvatur": {
+      "name": "Tas-Salvatur Rocks",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2021/12/Xwejni-Bay-2560x1440-1.jpeg",
+          "score": 3,
+          "notes": [
+            "loc-match:xwejni",
+            "cat-match:bay"
+          ]
+        }
+      ]
+    },
+    "blue-grotto": {
+      "name": "Blue Grotto",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Ghar-Lapsi-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:ghar_lapsi"
+          ]
+        }
+      ]
+    },
+    "coral-lagoon": {
+      "name": "Coral Lagoon",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Crystal-Lagoon-2560x1440-1.jpeg",
+          "score": 9,
+          "notes": [
+            "name-match:lagoon",
+            "loc-match:crystal_lagoon",
+            "cat-match:lagoon",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "salt-pans-marsalforn": {
+      "name": "Marsalforn Salt Pans",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2021/12/Xwejni-Bay-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:xwejni"
+          ]
+        }
+      ]
+    },
+    "inland-sea-dwejra-2": {
+      "name": "Dwejra Inland Sea (pool)",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:wied"
+          ]
+        }
+      ]
+    },
+    "munxar-pools": {
+      "name": "Munxar Cliff Pools",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "cumnija-pools": {
+      "name": "Ic-Cumnija Pools",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:wied"
+          ]
+        }
+      ]
+    },
+    "wied-il-mielah-cove": {
+      "name": "Wied il-Miela\u0127 Cove",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Wied-Ghasri-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:wied",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "san-blas-cove": {
+      "name": "San Blas Cove",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/San-Blas-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:blas",
+            "loc-match:san_blas",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "marsalforn-bay": {
+      "name": "Marsalforn Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Marsalforn-2560x14402-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:marsalforn",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "dahlet-qorrot": {
+      "name": "Da\u0127let Qorrot",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Dahlet-Qorot-2560x14404-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:dahlet",
+            "loc-match:",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "san-blas-bay": {
+      "name": "San Blas Bay",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/San-Blas-2560x1440-1.jpeg",
+          "score": 8,
+          "notes": [
+            "name-match:blas",
+            "loc-match:san_blas",
+            "own-domain"
+          ]
+        }
+      ]
+    },
+    "san-niklaw-bay": {
+      "name": "San Niklaw Bay",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Maria-Bay-2560x1440-1.jpg",
+          "score": 1,
+          "notes": [
+            "cat-match:bay"
+          ]
+        }
+      ]
+    },
+    "comino-cliffs": {
+      "name": "Comino South Cliffs",
+      "category": "natural",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Maria-Bay-2560x1440-1.jpg",
+          "score": 0,
+          "notes": []
+        }
+      ]
+    },
+    "qala-creek": {
+      "name": "Qala Creek",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Dahlet-Qorot-2560x14404-1.jpeg",
+          "score": 2,
+          "notes": [
+            "loc-match:dahlet"
+          ]
+        }
+      ]
+    },
+    "ramla-extension": {
+      "name": "Ramla l-\u0126amra (East End)",
+      "category": "sandy-beach",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bah%C3%ADa_de_Ramla_desde_la_cueva_de_Calipso%2C_isla_de_Gozo%2C_Malta%2C_2021-08-22%2C_DD_02.jpg/1920px-Bah%C3%ADa_de_Ramla_desde_la_cueva_de_Calipso%2C_isla_de_Gozo%2C_Malta%2C_2021-08-22%2C_DD_02.jpg",
+          "score": 8,
+          "notes": [
+            "name-match:ramla",
+            "loc-match:gozo",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bah%C3%ADa_de_Ramla_desde_la_cueva_de_Calipso%2C_isla_de_Gozo%2C_Malta%2C_2021-08-22%2C_DD_03.jpg/1920px-Bah%C3%ADa_de_Ramla_desde_la_cueva_de_Calipso%2C_isla_de_Gozo%2C_Malta%2C_2021-08-22%2C_DD_03.jpg",
+          "score": 8,
+          "notes": [
+            "name-match:ramla",
+            "loc-match:gozo",
+            "own-domain"
+          ]
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Gozo_-_Rambla_Bay.jpg/1920px-Gozo_-_Rambla_Bay.jpg",
+          "score": 3,
+          "notes": [
+            "loc-match:gozo",
+            "cat-match:bay"
+          ]
+        }
+      ]
+    },
+    "mgarr-harbour-rocks": {
+      "name": "M\u0121arr Harbour Rocks",
+      "category": "rocky-bay",
+      "photos": [
+        {
+          "url": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Mgarr-Ix-xini-2560x1440-1.jpeg",
+          "score": 6,
+          "notes": [
+            "name-match:mgarr",
+            "own-domain"
+          ]
+        }
+      ]
+    }
+  }
+}

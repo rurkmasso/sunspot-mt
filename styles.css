@@ -164,6 +164,172 @@ h2 { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.15; }
  border: 1px solid rgba(192, 86, 59, .15);
 }
 
+/* ─── Sun-rays loading spinner ───
+   Branded indeterminate spinner — sun in the centre with 8 rays
+   that fade around like a clock. Replaces generic dotted spinners
+   anywhere we load async data. */
+.ss-spinner {
+ width: 36px; height: 36px;
+ position: relative;
+ display: inline-block;
+}
+.ss-spinner::before {
+ content: "";
+ position: absolute; inset: 25%;
+ background: var(--grad-sun);
+ border-radius: 50%;
+ box-shadow: 0 0 16px rgba(255,183,77,.45);
+}
+.ss-spinner::after {
+ content: "";
+ position: absolute; inset: 0;
+ background:
+   conic-gradient(from 0deg,
+     rgba(245,124,0,.95) 0deg 30deg,
+     transparent 30deg 45deg,
+     rgba(245,124,0,.55) 45deg 75deg,
+     transparent 75deg 90deg,
+     rgba(245,124,0,.25) 90deg 120deg,
+     transparent 120deg 360deg);
+ mask: radial-gradient(circle, transparent 35%, #000 36%, #000 50%, transparent 51%);
+ -webkit-mask: radial-gradient(circle, transparent 35%, #000 36%, #000 50%, transparent 51%);
+ animation: ssSpinSun 1.4s linear infinite;
+}
+@keyframes ssSpinSun { to { transform: rotate(360deg); } }
+.ss-spinner-row {
+ display: inline-flex; align-items: center; gap: 12px;
+ color: var(--muted); font-size: 13px; font-weight: 600;
+}
+
+/* ─── Branded form inputs — limestone-toned with sun focus glow ─── */
+input[type=text], input[type=email], input[type=password], input[type=search],
+input[type=tel], input[type=number], input[type=url], input[type=date],
+textarea, select {
+ font-family: var(--font-body);
+ background: #fff;
+ border: 1.5px solid var(--line);
+ border-radius: 10px;
+ padding: 12px 14px;
+ transition: border-color .15s, box-shadow .15s;
+ color: var(--ink);
+}
+input:focus, textarea:focus, select:focus {
+ outline: none;
+ border-color: var(--honey);
+ box-shadow: 0 0 0 4px rgba(232,157,58,.18);
+}
+label {
+ font-size: 12px;
+ font-weight: 700;
+ color: var(--ink);
+ letter-spacing: .2px;
+}
+
+/* ─── Page hero (sub-pages: club detail, faq, about, guides…) ───
+   Drop a <section class="ss-page-hero"> wrapping h1 + lead copy and
+   sub-pages instantly feel on-brand without each authoring their own. */
+.ss-page-hero {
+ position: relative;
+ padding: 64px 0 56px;
+ background: linear-gradient(180deg, var(--limestone) 0%, #faf6ee 100%);
+ border-bottom: 1px solid rgba(192, 134, 59, .18);
+ overflow: hidden;
+}
+.ss-page-hero::before {
+ /* Soft radial sun-flare in the top-right */
+ content: "";
+ position: absolute; top: -40%; right: -8%;
+ width: 420px; height: 420px;
+ background: radial-gradient(circle, rgba(255,183,77,.35) 0%, transparent 65%);
+ pointer-events: none;
+}
+.ss-page-hero .container { position: relative; }
+.ss-page-hero .kicker {
+ display: inline-block;
+ font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase;
+ font-weight: 800; color: var(--terracotta);
+ margin-bottom: 12px;
+}
+.ss-page-hero h1 {
+ max-width: 18ch;
+ margin-bottom: 12px;
+}
+.ss-page-hero .lede {
+ font-size: clamp(15px, 1.6vw, 18px);
+ color: var(--muted);
+ max-width: 56ch;
+ line-height: 1.55;
+}
+
+/* ─── Branded empty states (replaces ad-hoc empties) ───
+   Use: <div class="ss-empty"><svg/><h3/><p/><a/></div> */
+.ss-empty {
+ text-align: center;
+ padding: 64px 24px;
+ max-width: 480px;
+ margin: 0 auto;
+}
+.ss-empty-icon {
+ width: 72px; height: 72px;
+ margin: 0 auto 18px;
+ border-radius: 50%;
+ background: var(--limestone);
+ border: 1px solid rgba(192, 134, 59, .25);
+ display: flex; align-items: center; justify-content: center;
+ color: var(--terracotta);
+}
+.ss-empty h3 {
+ font-family: var(--font-display);
+ font-size: 22px;
+ color: var(--ink);
+ margin-bottom: 8px;
+}
+.ss-empty p {
+ color: var(--muted);
+ font-size: 15px;
+ margin-bottom: 18px;
+}
+
+/* ─── Receipt-style ticket card (confirmation page) ───
+   Premium feel for the moment-of-delight after payment. */
+.ss-ticket {
+ background: #fff;
+ border-radius: 18px;
+ border: 1px solid rgba(192, 134, 59, .25);
+ box-shadow: 0 12px 36px rgba(232,157,58,.10), 0 1px 3px rgba(10,31,58,.06);
+ padding: 28px;
+ max-width: 520px;
+ margin: 0 auto;
+ position: relative;
+}
+.ss-ticket::before,
+.ss-ticket::after {
+ /* Notched edges like a real ticket */
+ content: "";
+ position: absolute;
+ left: -8px;
+ width: 16px; height: 16px;
+ background: var(--bg);
+ border-radius: 50%;
+ border: 1px solid rgba(192, 134, 59, .25);
+ top: 38%;
+}
+.ss-ticket::after { left: auto; right: -8px; }
+.ss-ticket-mark {
+ width: 56px; height: 56px;
+ margin: 0 auto 14px;
+ border-radius: 50%;
+ background: var(--grad-sun);
+ box-shadow: 0 6px 20px rgba(232,157,58,.35);
+ display: flex; align-items: center; justify-content: center;
+ color: #fff;
+}
+.ss-ticket-divider {
+ height: 1px;
+ background: repeating-linear-gradient(90deg, rgba(192,134,59,.4) 0 6px, transparent 6px 12px);
+ margin: 18px 0;
+}
+
 /* ─── Selection style — when something is "your pick" ───
    Used on selected sunbeds, selected filters, etc. */
 .is-picked {
