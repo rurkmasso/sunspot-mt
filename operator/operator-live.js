@@ -163,35 +163,9 @@
    return colours[h % colours.length];
  }
 
- // ─── 2) Greeting + day-overview ───────────────────────────────
- function renderGreeting() {
-   const state = window.opState || {};
-   const opName = (state.operator && state.operator.name) || 'Operator';
-   const todayCount = (state.bookings || []).length;
-   let el = document.getElementById('op-greeting');
-   if (!el) {
-     el = document.createElement('div');
-     el.id = 'op-greeting';
-     el.style.cssText =
-       'padding:14px 16px 4px;display:flex;align-items:baseline;justify-content:space-between;gap:12px;';
-     const todayPanel = document.getElementById('panel-today');
-     if (todayPanel) todayPanel.insertBefore(el, todayPanel.firstChild);
-   }
-   const today = new Date().toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'short' });
-   el.innerHTML =
-     '<div>' +
-       '<div style="font-family:Fraunces,Georgia,serif;font-size:22px;font-weight:600;color:#0a1f3a;letter-spacing:-0.4px;">' +
-         greeting() + ', ' + opName.split(' ')[0] +
-       '</div>' +
-       '<div style="font-size:13px;color:#5d6a82;margin-top:2px;">' + today + '</div>' +
-     '</div>' +
-     '<div style="text-align:right">' +
-       '<div style="font-family:Fraunces,Georgia,serif;font-size:30px;font-weight:600;color:#0a1f3a;line-height:1;">' + todayCount + '</div>' +
-       '<div style="font-size:11px;color:#5d6a82;text-transform:uppercase;letter-spacing:.6px;margin-top:4px;">' +
-         (todayCount === 1 ? 'booking today' : 'bookings today') +
-       '</div>' +
-     '</div>';
- }
+ // Greeting is owned by operator-brand.js (richer copy + live clock).
+ // Keeping this as a no-op so the event handler chain doesn't fail.
+ function renderGreeting() { /* see operator-brand.js */ }
 
  // ─── 3) Live state hero ───────────────────────────────────────
  function renderLiveHero() {

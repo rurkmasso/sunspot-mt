@@ -63,9 +63,12 @@
     const seeded = Array.from({ length: 10 }, (_, i) => {
       const states = ['pending','pending','accept','accept','accept','arrived','arrived','accept','arrived','pending'];
       const total = [40, 50, 25, 80, 30, 130, 25, 50, 280, 40][i];
+      // Same friendly BJ-#### format the customer sees on confirmation
+      const refNum = 1000 + ((i * 137) % 9000);
+      const refTail = (i.toString(36) + 'X').slice(0, 2).toUpperCase();
       return {
         id: 'demo-' + i,
-        ref: 'SS' + Math.random().toString(36).slice(2, 10).toUpperCase(),
+        ref: 'BJ-' + refNum + '-' + refTail,
         venue: venueId,
         date: new Date().toISOString().slice(0,10),
         spots: ['A' + (i+3), 'A' + (i+4)].slice(0, (i%3)+1),

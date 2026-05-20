@@ -136,7 +136,7 @@
        #op-sidebar .sb-nav button { justify-content: center; padding: 12px 4px; }
      }
 
-     /* === Laptop (≥1100): full sidebar + 2-col workspace === */
+     /* === Laptop (≥1100): full sidebar + single centred column === */
      @media (min-width: 1100px) {
        body { padding-left: 240px; }
        #op-sidebar {
@@ -150,27 +150,11 @@
        #op-sidebar .sb-brand { justify-content: flex-start; padding: 4px 8px 18px; }
        #op-sidebar .sb-nav button { justify-content: flex-start; padding: 12px 14px; }
 
-       /* Workspace centring + 2-col Today */
-       .op-panel { max-width: 1280px; margin: 0 auto; padding: 28px 32px 40px; }
-       #panel-today {
-         display: grid;
-         grid-template-columns: 1fr 360px;
-         gap: 24px;
-         align-items: start;
-       }
-       /* On laptop we re-home the greeting/live hero/activity feed into
-          the right column so the main column shows bookings only. */
-       #panel-today > #op-greeting       { grid-column: 1 / -1; }
-       #panel-today > .op-stats          { grid-column: 1 / -1; }
-       #panel-today > #op-live-hero      { grid-column: 2; grid-row: 3; position: sticky; top: 24px; }
-       #panel-today > #op-activity-feed  { grid-column: 2; grid-row: 4; position: sticky; top: 24px; margin-top: 0; }
-       #panel-today > h3,
-       #panel-today > .op-filter-chips,
-       #panel-today > #op-bookings-list { grid-column: 1; }
-
+       /* Single centred column — wider than mobile, no awkward grid gaps.
+          The live hero already shows the headline numbers; activity feed
+          and bookings stack below it the same way they do on phone. */
+       .op-panel { max-width: 840px; margin: 0 auto; padding: 24px 24px 40px; }
        .op-stats { display: grid !important; }
-
-       /* Bigger map canvas on laptop */
        #op-venue-aerial { max-width: 1100px; margin: 0 auto; padding: 0; }
      }
 

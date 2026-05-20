@@ -83,6 +83,12 @@
        background: linear-gradient(135deg, #0a1f3a 0%, #1d2842 60%) !important;
        position: relative;
        overflow: hidden;
+       border-radius: 18px !important;
+     }
+     #op-live-hero .num,
+     #op-live-hero strong,
+     #op-live-hero div[style*="font-family:Fraunces"] {
+       font-family: var(--font-display) !important;
      }
      #op-live-hero::before {
        /* Subtle radial sun-flare in the top-right corner */
