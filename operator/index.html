@@ -398,25 +398,24 @@
 <!-- SEATMAP panel -->
 <section class="op-panel" id="panel-seatmap">
   <header class="op-section-title">
-    <h1>Your sunbed layout</h1>
-    <span class="date">tap to close for maintenance</span>
+    <h1>Your venue layout</h1>
+    <span class="date" id="op-layout-count">0 spots placed</span>
   </header>
-  <div class="op-seatmap">
-    <h3>Sunbed layout · <span id="op-seatmap-date">today</span></h3>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Tap a sunbed to toggle availability. Use this for maintenance or VIP holds.</p>
+  <div class="op-seatmap" style="padding:0;background:transparent;border:0;">
+    <p style="font-size:13px;color:var(--muted);margin:0 16px 12px;">
+      This is the real aerial view of your venue. Tap anywhere on the map to drop a sunbed,
+      cabana, or VIP gazebo. Drag to reposition. Tap a spot to remove. Your customers see
+      the exact same map when they book.
+    </p>
+    <div id="op-venue-aerial" style="width:100%;height:62vh;min-height:380px;border-radius:0;overflow:hidden;background:#0a1f3a;"></div>
+  </div>
+  <!-- Legacy grid view kept for fallback if the map fails to load -->
+  <div id="op-grid-fallback" style="display:none;padding:16px;">
+    <h3>Sunbed layout (grid fallback)</h3>
     <div class="grid" id="op-seatmap-grid"></div>
-    <div class="op-legend">
-      <span class="free">Free</span>
-      <span class="taken">Booked</span>
-      <span class="inactive">Closed</span>
-    </div>
-  </div>
-  <div class="op-seatmap">
-    <h3>Cabanas</h3>
+    <h3 style="margin-top:14px">Cabanas</h3>
     <div class="grid" id="op-cabana-grid" style="grid-template-columns:repeat(4,1fr)"></div>
-  </div>
-  <div class="op-seatmap">
-    <h3>VIP gazebos</h3>
+    <h3 style="margin-top:14px">VIP gazebos</h3>
     <div class="grid" id="op-vip-grid" style="grid-template-columns:repeat(3,1fr)"></div>
   </div>
 </section>
@@ -468,6 +467,9 @@
   </a>
 </nav>
 
+<script src="../clubs-data.js"></script>
+<script src="../venue-map.js"></script>
 <script src="operator.js"></script>
+<script src="operator-aerial.js"></script>
 </body>
 </html>

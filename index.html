@@ -821,10 +821,20 @@
 </ol>
 </aside>
 
-<header class="section-head">
+<header class="section-head" style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+<div>
 <h2>Featured beach clubs in Malta &amp; Gozo</h2>
 <p id="result-summary">All 12 beaches across the Maltese islands.</p>
+</div>
+<div class="ss-view-toggle" role="tablist" aria-label="View" style="display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:13px;">
+<button type="button" role="tab" aria-selected="true" data-view="list" class="active" style="padding:8px 14px;background:#0a1f3a;color:#fff;border:none;cursor:pointer;font-weight:600;">List</button>
+<button type="button" role="tab" aria-selected="false" data-view="map"  style="padding:8px 14px;background:#fff;color:#0a1f3a;border:none;cursor:pointer;font-weight:600;">Map</button>
+</div>
 </header>
+
+<!-- Browse map (Leaflet + Esri satellite). All 112 venues plotted; click a
+     pin to view or reserve. Toggled by the List/Map switch above. -->
+<div id="ss-browse-map" style="display:none;width:100%;height:62vh;min-height:380px;border-radius:14px;overflow:hidden;background:#0a1f3a;margin-bottom:16px;"></div>
 
 <section aria-label="Beach club listings" class="listing-layout">
 <aside class="facet-sidebar" id="facet-sidebar" aria-label="Filters"></aside>
@@ -1005,5 +1015,43 @@
 <script src="icons.js"></script>
 <script src="features.js"></script>
 <script src="audiences.js"></script>
+<script src="venue-map.js"></script>
+<script>
+// List/Map toggle on the homepage. The map is built lazily on first activation
+// so initial page load isn't slowed down by Leaflet.
+(function () {
+ 'use strict';
+ const toggle = document.querySelector('.ss-view-toggle');
+ if (!toggle) return;
+ const mapEl  = document.getElementById('ss-browse-map');
+ const listEl = document.querySelector('.listing-layout');
+ let browseApi = null;
+
+ toggle.addEventListener('click', (e) => {
+   const btn = e.target.closest('[data-view]');
+   if (!btn) return;
+   const view = btn.dataset.view;
+   toggle.querySelectorAll('[data-view]').forEach(b => {
+     const active = b === btn;
+     b.classList.toggle('active', active);
+     b.setAttribute('aria-selected', active);
+     b.style.background = active ? '#0a1f3a' : '#fff';
+     b.style.color      = active ? '#fff'    : '#0a1f3a';
+   });
+   if (view === 'map') {
+     mapEl.style.display = '';
+     if (listEl) listEl.style.display = 'none';
+     if (!browseApi && window.SunspotMap) {
+       window.SunspotMap.browse({ container: mapEl, venues: window.SUNSPOT_CLUBS || [] })
+         .then(api => { browseApi = api; })
+         .catch(err => console.warn('browse map failed', err));
+     }
+   } else {
+     mapEl.style.display = 'none';
+     if (listEl) listEl.style.display = '';
+   }
+ });
+})();
+</script>
 </body>
 </html>

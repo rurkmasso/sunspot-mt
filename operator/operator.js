@@ -259,8 +259,12 @@
   function renderSeatmap() {
     const s = state.seatmap;
     if (!s) return;
-    const date = new Date(s.date).toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'short' });
-    $('#op-seatmap-date').textContent = date;
+    // Layout is now driven by the aerial map (operator-aerial.js). The grid
+    // below only renders if its container is visible (fallback case).
+    const grid = $('#op-seatmap-grid');
+    if (!grid) return;
+    const dateEl = $('#op-seatmap-date');
+    if (dateEl) dateEl.textContent = new Date(s.date).toLocaleDateString('en-GB', { weekday:'long', day:'numeric', month:'short' });
     const taken = new Set(s.taken_spots);
     const inactive = new Set(s.inactive_spots);
     state.inactive = inactive;
@@ -271,9 +275,9 @@
       else if (inactive.has(id)) st = 'inactive';
       return '<button class="op-seat" data-spot="' + id + '" data-state="' + st + '">' + id + '</button>';
     }
-    $('#op-seatmap-grid').innerHTML  = Array.from({ length: s.capacity.sunbeds }, (_, i) => cell('A' + (i+1))).join('');
-    $('#op-cabana-grid').innerHTML   = Array.from({ length: s.capacity.cabanas },  (_, i) => cell('C' + (i+1))).join('');
-    $('#op-vip-grid').innerHTML      = Array.from({ length: s.capacity.vip },      (_, i) => cell('V' + (i+1))).join('');
+    grid.innerHTML = Array.from({ length: s.capacity.sunbeds }, (_, i) => cell('A' + (i+1))).join('');
+    const cab = $('#op-cabana-grid'); if (cab) cab.innerHTML = Array.from({ length: s.capacity.cabanas }, (_, i) => cell('C' + (i+1))).join('');
+    const vip = $('#op-vip-grid');    if (vip) vip.innerHTML = Array.from({ length: s.capacity.vip },     (_, i) => cell('V' + (i+1))).join('');
 
     document.querySelectorAll('.op-seat').forEach(seat => {
       seat.addEventListener('click', async () => {
