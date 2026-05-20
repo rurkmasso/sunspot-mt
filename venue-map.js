@@ -23,6 +23,19 @@
  const ESRI_TILES  = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
  const ESRI_ATTR   = 'Tiles © Esri, Maxar, Earthstar Geographics';
  const STORAGE_KEY = 'sunspot_layouts';
+ // Per-venue background preference (satellite | plan). Defaults are chosen
+ // per category — satellite is right for beaches, useless for indoor pools.
+ const BG_PREF_KEY = 'sunspot_bg_prefs';
+ const DEFAULT_BG_BY_CATEGORY = {
+   'beach-club':  'satellite',
+   'sandy-beach': 'satellite',
+   'rocky-bay':   'satellite',
+   'natural':     'satellite',
+   'floating':    'satellite',
+   'pool-club':   'plan',
+   'rooftop':     'plan',
+   'lido':        'plan',
+ };
 
  // Visual style per spot type
  const SPOT_STYLE = {

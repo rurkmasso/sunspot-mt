@@ -105,29 +105,41 @@
      });
    }
 
-   // Mount the map
+   // Use the blueprint floor-plan editor (same module as the operator's
+   // Layout tab). Operator places spots → customer sees the exact same
+   // blueprint with the exact same spots. No satellite involved — beds,
+   // cabanas and VIPs are rendered against a clean pool-deck canvas.
    let mapApi;
-   window.SunspotMap.create({
-     container: aerialHost,
-     venue:    club,
-     mode:     'book',
-     selected: new Set(),
-     onSelect: (spot) => {
-       if (selected.has(spot.id)) {
-         selected.delete(spot.id);
-       } else {
-         selected.set(spot.id, spot);
-       }
-       renderList();
-       reprice();
-       mapApi.setSelected(new Set(selected.keys()));
-     },
-   }).then(api => { mapApi = api; reprice(); renderList(); })
-     .catch(err => {
-       console.warn('venue-map failed, falling back to SVG seatmap', err);
+   function buildBookView() {
+     try {
+       mapApi = window.SunspotPlan.create({
+         container: aerialHost,
+         venue:    club,
+         mode:     'book',
+         selected: new Set(),
+         onSelect: (spot) => {
+           if (selected.has(spot.id)) selected.delete(spot.id);
+           else selected.set(spot.id, spot);
+           renderList(); reprice();
+           mapApi.setSelected(new Set(selected.keys()));
+         },
+       });
+       reprice(); renderList();
+     } catch (err) {
+       console.warn('floorplan-editor failed, falling back to SVG seatmap', err);
        if (svgHost) svgHost.style.display = '';
        if (aerialHost) aerialHost.style.display = 'none';
-     });
+     }
+   }
+   // Floor-plan editor loads as a separate script — wait for it.
+   if (window.SunspotPlan) buildBookView();
+   else {
+     let tries = 0;
+     const t = setInterval(() => {
+       if (window.SunspotPlan) { clearInterval(t); buildBookView(); }
+       else if (++tries > 40) { clearInterval(t); /* give up */ }
+     }, 100);
+   }
 
    // Checkout hand-off (mirrors seatmap.js so checkout.html keeps working)
    checkoutBtn.addEventListener('click', () => {

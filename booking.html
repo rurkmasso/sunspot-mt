@@ -85,10 +85,9 @@
 
 <div class="seatmap-container" id="seatmap-container">
 <div class="tooltip" id="tooltip"></div>
-<!-- Aerial blueprint (Leaflet + Esri satellite tiles). Replaces the old
-     SVG seatmap. Shows the actual venue from above with the operator's
-     placed sunbeds / cabanas / VIPs as clickable markers. -->
-<div id="venue-aerial" style="width:100%;height:440px;border-radius:12px;overflow:hidden;background:#0a1f3a;"></div>
+<!-- Blueprint floor plan. Same component the operator uses to PLACE
+     spots — customer sees the exact same layout to BOOK them. -->
+<div id="venue-aerial" style="width:100%;border-radius:12px;overflow:hidden;background:transparent;"></div>
 <div id="svg-host" style="display:none"></div>
 </div>
 
@@ -124,6 +123,7 @@ Free cancellation until 24h before your reservation.
 <script src="clubs-data.js"></script>
 <script src="club-thumbs.js"></script>
 <script src="venue-map.js"></script>
+<script src="floorplan-editor.js"></script>
 <script src="booking-aerial.js"></script>
 <script src="auth.js"></script>
 <script src="nav-auth.js"></script>
