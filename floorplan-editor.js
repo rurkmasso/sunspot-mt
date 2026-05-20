@@ -452,6 +452,9 @@
          spotButton('sunbed', 'Sunbed', true) +
          spotButton('cabana', 'Cabana') +
          spotButton('vip',    'VIP gazebo') +
+         '<button type="button" id="sp-fill" style="margin-left:8px;padding:7px 12px;border:1px solid #ff9800;border-radius:8px;background:#fff8e8;color:#ef6c00;font-size:12px;font-weight:700;cursor:pointer;">' +
+           '⚡ Auto-fill row' +
+         '</button>' +
        '</div>' +
        '<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between;border-top:1px dashed #e3e8ef;padding-top:10px;">' +
          '<span id="sp-count" style="font-size:13px;color:#5d6a82;font-weight:600;">' + layout.spots.length + ' spots</span>' +
@@ -495,6 +498,29 @@
          if (opts.onChange) opts.onChange(layout);
          if (window.opToast) window.opToast('Added ' + AREA[kind].label.toLowerCase());
        });
+     });
+
+     // ⚡ Auto-fill row — drops 8 sunbeds in a neat row along the bottom edge
+     // of the selected area (or canvas if no area selected). The fastest way
+     // to populate a venue without tapping 30 times.
+     tb.querySelector('#sp-fill').addEventListener('click', () => {
+       const area = layout.areas.find(a => a.id === selectedAreaId);
+       const x0 = area ? area.x + 0.05 : 0.10;
+       const x1 = area ? area.x + area.w - 0.05 : 0.90;
+       const y  = area ? area.y + area.h + 0.06 : 0.85;
+       if (y > 0.95) { if (window.opToast) window.opToast('Not enough room — move area up first', 'warn'); return; }
+       const N = 8;
+       const used = layout.spots.filter(s => s.id.startsWith('A')).map(s => +s.id.slice(1) || 0);
+       let next = used.length ? Math.max.apply(null, used) + 1 : 1;
+       for (let i = 0; i < N; i++) {
+         const x = x0 + (x1 - x0) * (i / (N - 1));
+         layout.spots.push({ id: 'A' + next, type: 'sunbed', x, y });
+         next++;
+       }
+       saveLayout(venue.id, layout);
+       drawSpots();
+       if (opts.onChange) opts.onChange(layout);
+       if (window.opToast) window.opToast('Dropped ' + N + ' sunbeds — drag to fine-tune');
      });
 
      // Background upload

@@ -102,4 +102,49 @@
  }
 
  render();
+
+ // ─── Live status — poll localStorage every 4 s so when the operator
+ // accepts / declines / marks arrived, the customer sees the badge
+ // update WITHOUT refreshing the page. Also fires a toast on change.
+ let lastSnapshot = JSON.stringify(readBookings().map(b => [b.ref, b.operator_action]));
+ setInterval(function () {
+  const list = readBookings();
+  const snap = JSON.stringify(list.map(b => [b.ref, b.operator_action]));
+  if (snap === lastSnapshot) return;
+  // Find what changed and toast the user
+  try {
+   const prev = JSON.parse(lastSnapshot);
+   list.forEach(b => {
+    const old = prev.find(p => p[0] === b.ref);
+    if (old && old[1] !== (b.operator_action || 'pending')) {
+     const msg = b.operator_action === 'accept' ? 'Your booking ' + b.ref + ' was confirmed by the venue'
+              : b.operator_action === 'decline' ? 'Booking ' + b.ref + ' was declined — refund issued'
+              : b.operator_action === 'arrived' ? 'Welcome — you\'re checked in at ' + (b.clubName || 'the venue')
+              : 'Booking ' + b.ref + ' updated';
+     showLiveToast(msg, b.operator_action === 'decline' ? 'warn' : 'success');
+    }
+   });
+  } catch (e) {}
+  lastSnapshot = snap;
+  render();
+ }, 4000);
+
+ function showLiveToast(msg, kind) {
+  let host = document.getElementById('ss-live-toast-host');
+  if (!host) {
+   host = document.createElement('div');
+   host.id = 'ss-live-toast-host';
+   host.style.cssText = 'position:fixed;left:0;right:0;top:calc(env(safe-area-inset-top) + 16px);display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none;z-index:2000;padding:0 16px;';
+   document.body.appendChild(host);
+  }
+  const el = document.createElement('div');
+  el.style.cssText = 'background:' + (kind === 'warn' ? '#c62828' : '#2e7d32') + ';color:#fff;padding:12px 18px;border-radius:999px;box-shadow:0 6px 22px rgba(0,0,0,.22);font-weight:600;font-size:14px;opacity:0;transform:translateY(-8px);transition:all .2s ease;max-width:92vw;text-align:center;';
+  el.textContent = msg;
+  host.appendChild(el);
+  requestAnimationFrame(function () { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; });
+  setTimeout(function () {
+   el.style.opacity = '0'; el.style.transform = 'translateY(-8px)';
+   setTimeout(function () { el.remove(); }, 220);
+  }, 4200);
+ }
 })();
