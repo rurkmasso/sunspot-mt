@@ -1,0 +1,835 @@
+{
+  "summary": {
+    "warn": 22,
+    "error": 5
+  },
+  "pages": [
+    {
+      "page": "404.html",
+      "title": "Page not found \u2014 Sunspot Malta",
+      "title_len": 30,
+      "description": "We couldn",
+      "description_len": 9,
+      "canonical": "https://sunspot.mt/404.html",
+      "lang": "en-MT",
+      "robots": "noindex, nofollow",
+      "og": {
+        "title": "Page not found \u2014 Sunspot Malta",
+        "description": "We couldn",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/404.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Page not found \u2014 Sunspot Malta",
+        "description": "We couldn",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 1,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": [
+        [
+          "warn",
+          "description-too-short",
+          "9 chars"
+        ]
+      ]
+    },
+    {
+      "page": "about.html",
+      "title": "About Sunspot \u2014 Malta's dedicated beach booking platform",
+      "title_len": 56,
+      "description": "Sunspot is the Malta-built marketplace for beach clubs, lidos and rooftop pools. 8% commission, no flat fees, real-time inventory, automatic operator payouts.",
+      "description_len": 158,
+      "canonical": "https://sunspot.mt/about.html",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "About Sunspot \u2014 Malta",
+        "description": "Sunspot is the Malta-built marketplace for beach clubs, lidos and rooftop pools. 8% commission, no flat fees, real-time inventory, automatic operator payouts.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/about.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "About Sunspot \u2014 Malta",
+        "description": "Sunspot is the Malta-built marketplace for beach clubs, lidos and rooftop pools. 8% commission, no flat fees, real-time inventory, automatic operator payouts.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [
+        "AboutPage"
+      ],
+      "h1_count": 1,
+      "h2_count": 5,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": []
+    },
+    {
+      "page": "account.html",
+      "title": "My account \u2014 Sunspot",
+      "title_len": 20,
+      "description": "Your Sunspot account: bookings, favourites, payment methods, and profile.",
+      "description_len": 73,
+      "canonical": "https://sunspot.mt/account.html",
+      "lang": "en-MT",
+      "robots": "noindex, nofollow",
+      "og": {
+        "title": "My account \u2014 Sunspot",
+        "description": "Your Sunspot profile, payment methods and saved beach clubs.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/account.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "My account \u2014 Sunspot",
+        "description": "Your Sunspot profile, payment methods and saved beach clubs.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 3,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": [
+        [
+          "warn",
+          "title-too-short",
+          "20 chars"
+        ]
+      ]
+    },
+    {
+      "page": "app.html",
+      "title": "Sunspot app \u2014 book sunbeds from your phone",
+      "title_len": 42,
+      "description": "Install Sunspot to your home screen. Faster bookings, push notifications, offline access.",
+      "description_len": 89,
+      "canonical": "https://sunspot.mt/app.html",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "Sunspot app \u2014 book Malta",
+        "description": "Install Sunspot to your home screen. Faster bookings, push notifications, offline access.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/app.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Get the Sunspot app",
+        "description": "Install Sunspot to your home screen. Faster bookings, push notifications, offline access.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 2,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 4,
+      "issues": [
+        [
+          "warn",
+          "dead-anchors",
+          "4 found"
+        ]
+      ]
+    },
+    {
+      "page": "booking.html",
+      "title": "Choose your spot \u2014 Sunspot Malta",
+      "title_len": 32,
+      "description": "Pick the exact sunbed, cabana or VIP gazebo on the live layout. Real-time availability across Malta",
+      "description_len": 99,
+      "canonical": "https://sunspot.mt/",
+      "lang": "en-MT",
+      "robots": "noindex, nofollow",
+      "og": {
+        "title": "Sunspot \u2014 Reserve your beach spot",
+        "description": "Pick the exact sunbed, cabana or VIP gazebo on the live layout. Real-time availability across Malta",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/",
+        "type": "product"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Choose your spot \u2014 Sunspot Malta",
+        "description": "Pick the exact sunbed, cabana or VIP gazebo on the live layout. Real-time availability across Malta",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [
+        "(parse-error)"
+      ],
+      "h1_count": 1,
+      "h2_count": 1,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 1,
+      "issues": [
+        [
+          "warn",
+          "dead-anchors",
+          "1 found"
+        ],
+        [
+          "error",
+          "duplicate-canonical",
+          "https://sunspot.mt/"
+        ]
+      ]
+    },
+    {
+      "page": "bookings.html",
+      "title": "My beach club bookings \u2014 Sunspot",
+      "title_len": 32,
+      "description": "View and manage your beach club reservations across Malta and Gozo.",
+      "description_len": 67,
+      "canonical": "https://sunspot.mt/bookings.html",
+      "lang": "en-MT",
+      "robots": "noindex, nofollow",
+      "og": {
+        "title": "My beach club bookings \u2014 Sunspot",
+        "description": "All your Sunspot reservations in one place \u2014 show the QR, cancel before 24 h, see venue status.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/bookings.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "My beach club bookings \u2014 Sunspot",
+        "description": "All your Sunspot reservations in one place \u2014 show the QR, cancel before 24 h, see venue status.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 0,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": [
+        [
+          "warn",
+          "description-too-short",
+          "67 chars"
+        ]
+      ]
+    },
+    {
+      "page": "checkout.html",
+      "title": "Checkout \u2014 Sunspot",
+      "title_len": 18,
+      "description": "Complete your beach club reservation in Malta. Secure payment, instant confirmation, free cancellation up to 24 hours before.",
+      "description_len": 125,
+      "canonical": "https://sunspot.mt/checkout.html",
+      "lang": "en-MT",
+      "robots": "noindex, nofollow",
+      "og": {
+        "title": "Checkout \u2014 Sunspot",
+        "description": "Complete your beach reservation.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/checkout.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Checkout \u2014 Sunspot",
+        "description": "Secure checkout for your Sunspot beach club reservation. Free cancellation up to 24 h before.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 1,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 1,
+      "issues": [
+        [
+          "warn",
+          "title-too-short",
+          "18 chars"
+        ],
+        [
+          "warn",
+          "dead-anchors",
+          "1 found"
+        ]
+      ]
+    },
+    {
+      "page": "club.html",
+      "title": "Beach club & lido details \u2014 Sunspot Malta",
+      "title_len": 41,
+      "description": "Real photos, sunbed prices, opening hours and live availability for Malta",
+      "description_len": 73,
+      "canonical": "https://sunspot.mt/",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "",
+        "description": "Real photos, sunbed prices, opening hours and live availability for Malta",
+        "image": "",
+        "url": "https://sunspot.mt/",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Beach club \u2014 Sunspot",
+        "description": "Real photos, sunbed prices, opening hours and live availability for Malta",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [
+        "(parse-error)"
+      ],
+      "h1_count": 1,
+      "h2_count": 7,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": [
+        [
+          "warn",
+          "missing-og-title",
+          ""
+        ],
+        [
+          "warn",
+          "missing-og-image",
+          ""
+        ],
+        [
+          "error",
+          "duplicate-canonical",
+          "https://sunspot.mt/"
+        ]
+      ]
+    },
+    {
+      "page": "compare.html",
+      "title": "Compare Malta beach clubs side by side \u2014 Sunspot",
+      "title_len": 48,
+      "description": "Side-by-side comparison of beach clubs, lidos and rooftop pools in Malta \u2014 price, capacity, vibe, amenities.",
+      "description_len": 108,
+      "canonical": "https://sunspot.mt/compare.html",
+      "lang": "en-MT",
+      "robots": "index, follow",
+      "og": {
+        "title": "Compare Malta beach clubs side by side \u2014 Sunspot",
+        "description": "Pick two or three beach clubs and compare them on price, location, vibe, amenities and live availability. Decide in under a minute.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/compare.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Compare Malta beach clubs side by side \u2014 Sunspot",
+        "description": "Pick two or three beach clubs and compare them on price, location, vibe, amenities and live availability. Decide in under a minute.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 2,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 1,
+      "issues": [
+        [
+          "warn",
+          "dead-anchors",
+          "1 found"
+        ]
+      ]
+    },
+    {
+      "page": "confirmation.html",
+      "title": "Booking confirmed \u2014 Sunspot",
+      "title_len": 27,
+      "description": "Your beach club reservation in Malta is confirmed. Show the QR at the entrance.",
+      "description_len": 79,
+      "canonical": "https://sunspot.mt/confirmation.html",
+      "lang": "en-MT",
+      "robots": "noindex, nofollow",
+      "og": {
+        "title": "Booking confirmed \u2014 Sunspot",
+        "description": "Your Sunspot reservation is confirmed. Show the QR at the gate.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/confirmation.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Booking confirmed \u2014 Sunspot",
+        "description": "Your Sunspot reservation is confirmed. Show the QR at the gate.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 0,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": [
+        [
+          "warn",
+          "title-too-short",
+          "27 chars"
+        ]
+      ]
+    },
+    {
+      "page": "experiences.html",
+      "title": "Malta experiences \u2014 boat tours, jetski, kayak, sunset cruises",
+      "title_len": 61,
+      "description": "Book RIB tours to Comino, jetski safaris, sea-cave kayaks, sunset cruises, dive trips, party boats and Valletta walking tours \u2014 all on Sunspot, 8% service fee.",
+      "description_len": 159,
+      "canonical": "https://sunspot.mt/experiences.html",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "Malta experiences \u2014 boat tours, jetski, kayak, sunset cruises",
+        "description": "Book RIB tours to Comino, jetski safaris, sea-cave kayaks, sunset cruises, dive trips, party boats and Valletta walking tours \u2014 all on Sunspot, 8% service fee.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/experiences.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Malta experiences \u2014 boat tours, jetski, kayak, sunset cruises",
+        "description": "Book RIB tours to Comino, jetski safaris, sea-cave kayaks, sunset cruises, dive trips, party boats and Valletta walking tours \u2014 all on Sunspot, 8% service fee.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 1,
+      "img_total": 1,
+      "img_no_alt": 0,
+      "bad_anchors": 1,
+      "issues": [
+        [
+          "warn",
+          "dead-anchors",
+          "1 found"
+        ]
+      ]
+    },
+    {
+      "page": "faq.html",
+      "title": "FAQ \u2014 Bookings, cancellations, refunds, weather \u2014 Sunspot",
+      "title_len": 57,
+      "description": "Common questions about booking beach clubs on Sunspot \u2014 cancellation policy, weather refunds, payment, fees, accounts, for operators and tourists.",
+      "description_len": 146,
+      "canonical": "https://sunspot.mt/faq.html",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "FAQ \u2014 Bookings, cancellations, refunds, weather \u2014 Sunspot",
+        "description": "Common questions about booking beach clubs on Sunspot \u2014 cancellation policy, weather refunds, payment, fees, accounts, for operators and tourists.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/faq.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "FAQ \u2014 Bookings, cancellations, refunds, weather \u2014 Sunspot",
+        "description": "Common questions about booking beach clubs on Sunspot \u2014 cancellation policy, weather refunds, payment, fees, accounts, for operators and tourists.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [
+        "(parse-error)"
+      ],
+      "h1_count": 1,
+      "h2_count": 8,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": []
+    },
+    {
+      "page": "gifts.html",
+      "title": "Sunspot gift cards \u2014 give a Maltese beach day",
+      "title_len": 45,
+      "description": "Sunspot gift cards from \u20ac25, redeemable at all 112 venues across Malta, Gozo and Comino. Email or printable delivery. Never expires. Refundable for 14 days.",
+      "description_len": 156,
+      "canonical": "https://sunspot.mt/gifts.html",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "Sunspot gift cards \u2014 give a Maltese beach day",
+        "description": "Sunspot gift cards from \u20ac25, redeemable at all 112 venues across Malta, Gozo and Comino. Email or printable delivery. Never expires. Refundable for 14 days.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/gifts.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Sunspot gift cards \u2014 give a Maltese beach day",
+        "description": "Sunspot gift cards from \u20ac25, redeemable at all 112 venues across Malta, Gozo and Comino. Email or printable delivery. Never expires. Refundable for 14 days.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 4,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": []
+    },
+    {
+      "page": "guide.html",
+      "title": "Sunspot Field Guide \u2014 Malta beach & pool stories",
+      "title_len": 48,
+      "description": "Opinionated, on-the-ground guides to Malta",
+      "description_len": 42,
+      "canonical": "https://sunspot.mt/",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "",
+        "description": "",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Guide \u2014 Sunspot",
+        "description": "Sunspot guide article \u2014 Malta beach clubs, pools, lidos.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [
+        "(parse-error)"
+      ],
+      "h1_count": 1,
+      "h2_count": 0,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": [
+        [
+          "warn",
+          "description-too-short",
+          "42 chars"
+        ],
+        [
+          "warn",
+          "missing-og-title",
+          ""
+        ],
+        [
+          "warn",
+          "missing-og-description",
+          ""
+        ],
+        [
+          "error",
+          "duplicate-canonical",
+          "https://sunspot.mt/"
+        ]
+      ]
+    },
+    {
+      "page": "guides.html",
+      "title": "Malta beach club guides \u2014 sunsets, pool parties, Comino, Gozo",
+      "title_len": 61,
+      "description": "In-depth, opinionated guides to Malta",
+      "description_len": 37,
+      "canonical": "https://sunspot.mt/guides.html",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "Malta beach club guides \u2014 sunsets, pool parties, Comino, Gozo",
+        "description": "In-depth, opinionated guides to Malta",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/guides.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Malta beach club guides \u2014 sunsets, pool parties, Comino, Gozo",
+        "description": "In-depth, opinionated guides to Malta",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [
+        "CollectionPage"
+      ],
+      "h1_count": 1,
+      "h2_count": 2,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": [
+        [
+          "warn",
+          "description-too-short",
+          "37 chars"
+        ]
+      ]
+    },
+    {
+      "page": "index.html",
+      "title": "Sunspot \u2014 Malta beach clubs, lidos & rooftop pools booking",
+      "title_len": 58,
+      "description": "Book sunbeds, cabanas and floating cabanas at 112 beach clubs, lidos and rooftop pools across Malta, Gozo and Comino. Live availability, free cancellation, 8% service fee.",
+      "description_len": 171,
+      "canonical": "https://sunspot.mt/",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "Sunspot \u2014 Malta beach clubs, lidos & rooftop pools booking",
+        "description": "Book sunbeds, cabanas and floating cabanas at 112 beach clubs, lidos and rooftop pools across Malta, Gozo and Comino. Live availability, free cancellation, 8% service fee.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Sunspot \u2014 Malta beach clubs, lidos & rooftop pools booking",
+        "description": "Book sunbeds, cabanas and floating cabanas at 112 beach clubs, lidos and rooftop pools across Malta, Gozo and Comino. Live availability, free cancellation, 8% service fee.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [
+        "Organization",
+        "WebSite",
+        "ItemList"
+      ],
+      "h1_count": 1,
+      "h2_count": 5,
+      "img_total": 1,
+      "img_no_alt": 0,
+      "bad_anchors": 5,
+      "issues": [
+        [
+          "warn",
+          "description-too-long",
+          "171 chars"
+        ],
+        [
+          "warn",
+          "dead-anchors",
+          "5 found"
+        ],
+        [
+          "error",
+          "duplicate-canonical",
+          "https://sunspot.mt/"
+        ]
+      ]
+    },
+    {
+      "page": "living.html",
+      "title": "Living in Malta? Beach perks for residents & expats \u2014 Sunspot",
+      "title_len": 61,
+      "description": "Season passes, dog-friendly bays, work-from-beach venues with WiFi, daily-swimmer lidos and the beaches Maltese actually use. Built for locals and expats.",
+      "description_len": 154,
+      "canonical": "https://sunspot.mt/living.html",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "Living in Malta? Beach perks for residents & expats \u2014 Sunspot",
+        "description": "Season passes, dog-friendly bays, work-from-beach venues with WiFi, daily-swimmer lidos and the beaches Maltese actually use. Built for locals and expats.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/living.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Living in Malta? Beach perks for residents & expats \u2014 Sunspot",
+        "description": "Season passes, dog-friendly bays, work-from-beach venues with WiFi, daily-swimmer lidos and the beaches Maltese actually use. Built for locals and expats.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 5,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": []
+    },
+    {
+      "page": "signin.html",
+      "title": "Sign in or create an account \u2014 Sunspot",
+      "title_len": 38,
+      "description": "Sign in to your Sunspot account or create one to manage bookings, save favourites, and check in faster.",
+      "description_len": 103,
+      "canonical": "https://sunspot.mt/signin.html",
+      "lang": "en-MT",
+      "robots": "noindex, nofollow",
+      "og": {
+        "title": "Sign in to Sunspot",
+        "description": "Sign in to manage your beach club bookings, see your QR check-ins and save your favourite venues.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/signin.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Sign in to Sunspot",
+        "description": "Sign in to manage your beach club bookings, see your QR check-ins and save your favourite venues.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 2,
+      "h2_count": 0,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 5,
+      "issues": [
+        [
+          "warn",
+          "multiple-h1",
+          "2 found"
+        ],
+        [
+          "warn",
+          "dead-anchors",
+          "5 found"
+        ]
+      ]
+    },
+    {
+      "page": "visiting.html",
+      "title": "Visiting Malta? Plan your beach days \u2014 Sunspot",
+      "title_len": 46,
+      "description": "First time in Malta? Get a personalised beach itinerary based on where you",
+      "description_len": 74,
+      "canonical": "https://sunspot.mt/visiting.html",
+      "lang": "en-MT",
+      "robots": "index, follow, max-image-preview:large",
+      "og": {
+        "title": "Visiting Malta? Plan your beach days \u2014 Sunspot",
+        "description": "First time in Malta? Get a personalised beach itinerary based on where you",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/visiting.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Visiting Malta? Plan your beach days \u2014 Sunspot",
+        "description": "First time in Malta? Get a personalised beach itinerary based on where you",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 4,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": []
+    },
+    {
+      "page": "shop/cart.html",
+      "title": "Your Sunspot Shop cart",
+      "title_len": 22,
+      "description": "Items in your Sunspot Shop cart \u2014 checkout in 30 seconds, ships from Valletta.",
+      "description_len": 78,
+      "canonical": "https://sunspot.mt/shop/cart.html",
+      "lang": "en-MT",
+      "robots": "noindex",
+      "og": {
+        "title": "Your Sunspot Shop cart",
+        "description": "Items in your Sunspot Shop cart \u2014 checkout in 30 seconds, ships from Valletta.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/shop/cart.html",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Your Sunspot Shop cart",
+        "description": "Items in your Sunspot Shop cart \u2014 checkout in 30 seconds, ships from Valletta.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 2,
+      "img_total": 1,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": [
+        [
+          "warn",
+          "title-too-short",
+          "22 chars"
+        ],
+        [
+          "error",
+          "wrongly-noindex",
+          "robots='noindex'"
+        ]
+      ]
+    },
+    {
+      "page": "shop/index.html",
+      "title": "Shop merch from Malta's beach clubs \u2014 Sunspot Shop",
+      "title_len": 50,
+      "description": "Beach essentials by Sunspot. Quick-dry Turkish cotton towels, insulated stainless bottles, swim goggles, masks, dry bags and minimal apparel.",
+      "description_len": 141,
+      "canonical": "https://shop.sunspot.mt/",
+      "lang": "en-MT",
+      "robots": "",
+      "og": {
+        "title": "Shop merch from Malta",
+        "description": "Stickers, totes, tees, prints from Sunspot \u2014 Malta",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/shop/",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Shop merch from Malta",
+        "description": "Stickers, totes, tees, prints from Sunspot \u2014 Malta",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 1,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": []
+    },
+    {
+      "page": "shop/product.html",
+      "title": "Sunspot Shop \u2014 beach product details",
+      "title_len": 36,
+      "description": "Beach essential from Sunspot.",
+      "description_len": 29,
+      "canonical": "https://sunspot.mt/shop/",
+      "lang": "en-MT",
+      "robots": "",
+      "og": {
+        "title": "Sunspot Shop \u2014 beach product details",
+        "description": "Sunspot merch \u2014 limited-edition prints, totes and stickers. Designed in Valletta, printed locally.",
+        "image": "https://sunspot.mt/og-cover.png",
+        "url": "https://sunspot.mt/shop/",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Sunspot Shop \u2014 beach product details",
+        "description": "Sunspot merch \u2014 limited-edition prints, totes and stickers. Designed in Valletta, printed locally.",
+        "image": "https://sunspot.mt/og-cover.png"
+      },
+      "ld_types": [],
+      "h1_count": 1,
+      "h2_count": 2,
+      "img_total": 0,
+      "img_no_alt": 0,
+      "bad_anchors": 0,
+      "issues": [
+        [
+          "warn",
+          "description-too-short",
+          "29 chars"
+        ]
+      ]
+    }
+  ]
+}

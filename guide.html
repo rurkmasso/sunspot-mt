@@ -5,8 +5,8 @@
 <script src="gate.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Guide — Sunspot</title>
-<meta id="meta-desc" name="description" content="">
+<title>Sunspot Field Guide — Malta beach & pool stories</title>
+<meta id="meta-desc" name="description" content="Opinionated, on-the-ground guides to Malta's beach clubs, lidos and wild coast. Picked by people who actually go.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link id="canonical" rel="canonical" href="https://sunspot.mt/">
 <meta property="og:type" content="website">
@@ -26,6 +26,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Guide — Sunspot">
   <meta name="twitter:description" content="Sunspot guide article — Malta beach clubs, pools, lidos.">
+<meta property="og:image" content="https://sunspot.mt/og-cover.png">
+<meta property="og:site_name" content="Sunspot">
+<meta property="og:locale" content="en_MT">
+<meta name="twitter:image" content="https://sunspot.mt/og-cover.png">
 </head>
 <body>
 <header class="site-header">
@@ -60,6 +64,11 @@
 <!-- guide.js paints the hero full-bleed, then the article body inside the
      centred container. The "more-guides" element gets replaced by the
      ss-more-guides section so don't wrap it in .container. -->
+<!-- Static SEO H1 — JS rewrites the page with the actual guide title once
+     it loads. Visually hidden so it doesn't double up with the hero. -->
+<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;">
+ Sunspot Field Guide — Malta beach & pool stories
+</h1>
 <main id="guide-root" style="padding:0;">
  <div class="ss-spinner-row" style="padding:80px 24px;justify-content:center;">
   <span class="ss-spinner"></span> Loading guide…
