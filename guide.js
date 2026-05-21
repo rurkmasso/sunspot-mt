@@ -40,19 +40,53 @@
  setMeta('og-title', g.title);
  setMeta('og-desc', g.excerpt);
 
- const ld = document.getElementById('ld-article');
- if (ld) ld.textContent = JSON.stringify({
+ // Rich Article + BreadcrumbList JSON-LD — full E-E-A-T signals for Google.
+ const articleLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": g.title,
   "description": g.excerpt,
-  "image": g.heroImage || undefined,
-  "author":    { "@type": "Organization", "name": "Sunspot" },
-  "publisher": { "@type": "Organization", "name": "Sunspot", "logo": { "@type": "ImageObject", "url": "https://sunspot.mt/logo.svg" }},
+  "image": g.heroImage ? [g.heroImage] : undefined,
+  "author": {
+    "@type": "Organization",
+    "name": "Sunspot Editorial",
+    "url": "https://sunspot.mt/about.html",
+    "logo": { "@type": "ImageObject", "url": "https://sunspot.mt/logo.svg" },
+    "knowsAbout": ["Malta beaches", "Malta beach clubs", "Gozo coast", "Comino", "Rooftop pools Malta", "Lidos Sliema"],
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Malta" },
+      { "@type": "AdministrativeArea", "name": "Gozo" },
+      { "@type": "AdministrativeArea", "name": "Comino" }
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://sunspot.mt/#organization",
+    "name": "Sunspot",
+    "logo": { "@type": "ImageObject", "url": "https://sunspot.mt/logo.svg" }
+  },
   "datePublished": "2026-05-15",
-  "dateModified":  "2026-05-15",
+  "dateModified":  "2026-05-21",
+  "wordCount": (g.body || []).reduce(function (s, b) { return s + ((b.text || (b.items || []).join(' ') || '').split(/\s+/).length); }, 0),
+  "isAccessibleForFree": true,
+  "inLanguage": "en-MT",
   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://sunspot.mt/guide.html?g=" + g.slug },
- });
+  "about": (g.venues || []).map(function (vid) {
+    var c = clubs.find(function (x) { return x.id === vid; });
+    return c ? { "@type": "Place", "name": c.name, "address": c.location } : null;
+  }).filter(Boolean),
+ };
+ const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   { "@type": "ListItem", "position": 1, "name": "Sunspot",      "item": "https://sunspot.mt/" },
+   { "@type": "ListItem", "position": 2, "name": "Field Guide",  "item": "https://sunspot.mt/guides.html" },
+   { "@type": "ListItem", "position": 3, "name": g.title,        "item": "https://sunspot.mt/guide.html?g=" + g.slug }
+  ]
+ };
+ const ld = document.getElementById('ld-article');
+ if (ld) ld.textContent = JSON.stringify([articleLd, breadcrumbLd]);
 
  // ─── Render body blocks ───
  function renderBlock(b) {
@@ -97,11 +131,11 @@
      '<h1>' + g.title + '</h1>' +
      '<p class="excerpt">' + g.excerpt + '</p>' +
      '<div class="meta">' +
+       '<span>By <a href="about.html" style="color:#ffd190;font-weight:600;text-decoration:none;">Sunspot Editorial</a>, Valletta</span>' +
+       '<span class="dot"></span>' +
        '<span>' + g.readMinutes + ' min read</span>' +
        '<span class="dot"></span>' +
-       '<span>Updated May 2026</span>' +
-       '<span class="dot"></span>' +
-       '<a href="guides.html" style="color:#ffd190;font-weight:600;text-decoration:none;">All guides</a>' +
+       '<span>Updated 21 May 2026</span>' +
      '</div>' +
    '</div>' +
   '</header>' +

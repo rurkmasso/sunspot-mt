@@ -69,7 +69,7 @@
  if (!user) {
  root.innerHTML = `
  <div class="empty-card" style="margin-top:60px">
-<h2>You're not signed in</h2>
+<h2>Saved venues, payment methods, booking history</h2>
 <p style="color:var(--muted);margin:12px 0 20px">Sign in to see your bookings, favourites, and account.</p>
 <a href="signin.html" class="btn-primary" style="text-decoration:none;display:inline-block">Sign in or create account →</a>
 </div>`;
@@ -161,7 +161,7 @@
  <div class="account-header">
 <div class="account-avatar">${(user.firstName||'?').charAt(0).toUpperCase()}</div>
 <div>
-<h1>${user.firstName} ${user.lastName}</h1>
+<h1>Your Sunspot account</h1>
 <p class="muted">${user.email} · Member since ${user.joinedAt}</p>
 </div>
 </div>
@@ -203,5 +203,6 @@ ${tabs.map(t =>`<button class="account-tab ${t.id===initialTab?'active':''}" dat
 <script src="features.js"></script>
 <script src="audiences.js"></script>
 <script src="cookie-consent.js" defer></script>
+<script src="eeat-footer.js" defer></script>
 </body>
 </html>
