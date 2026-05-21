@@ -1,0 +1,46 @@
+{
+  "checked": 156,
+  "broken": 0,
+  "bad_by_venue": {},
+  "by_host_status": {
+    "nomaisland.com": {
+      "200": 3
+    },
+    "floskypool.com": {
+      "200": 3
+    },
+    "cafedelmar.com.mt": {
+      "200": 3
+    },
+    "aqualuna.mt": {
+      "200": 3
+    },
+    "1926lesoleil.com": {
+      "200": 1
+    },
+    "static.tacdn.com": {
+      "200": 1
+    },
+    "whichbeach.com.mt": {
+      "200": 130
+    },
+    "popeyemalta.com": {
+      "200": 2
+    },
+    "malta.intercontinental.com": {
+      "200": 2
+    },
+    "ionharbour.com": {
+      "200": 1
+    },
+    "verdihotels.com": {
+      "200": 3
+    },
+    "cugogranmacina.com": {
+      "200": 3
+    },
+    "www.odycy.com": {
+      "200": 1
+    }
+  }
+}
