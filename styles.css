@@ -330,6 +330,366 @@ label {
  margin: 18px 0;
 }
 
+/* ============================================================
+   GUIDES — magazine treatment
+   Cover cards on the index, long-form article layout on /guide
+   ============================================================ */
+
+/* ─── Guides index grid ─── */
+.ss-guides-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+ gap: 24px;
+ margin: 32px 0 56px;
+}
+.ss-guides-grid .feature {
+ grid-column: 1 / -1;
+}
+.ss-guide-cover {
+ position: relative;
+ display: block;
+ border-radius: 18px;
+ overflow: hidden;
+ background: var(--ink);
+ aspect-ratio: 4 / 5;
+ text-decoration: none;
+ color: #fff;
+ box-shadow: 0 4px 18px rgba(10,31,58,.10);
+ transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s;
+}
+.ss-guide-cover:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 14px 32px rgba(10,31,58,.18);
+}
+.ss-guide-cover .photo {
+ position: absolute; inset: 0;
+ background-size: cover; background-position: center;
+ transition: transform .8s cubic-bezier(.2,.8,.2,1);
+}
+.ss-guide-cover:hover .photo { transform: scale(1.04); }
+.ss-guide-cover .scrim {
+ position: absolute; inset: 0;
+ background: linear-gradient(180deg,
+   rgba(10,31,58,0) 30%,
+   rgba(10,31,58,.55) 70%,
+   rgba(10,31,58,.92) 100%);
+}
+.ss-guide-cover .content {
+ position: absolute; bottom: 0; left: 0; right: 0;
+ padding: 22px 22px 24px;
+}
+.ss-guide-cover .kicker {
+ display: inline-block;
+ font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+ font-weight: 800;
+ padding: 4px 10px;
+ border-radius: 999px;
+ background: rgba(255,183,77,.22);
+ color: #ffd190;
+ backdrop-filter: blur(8px);
+ -webkit-backdrop-filter: blur(8px);
+ margin-bottom: 12px;
+}
+.ss-guide-cover h2 {
+ font-family: var(--font-display);
+ font-size: clamp(20px, 2vw, 26px);
+ font-weight: 600;
+ line-height: 1.15;
+ letter-spacing: -0.015em;
+ color: #fff;
+ margin-bottom: 8px;
+}
+.ss-guide-cover .excerpt {
+ font-size: 13px;
+ opacity: .85;
+ line-height: 1.5;
+ margin-bottom: 12px;
+ display: -webkit-box;
+ -webkit-line-clamp: 2;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+}
+.ss-guide-cover .meta {
+ display: flex; align-items: center; gap: 8px;
+ font-size: 12px;
+ opacity: .8;
+}
+.ss-guide-cover .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: currentColor; }
+
+/* Feature card (first guide) on desktop spans 2 cols, landscape */
+@media (min-width: 720px) {
+ .ss-guides-grid .feature {
+   grid-column: span 2;
+   aspect-ratio: 16 / 9;
+ }
+ .ss-guides-grid .feature h2 { font-size: clamp(28px, 3vw, 40px); }
+ .ss-guides-grid .feature .excerpt {
+   font-size: 15px;
+   max-width: 60ch;
+   -webkit-line-clamp: 3;
+ }
+}
+
+/* ─── Single guide article (magazine layout) ─── */
+.ss-article {
+ max-width: 920px;
+ margin: 0 auto;
+ padding: 0 0 80px;
+}
+
+.ss-article-hero {
+ position: relative;
+ height: 60vh;
+ min-height: 420px;
+ max-height: 580px;
+ overflow: hidden;
+ color: #fff;
+}
+.ss-article-hero .photo {
+ position: absolute; inset: 0;
+ background-size: cover; background-position: center;
+ transform: scale(1.02);
+}
+.ss-article-hero .scrim {
+ position: absolute; inset: 0;
+ background: linear-gradient(180deg,
+   rgba(10,31,58,.15) 0%,
+   rgba(10,31,58,.40) 50%,
+   rgba(10,31,58,.88) 100%);
+}
+.ss-article-hero .inner {
+ position: relative;
+ max-width: 920px;
+ margin: 0 auto;
+ height: 100%;
+ display: flex; flex-direction: column; justify-content: flex-end;
+ padding: 0 24px 36px;
+}
+.ss-article-hero .kicker {
+ font-size: 11px;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ font-weight: 800;
+ color: #ffd190;
+ margin-bottom: 14px;
+}
+.ss-article-hero h1 {
+ font-family: var(--font-display);
+ font-size: clamp(30px, 5vw, 56px);
+ font-weight: 600;
+ line-height: 1.04;
+ letter-spacing: -0.025em;
+ max-width: 22ch;
+ color: #fff;
+ margin-bottom: 16px;
+ text-shadow: 0 2px 12px rgba(0,0,0,.20);
+}
+.ss-article-hero .excerpt {
+ font-size: clamp(15px, 1.8vw, 18px);
+ line-height: 1.55;
+ color: rgba(255,255,255,.92);
+ max-width: 60ch;
+ margin-bottom: 16px;
+}
+.ss-article-hero .meta {
+ font-size: 13px;
+ opacity: .85;
+ display: flex; gap: 10px; align-items: center;
+}
+.ss-article-hero .meta .dot { width: 3px; height: 3px; border-radius: 50%; background: currentColor; }
+
+/* Body content — long-form, readable, editorial */
+.ss-article-body {
+ padding: 48px 24px 0;
+ font-family: var(--font-body);
+ font-size: 17px;
+ line-height: 1.7;
+ color: var(--ink);
+}
+.ss-article-body > p {
+ margin: 0 0 22px;
+ max-width: 64ch;
+}
+.ss-article-body > p:first-of-type::first-letter {
+ font-family: var(--font-display);
+ font-size: 56px;
+ font-weight: 600;
+ float: left;
+ line-height: 0.95;
+ margin: 6px 10px 0 0;
+ color: var(--sun-deep);
+}
+.ss-article-body h2 {
+ font-family: var(--font-display);
+ font-size: clamp(22px, 2.6vw, 30px);
+ font-weight: 600;
+ letter-spacing: -0.02em;
+ margin: 40px 0 12px;
+ max-width: 30ch;
+ color: var(--ink);
+}
+.ss-article-body h2::before {
+ content: "";
+ display: block;
+ width: 36px; height: 3px;
+ background: var(--grad-sun);
+ border-radius: 999px;
+ margin-bottom: 12px;
+}
+.ss-article-body ul {
+ margin: 0 0 24px 0;
+ padding: 0;
+ list-style: none;
+ max-width: 60ch;
+}
+.ss-article-body ul li {
+ position: relative;
+ padding: 8px 0 8px 28px;
+ border-bottom: 1px dashed rgba(192, 134, 59, .25);
+}
+.ss-article-body ul li:last-child { border-bottom: 0; }
+.ss-article-body ul li::before {
+ content: "";
+ position: absolute;
+ left: 6px; top: 16px;
+ width: 8px; height: 8px;
+ border-radius: 50%;
+ background: var(--grad-sun);
+ box-shadow: 0 0 0 3px rgba(255,183,77,.25);
+}
+
+/* Pull quote — editorial sidebar */
+.ss-article-body blockquote {
+ font-family: var(--font-display);
+ font-style: italic;
+ font-size: clamp(22px, 2.4vw, 28px);
+ line-height: 1.3;
+ color: var(--ink);
+ max-width: 28ch;
+ margin: 36px auto;
+ padding: 12px 0 12px 24px;
+ border-left: 3px solid var(--honey);
+ quotes: "\201C" "\201D";
+}
+.ss-article-body blockquote::before { content: open-quote; color: var(--honey); margin-right: 4px; }
+.ss-article-body blockquote::after  { content: close-quote; color: var(--honey); margin-left: 4px; }
+
+/* Premium venue card inside an article */
+.ss-article-venue {
+ display: grid;
+ grid-template-columns: 180px 1fr;
+ gap: 0;
+ background: var(--limestone);
+ border: 1px solid rgba(192, 134, 59, .25);
+ border-radius: 14px;
+ overflow: hidden;
+ text-decoration: none;
+ color: var(--ink);
+ margin: 24px 0 28px;
+ max-width: 720px;
+ transition: transform .2s, box-shadow .2s;
+}
+.ss-article-venue:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 10px 26px rgba(232,157,58,.15);
+}
+.ss-article-venue .thumb {
+ background-size: cover; background-position: center;
+ min-height: 140px;
+}
+.ss-article-venue .info {
+ padding: 16px 20px;
+ display: flex; flex-direction: column; justify-content: space-between;
+}
+.ss-article-venue .info .name {
+ font-family: var(--font-display);
+ font-size: 19px; font-weight: 600;
+ letter-spacing: -0.01em;
+}
+.ss-article-venue .info .loc {
+ font-size: 13px; color: var(--muted);
+ margin-top: 2px;
+}
+.ss-article-venue .info .meta {
+ display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+ font-size: 13px; margin-top: 10px;
+}
+.ss-article-venue .info .rating { color: var(--sun-deep); font-weight: 700; }
+.ss-article-venue .info .price  { color: var(--ink); }
+.ss-article-venue .info .price strong { font-family: var(--font-display); font-weight: 600; }
+.ss-article-venue .info .cta {
+ align-self: flex-start;
+ margin-top: 12px;
+ background: var(--grad-sun);
+ color: #fff;
+ padding: 8px 16px;
+ border-radius: 999px;
+ font-size: 13px;
+ font-weight: 700;
+ box-shadow: 0 3px 10px rgba(232,108,0,.28);
+}
+@media (max-width: 540px) {
+ .ss-article-venue { grid-template-columns: 1fr; }
+ .ss-article-venue .thumb { aspect-ratio: 16/9; min-height: 0; }
+}
+
+/* Share row at end of article */
+.ss-article-share {
+ display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+ margin: 48px 0 0;
+ padding: 24px 0;
+ border-top: 1px solid rgba(192, 134, 59, .25);
+ border-bottom: 1px solid rgba(192, 134, 59, .25);
+ font-family: var(--font-display);
+}
+.ss-article-share strong { font-size: 15px; color: var(--ink); margin-right: 6px; }
+.ss-article-share button,
+.ss-article-share a {
+ background: #fff;
+ border: 1px solid var(--line);
+ padding: 8px 14px;
+ border-radius: 999px;
+ font-family: var(--font-body);
+ font-size: 13px;
+ font-weight: 600;
+ color: var(--ink);
+ cursor: pointer;
+ text-decoration: none;
+ transition: border-color .15s, background .15s;
+}
+.ss-article-share button:hover,
+.ss-article-share a:hover {
+ border-color: var(--honey);
+ background: var(--limestone);
+}
+
+/* "More guides" footer section */
+.ss-more-guides {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 56px 24px 0;
+}
+.ss-more-guides h2 {
+ font-family: var(--font-display);
+ font-size: 22px;
+ margin-bottom: 18px;
+ color: var(--ink);
+}
+
+/* Reading progress bar at the top of an article */
+.ss-progress {
+ position: fixed; top: 0; left: 0; right: 0;
+ height: 3px;
+ z-index: 100;
+ background: transparent;
+}
+.ss-progress > .bar {
+ height: 100%;
+ width: 0;
+ background: var(--grad-sun);
+ transition: width .12s ease-out;
+}
+
 /* ─── Selection style — when something is "your pick" ───
    Used on selected sunbeds, selected filters, etc. */
 .is-picked {

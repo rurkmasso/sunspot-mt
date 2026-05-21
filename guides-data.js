@@ -12,6 +12,7 @@ window.SUNSPOT_GUIDES = [
  readMinutes: 5,
  excerpt: 'A ranked guide to the best sunset spots — pool, rooftop and beach. Where to go, what to order, and what time to arrive.',
  heroEmoji: '',
+ heroImage: 'https://cafedelmar.com.mt/wp-content/uploads/2026/01/Cafe-Del-Mar-Wide-Shots-2nd-May-2025-95-scaled.jpg',
  venues: ['cafe-del-mar', 'flo', 'ramla', '1926-la-plage'],
  body: [
  { type: 'p', text: 'Malta sits roughly at the same latitude as Tunis, which means the sun drops fast and the colours go from gold to violet in under 25 minutes. Pick your spot based on that window — and what you want around you.' },
@@ -43,6 +44,7 @@ window.SUNSPOT_GUIDES = [
  readMinutes: 8,
  excerpt: 'New visitor rules in 2026 changed everything. Best times, ferry vs speedboat, where to find shade, what to pack.',
  heroEmoji: '',
+ heroImage: 'https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg',
  venues: ['blue-lagoon', 'paradise-bay'],
  body: [
  { type: 'p', text: 'The Blue Lagoon is the single most photographed stretch of water in Malta. From mid-June to August it can hit 2,000 visitors a day on a 200-metre cove — so the 2024 visitor rules added booked entry slots and capped daily numbers. Here\'s the realistic play.' },
@@ -74,6 +76,7 @@ window.SUNSPOT_GUIDES = [
  readMinutes: 6,
  excerpt: 'How a day on a 1,750m² floating island actually runs — boat times, what\'s included, is it worth €40+?',
  heroEmoji: '',
+ heroImage: 'https://nomaisland.com/wp-content/uploads/2026/02/Untitled-design-1.jpg',
  venues: ['noma'],
  body: [
  { type: 'p', text: 'Noma Island is a 1,750m² floating platform anchored 7 minutes by boat off the Maltese coast. There is nothing else like it in Europe. It opened in 2023; in 2026 it added a sunset session on Friday–Sunday nights. Here\'s what an actual day there looks like.' },
@@ -100,6 +103,7 @@ window.SUNSPOT_GUIDES = [
  readMinutes: 4,
  excerpt: 'Shallow water, kids\' menus, lifeguards, beach wheelchairs — the clubs that actually deliver on the family-friendly promise.',
  heroEmoji: '',
+ heroImage: 'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg',
  venues: ['azure-bay', 'golden-sands', 'hondoq'],
  body: [
  { type: 'p', text: 'Most beach clubs say "family-friendly". Few actually mean it. Here are three that do — based on shallow water, lifeguards, a real kids\' menu, and changing facilities you\'d use yourself.' },
@@ -122,6 +126,7 @@ window.SUNSPOT_GUIDES = [
  readMinutes: 5,
  excerpt: 'FLO Tue & Sat, Café del Mar Thursdays, plus the rotating sunset crew at Manta. Ticket prices, dress codes, DJ residencies.',
  heroEmoji: '',
+ heroImage: 'https://floskypool.com/wp-content/uploads/2024/05/about2.jpg',
  venues: ['flo', 'cafe-del-mar', 'manta'],
  body: [
  { type: 'p', text: 'Malta\'s pool-party calendar runs from late May to mid-September. Three venues do it well, on different nights, with different vibes. Here\'s the calendar.' },
@@ -144,6 +149,7 @@ window.SUNSPOT_GUIDES = [
  readMinutes: 6,
  excerpt: 'Xlendi for seafood, Ramla for red sand, Dwejra for geology, Ħondoq for quiet. A day-by-day coast itinerary.',
  heroEmoji: '',
+ heroImage: 'https://whichbeach.com.mt/wp-content/uploads/2022/01/Xlendi-2560x14401-1.jpeg',
  venues: ['xlendi', 'ramla', 'dwejra', 'hondoq'],
  body: [
  { type: 'p', text: 'Gozo is 14km long and you can drive across it in 20 minutes. Which means you can do the entire coast — four very different beach experiences — in a single long weekend. Here\'s how.' },
@@ -169,6 +175,7 @@ window.SUNSPOT_GUIDES = [
  readMinutes: 4,
  excerpt: 'St Peter\'s Pool, Dwejra Inland Sea, Blue Hole. Free entry, sunbed paid. Cliff jumping etiquette, water shoes, access.',
  heroEmoji: '',
+ heroImage: 'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Peters-Pool-2560x14403-2.jpg',
  venues: ['st-peters', 'dwejra'],
  body: [
  { type: 'p', text: 'Three of Malta\'s best swim spots aren\'t beaches — they\'re natural limestone basins carved by the sea. Entry is free; sunbeds (where available) are paid. Cliff jumping is local tradition. Water shoes are mandatory.' },
@@ -194,6 +201,7 @@ window.SUNSPOT_GUIDES = [
  readMinutes: 4,
  excerpt: 'Manta\'s bottomless brunch is the Saturday institution. We also love 1926 La Plage\'s chef-led day menu.',
  heroEmoji: '',
+ heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Tas-Sliema._Tign%C3%A9_Seafront_1.jpg/1920px-Tas-Sliema._Tign%C3%A9_Seafront_1.jpg',
  venues: ['manta', '1926-la-plage', 'aqualuna'],
  body: [
  { type: 'p', text: 'Brunch in Malta is a Sliema thing. Three places do it poolside — each with a different angle.' },
@@ -216,6 +224,7 @@ window.SUNSPOT_GUIDES = [
  readMinutes: 5,
  excerpt: 'Twenty Two on the 22nd floor for the view, then walk to Paceville. The 6-hour Malta date itinerary that just works.',
  heroEmoji: '',
+ heroImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg/1920px-Malta_-_St._Julian%27s_-_Portomaso_Marina_02.jpg',
  venues: ['twentytwo', 'flo'],
  body: [
  { type: 'p', text: 'A 6-hour itinerary for a first or fifth date. Reservations matter — both of these get tight on weekends.' },

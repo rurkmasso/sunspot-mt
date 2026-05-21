@@ -61,25 +61,29 @@
 </div>
 </header>
 
-<main class="container">
-<header class="page-head">
-<span class="kicker">Guides</span>
-<h1>The Sunspot guides to Malta's coast</h1>
-<p class="lede">In-depth, opinionated guides — written by people who actually go. Updated for the 2026 season.</p>
-</header>
-
-<section class="guides-grid" id="guides-grid"></section>
-
-<section class="content-block" style="margin: 60px 0;">
-<h2>Browse by region</h2>
-<div class="features-pills" style="gap:10px">
-<a href="index.html?region=north" class="pill">North coast</a>
-<a href="index.html?region=central" class="pill">Central (Sliema, St Julian's)</a>
-<a href="index.html?region=south" class="pill">South (Marsaxlokk)</a>
-<a href="index.html?region=gozo" class="pill">Gozo</a>
-<a href="index.html?region=comino" class="pill">Comino</a>
-</div>
+<section class="ss-page-hero">
+ <div class="container">
+  <span class="kicker">The Sunspot Field Guide</span>
+  <h1>Stories from Malta's coast</h1>
+  <p class="lede">Opinionated, on-the-ground guides — written by people who actually go to these places. Updated for the 2026 season.</p>
+ </div>
 </section>
+
+<main class="container">
+ <section class="ss-guides-grid" id="guides-grid"></section>
+
+ <div class="ss-ornament" aria-hidden="true"><span class="ss-ornament-icon"></span></div>
+
+ <section style="margin: 8px 0 64px;">
+  <h2 style="font-family:var(--font-display);font-size:24px;color:var(--ink);margin-bottom:14px;">Or browse by region</h2>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;">
+   <a href="index.html?region=north" class="ss-accent-pill" style="text-decoration:none;">North coast</a>
+   <a href="index.html?region=central" class="ss-accent-pill" style="text-decoration:none;">Sliema &amp; St Julian's</a>
+   <a href="index.html?region=south" class="ss-accent-pill" style="text-decoration:none;">South (Marsaxlokk)</a>
+   <a href="index.html?region=gozo" class="ss-accent-pill" style="text-decoration:none;">Gozo</a>
+   <a href="index.html?region=comino" class="ss-accent-pill" style="text-decoration:none;">Comino</a>
+  </div>
+ </section>
 </main>
 
 <footer>
@@ -90,17 +94,32 @@
 
 <script src="guides-data.js"></script>
 <script>
+// Editorial cover-card grid. First guide is the "feature" (wide hero
+// on desktop) and the rest fill the grid below. Pulls hero image from
+// the guide's heroImage field which is taken from its first venue.
 (function () {
  const guides = window.SUNSPOT_GUIDES || [];
- document.getElementById('guides-grid').innerHTML = guides.map(g =>`
- <a href="guide.html?g=${g.slug}" class="guide-card" style="border-left:4px solid ${g.color}">
-<div class="g-tag" style="background:${g.color}22;color:${g.color}">${g.tag}</div>
-<div class="g-hero-emoji">${g.heroEmoji}</div>
-<h2>${g.title}</h2>
-<p>${g.excerpt}</p>
-<span class="read-more">${g.readMinutes} min read →</span>
-</a>
-`).join('');
+ const cards = guides.map((g, i) => {
+  const featureClass = i === 0 ? ' feature' : '';
+  const hero = g.heroImage || (g.color ? '' : '');
+  const bgStyle = hero ? `background-image:url('${hero}')` : 'background:linear-gradient(135deg,#1d2842,#0a1f3a)';
+  return `
+   <a href="guide.html?g=${g.slug}" class="ss-guide-cover${featureClass}">
+    <div class="photo" style="${bgStyle}"></div>
+    <div class="scrim"></div>
+    <div class="content">
+     <span class="kicker">${g.tag}</span>
+     <h2>${g.title}</h2>
+     <p class="excerpt">${g.excerpt}</p>
+     <div class="meta">
+      <span>${g.readMinutes} min read</span>
+      <span class="dot"></span>
+      <span>Updated May 2026</span>
+     </div>
+    </div>
+   </a>`;
+ }).join('');
+ document.getElementById('guides-grid').innerHTML = cards;
 })();
 </script>
 <script src="auth.js"></script>
