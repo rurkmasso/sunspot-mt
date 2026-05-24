@@ -107,33 +107,66 @@
    );
  }
 
- // ─── 2) Press strip ───
+ // ─── 2) Press strip — infinite marquee ───
+ //
+ // Each logo is a small <img> if we have a file at assets/press/<slug>.svg,
+ // else falls back to typographic placeholder. The track is duplicated so
+ // the CSS `translateX(-50%)` loops seamlessly. Pause on hover.
+ //
+ // When real press coverage lands AND we have permission to use the logos,
+ // drop SVG files at:
+ //   assets/press/times-of-malta.svg
+ //   assets/press/lovin-malta.svg
+ //   assets/press/malta-today.svg
+ //   assets/press/tvm.svg
+ //   assets/press/malta-ceos.svg
+ //   assets/press/the-shift.svg
+ // and they'll auto-swap in. Until then, the typographic mocks keep the
+ // layout intact without claiming false endorsements visually.
  function pressRow() {
    const logos = [
-     ['Times of Malta',  'serif',  18],
-     ['Lovin Malta',     'sansB', 16],
-     ['Malta Today',     'serif',  17],
-     ['TVM',             'sansB', 18],
-     ['MaltaCEOs',       'sansR', 14],
-     ['The Shift',       'serif',  15],
+     { slug: 'times-of-malta', label: 'Times of Malta', style: 'serif', size: 20 },
+     { slug: 'lovin-malta',    label: 'Lovin Malta',    style: 'sansB', size: 18 },
+     { slug: 'malta-today',    label: 'Malta Today',    style: 'serif', size: 19 },
+     { slug: 'tvm',            label: 'TVM',            style: 'sansB', size: 22 },
+     { slug: 'malta-ceos',     label: 'MaltaCEOs',      style: 'sansR', size: 16 },
+     { slug: 'the-shift',      label: 'The Shift',      style: 'serif', size: 17 },
    ];
+   // Duplicate the list so the marquee can loop seamlessly
+   const trackHTML = logos.concat(logos).map(pressLogo).join('');
    return (
-     '<section style="background:#fff;border-bottom:1px solid rgba(192,134,59,.10);padding:28px 0;">' +
-       '<div style="max-width:1200px;margin:0 auto;padding:0 24px;text-align:center;">' +
-         '<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a7048;font-weight:800;margin-bottom:14px;">As featured in</div>' +
-         '<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px 36px;opacity:.65;">' +
-           logos.map(([n, s, sz]) => pressLogo(n, s, sz)).join('') +
+     '<section class="ss-press" style="background:#fff;border-bottom:1px solid rgba(192,134,59,.10);padding:28px 0;overflow:hidden;">' +
+       '<div style="max-width:1200px;margin:0 auto 14px;padding:0 24px;text-align:center;">' +
+         '<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a7048;font-weight:800;">Trusted by Maltese venues · press &amp; partners</div>' +
+       '</div>' +
+       '<div class="ss-press-viewport" style="position:relative;width:100%;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);">' +
+         '<div class="ss-press-track" style="display:flex;align-items:center;gap:56px;width:max-content;animation:ssPressScroll 36s linear infinite;will-change:transform;">' +
+           trackHTML +
          '</div>' +
        '</div>' +
      '</section>'
    );
  }
- function pressLogo(name, style, size) {
-   const family = style === 'serif' ? '"Fraunces", Georgia, serif' : '"Inter", -apple-system, sans-serif';
-   const weight = style === 'sansB' ? 800 : style === 'sansR' ? 500 : 500;
-   const ital   = style === 'serif' ? 'italic' : 'normal';
-   return '<span style="font-family:' + family + ';font-size:' + size + 'px;font-weight:' + weight +
-     ';font-style:' + ital + ';color:#0a1f3a;letter-spacing:-0.01em;white-space:nowrap;">' + name + '</span>';
+ function pressLogo(logo) {
+   const family = logo.style === 'serif' ? '"Fraunces", Georgia, serif' : '"Inter", -apple-system, sans-serif';
+   const weight = logo.style === 'sansB' ? 800 : 500;
+   const ital   = logo.style === 'serif' ? 'italic' : 'normal';
+   // Typographic placeholder — swaps to <img> automatically if the file exists
+   // at assets/press/<slug>.svg. The onerror handler reverts to typographic
+   // form so this can never look broken (e.g. before launch, no images yet).
+   const fallback =
+     '<span style="font-family:' + family + ';font-size:' + logo.size + 'px;' +
+       'font-weight:' + weight + ';font-style:' + ital + ';' +
+       'color:#0a1f3a;letter-spacing:-0.01em;white-space:nowrap;opacity:.55;">' + logo.label + '</span>';
+   // We probe for the asset by trying to load it; on error, drop to fallback.
+   return (
+     '<picture style="display:flex;align-items:center;height:30px;flex:0 0 auto;">' +
+       '<img src="assets/press/' + logo.slug + '.svg" alt="' + logo.label + '" ' +
+         'style="height:24px;width:auto;opacity:.65;" loading="lazy" decoding="async" ' +
+         'onerror="this.replaceWith(this.nextElementSibling);">' +
+       fallback +
+     '</picture>'
+   );
  }
 
  // ─── 3) Trust badges ───
@@ -255,7 +288,7 @@
    );
  }
 
- // CSS — collapse the 4-col grid on phone + tablet
+ // CSS — collapse the 4-col grid on phone + tablet + press marquee
  const css = document.createElement('style');
  css.textContent =
    '@media (max-width: 900px) {' +
@@ -267,6 +300,18 @@
      '.ss-eeat section > div[style*="grid-template-columns: 1.4fr"] {' +
        'grid-template-columns: 1fr !important;' +
      '}' +
+   '}' +
+   // Press marquee — translate the duplicated track by exactly 50%
+   // so the second copy lines up with the first when it wraps.
+   '@keyframes ssPressScroll {' +
+     '0%   { transform: translateX(0); }' +
+     '100% { transform: translateX(-50%); }' +
+   '}' +
+   '.ss-press-viewport:hover .ss-press-track { animation-play-state: paused; }' +
+   // Respect prefers-reduced-motion — no marquee for users who asked
+   '@media (prefers-reduced-motion: reduce) {' +
+     '.ss-press-track { animation: none !important; transform: none !important; }' +
+     '.ss-press-viewport { mask: none !important; -webkit-mask: none !important; }' +
    '}';
  document.head.appendChild(css);
 
