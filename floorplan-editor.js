@@ -39,10 +39,96 @@
  };
 
  const SPOT = {
-   sunbed: { color: '#ff9800', label: 'Sunbed', wPct: 7, ratio: '2 / 1' },
-   cabana: { color: '#0288d1', label: 'Cabana', wPct: 9, ratio: '1 / 1' },
-   vip:    { color: '#7b1fa2', label: 'VIP',    wPct: 10, ratio: '1 / 1' },
+   sunbed: { color: '#ff9800', label: 'Sunbed', wPct: 7,  ratio: '2 / 1', defaultPrice: 25 },
+   cabana: { color: '#0288d1', label: 'Cabana', wPct: 9,  ratio: '1 / 1', defaultPrice: 120 },
+   vip:    { color: '#7b1fa2', label: 'VIP',    wPct: 10, ratio: '1 / 1', defaultPrice: 280 },
  };
+
+ // ─── One-click venue templates ─────────────────────────────
+ // Pre-built layouts the operator can drop in. Replaces a blank canvas.
+ const TEMPLATES = {
+   'pool-club': {
+     label: 'Pool club',
+     description: 'Rectangular pool in the centre, sunbeds around it, cabanas at the back, VIPs flanking.',
+     build() {
+       return {
+         areas: [
+           { id: 'pool-1', kind: 'pool', x: 0.20, y: 0.30, w: 0.60, h: 0.35 },
+           { id: 'bar-1',  kind: 'bar',  x: 0.05, y: 0.05, w: 0.25, h: 0.10 },
+         ],
+         spots: gridOf('sunbed', 6, 3, 0.10, 0.72, 0.80, 0.92)
+              .concat(gridOf('sunbed', 6, 2, 0.10, 0.10, 0.80, 0.25))
+              .concat(gridOf('cabana', 4, 1, 0.15, 0.18, 0.85, 0.18))
+              .concat([{ id: 'V1', type: 'vip', x: 0.10, y: 0.50, price: 280 },
+                       { id: 'V2', type: 'vip', x: 0.90, y: 0.50, price: 280 }]),
+       };
+     }
+   },
+   'beach-club': {
+     label: 'Beach club',
+     description: 'Sand area front-and-centre, three rows of sunbeds along the water, cabanas at the back.',
+     build() {
+       return {
+         areas: [
+           { id: 'sand-1', kind: 'sand', x: 0.05, y: 0.40, w: 0.90, h: 0.55 },
+           { id: 'bar-1',  kind: 'bar',  x: 0.05, y: 0.05, w: 0.25, h: 0.10 },
+         ],
+         spots: gridOf('sunbed', 8, 3, 0.10, 0.50, 0.90, 0.85)
+              .concat(gridOf('cabana', 4, 1, 0.20, 0.22, 0.80, 0.22))
+              .concat([{ id: 'V1', type: 'vip', x: 0.50, y: 0.35, price: 280 }]),
+       };
+     }
+   },
+   'rooftop': {
+     label: 'Rooftop',
+     description: 'Small heated pool, 16 sunbeds in two rows, 4 cabanas, no sand.',
+     build() {
+       return {
+         areas: [
+           { id: 'pool-1', kind: 'pool', x: 0.30, y: 0.32, w: 0.40, h: 0.30 },
+           { id: 'bar-1',  kind: 'bar',  x: 0.05, y: 0.05, w: 0.30, h: 0.12 },
+         ],
+         spots: gridOf('sunbed', 8, 2, 0.10, 0.70, 0.90, 0.92)
+              .concat(gridOf('cabana', 4, 1, 0.18, 0.20, 0.82, 0.20)),
+       };
+     }
+   },
+   'lido': {
+     label: 'Lido (rocks)',
+     description: 'No pool. Rocky bay backdrop. Lounger rows facing the sea.',
+     build() {
+       return {
+         areas: [
+           { id: 'deck-1', kind: 'deck', x: 0.10, y: 0.30, w: 0.80, h: 0.60 },
+         ],
+         spots: gridOf('sunbed', 8, 4, 0.13, 0.40, 0.87, 0.85),
+       };
+     }
+   },
+ };
+
+ // Helper: build N×M sunbeds (or any type) spaced evenly within a bbox.
+ function gridOf(type, cols, rows, x0, y0, x1, y1) {
+   const cfg = SPOT[type] || SPOT.sunbed;
+   const out = [];
+   const dx = cols > 1 ? (x1 - x0) / (cols - 1) : 0;
+   const dy = rows > 1 ? (y1 - y0) / (rows - 1) : 0;
+   const prefix = { sunbed: 'A', cabana: 'C', vip: 'V' }[type];
+   let n = 1;
+   for (let r = 0; r < rows; r++) {
+     for (let c = 0; c < cols; c++) {
+       out.push({
+         id: prefix + n,
+         type,
+         x: cols > 1 ? x0 + c * dx : (x0 + x1) / 2,
+         y: rows > 1 ? y0 + r * dy : (y0 + y1) / 2,
+         price: cfg.defaultPrice,
+       });
+       n++;
+     }
+   }
+   return out;
+ }
 
  // ─── Storage ─────────────────────────────────────────────────
  function loadV3() {
@@ -180,6 +266,55 @@
    // Tool state (edit mode only)
    let activeTool = 'sunbed';   // 'sunbed'|'cabana'|'vip'|'select'
    let selectedAreaId = null;
+   let snapToGrid = true;       // 5% grid snap by default
+   let selectedSpotId = null;   // for the price-popover editor
+
+   // ─── Undo / Redo ───
+   // Stack of layout snapshots. saveSnap() pushes before any mutation
+   // that should be undoable; pushing also clears the redo stack.
+   const undoStack = [];
+   const redoStack = [];
+   const MAX_HISTORY = 30;
+   function saveSnap() {
+     undoStack.push(JSON.stringify(layout));
+     if (undoStack.length > MAX_HISTORY) undoStack.shift();
+     redoStack.length = 0;
+     updateHistoryButtons();
+   }
+   function undo() {
+     if (!undoStack.length) return;
+     redoStack.push(JSON.stringify(layout));
+     layout = JSON.parse(undoStack.pop());
+     saveLayout(venue.id, layout);
+     drawAreas(); drawSpots();
+     if (opts.onChange) opts.onChange(layout);
+     updateHistoryButtons();
+     if (window.opToast) window.opToast('Undone');
+   }
+   function redo() {
+     if (!redoStack.length) return;
+     undoStack.push(JSON.stringify(layout));
+     layout = JSON.parse(redoStack.pop());
+     saveLayout(venue.id, layout);
+     drawAreas(); drawSpots();
+     if (opts.onChange) opts.onChange(layout);
+     updateHistoryButtons();
+     if (window.opToast) window.opToast('Redone');
+   }
+   function updateHistoryButtons() {
+     const u = document.getElementById('sp-undo');
+     const r = document.getElementById('sp-redo');
+     if (u) u.disabled = undoStack.length === 0;
+     if (r) r.disabled = redoStack.length === 0;
+     if (u) u.style.opacity = u.disabled ? '.4' : '1';
+     if (r) r.style.opacity = r.disabled ? '.4' : '1';
+   }
+
+   // ─── Snap helper ───
+   function snap(v) {
+     if (!snapToGrid) return v;
+     return Math.round(v * 20) / 20;  // 5% increments
+   }
 
    // ─── Render ───
    function drawAreas() {
@@ -260,12 +395,14 @@
      drawAreas();
      if (activeTool !== 'select' && SPOT[activeTool]) {
        const rect = wrap.getBoundingClientRect();
-       const x = (e.clientX - rect.left) / rect.width;
-       const y = (e.clientY - rect.top)  / rect.height;
+       const x = snap((e.clientX - rect.left) / rect.width);
+       const y = snap((e.clientY - rect.top)  / rect.height);
        const prefix = { sunbed: 'A', cabana: 'C', vip: 'V' }[activeTool];
        const used = layout.spots.filter(s => s.id.startsWith(prefix)).map(s => +s.id.slice(1) || 0);
        const next = used.length ? Math.max.apply(null, used) + 1 : 1;
-       layout.spots.push({ id: prefix + next, type: activeTool, x, y });
+       const cfg = SPOT[activeTool];
+       saveSnap();
+       layout.spots.push({ id: prefix + next, type: activeTool, x, y, price: cfg.defaultPrice });
        saveLayout(venue.id, layout);
        drawSpots();
        if (window.opToast) window.opToast('Added ' + prefix + next);
@@ -281,6 +418,7 @@
          ? await window.opConfirm({ title: 'Remove ' + spot.id + '?', body: 'Tap the canvas again to place a new one.', ok: 'Remove', cancel: 'Keep', danger: true })
          : confirm('Remove ' + spot.id + '?');
        if (!ok) return;
+       saveSnap();
        layout.spots = layout.spots.filter(s => s.id !== spot.id);
        saveLayout(venue.id, layout);
        drawSpots();
@@ -294,13 +432,16 @@
    function attachSpotDrag(el, spot) {
      let dragging = false, moved = false;
      function down(e) { dragging = true; moved = false; e.preventDefault(); }
+     let snappedBefore = false;
      function move(e) {
        if (!dragging) return;
        const rect = wrap.getBoundingClientRect();
        const t = e.touches ? e.touches[0] : e;
-       const x = Math.min(0.99, Math.max(0.01, (t.clientX - rect.left) / rect.width));
-       const y = Math.min(0.99, Math.max(0.01, (t.clientY - rect.top)  / rect.height));
-       if (Math.abs(x - spot.x) > 0.005 || Math.abs(y - spot.y) > 0.005) moved = true;
+       const x = snap(Math.min(0.99, Math.max(0.01, (t.clientX - rect.left) / rect.width)));
+       const y = snap(Math.min(0.99, Math.max(0.01, (t.clientY - rect.top)  / rect.height)));
+       if (Math.abs(x - spot.x) > 0.005 || Math.abs(y - spot.y) > 0.005) {
+         if (!moved) { saveSnap(); moved = true; }
+       }
        spot.x = x; spot.y = y;
        el.style.left = (x * 100).toFixed(2) + '%';
        el.style.top  = (y * 100).toFixed(2) + '%';
@@ -439,6 +580,27 @@
      tb.className = 'sp-toolbar';
      tb.style.cssText = 'display:flex;flex-direction:column;gap:10px;padding:10px 0 12px;';
      tb.innerHTML =
+       // Templates + history row (sits above everything)
+       '<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between;">' +
+         '<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;">' +
+           '<span style="font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:#5d6a82;font-weight:700;margin-right:4px;">Start from a template</span>' +
+           Object.keys(TEMPLATES).map(k =>
+             '<button type="button" data-template="' + k + '" title="' + TEMPLATES[k].description.replace(/"/g, '&quot;') + '" ' +
+             'style="padding:7px 14px;border:1px solid #c0563b;border-radius:8px;background:#fff;color:#c0563b;font-size:12px;font-weight:700;cursor:pointer;">' +
+               TEMPLATES[k].label +
+             '</button>'
+           ).join('') +
+         '</div>' +
+         '<div style="display:flex;gap:4px;align-items:center;">' +
+           '<button type="button" id="sp-undo" title="Undo (Cmd/Ctrl+Z)" disabled ' +
+             'style="opacity:.4;padding:7px 10px;border:1px solid #d0d7e2;border-radius:8px;background:#fff;color:#0a1f3a;font-size:12px;font-weight:700;cursor:pointer;">↶ Undo</button>' +
+           '<button type="button" id="sp-redo" title="Redo (Cmd/Ctrl+Shift+Z)" disabled ' +
+             'style="opacity:.4;padding:7px 10px;border:1px solid #d0d7e2;border-radius:8px;background:#fff;color:#0a1f3a;font-size:12px;font-weight:700;cursor:pointer;">↷ Redo</button>' +
+           '<label style="display:inline-flex;align-items:center;gap:5px;padding:7px 10px;border:1px solid #d0d7e2;border-radius:8px;background:#fff;font-size:12px;font-weight:600;color:#0a1f3a;cursor:pointer;">' +
+             '<input type="checkbox" id="sp-snap" checked style="margin:0;cursor:pointer;"> Snap' +
+           '</label>' +
+         '</div>' +
+       '</div>' +
        '<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">' +
          '<span style="font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:#5d6a82;font-weight:700;margin-right:4px;">Add area</span>' +
          areaButton('pool', 'Pool') +
@@ -469,6 +631,50 @@
        '</div>';
      container.insertBefore(tb, wrap);
      countEl = tb.querySelector('#sp-count');
+
+     // Templates
+     tb.querySelectorAll('[data-template]').forEach(btn => {
+       btn.addEventListener('click', async () => {
+         const key = btn.dataset.template;
+         const tpl = TEMPLATES[key];
+         if (!tpl) return;
+         // Confirm if there's already stuff on the canvas
+         if (layout.areas.length || layout.spots.length) {
+           const ok = window.opConfirm
+             ? await window.opConfirm({
+                 title: 'Replace with ' + tpl.label + ' template?',
+                 body: 'This wipes your current layout. You can undo right after.',
+                 ok: 'Replace', cancel: 'Keep mine', danger: true,
+               })
+             : confirm('Replace with ' + tpl.label + ' template?');
+           if (!ok) return;
+         }
+         saveSnap();
+         layout = tpl.build();
+         saveLayout(venue.id, layout);
+         drawAreas(); drawSpots();
+         if (opts.onChange) opts.onChange(layout);
+         if (window.opToast) window.opToast(tpl.label + ' template loaded · ' + layout.spots.length + ' spots');
+       });
+     });
+
+     // Undo / Redo
+     tb.querySelector('#sp-undo').addEventListener('click', undo);
+     tb.querySelector('#sp-redo').addEventListener('click', redo);
+     // Keyboard shortcuts
+     document.addEventListener('keydown', (e) => {
+       const isUndo = (e.metaKey || e.ctrlKey) && e.key === 'z' && !e.shiftKey;
+       const isRedo = (e.metaKey || e.ctrlKey) && (e.key === 'Z' || (e.key === 'z' && e.shiftKey));
+       if (isUndo) { e.preventDefault(); undo(); }
+       else if (isRedo) { e.preventDefault(); redo(); }
+     });
+
+     // Snap toggle
+     tb.querySelector('#sp-snap').addEventListener('change', (e) => {
+       snapToGrid = e.target.checked;
+       grid.style.opacity = snapToGrid ? '.30' : '.10';
+       if (window.opToast) window.opToast(snapToGrid ? 'Snap to grid on' : 'Snap off — free placement');
+     });
 
      // Spot tool selection (highlights the active button)
      tb.querySelectorAll('[data-tool]').forEach(btn => {

@@ -29,11 +29,19 @@
  "mainEntity": {
    "@type": "Organization",
    "@id": "https://sunspot.mt/#organization",
-   "employee": [
-     { "@type": "Person", "name": "Mark Russo", "jobTitle": "Founder & Editor",
+   "founder": [
+     { "@type": "Person", "name": "Mark Russo",            "jobTitle": "Founder & CEO",
+       "url": "https://www.linkedin.com/in/markrusso/",
        "worksFor": { "@type": "Organization", "name": "Sunspot" },
-       "knowsAbout": ["Malta beaches", "Beach club operations", "Booking platforms", "Mediterranean travel"],
-       "address": { "@type": "PostalAddress", "addressLocality": "Valletta", "addressCountry": "MT" } }
+       "knowsAbout": ["Malta beaches", "Booking platforms", "Beach club operations", "Mediterranean travel", "Legal tech"] },
+     { "@type": "Person", "name": "Edward Fenech Adami",   "jobTitle": "Co-founder",
+       "hasOccupation": { "@type": "Occupation", "name": "Lawyer" } },
+     { "@type": "Person", "name": "Daniel Cutajar",        "jobTitle": "Co-founder",
+       "hasOccupation": { "@type": "Occupation", "name": "Lawyer" } },
+     { "@type": "Person", "name": "Matthew Pizzuto",       "jobTitle": "Co-founder",
+       "hasOccupation": { "@type": "Occupation", "name": "Medical doctor" } },
+     { "@type": "Person", "name": "Zach Sciberras",        "jobTitle": "Co-founder",
+       "hasOccupation": { "@type": "Occupation", "name": "Lawyer" } }
    ]
  }
 }
@@ -84,33 +92,83 @@
 
 <main class="container" style="padding-top:48px;padding-bottom:80px;">
 
-<!-- Team -->
-<h2 style="font-family:var(--font-display);font-size:26px;color:var(--ink);margin-bottom:24px;">Who you're talking to when you email us</h2>
+<!-- Lead founder -->
+<h2 style="font-family:var(--font-display);font-size:26px;color:var(--ink);margin-bottom:6px;">The team behind Sunspot</h2>
+<p style="color:var(--muted);font-size:14px;margin-bottom:24px;">Five Malta-based co-founders. Mark runs the platform day-to-day; the rest of us bring legal, medical and operational shoulders to the wheel.</p>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-bottom:64px;">
+<!-- Lead card — full width -->
+<article style="background:linear-gradient(135deg,#fff,#fdf6e8);border:1px solid rgba(192,134,59,.30);border-radius:18px;padding:28px;box-shadow:0 4px 18px rgba(232,157,58,.10);margin-bottom:32px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;">
+ <!-- Photo slot — drop a real headshot here as /assets/team/mark.jpg
+      and swap the <div> for an <img>. -->
+ <div style="width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#ffb74d,#f57c00);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:38px;font-weight:600;flex:0 0 96px;box-shadow:0 6px 20px rgba(232,108,0,.32);">MR</div>
+ <div>
+  <h3 style="font-family:var(--font-display);font-size:24px;color:var(--ink);margin-bottom:2px;letter-spacing:-0.01em;">Mark Russo</h3>
+  <p style="font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--terracotta);font-weight:800;margin-bottom:10px;">Founder &amp; CEO — runs the platform</p>
+  <p style="font-size:14px;color:var(--ink);line-height:1.6;max-width:60ch;">The one you'll actually meet. Built <a href="https://tizzju.com" rel="noopener" style="color:var(--sun-deep);font-weight:600;text-decoration:none;">Tizzju</a> (Malta legal tech) before this. Swims at Fond Għadir most mornings. Writes the Field Guide. Reply within a few hours, weekdays and most weekends.</p>
+  <p style="margin-top:10px;font-size:13px;display:flex;gap:14px;flex-wrap:wrap;">
+   <a href="mailto:mark@sunspot.mt" style="color:var(--sun-deep);font-weight:700;text-decoration:none;">mark@sunspot.mt</a>
+   <a href="https://www.linkedin.com/in/markrusso/" target="_blank" rel="noopener" style="color:#0288d1;font-weight:600;text-decoration:none;">LinkedIn →</a>
+  </p>
+ </div>
+</article>
 
- <article style="background:#fff;border:1px solid rgba(192,134,59,.20);border-radius:18px;padding:28px;box-shadow:0 1px 3px rgba(10,31,58,.04);">
-  <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#ffb74d,#f57c00);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:32px;font-weight:600;margin-bottom:16px;">M</div>
-  <h3 style="font-family:var(--font-display);font-size:20px;color:var(--ink);margin-bottom:2px;">Mark Russo</h3>
-  <p style="font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:12px;">Founder &amp; Editor</p>
-  <p style="font-size:14px;color:var(--muted);line-height:1.55;">Built Tizzju (Malta legal product) before this. Swims at Fond Għadir most mornings before 8 am. Writes most of the Field Guide.</p>
-  <p style="margin-top:12px;font-size:13px;"><a href="mailto:mark@sunspot.mt" style="color:var(--sun-deep);font-weight:600;text-decoration:none;">mark@sunspot.mt</a></p>
+<!-- Co-founders grid -->
+<h3 style="font-family:var(--font-display);font-size:20px;color:var(--ink);margin:0 0 14px;">Co-founders</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:48px;">
+
+ <article style="background:#fff;border:1px solid rgba(192,134,59,.20);border-radius:16px;padding:22px;box-shadow:0 1px 3px rgba(10,31,58,.04);">
+  <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#0288d1,#01579b);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:24px;font-weight:600;margin-bottom:14px;">EF</div>
+  <h4 style="font-family:var(--font-display);font-size:17px;color:var(--ink);margin-bottom:2px;">Edward Fenech Adami</h4>
+  <p style="font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:8px;">Co-founder · Lawyer</p>
+  <p style="font-size:13px;color:var(--muted);line-height:1.5;">Practising lawyer in Malta. Handles our regulatory and operator-contract work.</p>
  </article>
 
- <article style="background:#fff;border:1px solid rgba(192,134,59,.20);border-radius:18px;padding:28px;box-shadow:0 1px 3px rgba(10,31,58,.04);">
-  <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#0288d1,#01579b);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:32px;font-weight:600;margin-bottom:16px;">S</div>
-  <h3 style="font-family:var(--font-display);font-size:20px;color:var(--ink);margin-bottom:2px;">Sunspot Editorial</h3>
-  <p style="font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:12px;">Guides team</p>
-  <p style="font-size:14px;color:var(--muted);line-height:1.55;">Visits every venue on the platform at least twice per season. Writes the Field Guide. Doesn't accept comp visits — we pay our way in.</p>
-  <p style="margin-top:12px;font-size:13px;"><a href="mailto:editorial@sunspot.mt" style="color:var(--sun-deep);font-weight:600;text-decoration:none;">editorial@sunspot.mt</a></p>
+ <article style="background:#fff;border:1px solid rgba(192,134,59,.20);border-radius:16px;padding:22px;box-shadow:0 1px 3px rgba(10,31,58,.04);">
+  <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#2f6e5b,#1e4d3f);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:24px;font-weight:600;margin-bottom:14px;">DC</div>
+  <h4 style="font-family:var(--font-display);font-size:17px;color:var(--ink);margin-bottom:2px;">Daniel Cutajar</h4>
+  <p style="font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:8px;">Co-founder · Lawyer</p>
+  <p style="font-size:13px;color:var(--muted);line-height:1.5;">Practising lawyer in Malta. Compliance, GDPR, T&amp;Cs and operator agreements.</p>
  </article>
 
- <article style="background:#fff;border:1px solid rgba(192,134,59,.20);border-radius:18px;padding:28px;box-shadow:0 1px 3px rgba(10,31,58,.04);">
-  <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#2f6e5b,#1e4d3f);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:32px;font-weight:600;margin-bottom:16px;">O</div>
-  <h3 style="font-family:var(--font-display);font-size:20px;color:var(--ink);margin-bottom:2px;">Operator success</h3>
-  <p style="font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:12px;">Partner onboarding</p>
-  <p style="font-size:14px;color:var(--muted);line-height:1.55;">Helps new venues get listed, sets up Stripe payouts, trains staff on the operator app. WhatsApp during the season.</p>
-  <p style="margin-top:12px;font-size:13px;"><a href="mailto:partners@sunspot.mt" style="color:var(--sun-deep);font-weight:600;text-decoration:none;">partners@sunspot.mt</a></p>
+ <article style="background:#fff;border:1px solid rgba(192,134,59,.20);border-radius:16px;padding:22px;box-shadow:0 1px 3px rgba(10,31,58,.04);">
+  <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#c0563b,#8c3a25);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:24px;font-weight:600;margin-bottom:14px;">ZS</div>
+  <h4 style="font-family:var(--font-display);font-size:17px;color:var(--ink);margin-bottom:2px;">Zach Sciberras</h4>
+  <p style="font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:8px;">Co-founder · Lawyer</p>
+  <p style="font-size:13px;color:var(--muted);line-height:1.5;">Practising lawyer in Malta. Corporate structure and IP.</p>
+ </article>
+
+ <article style="background:#fff;border:1px solid rgba(192,134,59,.20);border-radius:16px;padding:22px;box-shadow:0 1px 3px rgba(10,31,58,.04);">
+  <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#7b1fa2,#4a148c);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:24px;font-weight:600;margin-bottom:14px;">MP</div>
+  <h4 style="font-family:var(--font-display);font-size:17px;color:var(--ink);margin-bottom:2px;">Matthew Pizzuto</h4>
+  <p style="font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:8px;">Co-founder · Doctor</p>
+  <p style="font-size:13px;color:var(--muted);line-height:1.5;">Medical doctor in Malta. Keeps the team honest about sun-safety and venue health standards.</p>
+ </article>
+
+</div>
+
+<!-- Functional roles -->
+<h2 style="font-family:var(--font-display);font-size:22px;color:var(--ink);margin-bottom:18px;">Who to email for what</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-bottom:48px;">
+
+ <article style="background:#fdf6e8;border:1px solid rgba(192,134,59,.25);border-radius:14px;padding:20px;">
+  <p style="font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:6px;">Anything general</p>
+  <a href="mailto:hello@sunspot.mt" style="font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--sun-deep);text-decoration:none;">hello@sunspot.mt</a>
+ </article>
+
+ <article style="background:#fdf6e8;border:1px solid rgba(192,134,59,.25);border-radius:14px;padding:20px;">
+  <p style="font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:6px;">Editorial / guide corrections</p>
+  <a href="mailto:editorial@sunspot.mt" style="font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--sun-deep);text-decoration:none;">editorial@sunspot.mt</a>
+ </article>
+
+ <article style="background:#fdf6e8;border:1px solid rgba(192,134,59,.25);border-radius:14px;padding:20px;">
+  <p style="font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:6px;">List your venue · become a partner</p>
+  <a href="mailto:partners@sunspot.mt" style="font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--sun-deep);text-decoration:none;">partners@sunspot.mt</a>
+ </article>
+
+ <article style="background:#fdf6e8;border:1px solid rgba(192,134,59,.25);border-radius:14px;padding:20px;">
+  <p style="font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:6px;">Press &amp; brand partnerships</p>
+  <a href="mailto:press@sunspot.mt" style="font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--sun-deep);text-decoration:none;">press@sunspot.mt</a>
  </article>
 
 </div>
