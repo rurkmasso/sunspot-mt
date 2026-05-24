@@ -431,6 +431,27 @@
 </section>
 
 <!-- STATS panel -->
+<!-- SETTINGS panel — banking + venue prefs -->
+<section class="op-panel" id="panel-settings">
+  <header class="op-section-title">
+    <h1>Settings</h1>
+    <span class="date">banking · profile · venue</span>
+  </header>
+
+  <!-- Stripe Connect banking card. operator-banking.js paints state. -->
+  <div id="op-banking-card" style="background:#fff;border:1px solid rgba(192,134,59,.22);border-radius:16px;padding:22px;margin:8px 16px 16px;box-shadow:0 1px 3px rgba(10,31,58,.05);">
+    <div class="ss-spinner-row" style="justify-content:center;padding:18px 0;">
+      <span class="ss-spinner"></span> Checking your bank connection…
+    </div>
+  </div>
+
+  <!-- Plain-language explainer below the card -->
+  <div style="background:#fdf6e8;border:1px solid rgba(192,134,59,.20);border-radius:14px;padding:16px;margin:0 16px 16px;font-size:13px;color:#5d6a82;line-height:1.55;">
+    <strong style="font-family:Fraunces,Georgia,serif;color:#0a1f3a;font-size:15px;display:block;margin-bottom:6px;">How payouts work</strong>
+    Sunspot takes 8% per booking. The remaining 92% is held by Stripe and paid into your IBAN every Monday for the previous week. You'll never see a flat fee or a monthly bill — only the per-booking percentage.
+  </div>
+</section>
+
 <section class="op-panel" id="panel-stats">
   <header class="op-section-title">
     <h1>This week</h1>
@@ -488,5 +509,6 @@
 <script src="operator-live.js?v=20260521b"></script>
 <script src="operator-shell.js?v=20260521b"></script>
 <script src="operator-brand.js?v=20260521b"></script>
+<script src="operator-banking.js?v=20260524a"></script>
 </body>
 </html>

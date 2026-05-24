@@ -188,9 +188,10 @@
      '</div>' +
      '<div class="sb-venue-slot" id="sb-venue-slot"></div>' +
      '<nav class="sb-nav">' +
-       sbBtn('today',   'Today',  'M3 12 12 3l9 9M5 10v10h14V10') +
-       sbBtn('seatmap', 'Layout', 'M3 3h18v18H3zM3 9h18M9 3v18') +
-       sbBtn('stats',   'Stats',  'M3 21h18M7 17V9m5 8V5m5 12V13') +
+       sbBtn('today',    'Today',    'M3 12 12 3l9 9M5 10v10h14V10') +
+       sbBtn('seatmap',  'Layout',   'M3 3h18v18H3zM3 9h18M9 3v18') +
+       sbBtn('stats',    'Stats',    'M3 21h18M7 17V9m5 8V5m5 12V13') +
+       sbBtn('settings', 'Settings', 'M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z') +
        '<button type="button" data-nav-action="scan">' +
          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V4h3M21 7V4h-3M3 17v3h3M21 17v3h-3M7 12h10"/></svg>' +
          '<span class="label">Scan QR</span>' +
