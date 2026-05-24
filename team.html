@@ -104,7 +104,7 @@
 <!-- Lead card — full width -->
 <article style="background:linear-gradient(135deg,#fff,#fdf6e8);border:1px solid rgba(192,134,59,.30);border-radius:18px;padding:28px;box-shadow:0 4px 18px rgba(232,157,58,.10);margin-bottom:32px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;">
  <!-- Photo slot — drop a real headshot here as /assets/team/mark.jpg
-      and swap the <div> for an <img>. -->
+      and swap the <div> for an <img loading="lazy" decoding="async">. -->
  <div style="width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#ffb74d,#f57c00);display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:38px;font-weight:600;flex:0 0 96px;box-shadow:0 6px 20px rgba(232,108,0,.32);">MR</div>
  <div>
   <h3 style="font-family:var(--font-display);font-size:24px;color:var(--ink);margin-bottom:2px;letter-spacing:-0.01em;">Mark Russo</h3>
@@ -221,11 +221,11 @@
 <div class="footer-bottom">© 2026 Sunspot Ltd. · Built in Valletta</div>
 </div>
 </footer>
-<script src="auth.js"></script>
-<script src="nav-auth.js"></script>
-<script src="icons.js"></script>
-<script src="features.js"></script>
-<script src="audiences.js"></script>
+<script src="auth.js" defer></script>
+<script src="nav-auth.js" defer></script>
+<script src="icons.js" defer></script>
+<script src="features.js" defer></script>
+<script src="audiences.js" defer></script>
 <script src="cookie-consent.js" defer></script>
 <script src="eeat-footer.js" defer></script>
 </body>
