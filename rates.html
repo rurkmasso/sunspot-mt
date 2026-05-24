@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en-MT">
+<head>
+<meta charset="UTF-8">
+<script src="gate.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunspot rate card — promotion, top-spot listings, memberships</title>
+<meta name="description" content="Sunspot rate card: how to feature your beach club on social posts, the homepage, top-of-guide listings, and the Sunspot Resident membership bundle. Transparent pricing.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://sunspot.mt/rates.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sunspot rate card — promotion, listings, memberships">
+<meta property="og:description" content="Transparent rate card for Maltese beach club operators and brand partners.">
+<meta property="og:url" content="https://sunspot.mt/rates.html">
+<meta property="og:site_name" content="Sunspot">
+<meta property="og:locale" content="en_MT">
+<meta property="og:image" content="https://sunspot.mt/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sunspot rate card">
+<meta name="twitter:description" content="Transparent rates for promotion, top-spot listings and memberships.">
+<meta name="twitter:image" content="https://sunspot.mt/og-cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='11' fill='%23ff9800'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%23ffb74d'/%3E%3Ccircle cx='24' cy='16' r='3' fill='%23fff5e1'/%3E%3C/svg%3E">
+
+<style>
+ .rates-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 20px;
+   margin: 28px 0;
+ }
+ .rate-card {
+   background: #fff;
+   border: 1px solid rgba(192, 134, 59, .25);
+   border-radius: 16px;
+   padding: 22px;
+   display: flex; flex-direction: column;
+   box-shadow: 0 1px 3px rgba(10, 31, 58, .04);
+   transition: transform .2s, box-shadow .2s;
+ }
+ .rate-card:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 8px 22px rgba(232, 157, 58, .12);
+ }
+ .rate-card.featured {
+   background: linear-gradient(180deg, #fdf6e8 0%, #fff 100%);
+   border-color: var(--honey);
+   box-shadow: 0 6px 22px rgba(232, 157, 58, .18);
+ }
+ .rate-card .pill {
+   display: inline-block;
+   font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase;
+   font-weight: 800; color: var(--terracotta);
+   padding: 3px 10px; border-radius: 999px;
+   background: var(--limestone);
+   margin-bottom: 12px;
+   align-self: flex-start;
+ }
+ .rate-card h3 {
+   font-family: var(--font-display);
+   font-size: 22px;
+   color: var(--ink);
+   margin-bottom: 6px;
+   letter-spacing: -0.015em;
+ }
+ .rate-card .price {
+   font-family: var(--font-display);
+   font-size: 36px;
+   color: var(--ink);
+   font-weight: 600;
+   letter-spacing: -0.02em;
+   margin: 4px 0 2px;
+ }
+ .rate-card .price small {
+   font-size: 14px; color: var(--muted); font-weight: 500;
+   font-family: var(--font-body);
+ }
+ .rate-card .lede {
+   font-size: 14px;
+   color: var(--muted);
+   line-height: 1.55;
+   margin-bottom: 14px;
+ }
+ .rate-card ul {
+   list-style: none; padding: 0; margin: 0 0 18px;
+ }
+ .rate-card ul li {
+   font-size: 13px; line-height: 1.5;
+   color: var(--ink);
+   padding: 6px 0 6px 22px;
+   position: relative;
+   border-bottom: 1px dashed rgba(192, 134, 59, .18);
+ }
+ .rate-card ul li:last-child { border-bottom: 0; }
+ .rate-card ul li::before {
+   content: "";
+   position: absolute; left: 0; top: 12px;
+   width: 12px; height: 12px;
+   background: var(--grad-sun);
+   border-radius: 50%;
+   box-shadow: 0 0 0 3px rgba(255,183,77,.20);
+ }
+ .rate-card .cta {
+   margin-top: auto;
+   text-decoration: none;
+   text-align: center;
+   padding: 11px 18px;
+   border-radius: 999px;
+   font-family: var(--font-body);
+   font-weight: 700;
+   font-size: 14px;
+   border: 1.5px solid var(--ink);
+   background: #fff;
+   color: var(--ink);
+   transition: background .15s, color .15s;
+ }
+ .rate-card .cta:hover {
+   background: var(--ink); color: #fff;
+ }
+ .rate-card.featured .cta {
+   background: var(--grad-sun);
+   color: #fff;
+   border: 0;
+   box-shadow: 0 4px 14px rgba(232,108,0,.34);
+ }
+ .rate-section-head {
+   font-family: var(--font-display);
+   font-size: 28px;
+   color: var(--ink);
+   margin: 56px 0 6px;
+   letter-spacing: -0.015em;
+ }
+ .rate-section-lede {
+   color: var(--muted);
+   font-size: 15px;
+   max-width: 65ch;
+   line-height: 1.55;
+   margin-bottom: 20px;
+ }
+ .rate-table {
+   width: 100%;
+   border-collapse: collapse;
+   margin: 16px 0 32px;
+   background: #fff;
+   border-radius: 14px;
+   overflow: hidden;
+   border: 1px solid rgba(192,134,59,.20);
+ }
+ .rate-table th, .rate-table td {
+   padding: 13px 16px;
+   text-align: left;
+   font-size: 14px;
+   border-bottom: 1px solid #f4ecdb;
+ }
+ .rate-table th {
+   background: var(--limestone);
+   font-family: var(--font-body);
+   font-size: 11px; letter-spacing: 1px; text-transform: uppercase;
+   color: var(--ink); font-weight: 700;
+   border-bottom: 2px solid var(--terracotta);
+ }
+ .rate-table tbody tr:last-child td { border-bottom: 0; }
+ .rate-table tbody tr:nth-child(even) td { background: #fbf8f2; }
+ .rate-table .price-cell {
+   font-family: var(--font-display);
+   font-weight: 600;
+   font-variant-numeric: tabular-nums;
+   color: var(--sun-deep);
+ }
+</style>
+<!-- hreflang — EN/MT/IT siblings of this page -->
+<link rel="alternate" hreflang="en-MT" href="https://sunspot.mt/rates.html">
+<link rel="alternate" hreflang="mt-MT" href="https://sunspot.mt/rates.html?lang=mt">
+<link rel="alternate" hreflang="it-MT" href="https://sunspot.mt/rates.html?lang=it">
+<link rel="alternate" hreflang="x-default" href="https://sunspot.mt/rates.html">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a href="index.html" class="brand" aria-label="Sunspot home">
+<svg class="brand-mark ss-brand-mark-anim" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+<g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">
+<line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
+<line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
+<line x1="7" y1="7" x2="10" y2="10"/><line x1="30" y1="30" x2="33" y2="33"/>
+<line x1="33" y1="7" x2="30" y2="10"/><line x1="10" y1="30" x2="7" y2="33"/>
+</g>
+<circle cx="20" cy="20" r="11" fill="#ff9800"/>
+<circle cx="20" cy="20" r="9" fill="#ffb74d"/>
+<circle cx="24" cy="16" r="3" fill="#fff5e1"/>
+</svg>
+<span class="brand-name">Sunspot</span>
+</a>
+<nav>
+<a href="index.html">Beaches</a>
+<a href="experiences.html">Experiences</a>
+<a href="guides.html">Guides</a>
+<a href="about.html">About</a>
+<a href="team.html">Team</a>
+</nav>
+</div>
+</header>
+
+<section class="ss-page-hero">
+ <div class="container">
+  <span class="kicker">Rate card · 2026 season</span>
+  <h1>Promote your venue. Become a Sunspot Resident.</h1>
+  <p class="lede">Transparent pricing for everything beyond the standard 8% commission. No quotes, no haggling — published rates, public booking, weekly invoice. We'll never advertise something we wouldn't book ourselves.</p>
+ </div>
+</section>
+
+<main class="container" style="padding-top:32px;padding-bottom:64px;">
+
+<!-- ════════════════ FOR OPERATORS ════════════════ -->
+<h2 class="rate-section-head">For operators — get more bookings</h2>
+<p class="rate-section-lede">Beyond the platform-standard listing. Pay only to amplify reach; the baseline listing is always free.</p>
+
+<div class="rates-grid">
+
+ <article class="rate-card">
+  <span class="pill">Discovery</span>
+  <h3>Featured on homepage</h3>
+  <div class="price">€180<small>/ week</small></div>
+  <p class="lede">Your venue card sits in the "Featured this week" rail on sunspot.mt for 7 days. Limited to 4 venues per week.</p>
+  <ul>
+   <li>Top-of-fold homepage placement</li>
+   <li>~14,000 impressions/week (April–Oct)</li>
+   <li>Your photo, your sunset hour, your CTA</li>
+   <li>Performance report included</li>
+  </ul>
+  <a href="mailto:partners@sunspot.mt?subject=Featured%20homepage" class="cta">Reserve a week →</a>
+ </article>
+
+ <article class="rate-card featured">
+  <span class="pill">Best value</span>
+  <h3>Top-3 in a guide article</h3>
+  <div class="price">€95<small>/ guide / month</small></div>
+  <p class="lede">Be the recommended pick in a Sunspot Field Guide article. Editorial discretion — we'll only place you where you actually fit.</p>
+  <ul>
+   <li>Position 1, 2, or 3 in a specific article</li>
+   <li>Premium venue card with photo + price</li>
+   <li>Direct booking link, deep link to your seatmap</li>
+   <li>Tracked clicks + bookings report</li>
+  </ul>
+  <a href="mailto:partners@sunspot.mt?subject=Guide%20listing" class="cta">Pitch your venue →</a>
+ </article>
+
+ <article class="rate-card">
+  <span class="pill">Reach</span>
+  <h3>Instagram post + story</h3>
+  <div class="price">€120<small>/ piece</small></div>
+  <p class="lede">A real, written-not-templated post on @sunspot.mt. We do not stack 3 brands per post — your venue gets the floor.</p>
+  <ul>
+   <li>1 carousel post (3 photos) + 1 story</li>
+   <li>Editorial copy, our voice</li>
+   <li>~6,800 followers, mostly Malta locals</li>
+   <li>Permanent post — we don't delete after a week</li>
+  </ul>
+  <a href="mailto:partners@sunspot.mt?subject=Instagram%20post" class="cta">Book a slot →</a>
+ </article>
+
+ <article class="rate-card">
+  <span class="pill">Newsletter</span>
+  <h3>Sunspot Weekly feature</h3>
+  <div class="price">€220<small>/ feature</small></div>
+  <p class="lede">Lead feature in the Thursday email. One venue per week. ~3,200 opens, ~24% CTR last 8 weeks.</p>
+  <ul>
+   <li>Hero image + 100 word editorial</li>
+   <li>Direct deep-link to your booking page</li>
+   <li>Tracked open / click / booking conversion</li>
+   <li>Sells out 3 weeks ahead in peak season</li>
+  </ul>
+  <a href="mailto:partners@sunspot.mt?subject=Newsletter%20feature" class="cta">Check availability →</a>
+ </article>
+
+</div>
+
+<h3 style="font-family:var(--font-display);font-size:20px;color:var(--ink);margin-top:24px;margin-bottom:12px;">Bundle deals — operator</h3>
+<table class="rate-table">
+<thead><tr><th>Bundle</th><th>Includes</th><th>List price</th><th class="price-cell">Bundle price</th><th>Saving</th></tr></thead>
+<tbody>
+ <tr><td>Launch week</td><td>Homepage feature (1 wk) + IG post + Newsletter feature</td><td>€520</td><td class="price-cell">€390</td><td>−25%</td></tr>
+ <tr><td>Summer season (12 wks)</td><td>4 homepage weeks + 3 IG posts + 3 newsletters</td><td>€1,640</td><td class="price-cell">€1,150</td><td>−30%</td></tr>
+ <tr><td>Always-on (full season)</td><td>2 guide top-3 listings + 8 IG posts + 6 newsletters + 6 homepage weeks</td><td>€3,490</td><td class="price-cell">€2,200</td><td>−37%</td></tr>
+</tbody>
+</table>
+
+<!-- ════════════════ FOR BRAND PARTNERS ════════════════ -->
+<h2 class="rate-section-head">For brand partners</h2>
+<p class="rate-section-lede">Non-venue brands — sunscreen, swimwear, beverage, mobility. We're selective: we say no to anything we wouldn't use ourselves at the beach.</p>
+
+<div class="rates-grid">
+
+ <article class="rate-card">
+  <span class="pill">Sponsorship</span>
+  <h3>Guide presenting sponsor</h3>
+  <div class="price">€450<small>/ guide / month</small></div>
+  <p class="lede">"This Sunspot Field Guide is presented by [your brand]" line under the title + a single tasteful brand placement in the article footer. No banner ads.</p>
+  <ul>
+   <li>Pick the guide — sunsets, Comino, Gozo, etc.</li>
+   <li>Brand mention, link, single hero ad slot</li>
+   <li>Disclosed clearly — we don't fake editorial</li>
+   <li>One sponsor per guide, max 3 active at a time</li>
+  </ul>
+  <a href="mailto:press@sunspot.mt?subject=Guide%20sponsorship" class="cta">Pitch your brand →</a>
+ </article>
+
+ <article class="rate-card">
+  <span class="pill">Activation</span>
+  <h3>Venue-level partnership</h3>
+  <div class="price">From €1,200<small>/ activation</small></div>
+  <p class="lede">Co-branded experience at a partner venue — e.g. brand-supplied sunscreen samples at every Aqualuna sunbed for a weekend. We build the activation; you supply the product.</p>
+  <ul>
+   <li>Custom — pricing depends on scope</li>
+   <li>Brand attribution on the booking confirmation</li>
+   <li>Optional QR-driven brand campaign</li>
+   <li>Editorial write-up in the Weekly</li>
+  </ul>
+  <a href="mailto:press@sunspot.mt?subject=Brand%20activation" class="cta">Talk to us →</a>
+ </article>
+
+ <article class="rate-card">
+  <span class="pill">Digital</span>
+  <h3>Site-wide banner</h3>
+  <div class="price">€680<small>/ month</small></div>
+  <p class="lede">Single tasteful banner in the footer of every article + venue page. 1 advertiser at a time — we never stack.</p>
+  <ul>
+   <li>Sitewide reach (~62,000 pages/month last 30 days)</li>
+   <li>Designed by us in-brand or your asset</li>
+   <li>Click-tracked, monthly report</li>
+   <li>3-month minimum commitment</li>
+  </ul>
+  <a href="mailto:press@sunspot.mt?subject=Site%20banner" class="cta">Reserve it →</a>
+ </article>
+
+</div>
+
+<!-- ════════════════ MEMBERSHIPS FOR USERS ════════════════ -->
+<h2 class="rate-section-head">For customers — Sunspot Resident</h2>
+<p class="rate-section-lede">If you swim twice a week, our season passes pay back in about a month. Built for locals, expats, and second-home owners.</p>
+
+<div class="rates-grid">
+
+ <article class="rate-card">
+  <span class="pill">10-pack</span>
+  <h3>Sliema Lido Pack</h3>
+  <div class="price">€79<small>/ 10 visits</small></div>
+  <p class="lede">Pre-paid sunbed credits at any Sliema lido. €7.90 per visit vs. €10–12 walk-in.</p>
+  <ul>
+   <li>Aqualuna, Exiles, Fond Għadir, Tigne, Famous Five</li>
+   <li>No expiry within the season</li>
+   <li>Use one credit per guest</li>
+   <li>Refundable unused credits at season end</li>
+  </ul>
+  <a href="signin.html?join=sliema-pack" class="cta">Buy the pack →</a>
+ </article>
+
+ <article class="rate-card featured">
+  <span class="pill">Most popular</span>
+  <h3>Sunspot Resident</h3>
+  <div class="price">€199<small>/ season (May–Oct)</small></div>
+  <p class="lede">Unlimited sunbed bookings at any lido in the Sunspot network. Cabanas + rooftops at 30% off. Free booking changes.</p>
+  <ul>
+   <li>Pays back after ~16 visits — average user does 40+</li>
+   <li>30% off cabanas + VIPs sitewide</li>
+   <li>Priority weekend booking window</li>
+   <li>Includes 2 guest-pass days/month</li>
+  </ul>
+  <a href="signin.html?join=resident" class="cta">Get my Resident pass →</a>
+ </article>
+
+ <article class="rate-card">
+  <span class="pill">Pool clubs</span>
+  <h3>Pool Club 5-Pack</h3>
+  <div class="price">€140<small>/ 5 visits</small></div>
+  <p class="lede">Pre-paid sunbed at rooftop pool clubs (FLO, Café del Mar, Hugo's, Twenty Two). Save €35 vs. walk-in.</p>
+  <ul>
+   <li>Pick your venue per visit</li>
+   <li>Includes pool entry + sunbed</li>
+   <li>Cocktails on the venue's menu, not ours</li>
+   <li>No expiry within the season</li>
+  </ul>
+  <a href="signin.html?join=pool-pack" class="cta">Get the 5-pack →</a>
+ </article>
+
+ <article class="rate-card">
+  <span class="pill">Family</span>
+  <h3>Family pass (4 people)</h3>
+  <div class="price">€350<small>/ season</small></div>
+  <p class="lede">Like Resident, but for a family of four. Unlimited sunbeds at any family-friendly lido in network. Kids under 6 free.</p>
+  <ul>
+   <li>4 named seats, unlimited use</li>
+   <li>Kids' wristbands included</li>
+   <li>Priority cabana booking</li>
+   <li>10% off restaurant orders at partner venues</li>
+  </ul>
+  <a href="signin.html?join=family" class="cta">Get the family pass →</a>
+ </article>
+
+</div>
+
+<!-- ════════════════ POLICY & TRANSPARENCY ════════════════ -->
+<div class="ss-ornament" aria-hidden="true"><span class="ss-ornament-icon"></span></div>
+
+<section style="max-width:740px;margin:0 auto;">
+ <h2 style="font-family:var(--font-display);font-size:24px;color:var(--ink);margin-bottom:12px;">How we keep this honest</h2>
+ <ul style="list-style:none;padding:0;margin:0;">
+  <li style="padding:10px 0;border-bottom:1px solid rgba(192,134,59,.18);"><strong>Disclosed sponsorships always.</strong> If a guide article was sponsored, the line says so under the title. We don't hide it inside a "partner" footnote.</li>
+  <li style="padding:10px 0;border-bottom:1px solid rgba(192,134,59,.18);"><strong>Editorial integrity over revenue.</strong> A featured slot doesn't buy a positive review. If the place is mediocre we'll say so. We've turned down sponsorships for that reason.</li>
+  <li style="padding:10px 0;border-bottom:1px solid rgba(192,134,59,.18);"><strong>No fake scarcity.</strong> "1 slot left!" only appears when there really is. The whole point of building this was to fix the booking dishonesty.</li>
+  <li style="padding:10px 0;"><strong>Published rate card.</strong> The above is what we charge. We don't quote different prices to different operators based on what we think they'll pay.</li>
+ </ul>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-bottom">© 2026 Sunspot Ltd. · Built in Valletta</div>
+</div>
+</footer>
+<script src="auth.js"></script>
+<script src="nav-auth.js"></script>
+<script src="icons.js"></script>
+<script src="features.js"></script>
+<script src="audiences.js"></script>
+<script src="cookie-consent.js" defer></script>
+<script src="eeat-footer.js" defer></script>
+</body>
+</html>

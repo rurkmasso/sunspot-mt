@@ -13,8 +13,15 @@
 
   // Required credentials (case-insensitive on the username).
   // Bytes are intentionally trivial — the real protection is the platform layer.
-  var REQ_USER = 'mark@sunspot.mt';
-  var REQ_PASS = 'password';
+  // All five founders share the same temporary password for the pre-launch
+  // gate; rotate before public launch.
+  var USERS = {
+    'mark@sunspot.mt':     'password',
+    'ed@sunspot.mt':       'password',
+    'daniel@sunspot.mt':   'password',
+    'zach@sunspot.mt':     'password',
+    'matt@sunspot.mt':     'password',
+  };
   var TOKEN_KEY = 'sunspot_gate_v1';
   // Token = base64 of timestamp + a marker. Persisted across reloads. Expires in 30 days.
   var TOKEN_TTL_MS = 30 * 24 * 60 * 60 * 1000;
@@ -103,7 +110,10 @@
       e.preventDefault();
       var u = document.getElementById('ss-gate-u').value.trim().toLowerCase();
       var p = document.getElementById('ss-gate-p').value;
-      if (u === REQ_USER.toLowerCase() && p === REQ_PASS) {
+      var expected = USERS[u];
+      if (expected && p === expected) {
+        // Remember who's signed in for the greeting in the operator app
+        try { localStorage.setItem('sunspot_gate_user', u); } catch (_) {}
         writeToken();
         overlay.style.opacity = '0';
         overlay.style.transition = 'opacity .2s';

@@ -18,3 +18,4 @@ build/
 # Photo-fetch cache (rebuilt by bin/fetch_real_photos*.py)
 bin/.photo_cache.json
 bin/photo_manifest*.json
+bin/__pycache__/

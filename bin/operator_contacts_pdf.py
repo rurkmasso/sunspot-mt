@@ -22,6 +22,8 @@ from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak,
 )
 
+from pdf_brand import COLOURS, styles as brand_styles, on_page_branded, brand_cover
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "clubs-data.js"
 OUT_PDF = ROOT / "bin" / "sunspot_operator_contacts.pdf"
@@ -116,34 +118,29 @@ def main():
     doc = SimpleDocTemplate(
         str(OUT_PDF),
         pagesize=landscape(A4),
-        leftMargin=12 * mm, rightMargin=12 * mm,
-        topMargin=14 * mm, bottomMargin=14 * mm,
+        leftMargin=14 * mm, rightMargin=14 * mm,
+        topMargin=22 * mm, bottomMargin=22 * mm,
         title="Sunspot — Operator contacts",
         author="Sunspot Ltd",
     )
 
-    styles = getSampleStyleSheet()
-    H1 = ParagraphStyle("H1", parent=styles["Title"], fontName="Helvetica-Bold",
-                        fontSize=20, textColor=colors.HexColor("#0a1f3a"),
-                        spaceAfter=4)
-    SUB = ParagraphStyle("Sub", parent=styles["Normal"], fontName="Helvetica",
-                         fontSize=10, textColor=colors.HexColor("#5d6a82"),
-                         spaceAfter=14)
-    REGION = ParagraphStyle("Region", parent=styles["Heading2"], fontName="Helvetica-Bold",
-                            fontSize=13, textColor=colors.HexColor("#ef6c00"),
-                            spaceBefore=12, spaceAfter=6)
-    CELL = ParagraphStyle("Cell", parent=styles["Normal"], fontName="Helvetica",
-                          fontSize=8, leading=10, textColor=colors.HexColor("#0a1f3a"))
-    NAME = ParagraphStyle("Name", parent=styles["Normal"], fontName="Helvetica-Bold",
-                          fontSize=9, leading=11, textColor=colors.HexColor("#0a1f3a"))
-    MUTED = ParagraphStyle("Muted", parent=styles["Normal"], fontName="Helvetica",
-                           fontSize=7, leading=9, textColor=colors.HexColor("#8a7048"))
+    S = brand_styles()
+    H1 = S["H1"]
+    SUB = S["Sub"]
+    REGION = ParagraphStyle("Region", parent=getSampleStyleSheet()["Heading2"],
+                            fontName="Helvetica-Bold", fontSize=13,
+                            textColor=COLOURS["terracotta"], spaceBefore=14, spaceAfter=8)
+    CELL = ParagraphStyle("Cell", parent=getSampleStyleSheet()["Normal"],
+                          fontName="Helvetica", fontSize=8, leading=10,
+                          textColor=COLOURS["ink"])
+    MUTED = S["Note"]
 
     story = []
-    story.append(Paragraph("Sunspot — operator contacts", H1))
-    story.append(Paragraph(
-        f"Master reference list for all {len(venues)} venues across Malta, Gozo and Comino. "
-        f"Generated from clubs-data.js. Last updated 24 May 2026.", SUB))
+    story.extend(brand_cover(
+        "Operator contacts",
+        kicker="Master reference — internal use",
+        subtitle=f"{len(venues)} venues across Malta, Gozo and Comino",
+    ))
 
     # Summary stats
     bookable = sum(1 for v in venues if v["hasBookable"])
@@ -261,7 +258,8 @@ def main():
         '<i>Generated from clubs-data.js. Re-run <b>python3 bin/operator_contacts_pdf.py</b> '
         'after editing venue records to refresh.</i>', MUTED))
 
-    doc.build(story)
+    branded = on_page_branded("Operator contacts")
+    doc.build(story, onFirstPage=branded, onLaterPages=branded)
     print(f"Generated {OUT_PDF} ({len(venues)} venues across {len(by_region)} regions)")
 
 
