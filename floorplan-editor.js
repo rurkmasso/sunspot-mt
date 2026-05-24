@@ -354,12 +354,30 @@
      });
    }
 
+   // Customer filter — controls which types are shown in 'book' mode.
+   // 'all' | 'sunbed' | 'cabana' | 'vip' | 'cheapest'
+   let bookFilter = 'all';
+   const visibleForBookFilter = (s) => {
+     if (mode !== 'book') return true;
+     if (bookFilter === 'all') return true;
+     if (bookFilter === 'cheapest') {
+       const sunbedPrices = layout.spots
+         .filter(x => x.type === 'sunbed' && !taken.has(x.id))
+         .map(x => x.price || SPOT.sunbed.defaultPrice);
+       const cheapest = sunbedPrices.length ? Math.min(...sunbedPrices) : 0;
+       return s.type === 'sunbed' && (s.price || SPOT.sunbed.defaultPrice) <= cheapest;
+     }
+     return s.type === bookFilter;
+   };
+
    function drawSpots() {
      spotsLayer.innerHTML = '';
      layout.spots.forEach(s => {
        const isT = taken.has(s.id);
        const isS = selected.has(s.id);
        const cfg = SPOT[s.type] || SPOT.sunbed;
+       const visible = visibleForBookFilter(s);
+       const dim = mode === 'book' && !visible;
        const el = document.createElement('button');
        el.type = 'button';
        el.className = 'sp-spot sp-spot-' + s.type;
@@ -372,11 +390,24 @@
          'aspect-ratio:' + cfg.ratio + ';' +
          'transform:translate(-50%,-50%);' +
          'background:transparent;border:0;padding:0;cursor:' + (mode === 'view' ? 'default' : 'pointer') + ';' +
-         'pointer-events:auto;transition:transform .12s;' +
+         'pointer-events:auto;transition:transform .12s, opacity .15s;' +
+         (dim ? 'opacity:.20;' : '') +
          (isS ? 'filter:drop-shadow(0 0 4px rgba(46,125,50,.9));' : '');
-       el.title = s.id + ' — ' + cfg.label;
+       el.title = s.id + ' — ' + cfg.label + (s.price ? ' · €' + s.price : '');
        el.innerHTML = spotSvg(s.type, isT, isS);
-       el.addEventListener('click', (e) => { e.stopPropagation(); onSpotClick(s); });
+       // Price tag — shown for cabanas + VIPs always (since they're rare),
+       // and for sunbeds at >=80% screen-width canvases (don't clutter on mobile).
+       if (mode === 'book' && !isT && s.price && (s.type !== 'sunbed' || isS)) {
+         const tag = document.createElement('span');
+         tag.style.cssText =
+           'position:absolute;left:50%;top:100%;transform:translate(-50%,4px);' +
+           'background:#0a1f3a;color:#fff;font-size:10px;font-weight:700;' +
+           'padding:2px 6px;border-radius:6px;white-space:nowrap;pointer-events:none;' +
+           'font-family:Inter,sans-serif;';
+         tag.textContent = '€' + s.price;
+         el.appendChild(tag);
+       }
+       el.addEventListener('click', (e) => { e.stopPropagation(); onSpotClick(s, e); });
        if (mode === 'edit') attachSpotDrag(el, s);
        spotsLayer.appendChild(el);
      });
@@ -384,6 +415,58 @@
        const c = layout.spots.length;
        countEl.textContent = c + ' spot' + (c === 1 ? '' : 's');
      }
+   }
+
+   // ─── Customer popover ─ (book mode only)
+   function showBookPopover(spot, anchorEl) {
+     // Close existing popover
+     const existing = container.querySelector('.sp-book-pop');
+     if (existing) existing.remove();
+     if (taken.has(spot.id)) return;
+     const cfg = SPOT[spot.type] || SPOT.sunbed;
+     const pop = document.createElement('div');
+     pop.className = 'sp-book-pop';
+     pop.style.cssText =
+       'position:absolute;left:' + (spot.x * 100).toFixed(2) + '%;top:' + (spot.y * 100).toFixed(2) + '%;' +
+       'transform:translate(-50%, calc(-100% - 16px));' +
+       'background:#fff;border:1px solid rgba(192,134,59,.30);border-radius:12px;' +
+       'box-shadow:0 8px 24px rgba(10,31,58,.18);padding:14px 16px;' +
+       'min-width:200px;max-width:260px;z-index:30;' +
+       'font-family:Inter,sans-serif;';
+     const isPicked = (opts.selected && opts.selected.has(spot.id));
+     pop.innerHTML =
+       '<div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;">' +
+         '<div>' +
+           '<div style="font-family:Fraunces,Georgia,serif;font-size:16px;color:#0a1f3a;font-weight:600;">' + cfg.label + ' ' + spot.id + '</div>' +
+         '</div>' +
+         '<div style="font-family:Fraunces,Georgia,serif;font-size:22px;color:#ef6c00;font-weight:600;">€' + (spot.price || cfg.defaultPrice) + '</div>' +
+       '</div>' +
+       '<div style="font-size:12px;color:#5d6a82;margin-top:4px;line-height:1.4;">' +
+         (spot.type === 'sunbed' ? 'One lounger with parasol. Service: drinks &amp; light bites at the venue.' :
+          spot.type === 'cabana' ? 'Four-person semi-private cabana with table service.' :
+                                   'Six-person enclosed gazebo, bottle service, private fridge.') +
+       '</div>' +
+       '<button type="button" data-pop-pick style="margin-top:12px;width:100%;background:' + (isPicked ? '#fff' : 'linear-gradient(135deg,#ffb74d,#f57c00)') + ';' +
+         'color:' + (isPicked ? '#c62828' : '#fff') + ';border:' + (isPicked ? '1px solid #c62828' : '0') + ';' +
+         'padding:9px 14px;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer;font-family:Inter,sans-serif;' +
+         'box-shadow:' + (isPicked ? 'none' : '0 3px 10px rgba(232,108,0,.32)') + ';">' +
+         (isPicked ? 'Remove from cart' : 'Add to cart') +
+       '</button>';
+     spotsLayer.appendChild(pop);
+     pop.querySelector('[data-pop-pick]').addEventListener('click', (e) => {
+       e.stopPropagation();
+       if (opts.onSelect) opts.onSelect(spot);
+       pop.remove();
+     });
+     // Close on outside click
+     setTimeout(() => {
+       document.addEventListener('click', function close(ev) {
+         if (!pop.contains(ev.target)) {
+           pop.remove();
+           document.removeEventListener('click', close);
+         }
+       });
+     }, 50);
    }
 
    // ─── Tap canvas (edit): drops a spot OR de-selects area ─
@@ -412,7 +495,7 @@
    wrap.addEventListener('click', onCanvasClick);
 
    // ─── Spot interactions ─
-   async function onSpotClick(spot) {
+   async function onSpotClick(spot, ev) {
      if (mode === 'edit') {
        const ok = window.opConfirm
          ? await window.opConfirm({ title: 'Remove ' + spot.id + '?', body: 'Tap the canvas again to place a new one.', ok: 'Remove', cancel: 'Keep', danger: true })
@@ -426,8 +509,46 @@
        if (window.opToast) window.opToast('Removed ' + spot.id, 'warn');
      } else if (mode === 'book') {
        if (taken.has(spot.id)) return;
-       if (opts.onSelect) opts.onSelect(spot);
+       // Show the popover with details + price. Picking is one more tap.
+       showBookPopover(spot);
      }
+   }
+
+   // ─── Book mode: filter chips above the map ─
+   function buildBookChips() {
+     if (mode !== 'book') return;
+     const bar = document.createElement('div');
+     bar.className = 'sp-book-chips';
+     bar.style.cssText =
+       'display:flex;flex-wrap:wrap;gap:8px;padding:10px 0 14px;align-items:center;';
+     const totalFree = layout.spots.filter(s => !taken.has(s.id)).length;
+     bar.innerHTML =
+       '<span style="font-family:Fraunces,Georgia,serif;font-size:13px;color:#5d6a82;margin-right:6px;">' +
+         '<strong style="color:#0a1f3a;">' + totalFree + '</strong> spots available' +
+       '</span>' +
+       chip('all',      'All',         true) +
+       chip('sunbed',   'Sunbeds',     false) +
+       chip('cabana',   'Cabanas',     false) +
+       chip('vip',      'VIP gazebos', false) +
+       chip('cheapest', 'Cheapest',    false);
+     container.insertBefore(bar, wrap);
+     bar.querySelectorAll('[data-chip]').forEach(btn => {
+       btn.addEventListener('click', () => {
+         bookFilter = btn.dataset.chip;
+         bar.querySelectorAll('[data-chip]').forEach(b => {
+           const on = b === btn;
+           b.style.background = on ? '#0a1f3a' : '#fff';
+           b.style.color      = on ? '#fff'    : '#0a1f3a';
+         });
+         drawSpots();
+       });
+     });
+   }
+   function chip(key, label, active) {
+     return '<button type="button" data-chip="' + key + '" ' +
+       (active ? 'style="background:#0a1f3a;color:#fff;' : 'style="background:#fff;color:#0a1f3a;') +
+       'border:1px solid #0a1f3a;border-radius:999px;padding:6px 14px;font-size:12px;' +
+       'font-weight:700;cursor:pointer;font-family:Inter,sans-serif;">' + label + '</button>';
    }
    function attachSpotDrag(el, spot) {
      let dragging = false, moved = false;
@@ -784,6 +905,7 @@
        label + '</button>';
    }
 
+   buildBookChips();
    drawAreas();
    drawSpots();
 
