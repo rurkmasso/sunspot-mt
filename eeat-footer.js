@@ -166,25 +166,31 @@
    );
  }
 
- // ─── 3) Trust badges ───
+ // ─── 3) Trust badges — distinct icon per badge ───
  function trustRow() {
-   const tick =
-     '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
-   const cell = (title, sub) =>
-     '<div style="display:flex;align-items:center;gap:10px;">' +
-       '<span style="width:32px;height:32px;border-radius:50%;background:#fff;color:#c0563b;display:flex;align-items:center;justify-content:center;border:1px solid rgba(192,134,59,.30);flex:0 0 32px;">' + tick + '</span>' +
+   // Each icon carries meaning — shield for payments, balance for compliance,
+   // anchor for MTA partnership, lock for transport security.
+   const icons = {
+     shield: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>',
+     balance:'<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 6h14M5 6l-3 7c0 2 1.5 3 3 3s3-1 3-3l-3-7zM19 6l-3 7c0 2 1.5 3 3 3s3-1 3-3l-3-7z"/></svg>',
+     anchor: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="M12 8v14M5 12h14M5 12a7 7 0 0 0 7 10M19 12a7 7 0 0 1-7 10"/></svg>',
+     lock:   '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>',
+   };
+   const cell = (icon, title, sub) =>
+     '<div style="display:flex;align-items:center;gap:12px;">' +
+       '<span style="width:40px;height:40px;border-radius:12px;background:#fff;color:#c0563b;display:flex;align-items:center;justify-content:center;border:1px solid rgba(192,134,59,.25);flex:0 0 40px;box-shadow:0 1px 2px rgba(10,31,58,.04);">' + icon + '</span>' +
        '<div style="min-width:0;">' +
-         '<div style="font-family:Fraunces,Georgia,serif;font-size:13px;font-weight:600;color:#0a1f3a;line-height:1.15;">' + title + '</div>' +
-         '<div style="font-size:11px;color:#8a7048;margin-top:1px;letter-spacing:.2px;line-height:1.3;">' + sub + '</div>' +
+         '<div style="font-family:Fraunces,Georgia,serif;font-size:14px;font-weight:600;color:#0a1f3a;line-height:1.15;">' + title + '</div>' +
+         '<div style="font-size:11px;color:#8a7048;margin-top:2px;letter-spacing:.2px;line-height:1.3;">' + sub + '</div>' +
        '</div>' +
      '</div>';
    return (
-     '<section style="background:#faf3e0;border-bottom:1px solid rgba(192,134,59,.20);padding:18px 0;">' +
-       '<div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;">' +
-         cell('Stripe Verified',         'PCI-DSS Level 1 partner') +
-         cell('GDPR Compliant',           'EU-grade data handling') +
-         cell('Malta Tourism Authority',  'Partner-listed venues') +
-         cell('SSL Encrypted',            'Every byte, every page') +
+     '<section style="background:#faf3e0;border-bottom:1px solid rgba(192,134,59,.20);padding:22px 0;">' +
+       '<div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">' +
+         cell(icons.shield,  'Stripe Verified',        'PCI-DSS Level 1 partner') +
+         cell(icons.balance, 'GDPR Compliant',         'EU-grade data handling') +
+         cell(icons.anchor,  'Malta Tourism Authority','Partner-listed venues') +
+         cell(icons.lock,    'SSL Encrypted',          'Every byte, every page') +
        '</div>' +
      '</section>'
    );
@@ -219,10 +225,20 @@
              '<span style="font-family:Fraunces,Georgia,serif;font-size:20px;font-weight:600;color:#0a1f3a;letter-spacing:-0.02em;">Sunspot</span>' +
            '</div>' +
            '<p style="font-size:13px;color:#5d6a82;line-height:1.55;margin:0 0 14px;max-width:34ch;">Malta\'s booking platform for beach clubs, lidos and rooftop pools. Built in Valletta by a small team.</p>' +
-           '<p style="font-size:13px;color:#5d6a82;line-height:1.7;margin:0;">' +
+           '<p style="font-size:13px;color:#5d6a82;line-height:1.7;margin:0 0 14px;">' +
              '<a href="mailto:hello@sunspot.mt" style="color:#ef6c00;font-weight:700;text-decoration:none;">hello@sunspot.mt</a><br>' +
              '<a href="tel:+35699239339" style="color:#0a1f3a;text-decoration:none;font-variant-numeric:tabular-nums;">+356 9923 9339</a>' +
            '</p>' +
+           // Mini app CTA + we're hiring hint
+           '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;">' +
+             '<a href="app.html" style="display:inline-flex;align-items:center;gap:6px;padding:7px 12px;background:#0a1f3a;color:#fff;border-radius:999px;font-size:12px;font-weight:700;text-decoration:none;letter-spacing:.2px;">' +
+               '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="6" y="2" width="12" height="20" rx="3"/><line x1="12" y1="18" x2="12" y2="18"/></svg>' +
+               'Get the app' +
+             '</a>' +
+             '<a href="mailto:careers@sunspot.mt?subject=Working%20at%20Sunspot" style="display:inline-flex;align-items:center;gap:6px;padding:7px 12px;background:#fff;color:#0a1f3a;border:1px solid #e89d3a;border-radius:999px;font-size:12px;font-weight:700;text-decoration:none;">' +
+               'We\'re hiring →' +
+             '</a>' +
+           '</div>' +
          '</div>' +
 
          col('For beachgoers', [
