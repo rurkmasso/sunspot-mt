@@ -113,40 +113,53 @@
  // `slug` field below, e.g. assets/press/times-of-malta.svg. They auto-
  // swap in. Until then the typographic placeholders keep the layout intact.
  function pressRow() {
+   // Each entry: slug for asset swap-in, displayed label, type treatment.
+   // Treatments chosen so the strip reads as deliberate editorial typography,
+   // not placeholders waiting for images. Mixed serif/sans creates the
+   // newsstand feel of a real press wall.
    const logos = [
-     { slug: 'times-of-malta', label: 'Times of Malta', style: 'serif', size: 20 },
-     { slug: 'lovin-malta',    label: 'Lovin Malta',    style: 'sansB', size: 18 },
-     { slug: 'malta-today',    label: 'Malta Today',    style: 'serif', size: 19 },
-     { slug: 'tvm',            label: 'TVM',            style: 'sansB', size: 22 },
-     { slug: 'malta-ceos',     label: 'MaltaCEOs',      style: 'sansR', size: 16 },
-     { slug: 'the-shift',      label: 'The Shift',      style: 'serif', size: 17 },
+     { slug: 'times-of-malta', label: 'Times of Malta', style: 'serif-bold', size: 26 },
+     { slug: 'lovin-malta',    label: 'Lovin Malta',    style: 'sans-tight', size: 24 },
+     { slug: 'malta-today',    label: 'Malta Today',    style: 'serif-bold', size: 24 },
+     { slug: 'tvm',            label: 'TVM',            style: 'sans-mono',  size: 30 },
+     { slug: 'malta-ceos',     label: 'MaltaCEOs',      style: 'sans-mixed', size: 22 },
+     { slug: 'the-shift',      label: 'The Shift',      style: 'serif-italic', size: 24 },
    ];
    const trackHTML = logos.concat(logos).map(pressLogo).join('');
    return (
-     '<section class="ss-press" style="background:#fff;border-bottom:1px solid rgba(192,134,59,.10);padding:28px 0;overflow:hidden;">' +
-       '<div style="max-width:1200px;margin:0 auto 14px;padding:0 24px;text-align:center;">' +
-         '<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a7048;font-weight:800;">As featured in</div>' +
+     '<section class="ss-press" style="background:#fff;border-bottom:1px solid rgba(192,134,59,.10);padding:32px 0;overflow:hidden;">' +
+       '<div style="max-width:1200px;margin:0 auto 18px;padding:0 24px;text-align:center;">' +
+         '<div style="font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:#8a7048;font-weight:800;">As featured in</div>' +
        '</div>' +
        '<div class="ss-press-viewport" style="position:relative;width:100%;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);">' +
-         '<div class="ss-press-track" style="display:flex;align-items:center;gap:56px;width:max-content;animation:ssPressScroll 36s linear infinite;will-change:transform;">' +
+         '<div class="ss-press-track" style="display:flex;align-items:center;gap:64px;width:max-content;animation:ssPressScroll 40s linear infinite;will-change:transform;">' +
            trackHTML +
          '</div>' +
        '</div>' +
      '</section>'
    );
  }
+ // Per-publication typography that reads as a deliberate brand wall, not a
+ // wireframe. Customised to feel right for each masthead's actual identity
+ // (serif/sans, weight, italic) without imitating their logo artwork.
  function pressLogo(logo) {
-   const family = logo.style === 'serif' ? '"Fraunces", Georgia, serif' : '"Inter", -apple-system, sans-serif';
-   const weight = logo.style === 'sansB' ? 800 : 500;
-   const ital   = logo.style === 'serif' ? 'italic' : 'normal';
+   const styles = {
+     'serif-bold':   { family: '"Fraunces", Georgia, serif',      weight: 700, italic: 'normal', tracking: '-0.02em' },
+     'serif-italic': { family: '"Fraunces", Georgia, serif',      weight: 600, italic: 'italic', tracking: '-0.015em' },
+     'sans-tight':   { family: '"Inter", -apple-system, sans-serif', weight: 800, italic: 'normal', tracking: '-0.04em' },
+     'sans-mono':    { family: '"Inter", -apple-system, sans-serif', weight: 900, italic: 'normal', tracking: '0.08em' },
+     'sans-mixed':   { family: '"Inter", -apple-system, sans-serif', weight: 700, italic: 'normal', tracking: '-0.01em' },
+   };
+   const s = styles[logo.style] || styles['sans-tight'];
    const fallback =
-     '<span style="font-family:' + family + ';font-size:' + logo.size + 'px;' +
-       'font-weight:' + weight + ';font-style:' + ital + ';' +
-       'color:#0a1f3a;letter-spacing:-0.01em;white-space:nowrap;opacity:.55;">' + logo.label + '</span>';
+     '<span style="font-family:' + s.family + ';font-size:' + logo.size + 'px;' +
+       'font-weight:' + s.weight + ';font-style:' + s.italic + ';' +
+       'letter-spacing:' + s.tracking + ';' +
+       'color:#0a1f3a;white-space:nowrap;line-height:1;opacity:.85;">' + logo.label + '</span>';
    return (
-     '<picture style="display:flex;align-items:center;height:30px;flex:0 0 auto;">' +
+     '<picture style="display:flex;align-items:center;height:36px;flex:0 0 auto;">' +
        '<img src="assets/press/' + logo.slug + '.svg" alt="' + logo.label + '" ' +
-         'style="height:24px;width:auto;opacity:.75;filter:grayscale(.2);" loading="lazy" decoding="async" ' +
+         'style="height:30px;width:auto;opacity:.85;" loading="lazy" decoding="async" ' +
          'onerror="this.replaceWith(this.nextElementSibling);">' +
        fallback +
      '</picture>'
