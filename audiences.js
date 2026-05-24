@@ -101,10 +101,12 @@
     },
   };
 
+  // No flag emojis — they render inconsistently across OSes and look
+  // off-brand. The 2-letter code does the same job and is reliable.
   const LANGS = [
-    { code: 'en', flag: '🇬🇧', name: 'English' },
-    { code: 'mt', flag: '🇲🇹', name: 'Malti' },
-    { code: 'it', flag: '🇮🇹', name: 'Italiano' },
+    { code: 'en', flag: 'EN', name: 'English' },
+    { code: 'mt', flag: 'MT', name: 'Malti' },
+    { code: 'it', flag: 'IT', name: 'Italiano' },
   ];
   const CURRENCIES = [
     // Mid-2026 rough rates. Replace with live API later.
