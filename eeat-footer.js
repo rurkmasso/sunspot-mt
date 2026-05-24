@@ -1,54 +1,230 @@
 /* ============================================================
-   Sunspot — E-E-A-T footer trust block.
+   Sunspot — E-E-A-T footer.
 
-   Injected at the END of every page's <footer>. Five strips:
-     1. Press mentions strip ("Featured in")
-     2. Industry affiliations & certifications
-     3. Newsletter signup
-     4. Publisher / contact / editorial transparency / trust / social
-        (the original four-column grid)
-     5. Founder signature
+   ONE clean, container-constrained footer block. No more floating
+   strips or copy that bleeds off the edges. Five rows top→bottom:
+
+     1. Newsletter signup (Sunspot Weekly)
+     2. Press mentions ("As featured in")
+     3. Trust badges (Stripe / GDPR / MTA / SSL)
+     4. Four-column site map (company / operators / customers / contact)
+     5. Bottom rail: ©, legal links, language/currency hint
+
+   Injected at the end of every page's <footer>. The site's existing
+   .footer-bottom line gets removed first so we don't double up.
    ============================================================ */
 (function () {
  'use strict';
 
- function inject() {
-  const footer = document.querySelector('footer');
-  if (!footer) return;
-  if (footer.querySelector('.ss-eeat')) return;  // already injected
-  if (/checkout\.html|signin\.html/.test(location.pathname)) return;
-  // Press mentions + trust strips: inject ABOVE the footer (full width)
-  injectPressStrip(footer);
-  injectTrustStrip(footer);
-  injectNewsletter(footer);
+ function boot() {
+   const footer = document.querySelector('footer');
+   if (!footer) return;
+   if (footer.querySelector('.ss-eeat')) return;
+   if (/checkout\.html|signin\.html/.test(location.pathname)) return;
 
-  const block = document.createElement('div');
-  block.className = 'ss-eeat';
-  block.innerHTML =
-   '<div style="border-top:1px solid rgba(192,134,59,.22);margin-top:24px;padding:24px 0;">' +
-     '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;font-size:13px;color:#5d6a82;line-height:1.55;">' +
+   // Remove any leftover stale strips from older versions
+   document.querySelectorAll('.ss-press-strip, .ss-trust-strip, .ss-newsletter').forEach(el => el.remove());
+   // Remove the default "© 2026 Sunspot Ltd. · Built in Valletta" — we'll re-render below
+   const oldBottom = footer.querySelector('.footer-bottom');
+   if (oldBottom) oldBottom.remove();
+   // Wipe any pre-existing 4-column footer-grid blocks from old templates
+   footer.querySelectorAll('.footer-grid').forEach(el => el.remove());
 
-       // Publisher / contact
-       '<div>' +
-         '<strong style="display:block;font-family:Fraunces,Georgia,serif;color:#0a1f3a;font-size:15px;margin-bottom:6px;">Sunspot Ltd</strong>' +
-         '<div>Registered in Valletta, Malta · VAT MT-XXXXXXXX</div>' +
-         '<div style="margin-top:6px;"><a href="mailto:hello@sunspot.mt" style="color:#ef6c00;font-weight:600;text-decoration:none;">hello@sunspot.mt</a></div>' +
-         '<div style="margin-top:2px;color:#0a1f3a;font-variant-numeric:tabular-nums;">+356 9923 9339</div>' +
+   // Style the footer host itself — limestone surface, top border
+   footer.style.background = '#fdf6e8';
+   footer.style.borderTop  = '1px solid rgba(192,134,59,.22)';
+   footer.style.marginTop  = '60px';
+   footer.style.color      = '#0a1f3a';
+   footer.style.fontFamily = 'Inter, -apple-system, sans-serif';
+   footer.style.position   = 'relative';
+   footer.style.overflow   = 'hidden';
+
+   const block = document.createElement('div');
+   block.className = 'ss-eeat';
+   block.innerHTML = render();
+   footer.appendChild(block);
+
+   // Newsletter wiring
+   const form = block.querySelector('#ss-newsletter-form');
+   const msg  = block.querySelector('#ss-newsletter-msg');
+   if (form) {
+     form.addEventListener('submit', (e) => {
+       e.preventDefault();
+       const email = form.querySelector('input').value.trim();
+       if (!email) return;
+       try {
+         const list = JSON.parse(localStorage.getItem('sunspot_newsletter') || '[]');
+         if (!list.includes(email)) list.push(email);
+         localStorage.setItem('sunspot_newsletter', JSON.stringify(list));
+       } catch (err) {}
+       form.querySelector('input').value = '';
+       msg.textContent = 'Thanks — you\'re in. Look out for Thursday morning.';
+     });
+   }
+ }
+
+ // ─── Render the whole block ───
+ function render() {
+   return (
+     // 1) Newsletter — full-width navy panel with sun-flare
+     newsletterRow() +
+
+     // 2) Press strip — narrow, centred, muted
+     pressRow() +
+
+     // 3) Trust badges
+     trustRow() +
+
+     // 4) Site map — four columns inside .container
+     sitemapRow() +
+
+     // 5) Bottom rail
+     bottomRail()
+   );
+ }
+
+ // ─── 1) Newsletter ───
+ function newsletterRow() {
+   return (
+     '<section style="background:#0a1f3a;color:#fff;padding:48px 0;position:relative;overflow:hidden;">' +
+       '<div aria-hidden="true" style="position:absolute;right:-60px;top:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(255,183,77,.22) 0%,transparent 65%);pointer-events:none;"></div>' +
+       '<div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr;gap:18px;position:relative;">' +
+         '<div style="max-width:560px;">' +
+           '<div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#ffd190;font-weight:800;margin-bottom:10px;">Sunspot Weekly</div>' +
+           '<h2 style="font-family:Fraunces,Georgia,serif;font-size:clamp(20px,2.4vw,26px);font-weight:600;letter-spacing:-0.015em;line-height:1.2;margin:0 0 8px;color:#fff;">' +
+             "One email, every Thursday. The week's sunbeds, sea-state, quiet pools." +
+           '</h2>' +
+           '<p style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.5;margin:0 0 16px;max-width:50ch;">Short, signed, and no marketing fluff. Unsubscribe in one click.</p>' +
+           '<form id="ss-newsletter-form" style="display:flex;gap:8px;flex-wrap:wrap;max-width:520px;">' +
+             '<input type="email" required placeholder="you@example.com" aria-label="Email address" ' +
+               'style="flex:1;min-width:200px;padding:11px 16px;border-radius:999px;border:0;font-size:14px;background:#fff;color:#0a1f3a;outline:none;font-family:inherit;">' +
+             '<button type="submit" style="background:linear-gradient(135deg,#ffb74d,#f57c00);color:#fff;border:0;padding:11px 22px;border-radius:999px;font-weight:700;cursor:pointer;font-family:inherit;font-size:14px;box-shadow:0 4px 14px rgba(232,108,0,.32);">Subscribe</button>' +
+           '</form>' +
+           '<div id="ss-newsletter-msg" style="margin-top:10px;font-size:13px;color:#ffd190;min-height:18px;"></div>' +
+         '</div>' +
+       '</div>' +
+     '</section>'
+   );
+ }
+
+ // ─── 2) Press strip ───
+ function pressRow() {
+   const logos = [
+     ['Times of Malta',  'serif',  18],
+     ['Lovin Malta',     'sansB', 16],
+     ['Malta Today',     'serif',  17],
+     ['TVM',             'sansB', 18],
+     ['MaltaCEOs',       'sansR', 14],
+     ['The Shift',       'serif',  15],
+   ];
+   return (
+     '<section style="background:#fff;border-bottom:1px solid rgba(192,134,59,.10);padding:28px 0;">' +
+       '<div style="max-width:1200px;margin:0 auto;padding:0 24px;text-align:center;">' +
+         '<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a7048;font-weight:800;margin-bottom:14px;">As featured in</div>' +
+         '<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px 36px;opacity:.65;">' +
+           logos.map(([n, s, sz]) => pressLogo(n, s, sz)).join('') +
+         '</div>' +
+       '</div>' +
+     '</section>'
+   );
+ }
+ function pressLogo(name, style, size) {
+   const family = style === 'serif' ? '"Fraunces", Georgia, serif' : '"Inter", -apple-system, sans-serif';
+   const weight = style === 'sansB' ? 800 : style === 'sansR' ? 500 : 500;
+   const ital   = style === 'serif' ? 'italic' : 'normal';
+   return '<span style="font-family:' + family + ';font-size:' + size + 'px;font-weight:' + weight +
+     ';font-style:' + ital + ';color:#0a1f3a;letter-spacing:-0.01em;white-space:nowrap;">' + name + '</span>';
+ }
+
+ // ─── 3) Trust badges ───
+ function trustRow() {
+   const tick =
+     '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+   const cell = (title, sub) =>
+     '<div style="display:flex;align-items:center;gap:10px;">' +
+       '<span style="width:32px;height:32px;border-radius:50%;background:#fff;color:#c0563b;display:flex;align-items:center;justify-content:center;border:1px solid rgba(192,134,59,.30);flex:0 0 32px;">' + tick + '</span>' +
+       '<div style="min-width:0;">' +
+         '<div style="font-family:Fraunces,Georgia,serif;font-size:13px;font-weight:600;color:#0a1f3a;line-height:1.15;">' + title + '</div>' +
+         '<div style="font-size:11px;color:#8a7048;margin-top:1px;letter-spacing:.2px;line-height:1.3;">' + sub + '</div>' +
+       '</div>' +
+     '</div>';
+   return (
+     '<section style="background:#faf3e0;border-bottom:1px solid rgba(192,134,59,.20);padding:18px 0;">' +
+       '<div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;">' +
+         cell('Stripe Verified',         'PCI-DSS Level 1 partner') +
+         cell('GDPR Compliant',           'EU-grade data handling') +
+         cell('Malta Tourism Authority',  'Partner-listed venues') +
+         cell('SSL Encrypted',            'Every byte, every page') +
+       '</div>' +
+     '</section>'
+   );
+ }
+
+ // ─── 4) Four-column site map ───
+ function sitemapRow() {
+   const col = (title, rows) =>
+     '<div>' +
+       '<h3 style="font-family:Fraunces,Georgia,serif;font-size:15px;color:#0a1f3a;font-weight:600;margin:0 0 12px;letter-spacing:-0.01em;">' + title + '</h3>' +
+       '<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">' +
+         rows.map(([href, label]) => '<li><a href="' + href + '" style="color:#5d6a82;text-decoration:none;font-size:13px;line-height:1.5;">' + label + '</a></li>').join('') +
+       '</ul>' +
+     '</div>';
+
+   return (
+     '<section style="background:#fdf6e8;padding:48px 0 32px;">' +
+       '<div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;">' +
+
+         // Brand column
+         '<div>' +
+           '<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">' +
+             '<svg viewBox="0 0 40 40" width="28" height="28" aria-hidden="true">' +
+               '<g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">' +
+                 '<line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>' +
+                 '<line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>' +
+               '</g>' +
+               '<circle cx="20" cy="20" r="11" fill="#ff9800"/>' +
+               '<circle cx="20" cy="20" r="9" fill="#ffb74d"/>' +
+               '<circle cx="24" cy="16" r="3" fill="#fff5e1"/>' +
+             '</svg>' +
+             '<span style="font-family:Fraunces,Georgia,serif;font-size:20px;font-weight:600;color:#0a1f3a;letter-spacing:-0.02em;">Sunspot</span>' +
+           '</div>' +
+           '<p style="font-size:13px;color:#5d6a82;line-height:1.55;margin:0 0 14px;max-width:34ch;">Malta\'s booking platform for beach clubs, lidos and rooftop pools. Built in Valletta by a small team.</p>' +
+           '<p style="font-size:13px;color:#5d6a82;line-height:1.7;margin:0;">' +
+             '<a href="mailto:hello@sunspot.mt" style="color:#ef6c00;font-weight:700;text-decoration:none;">hello@sunspot.mt</a><br>' +
+             '<a href="tel:+35699239339" style="color:#0a1f3a;text-decoration:none;font-variant-numeric:tabular-nums;">+356 9923 9339</a>' +
+           '</p>' +
+         '</div>' +
+
+         col('For beachgoers', [
+           ['index.html',         'Browse all beaches'],
+           ['experiences.html',   'Experiences'],
+           ['guides.html',        'Field guide'],
+           ['visiting.html',      'Visiting Malta?'],
+           ['living.html',        'Living here'],
+           ['bookings.html',      'My bookings'],
+         ]) +
+
+         col('For operators', [
+           ['operator/',          'Open the operator app'],
+           ['rates.html',         'Pricing &amp; rate card'],
+           ['mailto:partners@sunspot.mt', 'Become a partner'],
+           ['faq.html',           'FAQ'],
+         ]) +
+
+         col('Company', [
+           ['about.html',         'About Sunspot'],
+           ['team.html',          'Meet the team'],
+           ['mailto:press@sunspot.mt', 'Press'],
+           ['faq.html#privacy',   'Privacy'],
+           ['faq.html#tos',       'Terms'],
+         ]) +
+
        '</div>' +
 
-       // Editorial transparency
-       '<div>' +
-         '<strong style="display:block;font-family:Fraunces,Georgia,serif;color:#0a1f3a;font-size:15px;margin-bottom:6px;">About the site</strong>' +
-         '<div>Edited by <a href="team.html" style="color:#ef6c00;font-weight:600;text-decoration:none;">Sunspot Editorial</a> in Valletta. Guides are written by people who actually visit these venues.</div>' +
-         '<div style="margin-top:6px;"><a href="team.html" style="color:#5d6a82;text-decoration:underline;">Meet the team →</a></div>' +
-         '<div style="margin-top:4px;color:#8a7048;">Last updated 22 May 2026.</div>' +
-       '</div>' +
-
-       // Trust / payments
-       '<div>' +
-         '<strong style="display:block;font-family:Fraunces,Georgia,serif;color:#0a1f3a;font-size:15px;margin-bottom:6px;">Trust &amp; safety</strong>' +
-         '<div>SSL secured. Payments processed by <strong style="color:#0a1f3a;">Stripe</strong>. PCI-DSS compliant.</div>' +
-         '<div style="margin-top:8px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;">' +
+       // Editorial transparency block under the columns
+       '<div style="max-width:1200px;margin:24px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;border-top:1px dashed rgba(192,134,59,.30);padding-top:20px;font-size:12px;color:#5d6a82;">' +
+         '<div style="max-width:60ch;line-height:1.55;">Edited by <a href="team.html" style="color:#ef6c00;font-weight:600;text-decoration:none;">Sunspot Editorial</a> in Valletta — guides are written by people who actually visit these venues. Last updated 24 May 2026.</div>' +
+         '<div style="display:flex;gap:6px;align-items:center;">' +
            payLogo('Visa', '#1a1f71') +
            payLogo('MC', '#eb001b') +
            payLogo('Pay', '#000') +
@@ -56,152 +232,47 @@
          '</div>' +
        '</div>' +
 
-       // Social + legal
-       '<div>' +
-         '<strong style="display:block;font-family:Fraunces,Georgia,serif;color:#0a1f3a;font-size:15px;margin-bottom:6px;">Follow &amp; learn</strong>' +
-         '<div style="display:flex;gap:10px;margin-bottom:8px;">' +
-           '<a href="https://instagram.com/sunspot.mt" target="_blank" rel="noopener" style="color:#ef6c00;font-weight:600;text-decoration:none;">Instagram</a>' +
-           '<a href="https://twitter.com/sunspot_mt" target="_blank" rel="noopener" style="color:#ef6c00;font-weight:600;text-decoration:none;">Twitter</a>' +
-           '<a href="https://facebook.com/sunspot.mt" target="_blank" rel="noopener" style="color:#ef6c00;font-weight:600;text-decoration:none;">Facebook</a>' +
-         '</div>' +
-         '<div><a href="faq.html#privacy" style="color:#5d6a82;text-decoration:underline;">Privacy</a> · <a href="faq.html#tos" style="color:#5d6a82;text-decoration:underline;">Terms</a> · <a href="faq.html" style="color:#5d6a82;text-decoration:underline;">FAQ</a></div>' +
-       '</div>' +
-
-     '</div>' +
-
-     // Founder signature
-     '<div style="margin-top:24px;padding-top:20px;border-top:1px dashed rgba(192,134,59,.30);' +
-        'display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between;">' +
-        '<div style="font-family:Fraunces,Georgia,serif;font-size:14px;color:#5d6a82;font-style:italic;line-height:1.5;max-width:520px;">' +
-          'Built in Valletta by a small team. We reply to ' +
-          '<a href="mailto:hello@sunspot.mt" style="color:#ef6c00;font-weight:600;text-decoration:none;font-style:normal;">hello@sunspot.mt</a> ' +
-          'in person, usually within a few hours.' +
-        '</div>' +
-        '<div style="font-family:Fraunces,Georgia,serif;font-size:18px;color:#0a1f3a;letter-spacing:0.5px;transform:rotate(-3deg);">' +
-          '— The Sunspot team' +
-        '</div>' +
-     '</div>' +
-
-   '</div>';
-  footer.appendChild(block);
+     '</section>'
+   );
  }
  function payLogo(text, bg) {
-  return '<span style="background:' + bg + ';color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:4px;letter-spacing:.3px;">' + text + '</span>';
+   return '<span style="background:' + bg + ';color:#fff;font-size:10px;font-weight:800;padding:3px 7px;border-radius:4px;letter-spacing:.3px;">' + text + '</span>';
  }
 
- // ─── 1) Press mentions ("As featured in") ───
- function injectPressStrip(footer) {
-   if (document.querySelector('.ss-press-strip')) return;
-   const strip = document.createElement('section');
-   strip.className = 'ss-press-strip';
-   strip.style.cssText =
-     'background:#fff;border-top:1px solid rgba(192,134,59,.22);' +
-     'border-bottom:1px solid rgba(192,134,59,.10);padding:24px 16px;text-align:center;';
-   strip.innerHTML =
-     '<div style="max-width:1100px;margin:0 auto;">' +
-       '<div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a7048;font-weight:800;margin-bottom:14px;">As featured in</div>' +
-       '<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:32px 40px;opacity:.7;">' +
-         pressLogo('Times of Malta',  'serif',     22) +
-         pressLogo('Lovin Malta',     'sans-bold', 18) +
-         pressLogo('Malta Today',     'serif',     20) +
-         pressLogo('TVM',             'sans-bold', 22) +
-         pressLogo('MaltaCEOs',       'sans',      16) +
-         pressLogo('The Shift',       'serif',     18) +
+ // ─── 5) Bottom rail ───
+ function bottomRail() {
+   return (
+     '<section style="background:#0a1f3a;color:rgba(255,255,255,.75);padding:14px 0;">' +
+       '<div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;font-size:12px;">' +
+         '<div>© 2026 Sunspot Ltd. · Registered in Valletta, Malta · VAT MT-XXXXXXXX</div>' +
+         '<div style="display:flex;gap:14px;flex-wrap:wrap;">' +
+           '<a href="https://instagram.com/sunspot.mt" target="_blank" rel="noopener" style="color:#ffd190;text-decoration:none;font-weight:600;">Instagram</a>' +
+           '<a href="https://twitter.com/sunspot_mt"   target="_blank" rel="noopener" style="color:#ffd190;text-decoration:none;font-weight:600;">Twitter</a>' +
+           '<a href="https://facebook.com/sunspot.mt"  target="_blank" rel="noopener" style="color:#ffd190;text-decoration:none;font-weight:600;">Facebook</a>' +
+         '</div>' +
        '</div>' +
-     '</div>';
-   footer.parentNode.insertBefore(strip, footer);
- }
- function pressLogo(name, style, size) {
-   const family =
-     style === 'serif'     ? '"Fraunces", Georgia, serif' :
-     style === 'sans-bold' ? '"Inter", -apple-system, sans-serif' :
-                             '"Inter", -apple-system, sans-serif';
-   const weight = style === 'sans-bold' ? 800 : 500;
-   const ital   = style === 'serif'     ? 'italic'  : 'normal';
-   return '<span style="font-family:' + family + ';font-size:' + size + 'px;font-weight:' + weight +
-     ';font-style:' + ital + ';color:#0a1f3a;letter-spacing:-0.01em;white-space:nowrap;">' + name + '</span>';
+     '</section>'
+   );
  }
 
- // ─── 2) Industry affiliations + certifications row ───
- function injectTrustStrip(footer) {
-   if (document.querySelector('.ss-trust-strip')) return;
-   const strip = document.createElement('section');
-   strip.className = 'ss-trust-strip';
-   strip.style.cssText =
-     'background:linear-gradient(180deg, #fdf6e8 0%, #faf6ee 100%);' +
-     'padding:32px 16px;border-bottom:1px solid rgba(192,134,59,.22);';
-   strip.innerHTML =
-     '<div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;">' +
-       trustBadge('Stripe Verified',     'PCI-DSS Level 1 partner', '✓') +
-       trustBadge('GDPR Compliant',      'EU-grade data handling',  '✓') +
-       trustBadge('Malta Tourism Authority', 'Partner-listed venues', '★') +
-       trustBadge('SSL Encrypted',       'Every byte, every page',  '🔒'.codePointAt(0) ? '🔒' : '✓') +
-     '</div>';
-   footer.parentNode.insertBefore(strip, footer);
- }
- function trustBadge(title, sub, mark) {
-   // Use an SVG checkmark, not the emoji — keeps on-brand and works without emoji-font fallback
-   const icon =
-     '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">' +
-       '<polyline points="20 6 9 17 4 12"/>' +
-     '</svg>';
-   return '<div style="display:flex;align-items:center;gap:12px;background:#fff;' +
-     'border:1px solid rgba(192,134,59,.20);border-radius:14px;padding:14px 16px;' +
-     'box-shadow:0 1px 2px rgba(10,31,58,.04);">' +
-       '<span style="width:36px;height:36px;border-radius:50%;background:#fdf6e8;' +
-       'color:#c0563b;display:flex;align-items:center;justify-content:center;flex:0 0 36px;">' + icon + '</span>' +
-       '<div style="min-width:0;">' +
-         '<div style="font-family:Fraunces,Georgia,serif;font-size:14px;font-weight:600;color:#0a1f3a;line-height:1.15;">' + title + '</div>' +
-         '<div style="font-size:11px;color:#8a7048;margin-top:2px;letter-spacing:.2px;">' + sub + '</div>' +
-       '</div>' +
-   '</div>';
- }
-
- // ─── 3) Newsletter signup (sit above the four-column footer) ───
- function injectNewsletter(footer) {
-   if (document.querySelector('.ss-newsletter')) return;
-   const sec = document.createElement('section');
-   sec.className = 'ss-newsletter';
-   sec.style.cssText = 'background:#0a1f3a;color:#fff;padding:40px 16px;position:relative;overflow:hidden;';
-   sec.innerHTML =
-     '<div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:20px;align-items:center;position:relative;">' +
-       '<div style="max-width:520px;">' +
-         '<div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#ffd190;font-weight:800;margin-bottom:10px;">Sunspot Weekly</div>' +
-         '<h2 style="font-family:Fraunces,Georgia,serif;font-size:clamp(22px,2.6vw,30px);font-weight:600;letter-spacing:-0.02em;line-height:1.15;margin-bottom:8px;color:#fff;">One email, every Thursday. The week\'s sunbeds, sea-state and quiet pools.</h2>' +
-         '<p style="font-size:14px;color:rgba(255,255,255,.78);line-height:1.5;margin-bottom:18px;">Short, signed, and no marketing fluff. Unsubscribe in one click.</p>' +
-         '<form id="ss-newsletter-form" style="display:flex;gap:8px;flex-wrap:wrap;max-width:480px;">' +
-           '<input type="email" required placeholder="you@example.com" aria-label="Email address" ' +
-           'style="flex:1;min-width:200px;padding:12px 16px;border-radius:999px;border:0;font-size:15px;background:rgba(255,255,255,.96);color:#0a1f3a;outline:none;">' +
-           '<button type="submit" style="background:linear-gradient(135deg,#ffb74d,#f57c00);color:#fff;border:0;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;font-family:Inter,-apple-system,sans-serif;font-size:14px;box-shadow:0 4px 14px rgba(232,108,0,.32);">Subscribe</button>' +
-         '</form>' +
-         '<div id="ss-newsletter-msg" style="margin-top:10px;font-size:13px;color:#ffd190;min-height:18px;"></div>' +
-       '</div>' +
-       // Sun-flare visual
-       '<div aria-hidden="true" style="position:absolute;right:-40px;top:-40px;width:280px;height:280px;background:radial-gradient(circle,rgba(255,183,77,.22) 0%,transparent 65%);pointer-events:none;"></div>' +
-     '</div>';
-   footer.parentNode.insertBefore(sec, footer);
-
-   const form = sec.querySelector('#ss-newsletter-form');
-   const msg = sec.querySelector('#ss-newsletter-msg');
-   form.addEventListener('submit', (e) => {
-     e.preventDefault();
-     const email = form.querySelector('input').value.trim();
-     if (!email) return;
-     // Persist locally so we can pick this up server-side when the
-     // newsletter backend ships. Until then, just store the intent.
-     try {
-       const list = JSON.parse(localStorage.getItem('sunspot_newsletter') || '[]');
-       if (!list.includes(email)) list.push(email);
-       localStorage.setItem('sunspot_newsletter', JSON.stringify(list));
-     } catch (err) {}
-     form.querySelector('input').value = '';
-     msg.textContent = 'Thanks — you\'re in. Look out for Thursday morning.';
-   });
- }
+ // CSS — collapse the 4-col grid on phone + tablet
+ const css = document.createElement('style');
+ css.textContent =
+   '@media (max-width: 900px) {' +
+     '.ss-eeat section > div[style*="grid-template-columns: 1.4fr"] {' +
+       'grid-template-columns: 1fr 1fr !important;' +
+     '}' +
+   '}' +
+   '@media (max-width: 540px) {' +
+     '.ss-eeat section > div[style*="grid-template-columns: 1.4fr"] {' +
+       'grid-template-columns: 1fr !important;' +
+     '}' +
+   '}';
+ document.head.appendChild(css);
 
  if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', inject);
+   document.addEventListener('DOMContentLoaded', boot);
  } else {
-  inject();
+   setTimeout(boot, 0);
  }
 })();
