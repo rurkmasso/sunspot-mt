@@ -3764,3 +3764,58 @@ textarea, select {
   .ss-quickflow ol::-webkit-scrollbar { display: none; }
   .ss-quickflow { scrollbar-width: none; }
 }
+
+/* ==========================================================
+ Sunspot — internal-links / explore footer (SEO + UX)
+ Premium muted footer block, mobile-first
+ ========================================================== */
+.ss-explore{
+  margin:64px auto 0;
+  padding:32px 18px 40px;
+  border-top:1px solid var(--ss-hairline,#e5e7eb);
+  background:var(--ss-paper,#fafaf7);
+  font:14px/1.5 Inter,system-ui,-apple-system,sans-serif;
+  color:#374151;
+}
+.ss-explore-inner{
+  max-width:980px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px 24px;
+}
+.ss-explore-title{
+  display:block;
+  font:600 11px/1.4 Inter,sans-serif;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#6b7280;
+  margin-bottom:6px;
+}
+.ss-explore a{
+  display:inline-block;
+  padding:6px 0;
+  color:#1f3a5f;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:border-color .15s ease;
+}
+.ss-explore a:hover,
+.ss-explore a:focus-visible{
+  border-bottom-color:#1f3a5f;
+  outline:none;
+}
+@media (min-width:560px){
+  .ss-explore-inner{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:880px){
+  .ss-explore-inner{
+    grid-template-columns:auto repeat(7,minmax(0,1fr));
+    align-items:center;
+  }
+  .ss-explore-title{
+    margin-bottom:0;
+    padding-right:8px;
+    border-right:1px solid var(--ss-hairline,#e5e7eb);
+  }
+}

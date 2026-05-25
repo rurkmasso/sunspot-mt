@@ -1,7 +1,39 @@
+# Sunspot — robots.txt
 User-agent: *
 Allow: /
+# Private transactional flows
 Disallow: /checkout.html
 Disallow: /confirmation.html
 Disallow: /bookings.html
+Disallow: /signin.html
+Disallow: /account.html
+Disallow: /booking.html
+Disallow: /app.html
+# JS/CSS must be crawlable for rendering
+Allow: /*.css$
+Allow: /*.js$
+# Be polite — half a second between hits
+Crawl-delay: 1
+
+# Heavy AI scrapers — explicit opt-in only (block by default)
+User-agent: GPTBot
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+
+Host: sunspot.mt
 
 Sitemap: https://sunspot.mt/sitemap.xml
+Sitemap: https://sunspot.mt/sitemap-pages.xml
+Sitemap: https://sunspot.mt/sitemap-venues.xml
+Sitemap: https://sunspot.mt/sitemap-guides.xml
+Sitemap: https://sunspot.mt/sitemap-experiences.xml
+Sitemap: https://sunspot.mt/sitemap-beaches.xml
+Sitemap: https://sunspot.mt/sitemap-categories.xml
+Sitemap: https://sunspot.mt/sitemap-regions.xml

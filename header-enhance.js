@@ -115,54 +115,40 @@
    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
  }
 
- // ─── 3) Language switcher ─
+ // ─── 3) Language switcher — segmented pill (3-way toggle) ─
+ // Three buttons in a single pill: EN | MT | IT. Active state slides
+ // smoothly between them. Fixed total width so the header never reflows
+ // when language changes. Same control re-used in the mobile drawer.
  function installLangSwitcher(header) {
    const nav = header.querySelector('nav');
    if (!nav) return;
-   if (nav.querySelector('.ss-lang-pick')) return;
-
-   const current = getLang();
-   const wrap = document.createElement('div');
-   wrap.className = 'ss-lang-pick';
-   wrap.innerHTML =
-     '<button type="button" aria-haspopup="true" aria-expanded="false">' +
-       '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a14 14 0 0 1 0 20M12 2a14 14 0 0 0 0 20"/></svg>' +
-       '<span class="ss-lang-current">' + LANGS.find(l => l.code === current).short + '</span>' +
-     '</button>' +
-     '<ul role="menu">' +
-       LANGS.map(l =>
-         '<li><button type="button" data-lang="' + l.code + '"' + (l.code === current ? ' aria-current="true"' : '') + '>' +
-           '<span class="code">' + l.short + '</span> ' + l.label +
-         '</button></li>'
-       ).join('') +
-     '</ul>';
-   // Insert before the Sign-in button if present, else at the end
+   if (nav.querySelector('.ss-lang-seg')) return;
+   const wrap = buildLangSegment();
    const signIn = nav.querySelector('.btn-ghost, a[href="signin.html"]');
    if (signIn) nav.insertBefore(wrap, signIn);
    else        nav.appendChild(wrap);
-
-   const trigger = wrap.querySelector('button');
-   const menu    = wrap.querySelector('ul');
-   trigger.addEventListener('click', e => {
-     e.stopPropagation();
-     const open = wrap.classList.toggle('is-open');
-     trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-   });
-   document.addEventListener('click', e => {
-     if (!wrap.contains(e.target)) {
-       wrap.classList.remove('is-open');
-       trigger.setAttribute('aria-expanded', 'false');
-     }
-   });
-   menu.querySelectorAll('[data-lang]').forEach(btn => {
+ }
+ function buildLangSegment() {
+   const current = getLang();
+   const wrap = document.createElement('div');
+   wrap.className = 'ss-lang-seg';
+   wrap.setAttribute('role', 'group');
+   wrap.setAttribute('aria-label', 'Language');
+   wrap.innerHTML = LANGS.map(l =>
+     '<button type="button" data-lang="' + l.code + '"' +
+       (l.code === current ? ' class="is-on" aria-pressed="true"' : ' aria-pressed="false"') +
+       ' aria-label="' + l.label + '">' + l.short + '</button>'
+   ).join('');
+   wrap.querySelectorAll('[data-lang]').forEach(btn => {
      btn.addEventListener('click', () => {
-       setLang(btn.dataset.lang);
-       // Reload so audiences.js / other locale-aware modules pick it up
+       const code = btn.dataset.lang;
+       setLang(code);
        const url = new URL(location.href);
-       url.searchParams.set('lang', btn.dataset.lang);
+       url.searchParams.set('lang', code);
        location.href = url.toString();
      });
    });
+   return wrap;
  }
  function getLang() {
    try {
