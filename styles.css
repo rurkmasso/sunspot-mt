@@ -3767,55 +3767,77 @@ textarea, select {
 
 /* ==========================================================
  Sunspot — internal-links / explore footer (SEO + UX)
- Premium muted footer block, mobile-first
+ Editorial: tiny serif kicker over a single hairline, links
+ read like a magazine contents page. Mobile-first.
  ========================================================== */
 .ss-explore{
-  margin:64px auto 0;
-  padding:32px 18px 40px;
-  border-top:1px solid var(--ss-hairline,#e5e7eb);
-  background:var(--ss-paper,#fafaf7);
-  font:14px/1.5 Inter,system-ui,-apple-system,sans-serif;
-  color:#374151;
+  position:relative;
+  margin:80px auto 0;
+  padding:36px 22px 44px;
+  background:#fafaf6;
+  font:14px/1.55 var(--font-body, Inter,system-ui,sans-serif);
+  color:var(--ink-soft,#1d2842);
+}
+.ss-explore::before{
+  /* Single hairline rule with a fade — softer than border-top */
+  content:"";
+  position:absolute; top:0; left:50%; transform:translateX(-50%);
+  width:min(960px,calc(100% - 44px));
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(10,31,58,.14) 22%, rgba(10,31,58,.14) 78%, transparent);
 }
 .ss-explore-inner{
   max-width:980px;
   margin:0 auto;
   display:grid;
   grid-template-columns:1fr;
-  gap:10px 24px;
+  gap:6px 28px;
 }
 .ss-explore-title{
   display:block;
-  font:600 11px/1.4 Inter,sans-serif;
-  letter-spacing:.14em;
+  font:600 10.5px/1.4 var(--font-body, Inter,sans-serif);
+  letter-spacing:.22em;
   text-transform:uppercase;
-  color:#6b7280;
-  margin-bottom:6px;
+  color:var(--muted,#5d6a82);
+  margin:0 0 14px;
+}
+.ss-explore-title::before{
+  /* Tiny sun glyph ornament — ties the section to the brand mark */
+  content:"";
+  display:inline-block;
+  width:6px; height:6px;
+  border-radius:50%;
+  background:var(--sun-deep,#f57c00);
+  margin-right:9px;
+  vertical-align:1px;
+  box-shadow:0 0 0 3px rgba(245,124,0,.14);
 }
 .ss-explore a{
   display:inline-block;
-  padding:6px 0;
-  color:#1f3a5f;
+  padding:7px 0;
+  color:var(--ink,#0a1f3a);
   text-decoration:none;
   border-bottom:1px solid transparent;
-  transition:border-color .15s ease;
+  font-weight:500;
+  transition:color .15s ease, border-color .15s ease;
 }
 .ss-explore a:hover,
 .ss-explore a:focus-visible{
-  border-bottom-color:#1f3a5f;
+  color:var(--sun-deep,#f57c00);
+  border-bottom-color:var(--sun-deep,#f57c00);
   outline:none;
 }
 @media (min-width:560px){
   .ss-explore-inner{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (min-width:880px){
+  .ss-explore{padding:42px 28px 52px}
   .ss-explore-inner{
-    grid-template-columns:auto repeat(7,minmax(0,1fr));
-    align-items:center;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:8px 36px;
   }
   .ss-explore-title{
-    margin-bottom:0;
-    padding-right:8px;
-    border-right:1px solid var(--ss-hairline,#e5e7eb);
+    grid-column:1 / -1;
+    margin-bottom:10px;
   }
 }
