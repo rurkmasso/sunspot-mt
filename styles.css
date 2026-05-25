@@ -146,8 +146,16 @@ h2 { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.15; }
 }
 
 /* ─── Card lift on hover — for venue cards ─── */
-.club-card { transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s; }
-.club-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.club-card {
+  transition: transform .35s cubic-bezier(.2,.8,.2,1),
+              box-shadow .35s cubic-bezier(.2,.8,.2,1),
+              border-color .25s ease;
+}
+.club-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 38px rgba(10,31,58,.12), 0 2px 6px rgba(10,31,58,.06);
+  border-color: rgba(245,124,0,.22);
+}
 
 /* ─── Honey-amber accent badge ───
    For category chips, badges, "new" markers. */
@@ -1097,59 +1105,83 @@ a { color: inherit; }
 .club-card-wrap { display: flex; height: 100%; }
 .club-card {
  background: #fff;
- border-radius: var(--r-md);
+ border-radius: 16px;
  overflow: hidden;
- box-shadow: var(--shadow-sm);
+ box-shadow: 0 1px 2px rgba(10,31,58,.05);
  text-decoration: none;
  color: var(--ink);
- transition: transform 0.2s, box-shadow 0.2s;
  display: flex;
  flex-direction: column;
  width: 100%;
  border: 1px solid var(--line);
+ position: relative;
 }
-.club-card:hover {
- transform: translateY(-3px);
- box-shadow: var(--shadow-md);
-}
+/* Hover handled in the consolidated rule above. */
+
 .club-thumb {
- height: 200px;
+ aspect-ratio: 4 / 3;
+ height: auto;
  flex-shrink: 0;
  position: relative;
  overflow: hidden;
+ background: var(--sea-pale);
 }
 .club-thumb svg { width: 100%; height: 100%; display: block; }
+.club-thumb img,
+.club-thumb [data-bg] {
+ transition: transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.club-card:hover .club-thumb img,
+.club-card:hover .club-thumb [data-bg] {
+ transform: scale(1.035);
+}
+/* Subtle bottom gradient on the photo for badge legibility + depth */
+.club-thumb::after {
+ content: "";
+ position: absolute; inset: auto 0 0 0; height: 38%;
+ background: linear-gradient(180deg, transparent, rgba(10,31,58,.22));
+ pointer-events: none;
+}
 
 .badge {
  position: absolute;
- top: 14px;
- left: 14px;
- background: rgba(10,31,58,0.85);
- color: #fff;
- padding: 5px 12px;
- border-radius: 100px;
- font-size: 12px;
+ top: 12px;
+ left: 12px;
+ background: rgba(255,255,255,.92);
+ color: var(--ink);
+ padding: 5px 11px;
+ border-radius: 999px;
+ font-size: 11px;
  font-weight: 700;
- letter-spacing: 0.3px;
+ letter-spacing: .08em;
+ text-transform: uppercase;
  backdrop-filter: blur(8px);
+ -webkit-backdrop-filter: blur(8px);
+ box-shadow: 0 2px 8px rgba(10,31,58,.12);
  z-index: 2;
 }
-.badge-hot { background: var(--coral); }
-.badge-new { background: var(--available); }
+.badge-hot { background: var(--sun-deep); color: #fff; box-shadow: 0 2px 12px rgba(245,124,0,.35); }
+.badge-new { background: var(--balcony-green); color: #fff; box-shadow: 0 2px 12px rgba(47,110,91,.3); }
 
 .club-info {
- padding: 18px 20px 20px;
+ padding: 20px 22px 22px;
  flex: 1;
  display: flex;
  flex-direction: column;
 }
 .club-info h3 {
- font-size: 19px;
- font-weight: 700;
+ font-family: var(--font-display);
+ font-size: 21px;
+ font-weight: 600;
+ line-height: 1.15;
  margin-bottom: 6px;
- letter-spacing: -0.2px;
+ letter-spacing: -0.018em;
+ color: var(--ink);
+ font-variation-settings: 'opsz' 36, 'SOFT' 30;
  min-height: 26px;
+ transition: color .15s ease;
 }
+.club-card:hover .club-info h3 { color: var(--sea-2); }
 .location {
  color: var(--muted);
  font-size: 14px;
