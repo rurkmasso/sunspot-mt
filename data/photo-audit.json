@@ -8,7 +8,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['sliema', 'road', 'between']"
+  "reason": "filename=['rinella'] venue=['road', 'between', 'bahar']"
  },
  {
   "id": "bahar-ic-caghaq-rocks",
@@ -19,7 +19,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['road', 'caghaq', 'splash']"
+  "reason": "filename=['rinella'] venue=['road', 'opposite', 'splash']"
  },
  {
   "id": "birzebbuga-beach-club",
@@ -52,7 +52,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghar', 'lapsi'] venue=['south', 'grotto', 'coast']"
+  "reason": "filename=['lapsi', 'ghar'] venue=['wied', 'south', 'zurrieq']"
  },
  {
   "id": "bridge-bar-valletta",
@@ -63,7 +63,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['valletta', 'christopher', 'street']"
+  "reason": "filename=['rinella'] venue=['street', 'valletta', 'bridge']"
  },
  {
   "id": "brittannia-cafe",
@@ -74,7 +74,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['buggiba', 'front'] venue=['pijunieri', 'bugibba', 'promenade']"
+  "reason": "filename=['front', 'buggiba'] venue=['brittannia', 'promenade', 'triq']"
  },
  {
   "id": "brittannia-rocks-lido",
@@ -85,7 +85,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['buggiba', 'front'] venue=['brittannia', 'seafront', 'bugibba']"
+  "reason": "filename=['front', 'buggiba'] venue=['brittannia', 'seafront', 'bugibba']"
  },
  {
   "id": "cavalieri-pool",
@@ -96,7 +96,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['balluta'] venue=['spinola', 'cavalieri', 'julian']"
+  "reason": "filename=['balluta'] venue=['cavalieri', 'julian', 'spinola']"
  },
  {
   "id": "comino-beach-co",
@@ -107,7 +107,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['maria'] venue=['comino', 'north', 'santa']"
+  "reason": "filename=['maria'] venue=['north', 'marija', 'santa']"
  },
  {
   "id": "comino-cliffs",
@@ -118,7 +118,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['maria'] venue=['south', 'side', 'cliffs']"
+  "reason": "filename=['maria'] venue=['cliffs', 'south', 'access']"
  },
  {
   "id": "corinthia-st-george",
@@ -140,7 +140,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghasri', 'wied'] venue=['pools', 'below', 'northern']"
+  "reason": "filename=['ghasri', 'wied'] venue=['northern', 'cumnija', 'mellieha']"
  },
  {
   "id": "dwejra",
@@ -151,7 +151,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghasri', 'wied'] venue=['gozo', 'dwejra', 'lawrenz']"
+  "reason": "filename=['ghasri', 'wied'] venue=['dwejra', 'inland', 'lawrenz']"
  },
  {
   "id": "exiles-lido",
@@ -162,7 +162,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['tower', 'exiles', 'sliema']"
+  "reason": "filename=['fond', 'ghadir'] venue=['road', 'tower', 'sliema']"
  },
  {
   "id": "exiles-rocks",
@@ -173,7 +173,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['tower', 'exiles', 'sliema']"
+  "reason": "filename=['fond', 'ghadir'] venue=['exiles', 'road', 'tower']"
  },
  {
   "id": "famous-five-lido",
@@ -184,7 +184,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['sliema', 'promenade', 'famous']"
+  "reason": "filename=['fond', 'ghadir'] venue=['famous', 'between', 'five']"
  },
  {
   "id": "ghar-id-dud-rocks",
@@ -195,7 +195,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['ghar', 'tower', 'sliema']"
+  "reason": "filename=['fond', 'ghadir'] venue=['road', 'north', 'tower']"
  },
  {
   "id": "hilton-pool-deck",
@@ -206,7 +206,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['deck', 'portomaso', 'julian']"
+  "reason": "filename=['georges'] venue=['portomaso', 'deck', 'hilton']"
  },
  {
   "id": "hofra-l-kbira",
@@ -217,7 +217,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['kalanka'] venue=['delimara', 'hofra', 'marsaxlokk']"
+  "reason": "filename=['kalanka'] venue=['delimara', 'marsaxlokk', 'kbira']"
  },
  {
   "id": "hofra-z-zghira",
@@ -228,7 +228,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['kalanka'] venue=['zghira', 'delimara', 'hofra']"
+  "reason": "filename=['kalanka'] venue=['delimara', 'zghira', 'hofra']"
  },
  {
   "id": "hugos-terrace",
@@ -239,7 +239,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['lounge', 'hugo', 'terrace']"
+  "reason": "filename=['georges'] venue=['hugo', 'level', 'lounge']"
  },
  {
   "id": "independence-garden-rocks",
@@ -250,7 +250,7 @@
   "http": 200,
   "ctype": "image/webp",
   "class": "needs-review",
-  "reason": "filename=['exiles', 'scaled'] venue=['independence', 'promenade', 'sliema']"
+  "reason": "filename=['scaled', 'exiles'] venue=['garden', 'julian', 'promenade']"
  },
  {
   "id": "inland-sea-dwejra-2",
@@ -261,7 +261,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghasri', 'wied'] venue=['gozo', 'dwejra', 'lawrenz']"
+  "reason": "filename=['ghasri', 'wied'] venue=['dwejra', 'inland', 'lawrenz']"
  },
  {
   "id": "manta",
@@ -272,7 +272,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['manta', 'sliema', 'seafront']"
+  "reason": "filename=['fond', 'ghadir'] venue=['seafront', 'sliema', 'tign']"
  },
  {
   "id": "marina-hotel-pool",
@@ -283,18 +283,18 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['deck', 'julian', 'george']"
+  "reason": "filename=['georges'] venue=['george', 'deck', 'corinthia']"
  },
  {
   "id": "marquee-pool",
   "name": "Marquee Pool Club",
   "location": "Marquee Mall Roof, Triq il-Maskri, Tigne",
   "category": "pool-club",
-  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg",
+  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Fond-Ghadir-2560x1440-1.jpeg",
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['tomas'] venue=['maskri', 'mall', 'triq']"
+  "reason": "filename=['fond', 'ghadir'] venue=['tigne', 'maskri', 'sliema']"
  },
  {
   "id": "marsascala-lido",
@@ -305,7 +305,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['tomas'] venue=['marsascala', 'seafront']"
+  "reason": "filename=['tomas'] venue=['seafront', 'marsascala']"
  },
  {
   "id": "mint-sky-bar",
@@ -316,7 +316,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['buggiba', 'front'] venue=['doubletree', 'qawra', 'floor']"
+  "reason": "filename=['front', 'buggiba'] venue=['mint', 'floor', 'hilton']"
  },
  {
   "id": "munxar-pools",
@@ -327,7 +327,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['tomas'] venue=['munxar', 'pools', 'marsascala']"
+  "reason": "filename=['tomas'] venue=['cliff', 'marsascala', 'near']"
  },
  {
   "id": "pretty-bay",
@@ -349,7 +349,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['dahlet', 'qorot'] venue=['gozo', 'creek', 'east']"
+  "reason": "filename=['qorot', 'dahlet'] venue=['qala', 'east', 'gozo']"
  },
  {
   "id": "qui-si-sana-lido",
@@ -360,7 +360,7 @@
   "http": 200,
   "ctype": "image/webp",
   "class": "needs-review",
-  "reason": "filename=['exiles', 'scaled'] venue=['sana', 'seafront', 'sliema']"
+  "reason": "filename=['scaled', 'exiles'] venue=['sana', 'seafront', 'sliema']"
  },
  {
   "id": "ras-il-hekka",
@@ -371,7 +371,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghasri', 'wied'] venue=['gozo', 'cliffs', 'hekka']"
+  "reason": "filename=['ghasri', 'wied'] venue=['hekka', 'cliffs', 'eastern']"
  },
  {
   "id": "roy-lido",
@@ -382,7 +382,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['tower', 'independence', 'near']"
+  "reason": "filename=['fond', 'ghadir'] venue=['road', 'garden', 'tower']"
  },
  {
   "id": "salina-bay",
@@ -393,7 +393,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['mellieha'] venue=['salina', 'bugibba', 'road']"
+  "reason": "filename=['mellieha'] venue=['road', 'salina', 'between']"
  },
  {
   "id": "salini-resort-pool",
@@ -415,7 +415,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['maria'] venue=['from', 'east', 'walk']"
+  "reason": "filename=['maria'] venue=['walk', 'niklaw', 'from']"
  },
  {
   "id": "skipper-bar",
@@ -426,7 +426,7 @@
   "http": 200,
   "ctype": "image/webp",
   "class": "needs-review",
-  "reason": "filename=['exiles', 'scaled'] venue=['strand', 'skipper', 'sliema']"
+  "reason": "filename=['scaled', 'exiles'] venue=['strand', 'sliema', 'skipper']"
  },
  {
   "id": "spinola-bay",
@@ -437,7 +437,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['balluta'] venue=['spinola', 'julian']"
+  "reason": "filename=['balluta'] venue=['julian', 'spinola']"
  },
  {
   "id": "st-peters",
@@ -448,7 +448,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['peters'] venue=['delimara', 'marsaxlokk', 'peter']"
+  "reason": "filename=['peters'] venue=['delimara', 'peter', 'marsaxlokk']"
  },
  {
   "id": "st-thomas-bay",
@@ -459,7 +459,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['tomas'] venue=['marsascala', 'thomas', 'southwest']"
+  "reason": "filename=['tomas'] venue=['thomas', 'southwest', 'marsascala']"
  },
  {
   "id": "surfside-sliema",
@@ -470,7 +470,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['tower', 'sliema', 'surfside']"
+  "reason": "filename=['fond', 'ghadir'] venue=['road', 'tower', 'sliema']"
  },
  {
   "id": "tas-salvatur",
@@ -481,7 +481,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['xwejni'] venue=['marsalforn', 'salvatur', 'gozo']"
+  "reason": "filename=['xwejni'] venue=['above', 'salvatur', 'marsalforn']"
  },
  {
   "id": "the-embassy-rooftop",
@@ -492,7 +492,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['valletta', 'embassy', 'shopping']"
+  "reason": "filename=['rinella'] venue=['garden', 'valletta', 'complex']"
  },
  {
   "id": "tigne-lido",
@@ -503,7 +503,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['point', 'tigne', 'sliema']"
+  "reason": "filename=['fond', 'ghadir'] venue=['tigne', 'point', 'sliema']"
  },
  {
   "id": "tortuga-bugibba",
@@ -514,7 +514,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['buggiba', 'front'] venue=['turisti', 'bugibba', 'tortuga']"
+  "reason": "filename=['front', 'buggiba'] venue=['triq', 'bugibba', 'turisti']"
  },
  {
   "id": "trabuxu-rooftop",
@@ -525,7 +525,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['valletta', 'trabuxu', 'street']"
+  "reason": "filename=['rinella'] venue=['wine', 'street', 'valletta']"
  },
  {
   "id": "twentytwo",
@@ -536,7 +536,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['tower', 'portomaso', 'twenty']"
+  "reason": "filename=['georges'] venue=['floor', 'tower', 'julian']"
  },
  {
   "id": "westin-beach",
@@ -547,7 +547,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['dragonara', 'point', 'cabanas']"
+  "reason": "filename=['georges'] venue=['cabanas', 'point', 'westin']"
  },
  {
   "id": "westin-pool-cabanas",
@@ -558,7 +558,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['dragonara', 'julian', 'westin']"
+  "reason": "filename=['georges'] venue=['westin', 'julian', 'dragonara']"
  },
  {
   "id": "westin-pool-deck",
@@ -569,7 +569,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['deck', 'dragonara', 'point']"
+  "reason": "filename=['georges'] venue=['point', 'westin', 'deck']"
  },
  {
   "id": "white-rocks-pembroke",
@@ -580,7 +580,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['white', 'pembroke', 'behind']"
+  "reason": "filename=['rinella'] venue=['behind', 'pembroke', 'westin']"
  },
  {
   "id": "wied-iz-zurrieq",
@@ -591,7 +591,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghar', 'lapsi'] venue=['blue', 'south', 'grotto']"
+  "reason": "filename=['lapsi', 'ghar'] venue=['wied', 'south', 'pier']"
  },
  {
   "id": "anchor-bay",
