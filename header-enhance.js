@@ -81,20 +81,38 @@
    drawer.className = 'ss-drawer';
    drawer.setAttribute('role', 'dialog');
    drawer.setAttribute('aria-modal', 'true');
+   const sunMark =
+     '<svg viewBox="0 0 40 40" width="28" height="28" aria-hidden="true">' +
+       '<g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">' +
+         '<line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>' +
+         '<line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>' +
+         '<line x1="7" y1="7" x2="10" y2="10"/><line x1="30" y1="30" x2="33" y2="33"/>' +
+         '<line x1="33" y1="7" x2="30" y2="10"/><line x1="10" y1="30" x2="7" y2="33"/>' +
+       '</g>' +
+       '<circle cx="20" cy="20" r="11" fill="#ff9800"/>' +
+       '<circle cx="20" cy="20" r="9" fill="#ffb74d"/>' +
+       '<circle cx="24" cy="16" r="3" fill="#fff5e1"/>' +
+     '</svg>';
    drawer.innerHTML =
      '<div class="ss-drawer-back" aria-hidden="true"></div>' +
      '<aside class="ss-drawer-panel">' +
-       '<header style="display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid #f0e8d6;">' +
-         '<span style="font-family:Fraunces,Georgia,serif;font-size:18px;color:#0a1f3a;font-weight:600;">Menu</span>' +
-         '<button type="button" class="ss-drawer-close" aria-label="Close menu" style="background:none;border:0;color:#5d6a82;cursor:pointer;font-size:24px;line-height:1;padding:4px 8px;">×</button>' +
+       '<header class="ss-drawer-head">' +
+         '<span class="ss-drawer-brand">' + sunMark +
+           '<span class="ss-drawer-wordmark">Sunspot</span>' +
+         '</span>' +
+         '<button type="button" class="ss-drawer-close" aria-label="Close menu">' +
+           '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>' +
+         '</button>' +
        '</header>' +
-       '<nav style="padding:14px 8px;display:flex;flex-direction:column;">' +
+       '<nav class="ss-drawer-nav">' +
          nav.innerHTML.replace(/<button[^>]*>.*?<\/button>/g, '').replace(/<a /g, '<a class="ss-drawer-link" ') +
        '</nav>' +
-       '<div style="padding:18px 20px;border-top:1px solid #f0e8d6;display:flex;gap:8px;flex-wrap:wrap;">' +
-         '<a href="signin.html" class="ss-drawer-cta" style="flex:1;text-align:center;padding:12px;background:linear-gradient(135deg,#ffb74d,#f57c00);color:#fff;border-radius:999px;font-weight:700;text-decoration:none;font-size:14px;box-shadow:0 3px 10px rgba(232,108,0,.28);">Sign in</a>' +
+       '<div class="ss-drawer-cta-row">' +
+         '<a href="signin.html" class="ss-drawer-cta">Sign in</a>' +
        '</div>' +
-       '<div style="padding:16px 20px;font-size:12px;color:#8a7048;line-height:1.5;">Sunspot · Built in Valletta · <a href="mailto:hello@sunspot.mt" style="color:#ef6c00;font-weight:600;text-decoration:none;">hello@sunspot.mt</a></div>' +
+       '<div class="ss-drawer-foot">Sunspot &middot; Built in Valletta<br>' +
+         '<a href="mailto:hello@sunspot.mt">hello@sunspot.mt</a>' +
+       '</div>' +
      '</aside>';
    document.body.appendChild(drawer);
 
@@ -208,59 +226,146 @@
      .ss-drawer { position: fixed; inset: 0; z-index: 120; pointer-events: none; }
      .ss-drawer.is-open { pointer-events: auto; }
      .ss-drawer-back {
-       position: absolute; inset: 0; background: rgba(10,31,58,.45);
-       opacity: 0; transition: opacity .25s;
+       position: absolute; inset: 0;
+       background:
+         radial-gradient(circle at 70% 30%, rgba(245,124,0,.18), transparent 55%),
+         rgba(10,31,58,.48);
+       opacity: 0; transition: opacity .3s ease;
+       backdrop-filter: blur(2px);
+       -webkit-backdrop-filter: blur(2px);
      }
      .ss-drawer.is-open .ss-drawer-back { opacity: 1; }
      .ss-drawer-panel {
        position: absolute; top: 0; right: 0; bottom: 0;
-       width: min(320px, 84vw); background: #fff;
-       box-shadow: -10px 0 30px rgba(10,31,58,.18);
+       width: min(340px, 88vw);
+       background: linear-gradient(180deg,#ffffff 0%,#fafaf6 100%);
+       border-left: 1px solid #e8e3d8;
+       box-shadow: -24px 0 60px rgba(10,31,58,.18);
        display: flex; flex-direction: column;
-       transform: translateX(100%); transition: transform .28s cubic-bezier(.2,.8,.2,1);
+       transform: translateX(100%);
+       transition: transform .32s cubic-bezier(.2,.8,.2,1);
        overflow-y: auto;
+       padding: 0;
      }
      .ss-drawer.is-open .ss-drawer-panel { transform: translateX(0); }
+     /* Sun-flare ornament at the top of the drawer */
+     .ss-drawer-panel::before {
+       content: ""; position: absolute; top: -60px; left: -60px;
+       width: 220px; height: 220px;
+       background: radial-gradient(circle, rgba(255,183,77,.32) 0%, transparent 60%);
+       pointer-events: none;
+     }
      .ss-drawer-link {
-       padding: 12px 14px; display: block; color: #0a1f3a;
-       font-weight: 600; font-size: 15px;
-       border-radius: 10px; text-decoration: none;
+       padding: 14px 18px; display: flex; align-items: center; justify-content: space-between;
+       color: #0a1f3a;
+       font: 500 16px/1.3 'Fraunces','Iowan Old Style',Georgia,serif;
+       letter-spacing: -.01em;
+       text-decoration: none;
+       border-radius: 0;
+       border-bottom: 1px solid #f2eee3;
+       transition: color .15s ease, background .15s ease;
      }
-     .ss-drawer-link:hover { background: #fdf6e8; color: #ef6c00; }
-     .ss-drawer-link.active { background: #fdf6e8; color: #ef6c00; }
+     .ss-drawer-link::after {
+       content: "→";
+       color: #c8c0aa; font-family: 'Inter',sans-serif;
+       font-size: 14px; font-weight: 500;
+       transition: transform .15s ease, color .15s ease;
+     }
+     .ss-drawer-link:hover, .ss-drawer-link:focus-visible {
+       background: rgba(255,183,77,.06);
+       color: #f57c00;
+       outline: none;
+     }
+     .ss-drawer-link:hover::after, .ss-drawer-link:focus-visible::after {
+       color: #f57c00; transform: translateX(3px);
+     }
+     .ss-drawer-link.active { color: #f57c00; background: rgba(255,183,77,.08); }
 
-     /* Language switcher */
-     .ss-lang-pick { position: relative; display: inline-block; margin-left: 8px; }
-     .ss-lang-pick > button {
-       display: inline-flex; align-items: center; gap: 5px;
-       background: transparent; border: 1px solid #e3e8ef;
-       padding: 6px 10px; border-radius: 8px;
-       color: #0a1f3a; font-family: inherit; font-size: 12px; font-weight: 700;
-       letter-spacing: .4px; cursor: pointer;
-       transition: border-color .15s, background .15s;
+     /* Drawer header */
+     .ss-drawer-head {
+       position: relative; z-index: 1;
+       display: flex; align-items: center; justify-content: space-between;
+       padding: 20px 22px 18px;
+       border-bottom: 1px solid #f0e8d6;
      }
-     .ss-lang-pick > button:hover { border-color: #e89d3a; background: #fdf6e8; }
-     .ss-lang-pick > ul {
-       position: absolute; top: calc(100% + 6px); right: 0;
-       min-width: 160px; background: #fff;
-       border: 1px solid #e3e8ef; border-radius: 12px;
-       box-shadow: 0 8px 24px rgba(10,31,58,.10);
-       list-style: none; padding: 6px; margin: 0;
-       display: none;
+     .ss-drawer-brand {
+       display: inline-flex; align-items: center; gap: 10px;
+       font: 600 18px/1 'Fraunces','Iowan Old Style',Georgia,serif;
+       letter-spacing: -.012em; color: #0a1f3a;
      }
-     .ss-lang-pick.is-open > ul { display: block; }
-     .ss-lang-pick > ul li button {
-       width: 100%; text-align: left; background: transparent; border: 0;
-       padding: 9px 12px; border-radius: 8px; cursor: pointer;
-       font-family: inherit; font-size: 13px; color: #0a1f3a;
-       display: flex; align-items: center; gap: 10px;
+     .ss-drawer-wordmark { display: inline-block; }
+     .ss-drawer-close {
+       display: inline-flex; align-items: center; justify-content: center;
+       background: none; border: 0; cursor: pointer; padding: 8px;
+       color: #5d6a82; border-radius: 999px;
+       transition: color .15s ease, background .15s ease;
      }
-     .ss-lang-pick > ul li button:hover { background: #fdf6e8; }
-     .ss-lang-pick > ul li button[aria-current="true"] { color: #ef6c00; font-weight: 700; }
-     .ss-lang-pick .code {
-       background: #fdf6e8; color: #8a7048; font-weight: 800;
-       font-size: 10px; letter-spacing: .6px; padding: 2px 6px; border-radius: 4px;
+     .ss-drawer-close:hover { color: #0a1f3a; background: #f5ecd9; }
+
+     /* Drawer nav list */
+     .ss-drawer-nav {
+       padding: 8px 0;
+       position: relative; z-index: 1;
+       display: flex; flex-direction: column;
      }
+
+     /* Drawer footer + CTA */
+     .ss-drawer-cta-row {
+       padding: 16px 20px 12px;
+       border-top: 1px solid #f0e8d6;
+       position: relative; z-index: 1;
+     }
+     .ss-drawer-cta {
+       display: block; text-align: center;
+       padding: 13px 18px;
+       background: linear-gradient(135deg, #ffb74d, #f57c00);
+       color: #fff; border-radius: 999px;
+       font: 600 14px/1 'Inter', sans-serif; letter-spacing: .01em;
+       text-decoration: none;
+       box-shadow: 0 6px 16px rgba(245,124,0,.28);
+       transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+     }
+     .ss-drawer-cta:hover {
+       transform: translateY(-1px);
+       box-shadow: 0 10px 22px rgba(245,124,0,.32);
+       filter: brightness(1.04);
+     }
+     .ss-drawer-foot {
+       padding: 14px 22px 22px;
+       font: 400 12px/1.55 'Inter', sans-serif;
+       color: #8a7048;
+       position: relative; z-index: 1;
+     }
+     .ss-drawer-foot a { color: #f57c00; font-weight: 600; text-decoration: none; }
+
+     /* Language switcher — segmented pill (3-way EN/MT/IT) */
+     .ss-lang-seg {
+       display: inline-flex; align-items: center;
+       margin-left: 8px;
+       padding: 2px;
+       background: #fafaf6;
+       border: 1px solid #e3e8ef;
+       border-radius: 999px;
+       gap: 2px;
+     }
+     .ss-lang-seg button {
+       background: transparent; border: 0; cursor: pointer;
+       padding: 5px 10px;
+       font: 700 11px/1 inherit; letter-spacing: .14em;
+       color: #5d6a82;
+       border-radius: 999px;
+       transition: background .18s ease, color .18s ease;
+       min-width: 32px; text-align: center;
+     }
+     .ss-lang-seg button:hover { color: #0a1f3a; }
+     .ss-lang-seg button.is-on,
+     .ss-lang-seg button[aria-pressed="true"] {
+       background: #fff;
+       color: #0a1f3a;
+       box-shadow: 0 1px 3px rgba(10,31,58,.08);
+     }
+     /* Legacy dropdown version — keep as fallback if any page still renders it */
+     .ss-lang-pick { display: none; }
 
      /* Live pill (homepage only) */
      .ss-live-pill {
