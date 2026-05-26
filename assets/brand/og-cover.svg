@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sunspot — Open Graph cover (1200×630).
+  Used as the share image across every page. Editorial: deep ink-navy
+  ground, warm sun-flare top-right, brand lockup bottom-left, headline
+  set in Fraunces. Mediterranean palette, generous negative space.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Sunspot — Malta beach booking">
+  <title>Sunspot — Malta beach booking</title>
+
+  <defs>
+    <!-- Deep, slightly textured navy ground -->
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0a1f3a"/>
+      <stop offset="60%"  stop-color="#0e2c52"/>
+      <stop offset="100%" stop-color="#0a1f3a"/>
+    </linearGradient>
+    <!-- Warm sun flare in the top-right corner -->
+    <radialGradient id="flare" cx="0.82" cy="0.18" r="0.55">
+      <stop offset="0%"   stop-color="#ffb74d" stop-opacity="0.55"/>
+      <stop offset="40%"  stop-color="#f57c00" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0a1f3a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Subtle sea-glow at the bottom -->
+    <radialGradient id="sea" cx="0.18" cy="0.92" r="0.62">
+      <stop offset="0%"   stop-color="#0288d1" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0a1f3a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Hairline -->
+    <linearGradient id="hairline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#fff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground -->
+  <rect width="1200" height="630" fill="url(#ground)"/>
+  <rect width="1200" height="630" fill="url(#flare)"/>
+  <rect width="1200" height="630" fill="url(#sea)"/>
+
+  <!-- Brand mark + wordmark, top-left -->
+  <g transform="translate(72,68)">
+    <g stroke="#ffb74d" stroke-width="2.6" stroke-linecap="round" opacity="0.55">
+      <line x1="22" y1="2"  x2="22" y2="8"/>
+      <line x1="22" y1="36" x2="22" y2="42"/>
+      <line x1="2"  y1="22" x2="8"  y2="22"/>
+      <line x1="36" y1="22" x2="42" y2="22"/>
+      <line x1="8"  y1="8"  x2="12" y2="12"/>
+      <line x1="32" y1="32" x2="36" y2="36"/>
+      <line x1="36" y1="8"  x2="32" y2="12"/>
+      <line x1="12" y1="32" x2="8"  y2="36"/>
+    </g>
+    <circle cx="22" cy="22" r="12" fill="#ff9800"/>
+    <circle cx="22" cy="22" r="10" fill="#ffb74d"/>
+    <circle cx="27" cy="18" r="3"  fill="#fff5e1"/>
+    <text x="62" y="32"
+          font-family="Fraunces, 'Iowan Old Style', Georgia, serif"
+          font-weight="600" font-size="32"
+          letter-spacing="-0.6" fill="#fff">Sunspot</text>
+  </g>
+
+  <!-- Eyebrow -->
+  <text x="72" y="298"
+        font-family="Inter, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="600" font-size="14"
+        letter-spacing="3.2" fill="#ffb74d"
+        textLength="232" lengthAdjust="spacing">MALTA · GOZO · COMINO</text>
+
+  <!-- Headline — set in two display lines -->
+  <text x="72" y="376"
+        font-family="Fraunces, 'Iowan Old Style', Georgia, serif"
+        font-weight="500" font-size="72"
+        letter-spacing="-1.4" fill="#fff">112 ways to be</text>
+  <text x="72" y="458"
+        font-family="Fraunces, 'Iowan Old Style', Georgia, serif"
+        font-weight="500" font-size="72"
+        letter-spacing="-1.4" font-style="italic" fill="#ffb74d">in the sea today.</text>
+
+  <!-- Sub-lede -->
+  <text x="72" y="510"
+        font-family="Inter, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="400" font-size="20"
+        fill="#cfd4e0">Beach clubs, lidos and rooftop pools. Pick the actual spot.</text>
+
+  <!-- Hairline divider above the URL row -->
+  <rect x="72" y="552" width="1056" height="1" fill="url(#hairline)"/>
+
+  <!-- URL row -->
+  <text x="72" y="586"
+        font-family="Inter, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="600" font-size="16"
+        letter-spacing="2" fill="#fff">SUNSPOT.MT</text>
+  <text x="1128" y="586" text-anchor="end"
+        font-family="Inter, -apple-system, 'Segoe UI', sans-serif"
+        font-weight="400" font-size="16" fill="#9aa2b8">Built in Valletta</text>
+</svg>

@@ -57,6 +57,7 @@ PUBLIC_PAGES: list[dict] = [
     {"path":"about.html",      "title":"About Sunspot",              "p":"0.6", "cf":"monthly"},
     {"path":"team.html",       "title":"Team",                       "p":"0.5", "cf":"monthly"},
     {"path":"rates.html",      "title":"Operator rate card",         "p":"0.6", "cf":"monthly"},
+    {"path":"brand.html",      "title":"Brand",                      "p":"0.4", "cf":"monthly"},
     {"path":"club.html",       "title":"Beach club & lido",          "p":"0.9", "cf":"weekly", "dynamic": True},
     {"path":"guide.html",      "title":"Field guide article",        "p":"0.85","cf":"weekly", "dynamic": True},
 ]
@@ -78,6 +79,7 @@ BREADCRUMBS = {
     "about.html":        [("Home","/"), ("About","/about.html")],
     "team.html":         [("Home","/"), ("About","/about.html"), ("Team","/team.html")],
     "rates.html":        [("Home","/"), ("For operators","/rates.html")],
+    "brand.html":        [("Home","/"), ("Brand","/brand.html")],
     "compare.html":      [("Home","/"), ("Compare clubs","/compare.html")],
     "gifts.html":        [("Home","/"), ("Gift cards","/gifts.html")],
     "club.html":         [("Home","/"), ("Beaches","/"), ("Beach club","/club.html")],

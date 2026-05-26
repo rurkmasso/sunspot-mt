@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-MT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Brand — Sunspot</title>
+<meta name="description" content="The Sunspot brand: mark, lockup, palette, typography. Download SVG/PNG assets. For press, partners and operators.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://sunspot.mt/brand.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Brand — Sunspot">
+<meta property="og:description" content="The Sunspot brand: mark, lockup, palette, typography. Download SVG/PNG assets.">
+<meta property="og:url" content="https://sunspot.mt/brand.html">
+<meta property="og:image" content="https://sunspot.mt/og-cover.png">
+<meta property="og:site_name" content="Sunspot">
+<meta property="og:locale" content="en_MT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brand — Sunspot">
+<meta name="twitter:description" content="Sunspot brand assets and guidelines.">
+<meta name="twitter:image" content="https://sunspot.mt/og-cover.png">
+<link rel="icon" type="image/svg+xml" href="/assets/brand/mark.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a1f3a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .brand-page {
+    max-width: 1080px; margin: 0 auto; padding: 56px 24px 120px;
+    color: var(--ink);
+  }
+  .brand-eyebrow {
+    font: 600 11px/1.3 var(--font-body);
+    letter-spacing: .24em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 10px;
+  }
+  .brand-page h1 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(38px, 5.4vw, 64px);
+    line-height: 1.04;
+    letter-spacing: -0.028em;
+    margin: 0 0 14px;
+    color: var(--ink);
+    font-variation-settings: 'opsz' 60, 'SOFT' 30;
+  }
+  .brand-page .lede {
+    font: 400 18px/1.55 var(--font-body);
+    color: var(--muted);
+    max-width: 62ch;
+    margin: 0 0 64px;
+  }
+  .brand-section {
+    margin: 0 0 72px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  .brand-section-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px 36px;
+    margin-bottom: 28px;
+  }
+  @media (min-width: 760px) {
+    .brand-section-head { grid-template-columns: 220px 1fr; }
+  }
+  .brand-section-head h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.012em;
+    color: var(--ink);
+    margin: 0;
+  }
+  .brand-section-head p {
+    font: 400 15.5px/1.6 var(--font-body);
+    color: var(--muted);
+    margin: 0;
+    max-width: 58ch;
+  }
+
+  /* Mark plates */
+  .brand-mark-grid {
+    display: grid; gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .brand-plate {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    aspect-ratio: 4 / 3;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .brand-plate.paper      { background: #fafaf6; }
+  .brand-plate.limestone  { background: var(--limestone); }
+  .brand-plate.sea        { background: linear-gradient(180deg,#0288d1,#01579b); }
+  .brand-plate.ink        { background: var(--ink); }
+  .brand-plate.sun        { background: var(--grad-sun); }
+  .brand-plate svg        { max-width: 56%; max-height: 56%; }
+  .brand-plate .meta {
+    position: absolute; left: 14px; bottom: 12px;
+    font: 600 10px/1.3 var(--font-body);
+    letter-spacing: .14em; text-transform: uppercase;
+  }
+  .brand-plate.paper .meta, .brand-plate.limestone .meta { color: var(--muted); }
+  .brand-plate.sea .meta, .brand-plate.ink .meta, .brand-plate.sun .meta { color: rgba(255,255,255,.8); }
+
+  /* Palette */
+  .brand-palette {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+  .brand-swatch {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .brand-swatch-chip {
+    aspect-ratio: 16/9;
+    display: block;
+  }
+  .brand-swatch-body {
+    padding: 12px 14px 14px;
+    display: grid; gap: 2px;
+  }
+  .brand-swatch-name {
+    font: 600 13px/1.3 var(--font-body);
+    color: var(--ink);
+  }
+  .brand-swatch-hex {
+    font: 400 12px/1.3 'JetBrains Mono', ui-monospace, monospace;
+    color: var(--muted);
+    letter-spacing: .02em;
+  }
+
+  /* Type specimens */
+  .brand-spec {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px 28px;
+    background: #fff;
+  }
+  .brand-spec + .brand-spec { margin-top: 14px; }
+  .brand-spec .label {
+    font: 600 11px/1.3 var(--font-body);
+    color: var(--muted);
+    letter-spacing: .18em; text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .spec-display {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(34px, 4.5vw, 56px);
+    letter-spacing: -0.022em;
+    line-height: 1.05;
+    color: var(--ink);
+    margin: 0;
+    font-variation-settings: 'opsz' 60, 'SOFT' 30;
+  }
+  .spec-body {
+    font: 400 16px/1.6 var(--font-body);
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 64ch;
+  }
+
+  /* Voice */
+  .brand-voice {
+    display: grid; gap: 14px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 760px) { .brand-voice { grid-template-columns: 1fr 1fr; } }
+  .brand-rule {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .brand-rule.is-do  { border-top: 3px solid var(--balcony-green); }
+  .brand-rule.is-dont { border-top: 3px solid var(--terracotta); }
+  .brand-rule h3 {
+    font: 600 11px/1.3 var(--font-body);
+    letter-spacing: .2em; text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .brand-rule.is-do h3 { color: var(--balcony-green); }
+  .brand-rule.is-dont h3 { color: var(--terracotta); }
+  .brand-rule ul { list-style: none; padding: 0; margin: 0; }
+  .brand-rule li {
+    font: 400 15px/1.55 var(--font-body);
+    color: var(--ink);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand-rule li:last-child { border-bottom: none; padding-bottom: 0; }
+  .brand-rule li::before {
+    content: "";
+    display: inline-block;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: currentColor;
+    vertical-align: 3px; margin-right: 10px;
+    color: currentColor;
+  }
+  .brand-rule.is-do  li::before { background: var(--balcony-green); }
+  .brand-rule.is-dont li::before { background: var(--terracotta); }
+
+  /* Downloads */
+  .brand-dl {
+    display: grid; gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .brand-dl a {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 18px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color .15s ease, transform .15s ease, color .15s ease;
+  }
+  .brand-dl a:hover {
+    border-color: var(--honey);
+    color: var(--sun-deep);
+    transform: translateY(-1px);
+  }
+  .brand-dl .what {
+    font: 600 14px/1.3 var(--font-body);
+  }
+  .brand-dl .kind {
+    font: 400 11px/1 'JetBrains Mono', ui-monospace, monospace;
+    color: var(--muted);
+    text-transform: uppercase; letter-spacing: .12em;
+  }
+</style>
+<!-- ssbc:breadcrumb-ld -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sunspot.mt/"},{"@type":"ListItem","position":2,"name":"Brand","item":"https://sunspot.mt/brand.html"}]}</script>
+
+
+<link rel="alternate" hreflang="en-MT" href="https://sunspot.mt/brand.html">
+<link rel="alternate" hreflang="mt-MT" href="https://sunspot.mt/brand.html?lang=mt">
+<link rel="alternate" hreflang="it-MT" href="https://sunspot.mt/brand.html?lang=it">
+<link rel="alternate" hreflang="x-default" href="https://sunspot.mt/brand.html">
+</head>
+<body>
+
+<header class="site-header">
+<div class="container">
+<a href="index.html" class="brand" aria-label="Sunspot home">
+  <svg class="brand-mark ss-brand-mark-anim" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true">
+    <g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">
+      <line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
+      <line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
+      <line x1="7" y1="7" x2="10" y2="10"/><line x1="30" y1="30" x2="33" y2="33"/>
+      <line x1="33" y1="7" x2="30" y2="10"/><line x1="10" y1="30" x2="7" y2="33"/>
+    </g>
+    <circle cx="20" cy="20" r="11" fill="#ff9800"/>
+    <circle cx="20" cy="20" r="9" fill="#ffb74d"/>
+    <circle cx="24" cy="16" r="3" fill="#fff5e1"/>
+  </svg>
+  <span class="brand-name">Sunspot</span>
+</a>
+<nav aria-label="Main navigation">
+  <a href="index.html">Beaches</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="guides.html">Field guide</a>
+  <a href="about.html">About</a>
+  <a href="rates.html">For operators</a>
+  <a href="brand.html" class="active" aria-current="page">Brand</a>
+</nav>
+</div>
+</header>
+
+<main class="brand-page">
+
+  <p class="brand-eyebrow">Brand</p>
+  <h1>One sun. One sea.<br>Many ways to spend the day.</h1>
+  <p class="lede">The Sunspot identity is a small, deliberate kit: a sun mark with a single reflection glint, a serif wordmark set in Fraunces, and a palette pulled from late-afternoon sun on Sliema limestone. Use these assets for press, partner integrations, and operator decks.</p>
+
+  <!-- ─────────────────────────────────────────── Mark -->
+  <section class="brand-section">
+    <div class="brand-section-head">
+      <h2>The mark</h2>
+      <p>A sun catching reflected water — the asymmetric glint at the 2 o'clock position is the bit you can't remove without losing the brand. Eight rays, three concentric circles, one offset highlight. Keep the proportions intact; never re-colour the glint.</p>
+    </div>
+    <div class="brand-mark-grid">
+      <div class="brand-plate paper">
+        <object data="assets/brand/mark.svg" type="image/svg+xml" aria-label="Sunspot mark on paper"></object>
+        <span class="meta">Paper · primary</span>
+      </div>
+      <div class="brand-plate limestone">
+        <object data="assets/brand/mark.svg" type="image/svg+xml" aria-label="Sunspot mark on limestone"></object>
+        <span class="meta">Limestone</span>
+      </div>
+      <div class="brand-plate ink">
+        <object data="assets/brand/lockup-mono-light.svg" type="image/svg+xml" aria-label="Sunspot lockup, mono on ink" style="max-width:72%"></object>
+        <span class="meta">Mono on ink</span>
+      </div>
+      <div class="brand-plate sea">
+        <object data="assets/brand/lockup-mono-light.svg" type="image/svg+xml" aria-label="Sunspot lockup, mono on sea" style="max-width:72%"></object>
+        <span class="meta">Mono on sea</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── Palette -->
+  <section class="brand-section">
+    <div class="brand-section-head">
+      <h2>The palette</h2>
+      <p>Two anchors — ink-navy and honey-amber — sit at either end. Between them: warm limestone, sea-pale, balcony-green and Maltese terracotta, used sparingly. The page background is always paper (#fafbfc), never pure white.</p>
+    </div>
+    <div class="brand-palette">
+      <article class="brand-swatch"><span class="brand-swatch-chip" style="background:#0a1f3a"></span><div class="brand-swatch-body"><span class="brand-swatch-name">Ink</span><span class="brand-swatch-hex">#0A1F3A</span></div></article>
+      <article class="brand-swatch"><span class="brand-swatch-chip" style="background:#1d2842"></span><div class="brand-swatch-body"><span class="brand-swatch-name">Ink soft</span><span class="brand-swatch-hex">#1D2842</span></div></article>
+      <article class="brand-swatch"><span class="brand-swatch-chip" style="background:#e89d3a"></span><div class="brand-swatch-body"><span class="brand-swatch-name">Honey</span><span class="brand-swatch-hex">#E89D3A</span></div></article>
+      <article class="brand-swatch"><span class="brand-swatch-chip" style="background:#f57c00"></span><div class="brand-swatch-body"><span class="brand-swatch-name">Sun deep</span><span class="brand-swatch-hex">#F57C00</span></div></article>
+      <article class="brand-swatch"><span class="brand-swatch-chip" style="background:#ffb74d"></span><div class="brand-swatch-body"><span class="brand-swatch-name">Sun</span><span class="brand-swatch-hex">#FFB74D</span></div></article>
+      <article class="brand-swatch"><span class="brand-swatch-chip" style="background:#0288d1"></span><div class="brand-swatch-body"><span class="brand-swatch-name">Sea 1</span><span class="brand-swatch-hex">#0288D1</span></div></article>
+      <article class="brand-swatch"><span class="brand-swatch-chip" style="background:#01579b"></span><div class="brand-swatch-body"><span class="brand-swatch-name">Sea 2</span><span class="brand-swatch-hex">#01579B</span></div></article>
+      <article class="brand-swatch"><span class="brand-swatch-chip" style="background:#f5ecd9"></span><div class="brand-swatch-body"><span class="brand-swatch-name">Limestone</span><span class="brand-swatch-hex">#F5ECD9</span></div></article>
+      <article class="brand-swatch"><span class="brand-swatch-chip" style="background:#2f6e5b"></span><div class="brand-swatch-body"><span class="brand-swatch-name">Balcony green</span><span class="brand-swatch-hex">#2F6E5B</span></div></article>
+      <article class="brand-swatch"><span class="brand-swatch-chip" style="background:#c0563b"></span><div class="brand-swatch-body"><span class="brand-swatch-name">Terracotta</span><span class="brand-swatch-hex">#C0563B</span></div></article>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── Type -->
+  <section class="brand-section">
+    <div class="brand-section-head">
+      <h2>Typography</h2>
+      <p>Fraunces for display and editorial impact — opsz 36, SOFT 30 axis settings dial it just past geometric into something that feels hand-drawn. Inter for everything else. Never mix display weights below 500 with body weights above 600.</p>
+    </div>
+
+    <div class="brand-spec">
+      <span class="label">Display · Fraunces 500 · opsz 60</span>
+      <p class="spec-display">112 ways to be <em style="font-style:italic">in the sea today.</em></p>
+    </div>
+    <div class="brand-spec">
+      <span class="label">Body · Inter 400 · 16px</span>
+      <p class="spec-body">Beach clubs, lidos and rooftop pools across Malta, Gozo and Comino. Pick the actual spot — sunbed 14 with the umbrella tilted exactly the way you want it — and we'll save it for you. No double bookings, no walk-in lottery, no five-tab comparison shopping.</p>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── Voice -->
+  <section class="brand-section">
+    <div class="brand-section-head">
+      <h2>Voice and tone</h2>
+      <p>Sunspot sounds like a local who actually goes to the beach. Specific, slightly opinionated, never breathless. The aim is to be the trusted friend who knows which side of Ghajn Tuffieha gets shade after three — not the marketing copy that sells you a "Mediterranean experience."</p>
+    </div>
+    <div class="brand-voice">
+      <article class="brand-rule is-do">
+        <h3>Do</h3>
+        <ul>
+          <li>Be specific — "Sunbed 14, west-facing" beats "premium loungers"</li>
+          <li>Use Maltese place names without italicising them</li>
+          <li>Trust readers to handle a 3-sentence paragraph</li>
+          <li>Lead with the useful detail (price, time, distance) before the adjective</li>
+          <li>Mention things you'd actually warn a friend about</li>
+        </ul>
+      </article>
+      <article class="brand-rule is-dont">
+        <h3>Don't</h3>
+        <ul>
+          <li>"Stunning," "breathtaking," "luxury," "experience"</li>
+          <li>Mediterranean stock photography or rose-gold gradients</li>
+          <li>Treat Gozo as an afterthought — it's half the offer</li>
+          <li>Use emojis as bullet points or decorative spacers</li>
+          <li>Translate Maltese words you can leave in Maltese</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── Downloads -->
+  <section class="brand-section">
+    <div class="brand-section-head">
+      <h2>Download</h2>
+      <p>SVG for web and print, PNG for socials. The OG cover is the 1200×630 share image. Apple touch icon and the 192/512 PWA icons are the same mark rendered cleanly at fixed sizes.</p>
+    </div>
+    <div class="brand-dl">
+      <a href="assets/brand/mark.svg"             download><span class="what">Mark</span><span class="kind">SVG</span></a>
+      <a href="assets/brand/mark-mono.svg"        download><span class="what">Mark · mono</span><span class="kind">SVG</span></a>
+      <a href="assets/brand/wordmark.svg"         download><span class="what">Wordmark</span><span class="kind">SVG</span></a>
+      <a href="assets/brand/lockup.svg"           download><span class="what">Lockup</span><span class="kind">SVG</span></a>
+      <a href="assets/brand/lockup-mono-light.svg" download><span class="what">Lockup · mono light</span><span class="kind">SVG</span></a>
+      <a href="assets/brand/og-cover.svg"         download><span class="what">OG cover · 1200×630</span><span class="kind">SVG</span></a>
+      <a href="assets/brand/og-cover.png"         download><span class="what">OG cover · 1200×630</span><span class="kind">PNG</span></a>
+      <a href="assets/brand/apple-touch-icon.png" download><span class="what">Apple touch icon · 180</span><span class="kind">PNG</span></a>
+      <a href="assets/brand/favicon-192.png"      download><span class="what">Icon · 192</span><span class="kind">PNG</span></a>
+      <a href="assets/brand/favicon-512.png"      download><span class="what">Icon · 512</span><span class="kind">PNG</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+<div class="container">
+  <div class="footer-bottom">© 2026 Sunspot Ltd. · Built in Valletta · <a href="brand.html" style="color:inherit">Brand</a></div>
+</div>
+</footer>
+
+<script src="header-enhance.js" defer></script>
+
+<!-- ssbc:explore-block -->
+<nav class="ss-explore" aria-label="Explore Sunspot">
+  <div class="ss-explore-inner">
+    <span class="ss-explore-title">Explore Sunspot</span>
+    <a href="/">Browse beach clubs</a>
+    <a href="/experiences.html">Experiences & boat tours</a>
+    <a href="/guides.html">Field guides</a>
+    <a href="/visiting.html">Plan your visit</a>
+    <a href="/living.html">For residents</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="/about.html">About Sunspot</a>
+    <a href="/sitemap.html">Site map</a>
+  </div>
+</nav>
+</body>
+</html>

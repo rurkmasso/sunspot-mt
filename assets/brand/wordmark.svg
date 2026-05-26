@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sunspot — wordmark.
+  Rendered in Fraunces 600, opsz 36, letter-spacing -0.02em, ink #0a1f3a.
+  Falls back to Georgia if Fraunces isn't loaded. Keep the SVG text
+  approach (not outlined paths) so accessibility tools can still read
+  the brand name.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" role="img" aria-label="Sunspot">
+  <title>Sunspot</title>
+  <style>
+    .sunspot-wm {
+      font-family: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: -1px;
+      font-variation-settings: 'opsz' 36, 'SOFT' 30;
+    }
+  </style>
+  <text x="0" y="48" class="sunspot-wm" fill="#0a1f3a">Sunspot</text>
+</svg>
