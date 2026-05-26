@@ -4008,3 +4008,136 @@ textarea, select {
     margin-bottom:10px;
   }
 }
+
+/* ==========================================================
+ Sunspot — print stylesheet
+ Receipts, confirmations, even venue pages should print clean.
+ Strip chrome, deepen typography, force black ink, keep meta and
+ QR codes together with page-break-inside: avoid.
+ ========================================================== */
+@media print {
+  /* Page setup — A4 with generous margins, no headers/footers added by the browser */
+  @page {
+    size: A4;
+    margin: 18mm 16mm 22mm;
+  }
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    -webkit-print-color-adjust: economy;
+    print-color-adjust: economy;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  /* Hide everything that's not the content */
+  .site-header,
+  footer,
+  .ss-explore,
+  .ss-bottom-nav,
+  .ss-cookie-banner,
+  #ss-cookie-banner,
+  .compare-drawer,
+  .lightbox,
+  .ss-pref-bar,
+  nav[aria-label="Main navigation"],
+  .skip-link,
+  .hero-v2-scroll,
+  button:not(.print-keep),
+  .nf-search,
+  .conf-actions {
+    display: none !important;
+  }
+
+  /* Show "click here to..." links as plain text so they're useful on paper */
+  a[href^="http"]:not(.brand)::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+    word-break: break-all;
+  }
+
+  /* Confirmation card — let it breathe across the page, no shadow, no
+     gradient, just typography. */
+  .conf-card,
+  .ss-ticket {
+    background: #fff !important;
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 24mm 18mm !important;
+    page-break-inside: avoid;
+  }
+  .conf-card::before,
+  .ss-ticket::before,
+  .ss-ticket::after { display: none !important; }
+
+  .conf-tick {
+    background: none !important;
+    box-shadow: none !important;
+    border: 2px solid #000 !important;
+    color: #000 !important;
+    width: 60px !important;
+    height: 60px !important;
+    animation: none !important;
+  }
+  .conf-tick svg { stroke: #000 !important; }
+
+  /* Display type — keep the serif but force black */
+  h1, h2, h3, .ss-display {
+    color: #000 !important;
+    font-family: 'Fraunces', Georgia, serif !important;
+    page-break-after: avoid;
+  }
+  h1 { font-size: 22pt !important; }
+  h2 { font-size: 14pt !important; }
+  h3 { font-size: 12pt !important; }
+
+  /* Brand mark inline — let the SVG show with currentColor */
+  .brand-mark, .ss-ticket-mark, .nf-mark {
+    width: 28pt !important; height: 28pt !important;
+  }
+  .brand-mark *, .ss-ticket-mark *, .nf-mark * {
+    fill: #000 !important; stroke: #000 !important;
+  }
+
+  /* Pills, badges, tags — flat outlined treatment */
+  .ss-accent-pill, .badge, .bc-status, .ss-op-status {
+    background: none !important;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* QR — keep contrast and force a margin around it so cheap printers
+     don't trim it */
+  .qr {
+    border: 6pt solid #fff !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  /* Tables and meta blocks — clean lines, keep rows together */
+  table, ul, ol, dl { page-break-inside: avoid; }
+  tr, li { page-break-inside: avoid; }
+
+  /* Strip background fills from photos and gradients */
+  [style*="background-image"], .hero-v2-photo {
+    background: none !important;
+  }
+
+  /* Bring back a single-line footer with site + ref so the page is
+     identifiable when printed and torn off */
+  body::after {
+    content: "Sunspot — sunspot.mt — receipts and bookings are not legal invoices";
+    display: block;
+    margin-top: 16mm;
+    padding-top: 6mm;
+    border-top: 1px solid #ccc;
+    font-family: 'Inter', sans-serif;
+    font-size: 9pt;
+    color: #666;
+    text-align: center;
+  }
+}
