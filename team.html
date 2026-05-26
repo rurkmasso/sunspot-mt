@@ -23,27 +23,82 @@
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "AboutPage",
- "name": "The Sunspot team",
- "url": "https://sunspot.mt/team.html",
- "mainEntity": {
+ "@graph": [
+  {
+   "@type": "AboutPage",
+   "@id": "https://sunspot.mt/team.html#aboutpage",
+   "name": "The Sunspot team",
+   "description": "Meet the Valletta-based team behind Sunspot — founders, editors and the people you reach when you email hello@sunspot.mt.",
+   "url": "https://sunspot.mt/team.html",
+   "isPartOf": { "@id": "https://sunspot.mt/#website" },
+   "about": { "@id": "https://sunspot.mt/#organization" },
+   "mainEntity": { "@id": "https://sunspot.mt/#organization" }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://sunspot.mt/team.html#mark-russo",
+   "name": "Mark Russo",
+   "jobTitle": "Founder & CEO",
+   "url": "https://www.linkedin.com/in/markrusso/",
+   "email": "mark@sunspot.mt",
+   "sameAs": ["https://www.linkedin.com/in/markrusso/"],
+   "worksFor": { "@id": "https://sunspot.mt/#organization" },
+   "homeLocation": { "@type": "Place", "name": "Valletta, Malta" },
+   "knowsAbout": [
+    "Malta beach clubs", "Sunspot booking platform", "Beach club operations",
+    "Mediterranean travel", "Legal tech", "Spot-level inventory"
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://sunspot.mt/team.html#edward-fenech-adami",
+   "name": "Edward Fenech Adami",
+   "jobTitle": "Co-founder",
+   "hasOccupation": { "@type": "Occupation", "name": "Lawyer" },
+   "worksFor": { "@id": "https://sunspot.mt/#organization" },
+   "knowsAbout": ["Maltese commercial law", "Operator contracts", "Regulatory work"]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://sunspot.mt/team.html#daniel-cutajar",
+   "name": "Daniel Cutajar",
+   "jobTitle": "Co-founder",
+   "hasOccupation": { "@type": "Occupation", "name": "Lawyer" },
+   "worksFor": { "@id": "https://sunspot.mt/#organization" },
+   "knowsAbout": ["GDPR", "Compliance", "Terms and conditions", "Operator agreements"]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://sunspot.mt/team.html#matthew-pizzuto",
+   "name": "Matthew Pizzuto",
+   "jobTitle": "Co-founder",
+   "hasOccupation": { "@type": "Occupation", "name": "Medical doctor" },
+   "worksFor": { "@id": "https://sunspot.mt/#organization" },
+   "knowsAbout": ["Sun safety", "Venue health standards", "Mediterranean swim conditions"]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://sunspot.mt/team.html#zach-sciberras",
+   "name": "Zach Sciberras",
+   "jobTitle": "Co-founder",
+   "hasOccupation": { "@type": "Occupation", "name": "Lawyer" },
+   "worksFor": { "@id": "https://sunspot.mt/#organization" },
+   "knowsAbout": ["Corporate structure", "Intellectual property"]
+  },
+  {
    "@type": "Organization",
    "@id": "https://sunspot.mt/#organization",
+   "name": "Sunspot",
    "founder": [
-     { "@type": "Person", "name": "Mark Russo",            "jobTitle": "Founder & CEO",
-       "url": "https://www.linkedin.com/in/markrusso/",
-       "worksFor": { "@type": "Organization", "name": "Sunspot" },
-       "knowsAbout": ["Malta beaches", "Booking platforms", "Beach club operations", "Mediterranean travel", "Legal tech"] },
-     { "@type": "Person", "name": "Edward Fenech Adami",   "jobTitle": "Co-founder",
-       "hasOccupation": { "@type": "Occupation", "name": "Lawyer" } },
-     { "@type": "Person", "name": "Daniel Cutajar",        "jobTitle": "Co-founder",
-       "hasOccupation": { "@type": "Occupation", "name": "Lawyer" } },
-     { "@type": "Person", "name": "Matthew Pizzuto",       "jobTitle": "Co-founder",
-       "hasOccupation": { "@type": "Occupation", "name": "Medical doctor" } },
-     { "@type": "Person", "name": "Zach Sciberras",        "jobTitle": "Co-founder",
-       "hasOccupation": { "@type": "Occupation", "name": "Lawyer" } }
-   ]
- }
+    { "@id": "https://sunspot.mt/team.html#mark-russo" },
+    { "@id": "https://sunspot.mt/team.html#edward-fenech-adami" },
+    { "@id": "https://sunspot.mt/team.html#daniel-cutajar" },
+    { "@id": "https://sunspot.mt/team.html#matthew-pizzuto" },
+    { "@id": "https://sunspot.mt/team.html#zach-sciberras" }
+   ],
+   "employee": [{ "@id": "https://sunspot.mt/team.html#mark-russo" }]
+  }
+ ]
 }
 </script>
 

@@ -12,7 +12,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
 
-<script type="application/ld+json" id="faq-schema"></script>
+<!-- FAQPage JSON-LD is built statically by bin/seo_pass.py (in the <!--
+     ssbc:faq-ld --> block below) so search crawlers see the full Q&A
+     without executing JS. The old #faq-schema placeholder + runtime
+     IIFE was removed to avoid emitting duplicate FAQPage objects. -->
 <style>
 .faq-layout {
  display: grid; grid-template-columns: 240px 1fr;
@@ -288,24 +291,6 @@ At <strong>commercial venues</strong>(beach clubs, lidos, pool clubs): no, all v
 </div>
 </footer>
 
-<script>
-// FAQPage JSON-LD schema — auto-built from the rendered DOM
-(function () {
- const items = [...document.querySelectorAll('.faq-item')].map(item =>({
- "@type": "Question",
- "name": item.querySelector('summary').textContent.trim(),
- "acceptedAnswer": {
- "@type": "Answer",
- "text": item.querySelector('.answer').textContent.trim().replace(/\s+/g, ' '),
- },
- }));
- document.getElementById('faq-schema').textContent = JSON.stringify({
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": items,
- });
-})();
-</script>
 <script src="auth.js" defer></script>
 <script src="nav-auth.js" defer></script>
 <script src="icons.js" defer></script>

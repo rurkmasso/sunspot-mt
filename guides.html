@@ -14,9 +14,36 @@
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "CollectionPage",
- "name": "Malta beach club guides",
- "url": "https://sunspot.mt/guides.html"
+ "@graph": [
+  {
+   "@type": "CollectionPage",
+   "@id": "https://sunspot.mt/guides.html#collection",
+   "name": "Sunspot Field Guide — Malta beach club guides",
+   "description": "Opinionated, on-the-ground guides to Malta's coast — best sunset spots, Comino day-trips, Gozo wild swimming, family-friendly beaches, rooftop pools. Updated for 2026.",
+   "url": "https://sunspot.mt/guides.html",
+   "isPartOf": { "@id": "https://sunspot.mt/#website" },
+   "inLanguage": "en-MT",
+   "publisher": { "@id": "https://sunspot.mt/#organization" },
+   "mainEntity": { "@id": "https://sunspot.mt/guides.html#itemlist" }
+  },
+  {
+   "@type": "ItemList",
+   "@id": "https://sunspot.mt/guides.html#itemlist",
+   "name": "Field guides",
+   "numberOfItems": 9,
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "url": "https://sunspot.mt/guide.html?g=best-sunsets",     "name": "Where to watch the sunset in Malta" },
+    { "@type": "ListItem", "position": 2, "url": "https://sunspot.mt/guide.html?g=comino-day-trip",  "name": "Comino Blue Lagoon in 2026: the complete day-trip guide" },
+    { "@type": "ListItem", "position": 3, "url": "https://sunspot.mt/guide.html?g=noma-floating",    "name": "Noma Island: the only floating beach club in Europe" },
+    { "@type": "ListItem", "position": 4, "url": "https://sunspot.mt/guide.html?g=family-friendly",  "name": "Family-friendly beach clubs in Malta" },
+    { "@type": "ListItem", "position": 5, "url": "https://sunspot.mt/guide.html?g=pool-parties",     "name": "The best pool parties in Malta" },
+    { "@type": "ListItem", "position": 6, "url": "https://sunspot.mt/guide.html?g=gozo-coast",       "name": "Gozo: the slower, wilder side of the coast" },
+    { "@type": "ListItem", "position": 7, "url": "https://sunspot.mt/guide.html?g=natural-pools",    "name": "The natural pools of Malta" },
+    { "@type": "ListItem", "position": 8, "url": "https://sunspot.mt/guide.html?g=brunch-poolside",  "name": "Where to brunch poolside in Malta" },
+    { "@type": "ListItem", "position": 9, "url": "https://sunspot.mt/guide.html?g=date-night",       "name": "Rooftop date nights in Malta" }
+   ]
+  }
+ ]
 }
 </script>
 
