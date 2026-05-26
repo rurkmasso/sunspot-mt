@@ -62,6 +62,36 @@ To **reset** your session locally (force the gate to appear again): open browser
 2. **All prices wrapped with `data-eur`** so the currency switcher can re-format live.
 3. **Every photo-led hero** must leave the next section partially visible above the fold at 900px viewport.
 4. Brand palette: orange `#ff9800` (`--sun-deep`), deep navy `#0a1f3a` (`--ink`), aqua `#0288d1` (`--sea-1`), cream `#fff8e8` (`--sand`).
+5. Mobile-first **always** — design 390×844 first, then enhance up.
+
+## Brand kit
+
+Everything brand-related lives in **`assets/brand/`** and is documented
+on the public `/brand` page (`brand.html`):
+
+- `mark.svg` — primary sun mark with the asymmetric reflection glint
+- `mark-mono.svg` — single-colour version (inherits `currentColor`)
+- `wordmark.svg` — Sunspot wordmark in Fraunces
+- `lockup.svg` — horizontal mark + wordmark
+- `lockup-mono-light.svg` — lockup for dark backgrounds
+- `og-cover.svg` / `og-cover.png` — 1200×630 social share image
+- `favicon-32/192/512.png`, `apple-touch-icon.png` — icon family
+
+The PNGs are rendered from the SVGs by `bin/render_brand_pngs.py`
+(headless Chromium). Re-run any time the SVGs change so the rasters
+stay in sync:
+
+```bash
+python3 bin/render_brand_pngs.py
+```
+
+`manifest.json` wires the icons + theme + shortcuts for installable
+PWA. The favicon / apple-touch / manifest / theme-color block is
+stamped on every HTML page by `seo_pass.py`, so the brand reads the
+same the moment any URL loads.
+
+`/brand` is also the press / partner page — palette swatches, type
+specimens, voice and tone do/don't, and a downloads section.
 
 ## SEO + sitemaps
 
