@@ -104,10 +104,35 @@ files. Re-run any time the inputs change.
 | `bin/render_brand_pngs.py` | Renders the brand SVGs (`mark`, `og-cover`) to PNG via headless Chromium so the favicons and OG card stay in sync. |
 | `bin/seo_pass.py`          | Regenerates the seven sub-sitemaps + index, rewrites `robots.txt`, refreshes `sitemap.html`, stamps the favicon/manifest/canonical/hreflang/breadcrumb/Explore-footer blocks on every public HTML page. |
 | `bin/inject_itemlist.py`   | Reads `clubs-data.js` via Node, ranks the top venues, writes a full Schema.org `ItemList` (with `BeachResort`/`BarOrPub` items + `aggregateRating` + address + image) straight into `index.html` so Google sees the venues without executing the JS. |
+| `bin/inject_experiences_schema.py` | Reads `experiences-data.js`, parses each tour, and writes a `@graph` block at the top of `experiences.html` with `CollectionPage` + `ItemList` (19) + 19 `TouristTrip` items each carrying an `Offer` (price, currency, availability), duration, max-pax, provider organisation, photo, and category. |
 
 Order: `render_brand_pngs.py` first if the SVGs changed, then any
 content edits, then `inject_itemlist.py` whenever `clubs-data.js`
-changes, then `seo_pass.py` to refresh sitemaps + page-level SEO.
+changes, then `inject_experiences_schema.py` whenever
+`experiences-data.js` changes, then `seo_pass.py` to refresh sitemaps
++ page-level SEO.
+
+### Schema.org coverage (per page)
+
+Every public page now ships the right Schema.org type for what it
+actually is, all back-referenced to a single Organization + WebSite
+graph anchored at `sunspot.mt/#organization` and `sunspot.mt/#website`.
+
+| Page             | Main schemas                                                    |
+|---|---|
+| `/`              | Organization · WebSite · SearchAction · ItemList (12 venues)    |
+| `/experiences/`  | CollectionPage · ItemList (19) · TouristTrip[] with Offer       |
+| `/guides/`       | CollectionPage · ItemList of 9 articles                         |
+| `/guide.html`    | Article (injected at runtime by `guide.js` from `guides-data.js`)|
+| `/visiting/`     | Article · HowTo (4 steps for planning a Malta beach trip)       |
+| `/living/`       | Article with `audience` = residents + expats                    |
+| `/about/`        | AboutPage referencing the Organization                          |
+| `/team/`         | AboutPage + 5 Person entities with `worksFor`, `knowsAbout`     |
+| `/faq/`          | FAQPage with 32 Q&As (auto-extracted by `seo_pass.py`)          |
+| `/gifts/`        | Product + AggregateOffer (€25–500, 8 denominations)             |
+| `/rates/`        | Service + Offer (€0 listing, 8% guest-paid)                     |
+| `/brand/`        | BreadcrumbList only — style guide is non-canonical content      |
+| Every page       | BreadcrumbList, hreflang, robots, canonical, brand-icons block  |
 
 ## Mobile performance
 
