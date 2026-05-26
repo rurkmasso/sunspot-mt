@@ -233,9 +233,23 @@ CANONICAL_RX = re.compile(r'<link[^>]*\brel="canonical"[^>]*>')
 ROBOTS_RX    = re.compile(r'<meta\s+name="robots"\s+content="[^"]*">')
 HEAD_END_RX  = re.compile(r'</head>', re.I)
 BODY_END_RX  = re.compile(r'</body>', re.I)
+BRAND_MARK_BLOCK_RX = re.compile(r'<!-- ssbc:brand-icons -->.*?<!-- /ssbc:brand-icons -->', re.S)
+LEGACY_ICON_RX      = re.compile(r'<link\s+rel="icon"[^>]*>', re.I)
+LEGACY_APPLE_RX     = re.compile(r'<link\s+rel="apple-touch-icon"[^>]*>', re.I)
+LEGACY_MANIFEST_RX  = re.compile(r'<link\s+rel="manifest"[^>]*>', re.I)
+LEGACY_THEME_RX     = re.compile(r'<meta\s+name="theme-color"[^>]*>', re.I)
 BREADCRUMB_MARK = "<!-- ssbc:breadcrumb-ld -->"
 FAQ_MARK        = "<!-- ssbc:faq-ld -->"
 EXPLORE_MARK    = "<!-- ssbc:explore-block -->"
+BRAND_ICONS_BLOCK = """<!-- ssbc:brand-icons -->
+<link rel="icon" type="image/svg+xml" href="/assets/brand/mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a1f3a">
+<!-- /ssbc:brand-icons -->
+"""
 
 def canonical_for(path: str) -> str:
     if path == "index.html": return f"{ORIGIN}/"
@@ -290,10 +304,27 @@ def explore_block_html(current_path: str) -> str:
 
 def patch_html(path: pathlib.Path):
     name = path.name
-    if name in NOINDEX_PAGES:
-        return False  # leave private pages alone
     src = path.read_text(encoding="utf-8")
     orig = src
+
+    # Brand icons block goes on every page — even the auth-gated ones —
+    # so the favicon, apple-touch-icon, manifest and theme-color are
+    # consistent everywhere a user might land.
+    src = BRAND_MARK_BLOCK_RX.sub("", src)
+    src = LEGACY_ICON_RX.sub("", src)
+    src = LEGACY_APPLE_RX.sub("", src)
+    src = LEGACY_MANIFEST_RX.sub("", src)
+    src = LEGACY_THEME_RX.sub("", src)
+    src = re.sub(r"\n{3,}", "\n\n", src)
+    _icons = BRAND_ICONS_BLOCK
+    src = HEAD_END_RX.sub(lambda _: _icons + "</head>", src, count=1)
+
+    if name in NOINDEX_PAGES:
+        # Private pages get the brand icons but skip the SEO content.
+        if src != orig:
+            path.write_text(src, encoding="utf-8")
+            return True
+        return False
     canonical = canonical_for(name)
 
     # 1. Canonical — replace if exists, else inject before </head>.
