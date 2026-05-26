@@ -3591,29 +3591,33 @@ footer {
    ============================================================ */
 @media (max-width: 720px) {
 
-  /* === Hero: compress drastically === */
+  /* === Hero: compressed for mobile above-the-fold ===
+     Goal on 390×844: header (54px) + hero CTA visible without scrolling.
+     Tightening padding-top and trimming line-height pushes the CTA up
+     into the viewport without losing the editorial feel. */
   .hero-v2 {
-    min-height: 340px !important;
-    height: 60vh !important;
-    max-height: 460px !important;
+    min-height: 380px !important;
+    height: 64vh !important;
+    max-height: 520px !important;
   }
   .hero-v2-content {
-    padding: 100px 18px 24px !important;
+    padding: 64px 20px 22px !important;
   }
   .hero-v2-h1 {
-    font-size: 2rem !important;
+    font-size: clamp(2rem, 8.4vw, 2.4rem) !important;
     letter-spacing: -1px !important;
-    line-height: 1.05 !important;
+    line-height: 1.02 !important;
     margin-bottom: 10px !important;
-    max-width: 320px !important;
+    max-width: 340px !important;
   }
   .hero-v2-lede {
-    font-size: 14px !important;
-    margin-bottom: 14px !important;
-    max-width: 320px !important;
+    font-size: 14.5px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 16px !important;
+    max-width: 340px !important;
   }
   .hero-v2-meta {
-    margin-bottom: 12px !important;
+    margin-bottom: 14px !important;
     gap: 6px !important;
   }
   .hero-v2-tag {
@@ -3625,14 +3629,17 @@ footer {
     font-size: 11px !important;
     padding: 4px 10px !important;
   }
-  .hero-v2-cta { gap: 8px !important; }
+  .hero-v2-cta { gap: 8px !important; flex-wrap: wrap; }
   .hero-v2-primary {
-    padding: 12px 22px !important;
-    font-size: 14px !important;
+    /* Tap target ≥ 44px for Apple guidelines */
+    padding: 14px 22px !important;
+    font-size: 14.5px !important;
+    min-height: 46px;
   }
   .hero-v2-secondary {
-    padding: 12px 18px !important;
-    font-size: 13px !important;
+    padding: 14px 18px !important;
+    font-size: 13.5px !important;
+    min-height: 46px;
   }
 
   /* === Live-stats strip: single horizontal row, not 4 stacked rows === */

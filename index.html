@@ -58,11 +58,18 @@
 }
 </script>
 
-<link rel="preconnect" href="https://whichbeach.com.mt">
+<link rel="preconnect" href="https://whichbeach.com.mt" crossorigin>
 <link rel="dns-prefetch" href="https://whichbeach.com.mt">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
+
+<!-- LCP hint: tell the browser to fetch the hero image straight away,
+     before parsing the rest of the head. Cuts hundreds of ms off LCP. -->
+<link rel="preload" as="image"
+      href="https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg"
+      fetchpriority="high">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" media="all">
 <link rel="stylesheet" href="styles.css">
 
 <!-- ssbc:breadcrumb-ld -->
@@ -100,10 +107,12 @@
 
 <section class="hero-v2">
   <div class="hero-v2-photo" aria-hidden="true">
-    <picture>
-      <source media="(min-width: 900px)" srcset="https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg">
-      <img src="https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg" alt="Blue Lagoon, Comino — Sunspot" loading="eager" fetchpriority="high" width="2560" height="1440">
-    </picture>
+    <img
+      src="https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg"
+      alt="Blue Lagoon, Comino — turquoise water and limestone bay"
+      width="2560" height="1440"
+      sizes="100vw"
+      loading="eager" fetchpriority="high" decoding="async">
   </div>
   <div class="hero-v2-scrim" aria-hidden="true"></div>
 
