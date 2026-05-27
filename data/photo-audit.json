@@ -8,7 +8,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['caghaq', 'between', 'coast']"
+  "reason": "filename=['rinella'] venue=['bugibba', 'sliema', 'between']"
  },
  {
   "id": "bahar-ic-caghaq-rocks",
@@ -19,7 +19,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['splash', 'caghaq', 'rocks']"
+  "reason": "filename=['rinella'] venue=['opposite', 'splash', 'rocks']"
  },
  {
   "id": "birzebbuga-beach-club",
@@ -30,7 +30,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['kalanka'] venue=['pretty', 'birzebbuga', 'service']"
+  "reason": "filename=['kalanka'] venue=['service', 'birzebbuga', 'pretty']"
  },
  {
   "id": "blue-grotto",
@@ -41,7 +41,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghar', 'lapsi'] venue=['grotto', 'blue', 'wied']"
+  "reason": "filename=['ghar', 'lapsi'] venue=['grotto', 'wied', 'blue']"
  },
  {
   "id": "bridge-bar-valletta",
@@ -52,7 +52,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['bridge', 'christopher', 'valletta']"
+  "reason": "filename=['rinella'] venue=['christopher', 'bridge', 'valletta']"
  },
  {
   "id": "brittannia-cafe",
@@ -63,7 +63,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['buggiba', 'front'] venue=['korp', 'cafe', 'promenade']"
+  "reason": "filename=['front', 'buggiba'] venue=['bugibba', 'pijunieri', 'brittannia']"
  },
  {
   "id": "brittannia-rocks-lido",
@@ -74,7 +74,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['buggiba', 'front'] venue=['seafront', 'rocks', 'brittannia']"
+  "reason": "filename=['front', 'buggiba'] venue=['bugibba', 'seafront', 'brittannia']"
  },
  {
   "id": "cavalieri-pool",
@@ -85,7 +85,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['balluta'] venue=['cavalieri', 'spinola', 'julian']"
+  "reason": "filename=['balluta'] venue=['spinola', 'cavalieri', 'julian']"
  },
  {
   "id": "comino-beach-co",
@@ -96,7 +96,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['maria'] venue=['marija', 'santa', 'comino']"
+  "reason": "filename=['maria'] venue=['santa', 'comino', 'marija']"
  },
  {
   "id": "comino-cliffs",
@@ -107,7 +107,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['maria'] venue=['access', 'boat', 'south']"
+  "reason": "filename=['maria'] venue=['boat', 'comino', 'side']"
  },
  {
   "id": "corinthia-st-george",
@@ -118,7 +118,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['julian', 'george', 'corinthia']"
+  "reason": "filename=['georges'] venue=['corinthia', 'george', 'julian']"
  },
  {
   "id": "cumnija-pools",
@@ -129,7 +129,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['wied', 'ghasri'] venue=['palace', 'selmun', 'pools']"
+  "reason": "filename=['ghasri', 'wied'] venue=['coast', 'pools', 'selmun']"
  },
  {
   "id": "dwejra",
@@ -140,7 +140,18 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['wied', 'ghasri'] venue=['lawrenz', 'inland', 'gozo']"
+  "reason": "filename=['ghasri', 'wied'] venue=['lawrenz', 'dwejra', 'gozo']"
+ },
+ {
+  "id": "excelsior-pool",
+  "name": "Grand Hotel Excelsior Pool",
+  "location": "Great Siege Road, Floriana",
+  "category": "pool-club",
+  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg",
+  "http": 200,
+  "ctype": "image/jpeg",
+  "class": "needs-review",
+  "reason": "filename=['rinella'] venue=['floriana', 'excelsior', 'great']"
  },
  {
   "id": "exiles-lido",
@@ -151,7 +162,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['exiles', 'sliema', 'road']"
+  "reason": "filename=['fond', 'ghadir'] venue=['sliema', 'tower', 'road']"
  },
  {
   "id": "exiles-rocks",
@@ -162,7 +173,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['rocks', 'road', 'sliema']"
+  "reason": "filename=['fond', 'ghadir'] venue=['sliema', 'tower', 'road']"
  },
  {
   "id": "famous-five-lido",
@@ -173,7 +184,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['between', 'promenade', 'five']"
+  "reason": "filename=['fond', 'ghadir'] venue=['five', 'sliema', 'surfside']"
  },
  {
   "id": "ghar-id-dud-rocks",
@@ -184,7 +195,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['ghar', 'rocks', 'sliema']"
+  "reason": "filename=['fond', 'ghadir'] venue=['sliema', 'tower', 'road']"
  },
  {
   "id": "hilton-pool-deck",
@@ -206,7 +217,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['kalanka'] venue=['hofra', 'marsaxlokk', 'delimara']"
+  "reason": "filename=['kalanka'] venue=['marsaxlokk', 'kbira', 'hofra']"
  },
  {
   "id": "hofra-z-zghira",
@@ -217,7 +228,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['kalanka'] venue=['hofra', 'delimara', 'zghira']"
+  "reason": "filename=['kalanka'] venue=['zghira', 'hofra', 'peninsula']"
  },
  {
   "id": "hugos-terrace",
@@ -228,7 +239,18 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['terrace', 'julian', 'level']"
+  "reason": "filename=['georges'] venue=['julian', 'level', 'hugo']"
+ },
+ {
+  "id": "hyatt-regency-pool",
+  "name": "Hyatt Regency Malta Pool",
+  "location": "High Street, Sliema (next to Tigne Point)",
+  "category": "pool-club",
+  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Fond-Ghadir-2560x1440-1.jpeg",
+  "http": 200,
+  "ctype": "image/jpeg",
+  "class": "needs-review",
+  "reason": "filename=['fond', 'ghadir'] venue=['sliema', 'street', 'hyatt']"
  },
  {
   "id": "independence-garden-rocks",
@@ -239,7 +261,7 @@
   "http": 200,
   "ctype": "image/webp",
   "class": "needs-review",
-  "reason": "filename=['exiles', 'scaled'] venue=['julian', 'garden', 'independence']"
+  "reason": "filename=['scaled', 'exiles'] venue=['sliema', 'independence', 'garden']"
  },
  {
   "id": "manta",
@@ -250,7 +272,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['seafront', 'manta', 'sliema']"
+  "reason": "filename=['fond', 'ghadir'] venue=['tign', 'sliema', 'seafront']"
  },
  {
   "id": "marina-hotel-pool",
@@ -261,7 +283,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['deck', 'julian', 'corinthia']"
+  "reason": "filename=['georges'] venue=['deck', 'george', 'julian']"
  },
  {
   "id": "marquee-pool",
@@ -272,7 +294,18 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['mall', 'marquee', 'triq']"
+  "reason": "filename=['fond', 'ghadir'] venue=['marquee', 'roof', 'sliema']"
+ },
+ {
+  "id": "marsa-sports-club",
+  "name": "Marsa Sports Club Pool",
+  "location": "Aldo Moro Street, Marsa",
+  "category": "pool-club",
+  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Mistra-2560x1440-1.jpeg",
+  "http": 200,
+  "ctype": "image/jpeg",
+  "class": "needs-review",
+  "reason": "filename=['mistra'] venue=['marsa', 'sports', 'street']"
  },
  {
   "id": "marsascala-lido",
@@ -283,7 +316,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['tomas'] venue=['seafront', 'marsascala']"
+  "reason": "filename=['tomas'] venue=['marsascala', 'seafront']"
  },
  {
   "id": "mint-sky-bar",
@@ -294,7 +327,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['buggiba', 'front'] venue=['mint', 'floor', 'doubletree']"
+  "reason": "filename=['front', 'buggiba'] venue=['mint', 'floor', 'doubletree']"
  },
  {
   "id": "munxar-pools",
@@ -305,7 +338,18 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['tomas'] venue=['cliff', 'near', 'munxar']"
+  "reason": "filename=['tomas'] venue=['thomas', 'near', 'cliff']"
+ },
+ {
+  "id": "phoenicia-pool",
+  "name": "The Phoenicia Pool Deck",
+  "location": "The Mall, Floriana (outside Valletta gate)",
+  "category": "pool-club",
+  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg",
+  "http": 200,
+  "ctype": "image/jpeg",
+  "class": "needs-review",
+  "reason": "filename=['rinella'] venue=['deck', 'floriana', 'gate']"
  },
  {
   "id": "pretty-bay",
@@ -316,7 +360,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['kalanka'] venue=['pretty', 'birzebbuga']"
+  "reason": "filename=['kalanka'] venue=['birzebbuga', 'pretty']"
  },
  {
   "id": "qala-creek",
@@ -327,7 +371,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['qorot', 'dahlet'] venue=['east', 'creek', 'qala']"
+  "reason": "filename=['qorot', 'dahlet'] venue=['qala', 'east', 'gozo']"
  },
  {
   "id": "qui-si-sana-lido",
@@ -338,7 +382,7 @@
   "http": 200,
   "ctype": "image/webp",
   "class": "needs-review",
-  "reason": "filename=['exiles', 'scaled'] venue=['seafront', 'sana', 'sliema']"
+  "reason": "filename=['scaled', 'exiles'] venue=['seafront', 'sliema', 'sana']"
  },
  {
   "id": "ras-il-hekka",
@@ -349,7 +393,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['wied', 'ghasri'] venue=['eastern', 'hekka', 'gozo']"
+  "reason": "filename=['ghasri', 'wied'] venue=['cliffs', 'hekka', 'gozo']"
  },
  {
   "id": "roy-lido",
@@ -360,7 +404,18 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['julian', 'garden', 'independence']"
+  "reason": "filename=['fond', 'ghadir'] venue=['independence', 'near', 'tower']"
+ },
+ {
+  "id": "royal-malta-yc",
+  "name": "Royal Malta Yacht Club Pool & Lido",
+  "location": "Ta' Xbiex Seafront, Ta' Xbiex",
+  "category": "lido",
+  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Balluta-2560x1440-1.jpeg",
+  "http": 200,
+  "ctype": "image/jpeg",
+  "class": "needs-review",
+  "reason": "filename=['balluta'] venue=['seafront', 'royal', 'xbiex']"
  },
  {
   "id": "salina-bay",
@@ -371,7 +426,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['mellieha'] venue=['between', 'salina', 'bugibba']"
+  "reason": "filename=['mellieha'] venue=['salina', 'bugibba', 'road']"
  },
  {
   "id": "salini-resort-pool",
@@ -382,7 +437,18 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['mellieha'] venue=['salini', 'salina']"
+  "reason": "filename=['mellieha'] venue=['salina', 'salini']"
+ },
+ {
+  "id": "salt-of-earth",
+  "name": "Salt of the Earth Beachside",
+  "location": "Coast Road, Ba\u0127ar i\u010b-\u010aag\u0127aq",
+  "category": "beach-club",
+  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg",
+  "http": 200,
+  "ctype": "image/jpeg",
+  "class": "needs-review",
+  "reason": "filename=['rinella'] venue=['road', 'earth', 'salt']"
  },
  {
   "id": "san-niklaw-bay",
@@ -393,7 +459,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['maria'] venue=['east', 'niklaw', 'from']"
+  "reason": "filename=['maria'] venue=['comino', 'niklaw', 'from']"
  },
  {
   "id": "skipper-bar",
@@ -404,7 +470,7 @@
   "http": 200,
   "ctype": "image/webp",
   "class": "needs-review",
-  "reason": "filename=['exiles', 'scaled'] venue=['skipper', 'sliema', 'strand']"
+  "reason": "filename=['scaled', 'exiles'] venue=['skipper', 'sliema', 'strand']"
  },
  {
   "id": "spinola-bay",
@@ -426,7 +492,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['peters'] venue=['peter', 'delimara', 'marsaxlokk']"
+  "reason": "filename=['peters'] venue=['delimara', 'marsaxlokk', 'peter']"
  },
  {
   "id": "st-thomas-bay",
@@ -437,7 +503,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['tomas'] venue=['thomas', 'marsascala', 'southwest']"
+  "reason": "filename=['tomas'] venue=['thomas', 'southwest', 'marsascala']"
  },
  {
   "id": "surfside-sliema",
@@ -448,7 +514,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['sliema', 'road', 'surfside']"
+  "reason": "filename=['fond', 'ghadir'] venue=['surfside', 'sliema', 'tower']"
  },
  {
   "id": "tas-salvatur",
@@ -459,7 +525,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['xwejni'] venue=['above', 'marsalforn', 'rocks']"
+  "reason": "filename=['xwejni'] venue=['salvatur', 'above', 'gozo']"
  },
  {
   "id": "the-embassy-rooftop",
@@ -470,7 +536,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['garden', 'valletta', 'complex']"
+  "reason": "filename=['rinella'] venue=['roof', 'complex', 'garden']"
  },
  {
   "id": "tigne-lido",
@@ -481,7 +547,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghadir', 'fond'] venue=['point', 'sliema', 'tigne']"
+  "reason": "filename=['fond', 'ghadir'] venue=['sliema', 'point', 'tigne']"
  },
  {
   "id": "tortuga-bugibba",
@@ -492,7 +558,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['buggiba', 'front'] venue=['turisti', 'tortuga', 'triq']"
+  "reason": "filename=['front', 'buggiba'] venue=['bugibba', 'tortuga', 'triq']"
  },
  {
   "id": "trabuxu-rooftop",
@@ -503,7 +569,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['wine', 'republic', 'trabuxu']"
+  "reason": "filename=['rinella'] venue=['wine', 'trabuxu', 'republic']"
  },
  {
   "id": "twentytwo",
@@ -514,7 +580,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['julian', 'portomaso', '22nd']"
+  "reason": "filename=['georges'] venue=['portomaso', 'tower', 'floor']"
  },
  {
   "id": "westin-beach",
@@ -525,7 +591,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['julian', 'point', 'cabanas']"
+  "reason": "filename=['georges'] venue=['point', 'julian', 'westin']"
  },
  {
   "id": "westin-pool-cabanas",
@@ -536,7 +602,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['julian', 'dragonara', 'westin']"
+  "reason": "filename=['georges'] venue=['westin', 'dragonara', 'julian']"
  },
  {
   "id": "westin-pool-deck",
@@ -547,7 +613,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['georges'] venue=['deck', 'julian', 'westin']"
+  "reason": "filename=['georges'] venue=['deck', 'point', 'julian']"
  },
  {
   "id": "white-rocks-pembroke",
@@ -558,7 +624,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['rinella'] venue=['behind', 'coast', 'rocks']"
+  "reason": "filename=['rinella'] venue=['pembroke', 'westin', 'white']"
  },
  {
   "id": "wied-iz-zurrieq",
@@ -569,7 +635,7 @@
   "http": 200,
   "ctype": "image/jpeg",
   "class": "needs-review",
-  "reason": "filename=['ghar', 'lapsi'] venue=['grotto', 'blue', 'wied']"
+  "reason": "filename=['ghar', 'lapsi'] venue=['grotto', 'wied', 'blue']"
  },
  {
   "id": "anchor-bay",
@@ -669,6 +735,17 @@
   "ctype": "image/jpeg",
   "class": "ok-match",
   "reason": "matched on ['dahlet']"
+ },
+ {
+  "id": "db-san-antonio-beach",
+  "name": "db San Antonio Beach Club",
+  "location": "db San Antonio Hotel, Qawra Coast Road",
+  "category": "beach-club",
+  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Qawra-Point-2560x1440-1.jpeg",
+  "http": 200,
+  "ctype": "image/jpeg",
+  "class": "ok-match",
+  "reason": "matched on ['qawra']"
  },
  {
   "id": "db-seabank",
@@ -803,6 +880,17 @@
   "reason": "matched on ['armier']"
  },
  {
+  "id": "loa-mistra",
+  "name": "LOA Beach Club",
+  "location": "Mistra Bay, Selmun, Mellie\u0127a",
+  "category": "pool-club",
+  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Mistra-2560x1440-1.jpeg",
+  "http": 200,
+  "ctype": "image/jpeg",
+  "class": "ok-match",
+  "reason": "matched on ['mistra']"
+ },
+ {
   "id": "marsalforn-bay",
   "name": "Marsalforn Bay",
   "location": "Marsalforn village, north Gozo",
@@ -878,6 +966,17 @@
   "ctype": "image/jpeg",
   "class": "ok-match",
   "reason": "matched on ['mistra']"
+ },
+ {
+  "id": "pa-pa-comino",
+  "name": "Pa Pa Lounge Comino",
+  "location": "Above Blue Lagoon, Comino",
+  "category": "beach-club",
+  "photo": "https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg",
+  "http": 200,
+  "ctype": "image/jpeg",
+  "class": "ok-match",
+  "reason": "matched on ['blue', 'lagoon']"
  },
  {
   "id": "paradise-bay",
@@ -1109,6 +1208,17 @@
   "ctype": "image/jpeg",
   "class": "ok-trusted",
   "reason": "aqualuna.mt"
+ },
+ {
+  "id": "aria-paceville",
+  "name": "AriA Sky Lounge",
+  "location": "Level 16, InterContinental, Paceville",
+  "category": "rooftop",
+  "photo": "https://malta.intercontinental.com/wp-content/uploads/2024/02/winter.webp",
+  "http": 200,
+  "ctype": "image/webp",
+  "class": "ok-trusted",
+  "reason": "malta.intercontinental.com"
  },
  {
   "id": "cafe-del-mar",
