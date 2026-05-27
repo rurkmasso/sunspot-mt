@@ -487,7 +487,7 @@
  bestFor: ['Local feel', 'Families', 'Long walks'],
  dressCode: 'Swimwear', gettingThere: 'Bus 82 from Valletta · 30 min',
  parking: 'Free street parking', accessibility: 'Step-free · wheelchair accessible',
- photos: [ WB + '2022/01/Kalanka-2560x1440-1.jpeg' ],
+ photos: [ WB + '2022/01/St.-Tomas-Bay-2560x1440-1.jpg' ],
  },
  {
  id: 'mistra-bay', name: 'Mistra Bay', category: 'rocky-bay', region: 'north',
@@ -648,7 +648,7 @@
         'https://www.odycy.com/_next/image?url=%2Fimages%2Fbook-service-landing-hero.png&w=3840&q=75',
       ], sunbedFrom: 22, cabanaFrom: 120, vipFrom: 250, spotsLeft: 45, capacity: { sunbeds: 44, cabanas: 10, vip: 3, total: 74 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "salini-resort-pool", name: "Salini Resort Pool", category: "pool-club", region: "north", location: "Salini Resort, Salina Bay", regionLabel: "Salina", coords: { lat: 35.9495, lng: 14.4172 }, hasBookableSunbeds: true, rating: 4.3, reviews: 465, summary: "Quiet adults-leaning pool overlooking the Salina saltpans bay.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Pool deck", "Day passes", "Family-friendly"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg',
+        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Buggiba-Front-2560x1440-1.jpeg',
       ], sunbedFrom: 18, cabanaFrom: 90, vipFrom: 220, spotsLeft: 18, capacity: { sunbeds: 45, cabanas: 7, vip: 4, total: 135 }, poolType: "Outdoor freshwater pool", surface: "Pool deck" },
  { id: "marquee-pool", name: "Marquee Pool Club", category: "pool-club", region: "central", location: "Marquee Mall Roof, Triq il-Maskri, Tigne", regionLabel: "Sliema", coords: { lat: 35.9088, lng: 14.5072 }, hasBookableSunbeds: true, rating: 4.1, reviews: 39, summary: "Members-leaning pool club on the Marquee Mall roof — sleek, all-white aesthetic.", amenities: ["Outdoor pool", "Towel service", "Snack bar", "Lifeguard on duty", "Free Wi-Fi"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Members club vibe", "All-white aesthetic", "Adults only"], bestFor: ["Families", "Day-trippers", "Pool lovers"], dressCode: "Swimwear · Coverup in restaurant", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Fond-Ghadir-2560x1440-1.jpeg',
@@ -718,7 +718,7 @@
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Maria-Bay-2560x1440-1.jpg',
       ], sunbedFrom: 15, cabanaFrom: 70, vipFrom: 200, spotsLeft: 20, capacity: { sunbeds: 41, cabanas: 7, vip: 4, total: 71 }, poolType: "Beach", surface: "Sand" },
  { id: "birzebbuga-beach-club", name: "Pretty Bay Beach Service", category: "beach-club", region: "south", location: "Pretty Bay, Birzebbuga", regionLabel: "Birzebbuga", coords: { lat: 35.8203, lng: 14.5358 }, hasBookableSunbeds: true, rating: 4.3, reviews: 359, summary: "South-coast sunbed service at Birzebbuga's Pretty Bay — quieter than the north.", amenities: ["Sunbeds & umbrellas", "Beach bar", "Watersports rental", "Showers", "Lifeguard"], website: "", socials: { }, phone: "", email: "", hours: "09:00–19:00 daily", season: "May–October", features: ["Sunbed service", "Beach bar", "Watersports"], bestFor: ["Beach lovers", "Families", "Tourists"], dressCode: "Swimwear · Coverup at bar", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg',
+        'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Tomas-Bay-2560x1440-1.jpg',
       ], sunbedFrom: 12, cabanaFrom: 80, vipFrom: 200, spotsLeft: 40, capacity: { sunbeds: 59, cabanas: 5, vip: 2, total: 149 }, poolType: "Beach", surface: "Sand" },
  { id: "imgiebah-bay", name: "Imġiebaħ Bay", category: "sandy-beach", region: "north", location: "Selmun, Mellieha", regionLabel: "Selmun", coords: { lat: 35.9572, lng: 14.3878 }, hasBookableSunbeds: false, rating: 4.5, reviews: 400, summary: "Remote sandy cove reached via a rough 4×4 track or 25-min hike. No facilities, big payoff.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Remote", "Sandy", "No facilities", "Hike-in"], bestFor: ["Adventurers", "Quiet days", "Couples"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Imgiebah-2560x14402-1.jpeg',
@@ -739,10 +739,10 @@
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Fomm-ir-Rih-2560x1440-1.jpeg',
       ] },
   { id: "bahar-ic-caghaq", name: "Baħar iċ-Ċagħaq", category: "sandy-beach", region: "central", location: "Coast Road, between Sliema and Bugibba", regionLabel: "Coast Road", coords: { lat: 35.9472, lng: 14.4612 }, hasBookableSunbeds: false, rating: 4.6, reviews: 513, summary: "Coastal beach belt with sandy patches and rocky platforms. Splash & Fun water park is here too.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Sandy patches", "Splash & Fun nearby"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
+        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Qawra-Point-2560x1440-1.jpeg',
       ] },
  { id: "salina-bay", name: "Salina Bay", category: "sandy-beach", region: "north", location: "Salina, between Bugibba and Coast Road", regionLabel: "Salina", coords: { lat: 35.9472, lng: 14.4178 }, hasBookableSunbeds: false, rating: 4.1, reviews: 449, summary: "Bird reserve and historic saltpans wrap around this shallow sandy bay. Good for kids.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Shallow", "Saltpans", "Bird reserve", "Family-friendly"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mellieha-Bay-2560x1440-1.jpeg',
+        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Buggiba-Front-2560x1440-1.jpeg',
       ] },
  { id: "balluta-bay", name: "Balluta Bay", category: "sandy-beach", region: "central", location: "Balluta Square, St Julian's", regionLabel: "St Julian's", coords: { lat: 35.9193, lng: 14.4988 }, hasBookableSunbeds: false, rating: 4.6, reviews: 419, summary: "Tiny urban sandy patch in central St Julian's, framed by the Balluta Buildings. More postcard than beach.", amenities: ["Free public access", "Sand", "Some shade trees"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Urban", "Tiny", "Iconic backdrop"], bestFor: ["Families", "Day trips", "Snorkellers"], dressCode: "Swimwear", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Balluta-2560x1440-1.jpeg',
@@ -766,7 +766,7 @@
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Kalanka-2560x1440-1.jpeg',
       ] },
  { id: "white-rocks-pembroke", name: "White Rocks", category: "rocky-bay", region: "central", location: "Pembroke coast, behind Westin", regionLabel: "Pembroke", coords: { lat: 35.9322, lng: 14.4842 }, hasBookableSunbeds: false, rating: 4.4, reviews: 90, summary: "Abandoned military pools now used as a free rocky bathing area — favoured by locals.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Free", "Historic", "Rock pools"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
+        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Exiles-Bay-2560x1440-1-scaled-1.webp',
       ] },
  { id: "independence-garden-rocks", name: "Independence Garden Rocks", category: "rocky-bay", region: "central", location: "Sliema Promenade (Independence Garden, St Julian's border)", regionLabel: "Sliema", coords: { lat: 35.9197, lng: 14.5012 }, hasBookableSunbeds: false, rating: 4.4, reviews: 605, summary: "Slated rocky shelf along the promenade — daily-swimmer haunt with sea ladders.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Free", "Daily swimmers", "Sunset spot"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Exiles-Bay-2560x1440-1-scaled-1.webp',
@@ -777,7 +777,7 @@
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Exiles-Bay-2560x1440-1-scaled-1.webp',
       ] },
  { id: "bahar-ic-caghaq-rocks", name: "Baħar iċ-Ċagħaq Rocks", category: "rocky-bay", region: "central", location: "Coast Road, opposite Splash & Fun", regionLabel: "Coast Road", coords: { lat: 35.9482, lng: 14.4625 }, hasBookableSunbeds: false, rating: 4.1, reviews: 242, summary: "Flat rocky platform stretching along the coast road — good snorkelling, plenty of space.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Free", "Snorkelling", "Quiet"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
-        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
+        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Qawra-Point-2560x1440-1.jpeg',
       ] },
  { id: "rinella-bay", name: "Rinella Bay", category: "rocky-bay", region: "south", location: "Kalkara harbour", regionLabel: "Kalkara", coords: { lat: 35.8895, lng: 14.5358 }, hasBookableSunbeds: false, rating: 4.4, reviews: 489, summary: "Tiny rocky cove on the Kalkara side of the Grand Harbour — quiet inner-harbour swim.", amenities: ["Free access", "Snorkelling", "Deep water swim"], website: "", socials: { }, phone: "", email: "", hours: "Daylight only", season: "May–October", features: ["Inner harbour", "Quiet", "Snorkelling"], bestFor: ["Snorkellers", "Adventurers", "Quiet days"], dressCode: "Swimwear · Bring water shoes", parking: "Public parking nearby", accessibility: "", photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
@@ -930,7 +930,7 @@
  parking: 'Hotel parking €5/day',
  accessibility: 'Step-free to outdoor pool; lifeguard-assisted pool entry on request',
  photos: [
-        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
+        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Balluta-2560x1440-1.jpeg',
       ],
  },
 
@@ -1043,7 +1043,7 @@
  parking: 'Free parking on-site',
  accessibility: 'Mostly flat lawn; rocky swim entry has steps',
  photos: [
-        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
+        'https://whichbeach.com.mt/wp-content/uploads/2022/01/Qawra-Point-2560x1440-1.jpeg',
       ],
  },
 
