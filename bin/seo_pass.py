@@ -62,6 +62,7 @@ PUBLIC_PAGES: list[dict] = [
     {"path":"brand.html",      "title":"Brand",                      "p":"0.4", "cf":"monthly"},
     {"path":"club.html",       "title":"Beach club & lido",          "p":"0.9", "cf":"weekly", "dynamic": True},
     {"path":"guide.html",      "title":"Field guide article",        "p":"0.85","cf":"weekly", "dynamic": True},
+    {"path":"charter.html",    "title":"Charter detail",             "p":"0.85","cf":"weekly", "dynamic": True},
 ]
 
 # Pages that should NOT be in the sitemap or indexed
@@ -88,6 +89,7 @@ BREADCRUMBS = {
     "gifts.html":        [("Home","/"), ("Gift cards","/gifts.html")],
     "club.html":         [("Home","/"), ("Beaches","/"), ("Beach club","/club.html")],
     "guide.html":        [("Home","/"), ("Guides","/guides.html"), ("Article","/guide.html")],
+    "charter.html":      [("Home","/"), ("Charters","/charters.html"), ("Charter","/charter.html")],
     "sitemap.html":      [("Home","/"), ("Site map","/sitemap.html")],
 }
 

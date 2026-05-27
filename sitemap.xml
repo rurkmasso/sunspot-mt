@@ -2,7 +2,8 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap><loc>https://sunspot.mt/sitemap-pages.xml</loc><lastmod>2026-05-27</lastmod></sitemap>
   <sitemap><loc>https://sunspot.mt/sitemap-venues.xml</loc><lastmod>2026-05-27</lastmod></sitemap>
-  <sitemap><loc>https://sunspot.mt/sitemap-experiences.xml</loc><lastmod>2026-05-27</lastmod></sitemap>
+  <sitemap><loc>https://sunspot.mt/sitemap-experiences.xml</loc></sitemap>
+  <sitemap><loc>https://sunspot.mt/sitemap-charters.xml</loc><lastmod>2026-05-27</lastmod></sitemap>
   <sitemap><loc>https://sunspot.mt/sitemap-beaches.xml</loc><lastmod>2026-05-27</lastmod></sitemap>
   <sitemap><loc>https://sunspot.mt/sitemap-regions.xml</loc><lastmod>2026-05-27</lastmod></sitemap>
   <sitemap><loc>https://sunspot.mt/sitemap-categories.xml</loc><lastmod>2026-05-27</lastmod></sitemap>

@@ -273,6 +273,7 @@
 
 <!-- ssbc:breadcrumb-ld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sunspot.mt/"},{"@type":"ListItem","position":2,"name":"Experiences","item":"https://sunspot.mt/experiences.html"},{"@type":"ListItem","position":3,"name":"Boat charters","item":"https://sunspot.mt/charters.html"}]}</script>
+
 <!-- ssbc:brand-icons -->
 <link rel="icon" type="image/svg+xml" href="/assets/brand/mark.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -482,7 +483,7 @@ document.addEventListener('DOMContentLoaded', function () {
     grid.innerHTML = items.map(e => {
       const badge = e.cat === 'private-charter' ? 'Private' : (e.cat === 'sunset' ? 'Sunset' : (e.cat === 'rib' ? 'RIB' : 'Boat'));
       const pax  = e.max_pax ? ('up to ' + e.max_pax) : '—';
-      return `<a class="charter-card" href="experiences.html?e=${escapeHtml(e.id)}">
+      return `<a class="charter-card" href="charter.html?c=${escapeHtml(e.id)}">
         <span class="charter-thumb"><img src="${escapeHtml(e.photo)}" alt="${escapeHtml(e.name)}" loading="lazy" decoding="async">
           <span class="charter-badge">${escapeHtml(badge)}</span>
         </span>
