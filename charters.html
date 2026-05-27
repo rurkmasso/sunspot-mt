@@ -5,19 +5,17 @@
 <script src="gate.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Boat charters in Malta — yachts, catamarans, RIBs · Sunspot</title>
-<meta name="description" content="Private boat charters across Malta — skippered sailing yachts, catamarans, power yachts, RIBs and sunset cruises. Half-day to long-weekend, 4 to 30 guests, transparent prices. 8% service fee, no upselling.">
+<meta name="description" content="Private boat charters across Malta — skippered sailing yachts, catamarans, power yachts, RIBs and sunset cruises. Half-day from €350. 8% service fee.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://sunspot.mt/charters.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Boat charters in Malta — yachts, catamarans, RIBs · Sunspot">
-<meta property="og:description" content="Skippered private charters across Malta. Half-day from €350, full-day from €780. Transparent pricing, 8% service fee.">
+<meta property="og:description" content="Skippered private charters across Malta. Half-day from €350.">
 <meta property="og:url" content="https://sunspot.mt/charters.html">
 <meta property="og:image" content="https://sunspot.mt/og-cover.png">
 <meta property="og:site_name" content="Sunspot">
 <meta property="og:locale" content="en_MT">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Boat charters in Malta — yachts, catamarans, RIBs · Sunspot">
-<meta name="twitter:description" content="Private charters across Malta — sailing, power, RIBs, multi-day. From €350.">
 <meta name="twitter:image" content="https://sunspot.mt/og-cover.png">
 
 <script type="application/ld+json">
@@ -28,30 +26,25 @@
    "@type": "CollectionPage",
    "@id": "https://sunspot.mt/charters.html#collection",
    "name": "Boat charters in Malta",
-   "description": "Private skippered charters across Malta and Gozo — sailing yachts, catamarans, RIBs and power yachts. Half-day to long-weekend.",
    "url": "https://sunspot.mt/charters.html",
    "inLanguage": "en-MT",
    "isPartOf": { "@id": "https://sunspot.mt/#website" },
-   "publisher": { "@id": "https://sunspot.mt/#organization" },
-   "about": { "@type": "Country", "name": "Malta" }
+   "publisher": { "@id": "https://sunspot.mt/#organization" }
   },
   {
    "@type": "Service",
    "@id": "https://sunspot.mt/charters.html#service",
    "serviceType": "Private boat charter",
    "name": "Sunspot — Boat Charters",
+   "provider": { "@id": "https://sunspot.mt/#organization" },
    "areaServed": [
     { "@type": "AdministrativeArea", "name": "Malta" },
     { "@type": "AdministrativeArea", "name": "Gozo" },
     { "@type": "AdministrativeArea", "name": "Comino" }
    ],
-   "provider": { "@id": "https://sunspot.mt/#organization" },
    "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "EUR",
-    "lowPrice": "350",
-    "highPrice": "4800",
-    "offerCount": "11",
+    "@type": "AggregateOffer", "priceCurrency": "EUR",
+    "lowPrice": "350", "highPrice": "4800", "offerCount": "18",
     "availability": "https://schema.org/InStock"
    }
   }
@@ -60,233 +53,191 @@
 </script>
 
 <link rel="preconnect" href="https://whichbeach.com.mt" crossorigin>
-<link rel="preload" as="image"
-      href="https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg"
-      fetchpriority="high">
+<link rel="preload" as="image" href="https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
 
 <style>
-  /* Hero — same editorial language as the homepage */
-  .charters-hero { position: relative; min-height: 520px; height: 60vh; max-height: 600px;
-    display: flex; align-items: flex-end; overflow: hidden; color: #fff; }
-  .charters-hero-photo { position: absolute; inset: 0; z-index: 0; }
-  .charters-hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 38%; }
-  .charters-hero::after { content: ""; position: absolute; inset: 0; z-index: 1;
-    background:
-      linear-gradient(180deg, rgba(10,31,58,0) 30%, rgba(10,31,58,.55) 70%, rgba(10,31,58,.88) 100%),
-      linear-gradient(90deg, rgba(10,31,58,.35) 0%, transparent 60%);
+  /* Compact hero */
+  .ch-hero {
+    position: relative; aspect-ratio: 21/9; max-height: 360px; min-height: 220px;
+    overflow: hidden; color: #fff;
   }
-  .charters-hero-content { position: relative; z-index: 2; max-width: 1200px; width: 100%;
-    margin: 0 auto; padding: 0 28px 56px; }
-  .charters-hero .eyebrow {
-    display: inline-block; padding: 6px 14px; background: rgba(255,255,255,.14);
-    backdrop-filter: blur(8px); border-radius: 999px;
-    font: 700 11px/1 var(--font-body); letter-spacing: 2.4px; text-transform: uppercase;
+  .ch-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; z-index: 0; }
+  .ch-hero::after { content: ""; position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(180deg, rgba(10,31,58,.20) 0%, rgba(10,31,58,.55) 60%, rgba(10,31,58,.85) 100%);
   }
-  .charters-hero h1 {
+  .ch-hero-inner {
+    position: absolute; inset: 0; z-index: 2;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    max-width: 1100px; margin: 0 auto; padding: 0 22px 22px;
+  }
+  .ch-hero .eyebrow {
+    display: inline-block; align-self: flex-start;
+    padding: 4px 10px; border-radius: 999px;
+    background: rgba(255,255,255,.18); backdrop-filter: blur(8px);
+    font: 700 10px/1 var(--font-body); letter-spacing: 2.2px; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .ch-hero h1 {
     font-family: var(--font-display); font-weight: 500;
-    font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.02;
-    letter-spacing: -0.026em; margin: 22px 0 14px; max-width: 16ch;
-    font-variation-settings: 'opsz' 72, 'SOFT' 30;
+    font-size: clamp(1.8rem, 4.8vw, 2.8rem);
+    line-height: 1.02; letter-spacing: -0.024em;
+    margin: 0 0 6px; color: #fff;
+    font-variation-settings: 'opsz' 64, 'SOFT' 30;
   }
-  .charters-hero h1 em { font-style: italic; color: #ffd58a; }
-  .charters-hero p.lede { font-size: 17px; line-height: 1.55; max-width: 56ch; color: rgba(255,255,255,.92); margin: 0; }
-  @media (max-width: 720px) {
-    .charters-hero { min-height: 400px; height: auto; max-height: 520px; }
-    .charters-hero-content { padding: 64px 22px 28px; }
-    .charters-hero p.lede { font-size: 14.5px; }
-  }
+  .ch-hero h1 em { font-style: italic; color: #ffd58a; }
+  .ch-hero p { font-size: 14.5px; line-height: 1.5; margin: 0; max-width: 60ch; color: rgba(255,255,255,.92); }
 
-  /* Page body */
-  .charters-page { max-width: 1200px; margin: 0 auto; padding: 56px 24px 100px; }
-  .charters-intro { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px;
-    align-items: start; margin-bottom: 72px; padding-bottom: 56px;
-    border-bottom: 1px solid var(--line); }
-  @media (max-width: 880px) { .charters-intro { grid-template-columns: 1fr; gap: 24px; } }
-  .charters-intro h2 {
-    font-family: var(--font-display); font-weight: 500;
-    font-size: clamp(1.8rem, 3.2vw, 2.4rem); line-height: 1.15;
-    letter-spacing: -0.022em; margin: 0 0 18px; max-width: 22ch;
-    font-variation-settings: 'opsz' 48, 'SOFT' 30;
+  /* Page */
+  .ch-page { max-width: 1100px; margin: 0 auto; padding: 24px 18px 80px; }
+
+  /* Category strip */
+  .ch-cats {
+    display: grid; grid-auto-flow: column;
+    grid-auto-columns: minmax(160px, 1fr);
+    gap: 10px;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    margin: 0 -18px 24px;
+    padding: 4px 18px 8px;
+    scrollbar-width: none;
   }
-  .charters-intro p { color: var(--muted); font-size: 17px; line-height: 1.65; max-width: 60ch; margin: 0 0 14px; }
-  .charters-intro aside {
-    background: #fafaf6; border: 1px solid var(--line); border-radius: 14px;
-    padding: 28px;
+  .ch-cats::-webkit-scrollbar { display: none; }
+  @media (min-width: 720px) {
+    .ch-cats {
+      grid-auto-flow: row;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-columns: auto;
+      overflow: visible;
+      margin: 0 0 28px;
+      padding: 0;
+    }
   }
-  .charters-intro aside h3 {
-    font: 600 11px/1.4 var(--font-body); letter-spacing: .2em;
-    text-transform: uppercase; color: var(--muted); margin: 0 0 14px;
+  .ch-cat {
+    scroll-snap-align: start;
+    background: #fff; border: 1.5px solid var(--line); border-radius: 14px;
+    padding: 14px 14px 12px;
+    cursor: pointer; text-align: left;
+    font: inherit; color: inherit;
+    transition: border-color .15s ease, background .15s ease, transform .15s ease;
+    display: flex; flex-direction: column; gap: 4px;
+    min-height: 92px;
   }
-  .charters-intro aside ul { list-style: none; padding: 0; margin: 0; }
-  .charters-intro aside li {
+  .ch-cat:hover, .ch-cat:focus-visible {
+    border-color: var(--honey);
+    transform: translateY(-1px); outline: none;
+  }
+  .ch-cat.is-on { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .ch-cat .label {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 16px; letter-spacing: -0.014em; line-height: 1.15;
+    font-variation-settings: 'opsz' 24, 'SOFT' 30;
+  }
+  .ch-cat .sub { font-size: 12px; color: var(--muted); line-height: 1.3; }
+  .ch-cat.is-on .sub { color: rgba(255,255,255,.7); }
+  .ch-cat .count {
+    margin-top: auto; align-self: flex-start;
+    background: var(--honey-soft, #f4ead0); color: var(--honey, #b8861a);
+    font: 700 11px/1 var(--font-body); letter-spacing: .04em;
+    padding: 4px 9px; border-radius: 999px;
+  }
+  .ch-cat.is-on .count { background: rgba(255,183,77,.25); color: #ffd58a; }
+
+  /* Section heading */
+  .ch-section-head {
     display: flex; align-items: baseline; justify-content: space-between;
-    gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line);
-    font-size: 14.5px;
+    gap: 14px; margin: 4px 0 18px;
   }
-  .charters-intro aside li:last-child { border-bottom: 0; padding-bottom: 0; }
-  .charters-intro aside li strong { color: var(--ink); }
-  .charters-intro aside li span { color: var(--honey); font-family: 'JetBrains Mono', ui-monospace, monospace;
-    font-size: 13px; font-weight: 600; }
-
-  /* Category tabs */
-  .charters-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 28px;
-    padding-bottom: 18px; border-bottom: 1px solid var(--line); }
-  .charters-tab {
-    background: #fff; border: 1px solid var(--line);
-    padding: 8px 16px; border-radius: 999px;
-    font: 500 13px/1 var(--font-body); color: var(--ink);
-    cursor: pointer; transition: background .15s, border-color .15s, color .15s;
+  .ch-section-head h2 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -0.022em; line-height: 1.15;
+    margin: 0;
   }
-  .charters-tab:hover { border-color: var(--honey); color: var(--sun-deep); }
-  .charters-tab.is-on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .ch-section-head .meta { color: var(--muted); font-size: 13.5px; }
 
-  /* Charter grid */
-  .charters-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 24px; }
-  .charter-card {
+  /* Card grid */
+  .ch-grid {
+    display: grid; gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .ch-card {
     background: #fff; border: 1px solid var(--line); border-radius: 16px;
-    overflow: hidden; display: flex; flex-direction: column; height: 100%;
+    overflow: hidden; display: flex; flex-direction: column;
+    text-decoration: none; color: var(--ink);
     transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s, border-color .15s;
   }
-  .charter-card:hover {
+  .ch-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 14px 38px rgba(10,31,58,.12), 0 2px 6px rgba(10,31,58,.06);
+    box-shadow: 0 14px 38px rgba(10,31,58,.12);
     border-color: rgba(245,124,0,.22);
   }
-  .charter-thumb { aspect-ratio: 5 / 3; overflow: hidden; position: relative; background: var(--sea-pale); }
-  .charter-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.8,.2,1); }
-  .charter-card:hover .charter-thumb img { transform: scale(1.035); }
-  .charter-badge { position: absolute; top: 12px; left: 12px;
+  .ch-thumb { aspect-ratio: 5/3; overflow: hidden; background: var(--sea-pale); position: relative; }
+  .ch-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.8,.2,1); display: block; }
+  .ch-card:hover .ch-thumb img { transform: scale(1.035); }
+  .ch-badge {
+    position: absolute; top: 10px; left: 10px;
     background: rgba(255,255,255,.92); backdrop-filter: blur(8px);
-    color: var(--ink); padding: 5px 11px; border-radius: 999px;
-    font: 700 10.5px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase;
-    box-shadow: 0 2px 8px rgba(10,31,58,.12); }
-  .charter-body { padding: 20px 22px 22px; flex: 1; display: flex; flex-direction: column; }
-  .charter-body h3 {
-    font-family: var(--font-display); font-weight: 600;
-    font-size: 21px; line-height: 1.18; letter-spacing: -0.018em;
-    margin: 0 0 6px; color: var(--ink);
-    font-variation-settings: 'opsz' 36, 'SOFT' 30;
+    color: var(--ink); padding: 4px 9px; border-radius: 999px;
+    font: 700 10px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase;
   }
-  .charter-meta { font-size: 12.5px; color: var(--muted); margin-bottom: 10px;
-    display: flex; gap: 12px; flex-wrap: wrap; }
-  .charter-meta strong { color: var(--ink); }
-  .charter-summary { color: var(--ink-soft); font-size: 14px; line-height: 1.55; flex: 1; margin: 0 0 14px; }
-  .charter-foot { display: flex; align-items: baseline; justify-content: space-between;
-    border-top: 1px solid var(--line); padding-top: 14px; margin-top: auto; }
-  .charter-foot .price { font-family: var(--font-display); font-weight: 500; font-size: 22px;
-    color: var(--ink); letter-spacing: -0.012em; }
-  .charter-foot .price small { font-size: 13px; color: var(--muted); font-weight: 400; margin-left: 4px;
-    font-family: var(--font-body); }
-  .charter-foot a { color: var(--sun-deep); font: 600 13px/1 var(--font-body); text-decoration: none; }
-  .charter-foot a:hover { text-decoration: underline; }
+  .ch-card-body { padding: 16px 18px 18px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+  .ch-card-body h3 {
+    font-family: var(--font-display); font-weight: 600; font-size: 18px;
+    line-height: 1.2; letter-spacing: -0.016em; margin: 0;
+    color: var(--ink); font-variation-settings: 'opsz' 32, 'SOFT' 30;
+  }
+  .ch-card-meta { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
+  .ch-card-meta strong { color: var(--ink); }
+  .ch-card-summary { font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); flex: 1; margin: 0; }
+  .ch-foot {
+    display: flex; align-items: baseline; justify-content: space-between;
+    border-top: 1px solid var(--line); padding-top: 12px; margin-top: 6px;
+  }
+  .ch-foot .price {
+    font-family: var(--font-display); font-weight: 500; font-size: 20px;
+    color: var(--ink); letter-spacing: -0.01em;
+  }
+  .ch-foot .price small { font-size: 12px; color: var(--muted); font-weight: 400;
+    margin-left: 4px; font-family: var(--font-body); }
+  .ch-foot .go { font: 600 12.5px/1 var(--font-body); color: var(--sun-deep); }
 
-  /* How-it-works strip */
-  .charters-how {
-    margin: 80px 0 0;
-    padding: 56px 0;
-    background: var(--limestone);
-    border-radius: 18px;
+  /* "How it works" strip */
+  .ch-how {
+    margin: 56px 0 0; padding: 32px 22px;
+    background: var(--limestone, #f5ecd9);
+    border-radius: 16px;
   }
-  .charters-how-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-  .charters-how h2 {
+  .ch-how h2 {
     font-family: var(--font-display); font-weight: 500;
-    font-size: clamp(1.8rem, 3vw, 2.2rem); margin: 0 0 28px;
-    letter-spacing: -0.022em; max-width: 22ch;
+    font-size: clamp(1.4rem, 2.6vw, 1.8rem); margin: 0 0 18px;
+    letter-spacing: -0.02em;
   }
-  .charters-how-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px; counter-reset: step; }
-  .charters-how-step { background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 14px;
-    padding: 22px 22px 24px; position: relative; }
-  .charters-how-step::before {
-    counter-increment: step;
-    content: counter(step);
-    position: absolute; top: -14px; left: 22px;
-    width: 32px; height: 32px; border-radius: 50%;
+  .ch-how-steps {
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    counter-reset: step;
+  }
+  .ch-how-step {
+    background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 12px;
+    padding: 16px 16px 18px; position: relative;
+  }
+  .ch-how-step::before {
+    counter-increment: step; content: counter(step);
+    position: absolute; top: -12px; left: 16px;
+    width: 26px; height: 26px; border-radius: 50%;
     background: var(--ink); color: #fff;
     display: flex; align-items: center; justify-content: center;
-    font: 600 14px/1 var(--font-body);
+    font: 600 12px/1 var(--font-body);
   }
-  .charters-how-step h3 { font-family: var(--font-display); font-weight: 500;
-    font-size: 17px; margin: 12px 0 6px; color: var(--ink); letter-spacing: -0.012em; }
-  .charters-how-step p { font-size: 14px; line-height: 1.55; color: var(--muted); margin: 0; }
-
-  /* FAQ block */
-  .charters-faq { margin: 80px 0 0; }
-  .charters-faq h2 {
-    font-family: var(--font-display); font-weight: 500;
-    font-size: clamp(1.8rem, 3vw, 2.2rem); margin: 0 0 24px;
-    letter-spacing: -0.022em;
+  .ch-how-step h3 {
+    font-family: var(--font-display); font-weight: 500; font-size: 15px;
+    margin: 10px 0 4px; color: var(--ink); letter-spacing: -0.01em;
   }
-  .charters-faq details {
-    background: #fff; border: 1px solid var(--line); border-radius: 12px;
-    padding: 0; margin-bottom: 10px; overflow: hidden;
-  }
-  .charters-faq summary {
-    padding: 18px 22px; cursor: pointer; list-style: none;
-    font: 600 15px/1.45 var(--font-body); color: var(--ink);
-    display: flex; align-items: center; justify-content: space-between; gap: 14px;
-  }
-  .charters-faq summary::-webkit-details-marker { display: none; }
-  .charters-faq summary::after {
-    content: "+"; color: var(--honey); font-size: 22px; line-height: 1; font-weight: 400;
-    transition: transform .2s ease;
-  }
-  .charters-faq details[open] summary::after { transform: rotate(45deg); }
-  .charters-faq details .ans { padding: 0 22px 22px; color: var(--ink-soft); font-size: 14.5px; line-height: 1.65; }
-  .charters-faq details .ans p { margin: 0 0 10px; }
-
-  /* CTA band */
-  .charters-cta {
-    margin: 80px 0 0; padding: 56px 32px;
-    background: linear-gradient(155deg, var(--ink) 0%, var(--sea-2) 100%);
-    color: #fff; border-radius: 20px; text-align: center;
-    position: relative; overflow: hidden;
-  }
-  .charters-cta::before {
-    content: ""; position: absolute; top: -40%; right: -10%;
-    width: 70%; aspect-ratio: 1;
-    background: radial-gradient(circle, rgba(255,183,77,.18), transparent 60%);
-    pointer-events: none;
-  }
-  .charters-cta h2 {
-    position: relative;
-    font-family: var(--font-display); font-weight: 500;
-    font-size: clamp(1.8rem, 3.6vw, 2.6rem); letter-spacing: -0.026em;
-    margin: 0 0 12px;
-  }
-  .charters-cta p { position: relative; font-size: 15.5px; line-height: 1.55; max-width: 56ch;
-    margin: 0 auto 26px; color: rgba(255,255,255,.85); }
-  .charters-cta a {
-    position: relative; display: inline-block; padding: 13px 28px;
-    background: var(--grad-sun); color: #fff;
-    border-radius: 999px; text-decoration: none;
-    font: 600 14.5px/1 var(--font-body); letter-spacing: .01em;
-    box-shadow: 0 8px 22px rgba(245,124,0,.32);
-  }
-  .charters-cta a:hover { transform: translateY(-1px); }
+  .ch-how-step p { font-size: 13px; line-height: 1.5; color: var(--muted); margin: 0; }
 </style>
-
-<!-- ssbc:breadcrumb-ld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sunspot.mt/"},{"@type":"ListItem","position":2,"name":"Experiences","item":"https://sunspot.mt/experiences.html"},{"@type":"ListItem","position":3,"name":"Boat charters","item":"https://sunspot.mt/charters.html"}]}</script>
-
-<!-- ssbc:brand-icons -->
-<link rel="icon" type="image/svg+xml" href="/assets/brand/mark.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#0a1f3a">
-<!-- /ssbc:brand-icons -->
-
-<link rel="alternate" hreflang="en-MT" href="https://sunspot.mt/charters.html">
-<link rel="alternate" hreflang="mt-MT" href="https://sunspot.mt/charters.html?lang=mt">
-<link rel="alternate" hreflang="it-MT" href="https://sunspot.mt/charters.html?lang=it">
-<link rel="alternate" hreflang="x-default" href="https://sunspot.mt/charters.html">
 </head>
 <body>
 
@@ -317,120 +268,74 @@
 </div>
 </header>
 
-<section class="charters-hero">
-  <div class="charters-hero-photo" aria-hidden="true">
-    <img src="https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg"
-         alt="A catamaran anchored in the Blue Lagoon, Comino" width="2560" height="1440"
-         loading="eager" fetchpriority="high" decoding="async">
-  </div>
-  <div class="charters-hero-content">
-    <span class="eyebrow">Malta · Gozo · Comino</span>
-    <h1>Your own boat for the day. <em>Or three.</em></h1>
-    <p class="lede">Skippered private charters across the Maltese islands — sailing yachts, catamarans, RIBs, power yachts and the occasional cabin charter for a long weekend. Same 8% service fee as the rest of Sunspot. The price you see is the price.</p>
+<section class="ch-hero">
+  <img src="https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg"
+       alt="A catamaran anchored in the Blue Lagoon" width="2560" height="1440"
+       loading="eager" fetchpriority="high" decoding="async">
+  <div class="ch-hero-inner">
+    <span class="eyebrow">Charters · Malta · Gozo</span>
+    <h1>Your own boat. <em>For the day.</em></h1>
+    <p>18 skippered private charters. Pick a category — every one has options.</p>
   </div>
 </section>
 
-<main class="charters-page">
+<main class="ch-page">
 
-  <section class="charters-intro">
-    <div>
-      <h2>What we charter, and what it costs</h2>
-      <p>Eleven private boats in the catalogue. They sit between the day-cruise catamarans (€55 a head, eighty strangers) and a bareboat charter from a marina nobody at your hotel can pronounce. You get the boat, the skipper, the crew if the boat needs one, and a sensible itinerary you can tweak by the hour.</p>
-      <p>Half-days are perfect for a Comino loop. Full-days reach Gozo and back with two anchor stops. Long weekends sleep aboard. Power yachts cut the travel time in half and add a chef on board. RIB convoys carry a group of twenty-four faster than any catamaran could.</p>
-      <p>If you can't tell what you want yet, the boat-finder below filters by group size and trip length.</p>
-    </div>
-    <aside>
-      <h3>Starting prices</h3>
-      <ul>
-        <li><strong>Half-day sailing yacht</strong><span>€450</span></li>
-        <li><strong>Full-day sailing yacht</strong><span>€780</span></li>
-        <li><strong>Half-day power yacht</strong><span>€950</span></li>
-        <li><strong>Full-day power yacht</strong><span>€1,750</span></li>
-        <li><strong>Twin-RIB convoy (24 guests)</strong><span>€1,100</span></li>
-        <li><strong>Catamaran private day</strong><span>€1,100</span></li>
-        <li><strong>Corporate Sunseeker 73</strong><span>€2,200</span></li>
-        <li><strong>Cabin cat · 3 nights</strong><span>€4,800</span></li>
-      </ul>
-    </aside>
-  </section>
-
-  <div class="charters-tabs" id="charter-tabs">
-    <button class="charters-tab is-on" data-filter="all">All boats</button>
-    <button class="charters-tab" data-filter="sailing">Sailing</button>
-    <button class="charters-tab" data-filter="power">Power</button>
-    <button class="charters-tab" data-filter="catamaran">Catamaran</button>
-    <button class="charters-tab" data-filter="rib">RIB</button>
-    <button class="charters-tab" data-filter="sunset">Sunset</button>
-    <button class="charters-tab" data-filter="multi-day">Multi-day</button>
+  <!-- Category strip -->
+  <div class="ch-cats" id="ch-cats" role="tablist" aria-label="Charter categories">
+    <button class="ch-cat is-on" data-c="all"       role="tab" aria-selected="true">
+      <span class="label">All boats</span><span class="sub">Every charter</span><span class="count">—</span>
+    </button>
+    <button class="ch-cat" data-c="sailing"     role="tab">
+      <span class="label">Sailing</span><span class="sub">Bavaria + Lagoon</span><span class="count">—</span>
+    </button>
+    <button class="ch-cat" data-c="catamaran"   role="tab">
+      <span class="label">Catamaran</span><span class="sub">Big-group day cats</span><span class="count">—</span>
+    </button>
+    <button class="ch-cat" data-c="power"       role="tab">
+      <span class="label">Power yacht</span><span class="sub">Princess + Sunseeker</span><span class="count">—</span>
+    </button>
+    <button class="ch-cat" data-c="rib"         role="tab">
+      <span class="label">RIB</span><span class="sub">Speedboats</span><span class="count">—</span>
+    </button>
+    <button class="ch-cat" data-c="sunset"      role="tab">
+      <span class="label">Sunset</span><span class="sub">Evening cruises</span><span class="count">—</span>
+    </button>
+    <button class="ch-cat" data-c="multi-day"   role="tab">
+      <span class="label">Multi-day</span><span class="sub">Sleep aboard</span><span class="count">—</span>
+    </button>
   </div>
 
-  <section class="charters-grid" id="charters-grid"></section>
+  <header class="ch-section-head">
+    <h2 id="ch-heading">All boats</h2>
+    <span class="meta" id="ch-count">—</span>
+  </header>
 
-  <section class="charters-how">
-    <div class="charters-how-inner">
-      <h2>How a charter booking works.</h2>
-      <div class="charters-how-steps">
-        <article class="charters-how-step">
-          <h3>Pick a boat</h3>
-          <p>Filter by group size and trip length. Each card shows what the skipper does, what's catered, and what's a per-head add-on.</p>
-        </article>
-        <article class="charters-how-step">
-          <h3>Tell us the day</h3>
-          <p>You pick the date. We confirm availability with the operator within four hours, weekdays and most weekends.</p>
-        </article>
-        <article class="charters-how-step">
-          <h3>Pay a 30% hold</h3>
-          <p>Card or SEPA — the rest 24 hours before sailing. Free cancellation up to 72 hours before. Weather cancels by the operator are 100% refunded.</p>
-        </article>
-        <article class="charters-how-step">
-          <h3>Show up at the dock</h3>
-          <p>Pickup point and exact pontoon arrive by email the night before, with your skipper's phone number and a sea-state forecast.</p>
-        </article>
-      </div>
+  <section class="ch-grid" id="ch-grid" role="tabpanel" aria-labelledby="ch-heading">
+    <p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0;">Loading charters…</p>
+  </section>
+
+  <!-- How it works -->
+  <section class="ch-how">
+    <h2>How a charter booking works.</h2>
+    <div class="ch-how-steps">
+      <article class="ch-how-step">
+        <h3>Pick a boat</h3>
+        <p>Filter by category. Each card shows what the skipper does, what's catered, and what's extra.</p>
+      </article>
+      <article class="ch-how-step">
+        <h3>Tell us the day</h3>
+        <p>You pick the date. We confirm availability with the operator within four hours.</p>
+      </article>
+      <article class="ch-how-step">
+        <h3>Pay a 30% hold</h3>
+        <p>Card or SEPA — the rest 24 hours before sailing. Free cancellation up to 72 hours before.</p>
+      </article>
+      <article class="ch-how-step">
+        <h3>Show at the dock</h3>
+        <p>Pontoon and skipper's number arrive by email the night before, with a sea-state forecast.</p>
+      </article>
     </div>
-  </section>
-
-  <section class="charters-faq">
-    <h2>Charter questions, answered.</h2>
-
-    <details>
-      <summary>Can I bring my own food and drink?</summary>
-      <div class="ans"><p>Yes — every operator allows it. Bring an ice-box, your own bottles, whatever you want. The catered options exist if you'd rather not, but nobody marks up corkage and nobody minds. Some boats provide a fridge.</p></div>
-    </details>
-    <details>
-      <summary>Where do most charters depart from?</summary>
-      <div class="ans"><p>Most sailing and power yachts leave from Msida Marina. RIBs and catamarans leave from Sliema Ferries or Cirkewwa, depending on the trip. Sicily day-trips run from Mġarr in Gozo. The exact pontoon is in the night-before email.</p></div>
-    </details>
-    <details>
-      <summary>What if the weather is bad?</summary>
-      <div class="ans"><p>The skipper makes the call by 18:00 the night before. If it's an operator cancellation for weather, you get a full refund within 24 hours — no need to argue about it. If the weather is just overcast and you want to skip anyway, that falls under the standard 72-hour cancellation policy.</p></div>
-    </details>
-    <details>
-      <summary>Do I need a sailing license?</summary>
-      <div class="ans"><p>Not for any charter on this page — every boat ships with a licensed skipper. If you do hold a Day Skipper or higher and want to sail bareboat, get in touch (hello@sunspot.mt) and we'll match you with the operators who do that.</p></div>
-    </details>
-    <details>
-      <summary>Are kids welcome?</summary>
-      <div class="ans"><p>On every boat except the bachelor catamaran. Lifejackets in your size are aboard. The pedalo and the banana boat over on the watersports page are more child-friendly for under-fives.</p></div>
-    </details>
-    <details>
-      <summary>What's included in the price?</summary>
-      <div class="ans"><p>The boat, the crew (skipper, and a steward / chef where the listing says so), fuel, mooring fees and Sunspot's 8% service fee. Anything else is opt-in and clearly priced — DJ, decoration, additional catering, photographer.</p></div>
-    </details>
-    <details>
-      <summary>Can I tip the skipper?</summary>
-      <div class="ans"><p>Yes, and it's welcome. Cash directly to the crew is standard — €20–50 per guest for a half-day, more for a full-day, scale with how much they did. Not included in the platform fee.</p></div>
-    </details>
-    <details>
-      <summary>I want something not on this page.</summary>
-      <div class="ans"><p>Email <a href="mailto:hello@sunspot.mt">hello@sunspot.mt</a> with what you want and how many people. We work with twelve more operators we haven't listed yet — small wooden luzzu, Riva-style classics, a wooden gulet that sleeps twelve. We'll match the right boat.</p></div>
-    </details>
-  </section>
-
-  <section class="charters-cta">
-    <h2>Not sure which boat?</h2>
-    <p>Tell us how many people, what date, and we'll come back with the two or three boats that fit. No upselling.</p>
-    <a href="mailto:hello@sunspot.mt?subject=Charter%20enquiry">Talk to us</a>
   </section>
 
 </main>
@@ -444,88 +349,118 @@
 <script src="experiences-data.js" defer></script>
 <script src="header-enhance.js" defer></script>
 <script>
-// Render the charter grid from experiences-data.js
-document.addEventListener('DOMContentLoaded', function () {
-  function escapeHtml(s) { return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-  function durHours(h) {
-    if (!h) return '—';
-    if (h >= 24) { const d = Math.round(h/24); return d + ' day' + (d===1?'':'s'); }
-    if (h >= 1) return h + ' hr' + (h===1?'':'s');
-    return Math.round(h*60) + ' min';
+(function () {
+  function ready(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
   }
-  const FILTERS = {
-    all:       e => true,
-    sailing:   e => /sailing|sail-/i.test(e.id) || /sail/i.test(e.name),
-    power:     e => /power-yacht|corporate|princess|sunseeker/i.test(e.id + ' ' + e.name),
-    catamaran: e => /catamaran|cat-|cabin-cat/i.test(e.id),
-    rib:       e => e.cat === 'rib' || /rib/i.test(e.id),
-    sunset:    e => e.cat === 'sunset',
-    'multi-day':e => (e.duration_h || 0) >= 24,
-  };
 
   function isCharter(e) {
     return e.cat === 'private-charter'
       || (e.cat === 'sunset' && (e.duration_h || 0) >= 2)
       || (e.cat === 'boat-tour' && e.id.indexOf('sicily') === 0)
-      || (e.cat === 'rib' && e.id.indexOf('rib-rental') === 0)
-      || e.id === 'yacht-day-charter';
+      || e.id === 'glass-bottom-comino'
+      || e.id === 'yacht-day-charter'
+      || (e.cat === 'rib' && e.id.indexOf('rib-rental') === 0);
+  }
+  // Every category MAPS to a predicate. None empty.
+  const FILTERS = {
+    all:        () => true,
+    sailing:    e => /sailing-yacht|cabin-cat|sailing-lessons/i.test(e.id) || /\bsailing\b/i.test(e.name),
+    catamaran:  e => /catamaran|cabin-cat|booze-cruise-comino|sunset-catamaran|sicily-day-cat/i.test(e.id),
+    power:      e => /power-yacht|corporate|princess/i.test(e.id) || /Sunseeker|Princess/.test(e.name),
+    rib:        e => e.cat === 'rib' || /^twin-rib|rib-rental/i.test(e.id),
+    sunset:     e => e.cat === 'sunset',
+    'multi-day':e => (e.duration_h || 0) >= 24,
+  };
+  const HEADINGS = {
+    all:        'All boats',
+    sailing:    'Sailing yachts',
+    catamaran:  'Catamarans',
+    power:      'Power yachts',
+    rib:        'RIBs & speedboats',
+    sunset:     'Sunset cruises',
+    'multi-day':'Multi-day (sleep aboard)',
+  };
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+      ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function fmtDur(h) {
+    if (!h) return '';
+    if (h >= 24) { const d = Math.round(h/24); return d + 'd'; }
+    if (h >= 1)  return h + 'h';
+    return Math.round(h*60) + 'm';
   }
 
-  const EXP = (window.SUNSPOT_EXPERIENCES || []).filter(isCharter);
-  const grid = document.getElementById('charters-grid');
-  const tabs = document.querySelectorAll('.charters-tab');
-  let active = 'all';
+  ready(function () {
+    const all = (window.SUNSPOT_EXPERIENCES || []).filter(isCharter);
 
-  function render() {
-    const filter = FILTERS[active] || FILTERS.all;
-    const items = EXP.filter(filter);
-    if (!items.length) { grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted);">No charters match that filter — pick another tab.</p>'; return; }
-    grid.innerHTML = items.map(e => {
-      const badge = e.cat === 'private-charter' ? 'Private' : (e.cat === 'sunset' ? 'Sunset' : (e.cat === 'rib' ? 'RIB' : 'Boat'));
-      const pax  = e.max_pax ? ('up to ' + e.max_pax) : '—';
-      return `<a class="charter-card" href="charter.html?c=${escapeHtml(e.id)}">
-        <span class="charter-thumb"><img src="${escapeHtml(e.photo)}" alt="${escapeHtml(e.name)}" loading="lazy" decoding="async">
-          <span class="charter-badge">${escapeHtml(badge)}</span>
-        </span>
-        <span class="charter-body">
-          <h3>${escapeHtml(e.name)}</h3>
-          <span class="charter-meta">
-            <span>${escapeHtml(durHours(e.duration_h))}</span>
-            <span>${escapeHtml(pax)} guests</span>
-            ${e.hub ? '<span>'+escapeHtml(e.hub)+'</span>' : ''}
-          </span>
-          <span class="charter-summary">${escapeHtml(e.summary)}</span>
-          <span class="charter-foot">
-            <span class="price">€${Number(e.price).toLocaleString('en-GB')}<small>from</small></span>
-            <span>View →</span>
-          </span>
-        </span>
-      </a>`;
-    }).join('');
-  }
+    function countFor(c) {
+      const f = FILTERS[c]; if (!f) return 0;
+      return all.filter(f).length;
+    }
+    document.querySelectorAll('.ch-cat').forEach(btn => {
+      const span = btn.querySelector('.count');
+      if (span) span.textContent = countFor(btn.dataset.c);
+    });
 
-  tabs.forEach(t => t.addEventListener('click', () => {
-    active = t.dataset.filter || 'all';
-    tabs.forEach(x => x.classList.toggle('is-on', x === t));
-    render();
-  }));
+    const grid    = document.getElementById('ch-grid');
+    const heading = document.getElementById('ch-heading');
+    const meta    = document.getElementById('ch-count');
+    const tabs    = document.querySelectorAll('.ch-cat');
 
-  render();
-});
+    function render(cat) {
+      const f = FILTERS[cat] || FILTERS.all;
+      const items = all.filter(f);
+      heading.textContent = HEADINGS[cat] || HEADINGS.all;
+      meta.textContent = items.length + ' available';
+
+      if (!items.length) {
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0;">No charters in this category yet — pick another tab.</p>';
+        return;
+      }
+      grid.innerHTML = items.map(e => {
+        const badge = e.cat === 'private-charter' ? 'Private' :
+                      e.cat === 'sunset'           ? 'Sunset' :
+                      e.cat === 'rib'              ? 'RIB' : 'Boat';
+        return '<a class="ch-card" href="charter.html?c=' + escapeHtml(e.id) + '">' +
+          '<span class="ch-thumb">' +
+            '<img src="' + escapeHtml(e.photo) + '" alt="' + escapeHtml(e.name) + '" loading="lazy" decoding="async">' +
+            '<span class="ch-badge">' + escapeHtml(badge) + '</span>' +
+          '</span>' +
+          '<span class="ch-card-body">' +
+            '<h3>' + escapeHtml(e.name) + '</h3>' +
+            '<span class="ch-card-meta">' +
+              (e.duration_h ? '<span>' + escapeHtml(fmtDur(e.duration_h)) + '</span>' : '') +
+              (e.max_pax ? '<span>up to <strong>' + escapeHtml(e.max_pax) + '</strong></span>' : '') +
+              (e.hub ? '<span>' + escapeHtml(e.hub) + '</span>' : '') +
+            '</span>' +
+            '<span class="ch-card-summary">' + escapeHtml(e.summary) + '</span>' +
+            '<span class="ch-foot">' +
+              '<span class="price">€' + Number(e.price).toLocaleString('en-GB') + '<small>for the boat</small></span>' +
+              '<span class="go">View →</span>' +
+            '</span>' +
+          '</span>' +
+        '</a>';
+      }).join('');
+    }
+
+    tabs.forEach(b => b.addEventListener('click', function () {
+      tabs.forEach(x => {
+        const on = x === b;
+        x.classList.toggle('is-on', on);
+        x.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      render(b.dataset.c);
+      heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }));
+
+    render('all');
+  });
+})();
 </script>
 
-<!-- ssbc:explore-block -->
-<nav class="ss-explore" aria-label="Explore Sunspot">
-  <div class="ss-explore-inner">
-    <span class="ss-explore-title">Explore Sunspot</span>
-    <a href="/">Browse beach clubs</a>
-    <a href="/experiences.html">Experiences</a>
-    <a href="/watersports.html">Watersports</a>
-    <a href="/guides.html">Field guides</a>
-    <a href="/visiting.html">Plan your visit</a>
-    <a href="/faq.html">FAQ</a>
-    <a href="/about.html">About Sunspot</a>
-  </div>
-</nav>
 </body>
 </html>

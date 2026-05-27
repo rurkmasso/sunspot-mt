@@ -3591,56 +3591,57 @@ footer {
    ============================================================ */
 @media (max-width: 720px) {
 
-  /* === Hero: compressed for mobile above-the-fold ===
-     Goal on 390×844: header (54px) + hero CTA visible without scrolling.
-     Tightening padding-top and trimming line-height pushes the CTA up
-     into the viewport without losing the editorial feel. */
+  /* === Hero: aggressive compression for mobile above-the-fold ===
+     Goal on 390×844: header (54px) + hero (300px) + search-bar +
+     first venue card row all visible without scrolling.
+     Hero becomes a compact "billboard" not a screen-filling photo. */
   .hero-v2 {
-    min-height: 380px !important;
-    height: 64vh !important;
-    max-height: 520px !important;
+    min-height: 280px !important;
+    height: auto !important;
+    max-height: 340px !important;
   }
   .hero-v2-content {
-    padding: 64px 20px 22px !important;
+    padding: 32px 18px 18px !important;
   }
   .hero-v2-h1 {
-    font-size: clamp(2rem, 8.4vw, 2.4rem) !important;
-    letter-spacing: -1px !important;
-    line-height: 1.02 !important;
-    margin-bottom: 10px !important;
-    max-width: 340px !important;
+    font-size: clamp(1.65rem, 6.8vw, 1.9rem) !important;
+    letter-spacing: -0.7px !important;
+    line-height: 1.04 !important;
+    margin-bottom: 6px !important;
+    max-width: 320px !important;
   }
   .hero-v2-lede {
-    font-size: 14.5px !important;
+    font-size: 13.5px !important;
     line-height: 1.45 !important;
-    margin-bottom: 16px !important;
-    max-width: 340px !important;
+    margin-bottom: 12px !important;
+    max-width: 320px !important;
   }
   .hero-v2-meta {
-    margin-bottom: 14px !important;
-    gap: 6px !important;
+    margin-bottom: 10px !important;
+    gap: 5px !important;
   }
   .hero-v2-tag {
     font-size: 9.5px !important;
-    padding: 4px 10px !important;
+    padding: 3px 9px !important;
     letter-spacing: 1.4px !important;
   }
   .hero-v2-live {
-    font-size: 11px !important;
-    padding: 4px 10px !important;
+    font-size: 10.5px !important;
+    padding: 3px 10px !important;
   }
   .hero-v2-cta { gap: 8px !important; flex-wrap: wrap; }
   .hero-v2-primary {
-    /* Tap target ≥ 44px for Apple guidelines */
-    padding: 14px 22px !important;
-    font-size: 14.5px !important;
-    min-height: 46px;
+    padding: 11px 18px !important;
+    font-size: 13.5px !important;
+    min-height: 42px;
   }
   .hero-v2-secondary {
-    padding: 14px 18px !important;
-    font-size: 13.5px !important;
-    min-height: 46px;
+    padding: 11px 16px !important;
+    font-size: 13px !important;
+    min-height: 42px;
   }
+  /* Scroll-indicator at the bottom of the hero is just chrome on mobile */
+  .hero-v2-scroll { display: none !important; }
 
   /* === Live-stats strip: single horizontal row, not 4 stacked rows === */
   .ss-stats-strip {
@@ -3694,16 +3695,38 @@ footer {
   /* === Newsletter on phone: trimmer === */
   .ss-newsletter { padding: 24px 14px !important; }
 
-  /* === Sticky finder bar — make it 100% sticky to top right under header === */
+  /* === Sticky finder bar — collapse filter chips into a sheet === */
   .ss-finder {
-    padding: 10px 0 !important;
+    padding: 8px 0 !important;
     position: sticky;
     top: 0;
     z-index: 26;
   }
-  .ss-finder-bar { gap: 4px; }
-  /* Belt-and-braces: hide popover unless details is open. position:fixed
-     defeats the native <details>display:none auto-hide. */
+  .ss-finder-bar { gap: 4px; padding: 6px; }
+  /* On mobile, hide the segment chips by default — only show
+     search + the "Filters" toggle. Tapping it opens the sheet. */
+  .ss-finder-bar > .ss-finder-segment,
+  .ss-finder-bar > .ss-finder-sep,
+  .ss-finder-bar > .ss-finder-multi { display: none; }
+  body.ss-filters-open .ss-finder-bar > .ss-finder-segment,
+  body.ss-filters-open .ss-finder-bar > .ss-finder-multi {
+    display: flex;
+  }
+  body.ss-filters-open .ss-finder-bar {
+    flex-wrap: wrap;
+  }
+  /* Filter-chip count badge on the Filters button so user knows
+     how many active filters when chips are collapsed */
+  .ss-finder-filters-btn[data-count]:not([data-count="0"])::after {
+    content: attr(data-count);
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--sun-deep); color: #fff;
+    min-width: 18px; height: 18px; padding: 0 5px;
+    border-radius: 999px;
+    font: 700 10.5px/1 var(--font-body); margin-left: 6px;
+  }
+  /* Hide popover unless details is open. position:fixed defeats the
+     native <details> auto-hide. */
   .ss-finder-multi:not([open]) .ss-finder-multi-panel { display: none !important; }
   .ss-finder-multi[open] .ss-finder-multi-panel {
     position: fixed !important;
