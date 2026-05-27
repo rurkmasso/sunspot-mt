@@ -48,6 +48,8 @@ PUBLIC_PAGES: list[dict] = [
     # path,                title (for HTML sitemap), priority, changefreq, hreflang_root
     {"path":"index.html",      "title":"Home",                       "p":"1.0", "cf":"daily"},
     {"path":"experiences.html","title":"Experiences",                "p":"0.9", "cf":"weekly"},
+    {"path":"charters.html",   "title":"Boat charters",              "p":"0.9", "cf":"weekly"},
+    {"path":"watersports.html","title":"Watersports",                "p":"0.9", "cf":"weekly"},
     {"path":"guides.html",     "title":"Guides",                     "p":"0.9", "cf":"weekly"},
     {"path":"visiting.html",   "title":"Visiting Malta",             "p":"0.9", "cf":"weekly"},
     {"path":"living.html",     "title":"Living in Malta",            "p":"0.8", "cf":"weekly"},
@@ -72,6 +74,8 @@ NOINDEX_PAGES = {
 BREADCRUMBS = {
     "index.html":        [("Home", "/")],
     "experiences.html":  [("Home","/"), ("Experiences","/experiences.html")],
+    "charters.html":     [("Home","/"), ("Experiences","/experiences.html"), ("Boat charters","/charters.html")],
+    "watersports.html":  [("Home","/"), ("Experiences","/experiences.html"), ("Watersports","/watersports.html")],
     "guides.html":       [("Home","/"), ("Guides","/guides.html")],
     "visiting.html":     [("Home","/"), ("Visiting Malta","/visiting.html")],
     "living.html":       [("Home","/"), ("Living in Malta","/living.html")],
@@ -276,13 +280,13 @@ def hreflang_block(path: str) -> str:
 
 EXPLORE_LINKS = [
     ("/",              "Browse beach clubs"),
-    ("/experiences.html","Experiences & boat tours"),
+    ("/experiences.html","Experiences"),
+    ("/charters.html", "Boat charters"),
+    ("/watersports.html","Watersports"),
     ("/guides.html",   "Field guides"),
     ("/visiting.html", "Plan your visit"),
-    ("/living.html",   "For residents"),
     ("/faq.html",      "FAQ"),
     ("/about.html",    "About Sunspot"),
-    ("/sitemap.html",  "Site map"),
 ]
 
 def explore_block_html(current_path: str) -> str:
