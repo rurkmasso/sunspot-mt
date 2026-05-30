@@ -248,6 +248,27 @@
         'https://1926lesoleil.com/wp-content/uploads/2023/05/fbshare.jpg',
         'https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2024_L.png',
       ],
+ intro_long: '1926 La Plage is the beach club of the boutique hotel 1926 Le Soleil on the Sliema seafront — Art Deco design, an infinity pool that visually merges with the open sea, room for thirty-six sunbeds. Hotel guests get exclusive daily access; the public books sunbeds, the restaurant, and the evening "La Vie" gastronomy concept. Daytime is relaxed; evenings turn elevated with a chef-led menu and softer light. Open 1 May – 31 October.',
+ key_facts: [
+   { label: 'Pool', value: 'Heated infinity' },
+   { label: 'Vibe', value: 'Boutique, adults-leaning' },
+   { label: 'Capacity', value: '36 sunbeds + 4 cabanas + 2 VIP' },
+   { label: 'Evenings', value: 'La Vie 18:00–22:30' },
+   { label: 'From', value: '€30 sunbed / €150 cabana' },
+ ],
+ tips: [
+   'Book sunbeds 12–18 for the direct sea view across the infinity edge.',
+   'Hotel guests get free deck access — no add-on needed if you are staying.',
+   'Smart casual after 18:00; no flip-flops at dinner.',
+   'Valet at the hotel (€15/day) beats circling the Sliema seafront.',
+ ],
+ faq: [
+   { q: 'Do I need to stay at the hotel to use it?', a: 'No. Public bookings for sunbeds, cabanas and the restaurant.' },
+   { q: 'Is the pool heated?', a: 'Yes — usable through October.' },
+   { q: 'What\'s the difference between the day club and La Vie?', a: 'Day club is sunbeds plus bar service to 17:30. La Vie is a separate chef-led dinner concept from 18:00.' },
+   { q: 'Are kids allowed?', a: 'Yes during the day. Evenings are adults-leaning, smart-casual.' },
+ ],
+ nearby: ['aqualuna', 'manta', 'twentytwo', 'phoenicia-pool'],
  },
  {
  id: 'manta', name: 'Manta Beach Club', category: 'pool-club', region: 'central',
@@ -323,6 +344,27 @@
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/St.-Georges-Bay-2560x1440-1.jpg',
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Balluta-2560x1440-1.jpeg',
       ],
+ intro_long: 'Twenty Two is on the 22nd floor of the Portomaso Tower — the highest occupied floor of Malta\'s tallest building, with glass on all sides for a 360° read of the island. No pool; a sun terrace with limited loungers and a bar that runs 16:00–02:00 Wed–Sun. The cocktail program is on the heavier side: house infusions, premium spirits. The view is the whole point — book a window seat or take the sun-terrace bed for sunset.',
+ key_facts: [
+   { label: 'View', value: '360° from the 22nd floor' },
+   { label: 'Hours', value: '16:00–02:00 Wed–Sun' },
+   { label: 'Capacity', value: '24 sunbeds + 6 cabanas + 4 VIP' },
+   { label: 'Dress', value: 'Smart-elegant after 20:00' },
+   { label: 'From', value: '€35 sunbed / €180 cabana' },
+ ],
+ tips: [
+   'Sunset bed faces west — book at least 5 days ahead for a Saturday.',
+   'Closed Mon–Tue. First night of the week is Wednesday.',
+   'No shorts after 20:00; the door enforces it.',
+   'Direct lift to floor 22 from the Portomaso Tower lobby.',
+ ],
+ faq: [
+   { q: 'Is there a pool?', a: 'No — sun terrace only. The venue is built around the view, not swimming.' },
+   { q: 'How tight is capacity?', a: 'Total 180. Window cabanas book out for Saturdays one to two weeks ahead.' },
+   { q: 'Can I just come for a drink at the bar?', a: 'Yes, walk-ins at the bar until capacity. A sunbed or cabana needs a reservation.' },
+   { q: 'Best night?', a: 'Friday for the DJ residency, Wednesday for the quietest seat at the bar.' },
+ ],
+ nearby: ['flo', 'noma', 'manta', 'aria-paceville'],
  },
  {
  id: 'blue-lagoon', name: 'Blue Lagoon Lounge', category: 'beach-club', region: 'comino',
@@ -347,6 +389,27 @@
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Blue-Lagoon-2560x1440-1.jpeg',
       ],
+ intro_long: 'The Blue Lagoon between Comino and Cominotto is the most photographed stretch of water in the Maltese islands — shallow, brilliant turquoise, surrounded by low limestone. The lounge runs a small premium section against the rocks of the western arm with a few cabanas and two VIP tents right on the lagoon\'s edge. Reservations are essential June through September; walk-ins frequently turned away by 09:00. The ferry from Ċirkewwa is €15 return, last boat leaves at 17:00 sharp.',
+ key_facts: [
+   { label: 'Water', value: 'Natural turquoise lagoon' },
+   { label: 'Ferry', value: 'Ċirkewwa, €15 return' },
+   { label: 'Capacity', value: '40 sunbeds + 6 cabanas + 2 VIP' },
+   { label: 'Last boat', value: '17:00' },
+   { label: 'From', value: '€35 sunbed / €320 VIP' },
+ ],
+ tips: [
+   'First ferry at 09:00 — be on it. By 11:00 the lagoon is jammed.',
+   'VIP tents 1 and 2 are right at the water; cabanas sit further back.',
+   'Bring water shoes — the rock platform is sharp in places.',
+   'Last boat is 17:00 sharp. Don\'t get romantic about the sunset, you will miss it.',
+ ],
+ faq: [
+   { q: 'Can I swim straight off the lounge?', a: 'Yes. The lagoon is right there. Snorkel rental at the bar.' },
+   { q: 'Is there a restaurant?', a: 'Bar only — cocktails, light bites. The lagoon has no real kitchen.' },
+   { q: 'How do I get there without a car?', a: 'Bus 41 or 42 from Valletta to Ċirkewwa, then the public ferry.' },
+   { q: 'Toilet situation?', a: 'Compost toilets at the lounge. Bring tissues; resilience helps.' },
+ ],
+ nearby: ['pa-pa-comino', 'paradise-bay', 'azure-bay', 'noma'],
  },
  {
  id: 'azure-bay', name: 'Mellieħa Bay Club', category: 'beach-club', region: 'north',
@@ -980,6 +1043,27 @@
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Mistra-2560x1440-1.jpeg',
       ],
+ intro_long: 'LOA opened in 2023 on the south side of Mistra Bay, a 12-minute drive from Mellieħa and a different world from the Bugibba strip. Three terraced pool decks step down to a private rocky swim platform; the restaurant is on the upper level with bay views. Mediterranean small-plates menu by the team behind Café Cuba (Sliema). Quietest weekday lunch in Malta — the bay sees almost no traffic. Sunday sunset DJ runs to midnight.',
+ key_facts: [
+   { label: 'Pools', value: 'Three terraced freshwater + sea' },
+   { label: 'Capacity', value: '70 sunbeds + 12 cabanas + 3 VIP' },
+   { label: 'Sundays', value: 'Sunset DJ to midnight' },
+   { label: 'Season', value: 'May–October' },
+   { label: 'From', value: '€30 sunbed / €130 cabana' },
+ ],
+ tips: [
+   'Weekday lunch is the move — the bay is almost empty Tue and Wed.',
+   'Lower deck closest to the sea is shaded after 16:00; upper deck stays in sun.',
+   'Bus 221 from Bugibba stops at the Selmun gate, 10-min walk down.',
+   'Sunday DJ peaks 19:00 — book a table to 21:00 then move to sunset cocktails.',
+ ],
+ faq: [
+   { q: 'How is it different from a Bugibba beach club?', a: 'Quieter cove, no party crowd, restaurant-led. Closer in feel to LOA\'s sister venue Café Cuba.' },
+   { q: 'Is the sea swim worth it or is the pool better?', a: 'The sea. The swim platform is private and Mistra has excellent water clarity.' },
+   { q: 'Are kids allowed?', a: 'Yes during the day. Sunday DJ is 18+ after 20:00.' },
+   { q: 'Parking?', a: 'Free on-site lot, ample.' },
+ ],
+ nearby: ['azure-bay', 'mistra-bay', 'golden-sands', 'paradise-bay'],
  },
 
  {
@@ -1009,6 +1093,27 @@
  photos: [
         'https://whichbeach.com.mt/wp-content/uploads/2022/01/Rinella-2560x1440-1.jpeg',
       ],
+ intro_long: 'Built in 1939, the Phoenicia is Malta\'s grand-old-lady hotel — Belle-Époque style, terraced gardens, and a pool deck cantilevered out over the Floriana bastions. Day passes (around €60) include sunbed, towel and pool access; cabanas add table service and a bottle. The historic gardens around it are open for walking. The restaurant is properly good — chef-led, Mediterranean. Closer to a club than a hotel pool, but with the quiet of a heritage site and a clientele that skews older and slower.',
+ key_facts: [
+   { label: 'Pool', value: 'Outdoor 25m freshwater' },
+   { label: 'Hotel opened', value: '1939' },
+   { label: 'View', value: 'Marsamxett bastions' },
+   { label: 'Capacity', value: '48 sunbeds + 6 cabanas' },
+   { label: 'From', value: '€40 sunbed / €220 cabana' },
+ ],
+ tips: [
+   'Walk from Valletta gate — 5 minutes through The Mall gardens. No parking needed.',
+   'Heritage gardens are open access — see the lily pond before you swim.',
+   'Afternoon (15:00+) is when hotel guests clear out and walk-ins find space.',
+   'Spa is upstairs and bookable on the same day pass.',
+ ],
+ faq: [
+   { q: 'Do you need to be a hotel guest?', a: 'No. Day passes (~€60) include pool, sunbed and towel.' },
+   { q: 'Is the pool heated?', a: 'Heated in October only; otherwise outdoor seasonal.' },
+   { q: 'Best for kids?', a: 'Daytime is fine. The vibe skews adults — not a slide-and-fountain crowd.' },
+   { q: 'Where\'s the entrance?', a: 'Through the hotel lobby on The Mall; pool reception is to the right.' },
+ ],
+ nearby: ['excelsior-pool', 'hyatt-regency-pool', 'aqualuna', 'manta'],
  },
 
  {

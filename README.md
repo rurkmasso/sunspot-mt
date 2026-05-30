@@ -212,7 +212,8 @@ Top-tier venues carry additional fields beyond the standard catalog:
 `intro_long`, `key_facts`, `tips`, `faq`, `nearby`. `club.html`
 renders them automatically when present. Currently populated on:
 Noma Island, FLO Skypool, Café del Mar Malta, Aqualuna Lido, Manta
-Beach Club.
+Beach Club, 1926 La Plage, Twenty Two, Blue Lagoon Lounge, LOA
+Beach Club, The Phoenicia Pool Deck (10 venues).
 
 The same pattern on the experiences side uses `spec`, `crew`,
 `itinerary`, `includes`, `not_included`, `bring`, `faq` and is
