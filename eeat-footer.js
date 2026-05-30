@@ -144,18 +144,16 @@
  // `slug` field below, e.g. assets/press/times-of-malta.svg. They auto-
  // swap in. Until then the typographic placeholders keep the layout intact.
  function pressRow() {
-   // Each entry: slug for asset swap-in, displayed label, type treatment.
-   // Treatments chosen so the strip reads as deliberate editorial typography,
-   // not placeholders waiting for images. Mixed serif/sans creates the
-   // newsstand feel of a real press wall.
-   const logos = [
+   // Press entries are editable in WP Admin → Settings → Site chrome
+   // (key: `press`). Defaults below render when CHROME isn't hydrated.
+   const logos = chrome('press', [
      { slug: 'times-of-malta', label: 'Times of Malta', style: 'serif-bold', size: 26 },
      { slug: 'lovin-malta',    label: 'Lovin Malta',    style: 'sans-tight', size: 24 },
      { slug: 'malta-today',    label: 'Malta Today',    style: 'serif-bold', size: 24 },
      { slug: 'tvm',            label: 'TVM',            style: 'sans-mono',  size: 30 },
      { slug: 'malta-ceos',     label: 'MaltaCEOs',      style: 'sans-mixed', size: 22 },
      { slug: 'the-shift',      label: 'The Shift',      style: 'serif-italic', size: 24 },
-   ];
+   ]);
    const trackHTML = logos.concat(logos).map(pressLogo).join('');
    return (
      '<section class="ss-press" style="background:#fff;border-bottom:1px solid rgba(192,134,59,.10);padding:32px 0;overflow:hidden;">' +
@@ -255,10 +253,16 @@
              '</svg>' +
              '<span style="font-family:Fraunces,Georgia,serif;font-size:20px;font-weight:600;color:#0a1f3a;letter-spacing:-0.02em;">Sunspot</span>' +
            '</div>' +
-           '<p style="font-size:13px;color:#5d6a82;line-height:1.55;margin:0 0 14px;max-width:34ch;">Malta\'s booking platform for beach clubs, lidos and rooftop pools. Built in Valletta by a small team.</p>' +
+           // Brand tagline / contact — editable in WP Admin → Site chrome
+           '<p style="font-size:13px;color:#5d6a82;line-height:1.55;margin:0 0 14px;max-width:34ch;">' +
+             esc(chrome('footer.brand.tagline',
+               'Malta\'s booking platform for beach clubs, lidos and rooftop pools. Built in Valletta by a small team.')) +
+           '</p>' +
            '<p style="font-size:13px;color:#5d6a82;line-height:1.7;margin:0 0 14px;">' +
-             '<a href="mailto:hello@sunspot.mt" style="color:#ef6c00;font-weight:700;text-decoration:none;">hello@sunspot.mt</a><br>' +
-             '<a href="tel:+35699239339" style="color:#0a1f3a;text-decoration:none;font-variant-numeric:tabular-nums;">+356 9923 9339</a>' +
+             '<a href="mailto:' + esc(chrome('footer.brand.email', 'hello@sunspot.mt')) + '" style="color:#ef6c00;font-weight:700;text-decoration:none;">' +
+               esc(chrome('footer.brand.email', 'hello@sunspot.mt')) + '</a><br>' +
+             '<a href="tel:' + esc(chrome('footer.brand.phone', '+35699239339').replace(/\s+/g, '')) + '" style="color:#0a1f3a;text-decoration:none;font-variant-numeric:tabular-nums;">' +
+               esc(chrome('footer.brand.phone', '+356 9923 9339')) + '</a>' +
            '</p>' +
            // Mini app CTA + we're hiring hint
            '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;">' +
@@ -272,29 +276,31 @@
            '</div>' +
          '</div>' +
 
-         col('For beachgoers', [
-           ['index.html',         'Browse all beaches'],
-           ['experiences.html',   'Experiences'],
-           ['guides.html',        'Field guide'],
-           ['visiting.html',      'Visiting Malta?'],
-           ['living.html',        'Living here'],
-           ['bookings.html',      'My bookings'],
-         ]) +
-
-         col('For operators', [
-           ['operator/',          'Open the operator app'],
-           ['rates.html',         'Pricing &amp; rate card'],
-           ['mailto:partners@sunspot.mt', 'Become a partner'],
-           ['faq.html',           'FAQ'],
-         ]) +
-
-         col('Company', [
-           ['about.html',         'About Sunspot'],
-           ['team.html',          'Meet the team'],
-           ['mailto:press@sunspot.mt', 'Press'],
-           ['faq.html#privacy',   'Privacy'],
-           ['faq.html#tos',       'Terms'],
-         ]) +
+         // Three columns — editable in WP Admin → Site chrome (footer.columns).
+         // Each is { heading, items: [{ label, href }] }.
+         chrome('footer.columns', [
+           { heading: 'For beachgoers', items: [
+             { label: 'Browse all beaches', href: 'index.html' },
+             { label: 'Experiences',        href: 'experiences.html' },
+             { label: 'Field guide',        href: 'guides.html' },
+             { label: 'Visiting Malta?',    href: 'visiting.html' },
+             { label: 'Living here',        href: 'living.html' },
+             { label: 'My bookings',        href: 'bookings.html' },
+           ]},
+           { heading: 'For operators', items: [
+             { label: 'Open the operator app', href: 'operator/' },
+             { label: 'Pricing &amp; rate card', href: 'rates.html' },
+             { label: 'Become a partner',     href: 'mailto:partners@sunspot.mt' },
+             { label: 'FAQ',                  href: 'faq.html' },
+           ]},
+           { heading: 'Company', items: [
+             { label: 'About Sunspot',       href: 'about.html' },
+             { label: 'Meet the team',       href: 'team.html' },
+             { label: 'Press',               href: 'mailto:press@sunspot.mt' },
+             { label: 'Privacy',             href: 'faq.html#privacy' },
+             { label: 'Terms',               href: 'faq.html#tos' },
+           ]},
+         ]).map(c => col(esc(c.heading), (c.items || []).map(it => [it.href, it.label]))).join('') +
 
        '</div>' +
 

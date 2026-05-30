@@ -329,9 +329,21 @@
      btn.addEventListener('click', () => {
        const code = btn.dataset.lang;
        setLang(code);
-       const url = new URL(location.href);
-       url.searchParams.set('lang', code);
-       location.href = url.toString();
+       // Reflect the active pill immediately.
+       wrap.querySelectorAll('[data-lang]').forEach(b => {
+         const on = b.dataset.lang === code;
+         b.classList.toggle('is-on', on);
+         b.setAttribute('aria-pressed', on ? 'true' : 'false');
+       });
+       // Translate the full page in place via the i18n engine (no reload).
+       if (window.SunspotI18n) {
+         window.SunspotI18n.setLang(code);
+       } else {
+         // Engine not loaded — fall back to a reload with ?lang.
+         const url = new URL(location.href);
+         url.searchParams.set('lang', code);
+         location.href = url.toString();
+       }
      });
    });
    return wrap;
