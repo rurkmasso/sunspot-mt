@@ -1,6 +1,6 @@
 # Sunspot — Malta beach booking platform
 
-Static prototype for **sunspot.mt**, Malta's dedicated booking platform for beach clubs, lidos and rooftop pools. 112 venues across Malta, Gozo and Comino.
+Static prototype for **sunspot.mt**, Malta's dedicated booking platform for beach clubs, lidos and rooftop pools. 126 venues across Malta, Gozo and Comino, plus 64 experiences (charters, watersports, sun activities).
 
 > **Pre-launch — site is gated.** All pages require sign-in before render.
 > Email: `mark@sunspot.mt` · Password: `password`
@@ -28,8 +28,9 @@ python3 -m http.server 8080
 | `compare.html` | Side-by-side venue comparison |
 | `app.html` | "Get the app" landing + PWA install |
 | `shop/` | Shop subdomain (towels, bottles, goggles, apparel) |
-| `clubs-data.js` | 112-venue catalog (the design source of truth) |
-| `experiences-data.js` | 19 experiences catalog |
+| `clubs-data.js` | 126-venue catalog (the design source of truth) |
+| `experiences-data.js` | 64 experiences catalog (charters, watersports, sun activities) |
+| `charter.html` + `charter.js` | Deep editorial template — itinerary, includes, FAQ, spec card per charter |
 | `features.js` | Lazy load, favourites, compare, sea-state, newsletter, hamburger |
 | `audiences.js` | Language / currency / family-mode / mode popup / distance |
 | `icons.js` | SVG icon library (~40 stroke icons, currentColor) |
@@ -178,6 +179,44 @@ Each run:
 
 The script is the single source of truth for SEO. Don't hand-edit
 sitemap XML, robots.txt, or the patched blocks — re-run instead.
+
+## Working with Claude Code
+
+The project ships a set of **skills** and **subagents** in `.claude/`
+so any contributor (or Claude session) can pick up the conventions
+without re-deriving them.
+
+### Skills — `.claude/skills/`
+
+| Skill | When it applies |
+|---|---|
+| `sunspot-build` | After any edit to `clubs-data.js`, `experiences-data.js`, brand SVGs, or HTML — explains which builder to re-run in which order. |
+| `sunspot-add-venue` | Adding a real Malta/Gozo venue — required fields, the Malta bounding box (35.6–36.20 N · 14.10–14.70 E), photo conventions. |
+| `sunspot-add-experience` | Adding a charter / watersport / sun activity — category taxonomy, deep-content extensions (`spec`, `itinerary`, `includes`, `faq`). |
+| `sunspot-brand-voice` | Writing any user-facing copy — do/don't lists, banned words, length rules. |
+| `sunspot-mobile-pattern` | Building or rewriting a hub page — the shared 21:9 hero + horizontal-scroll category-strip + card-grid pattern used by `/experiences`, `/charters`, `/watersports`. |
+
+### Subagents — `.claude/agents/`
+
+| Agent | What it does |
+|---|---|
+| `sunspot-venue-curator` | Researches a real Malta venue (operator site, coords, photo) and returns a paste-ready `clubs-data.js` block. Run several in parallel to bulk-add venues. |
+| `sunspot-photo-auditor` | Runs `bin/verify_venue_photos.py`, filters to real broken / geographic mismatches, returns a punch list with suggested replacements. |
+| `sunspot-builder` | Detects which inputs changed via `git status` and runs only the necessary build scripts in the right order. |
+| `sunspot-content-writer` | Writes user-facing copy in Sunspot brand voice — summaries, FAQ answers, hero H1s. Returns only the copy, ready to paste. |
+| `sunspot-mobile-tester` | Renders any page at 390×844 via Playwright and reports above-the-fold cards, category-tile counts, screenshot path. |
+
+### Deep editorial content
+
+Top-tier venues carry additional fields beyond the standard catalog:
+`intro_long`, `key_facts`, `tips`, `faq`, `nearby`. `club.html`
+renders them automatically when present. Currently populated on:
+Noma Island, FLO Skypool, Café del Mar Malta, Aqualuna Lido, Manta
+Beach Club.
+
+The same pattern on the experiences side uses `spec`, `crew`,
+`itinerary`, `includes`, `not_included`, `bring`, `faq` and is
+rendered by `charter.html` / `charter.js` per `?c=<charter-id>`.
 
 ## Production target
 

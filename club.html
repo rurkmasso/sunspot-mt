@@ -98,6 +98,19 @@
 
 <div id="contact-card" class="contact-card"></div>
 
+<section id="venue-deep" hidden style="margin:36px 0 16px">
+  <div id="vd-intro" style="font-size:16px;line-height:1.7;color:#243753;margin-bottom:28px"></div>
+
+  <h2 id="vd-key-facts-h" style="margin-bottom:14px">The essentials</h2>
+  <dl id="vd-key-facts" style="display:grid;grid-template-columns:1fr auto;gap:10px 18px;margin:0 0 30px;padding:18px 22px;background:#fafaf6;border:1px solid #e7e1cf;border-radius:14px"></dl>
+
+  <h2 id="vd-tips-h" style="margin-bottom:14px">Local tips</h2>
+  <ul id="vd-tips" style="list-style:none;padding:0;margin:0 0 32px;display:grid;gap:10px"></ul>
+
+  <h2 id="vd-faq-h" style="margin-bottom:14px">Frequently asked</h2>
+  <div id="vd-faq" style="margin-bottom:32px"></div>
+</section>
+
 <h2>Location</h2>
 <div class="map-placeholder" id="club-map" aria-label="Map">
 <span><span id="map-loc">Malta</span></span>
@@ -210,6 +223,45 @@
 <script src="cookie-consent.js" defer></script>
 <script src="eeat-footer.js" defer></script>
 <script src="header-enhance.js" defer></script>
+
+<script>
+// Deep editorial block — runs only when the venue has intro_long etc.
+(function () {
+  const slug = new URLSearchParams(location.search).get('club');
+  function esc(s){return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+  function render() {
+    const club = (window.SUNSPOT_CLUBS||[]).find(c=>c.id===slug);
+    if (!club || !club.intro_long) return;
+    const root = document.getElementById('venue-deep');
+    document.getElementById('vd-intro').textContent = club.intro_long;
+    if (Array.isArray(club.key_facts) && club.key_facts.length) {
+      document.getElementById('vd-key-facts').innerHTML = club.key_facts.map(f =>
+        '<dt style="color:#6b7280;font-size:14px">' + esc(f.label) + '</dt>' +
+        '<dd style="color:#0a1f3a;font-weight:600;font-size:14px;text-align:right;margin:0">' + esc(f.value) + '</dd>'
+      ).join('');
+    } else { document.getElementById('vd-key-facts').remove(); document.getElementById('vd-key-facts-h').remove(); }
+    if (Array.isArray(club.tips) && club.tips.length) {
+      document.getElementById('vd-tips').innerHTML = club.tips.map(t =>
+        '<li style="padding-left:24px;position:relative;color:#243753;font-size:15px;line-height:1.55">' +
+        '<span style="position:absolute;left:0;top:2px;color:#b8861a;font-weight:700">→</span>' + esc(t) + '</li>'
+      ).join('');
+    } else { document.getElementById('vd-tips').remove(); document.getElementById('vd-tips-h').remove(); }
+    if (Array.isArray(club.faq) && club.faq.length) {
+      document.getElementById('vd-faq').innerHTML = club.faq.map(f =>
+        '<details style="background:#fff;border:1px solid #e7e1cf;border-radius:12px;margin-bottom:10px;overflow:hidden">' +
+        '<summary style="padding:16px 20px;cursor:pointer;list-style:none;font-weight:600;font-size:14.5px;color:#0a1f3a">' + esc(f.q) + '</summary>' +
+        '<p style="padding:0 20px 18px;color:#243753;font-size:14px;line-height:1.65;margin:0">' + esc(f.a) + '</p>' +
+        '</details>'
+      ).join('');
+      const faqLd = {"@context":"https://schema.org","@type":"FAQPage","mainEntity": club.faq.map(f=>({"@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a}}))};
+      const s = document.createElement('script'); s.type='application/ld+json'; s.textContent = JSON.stringify(faqLd); document.head.appendChild(s);
+    } else { document.getElementById('vd-faq').remove(); document.getElementById('vd-faq-h').remove(); }
+    root.hidden = false;
+  }
+  if (window.SUNSPOT_CLUBS) render();
+  else document.addEventListener('DOMContentLoaded', render);
+})();
+</script>
 
 <!-- ssbc:explore-block -->
 <nav class="ss-explore" aria-label="Explore Sunspot">
