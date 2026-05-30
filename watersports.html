@@ -261,27 +261,15 @@
 
 <header class="site-header">
 <div class="container">
-<a href="index.html" class="brand" aria-label="Sunspot home">
-  <svg class="brand-mark ss-brand-mark-anim" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true">
-    <g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">
-      <line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
-      <line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
-      <line x1="7" y1="7" x2="10" y2="10"/><line x1="30" y1="30" x2="33" y2="33"/>
-      <line x1="33" y1="7" x2="30" y2="10"/><line x1="10" y1="30" x2="7" y2="33"/>
-    </g>
-    <circle cx="20" cy="20" r="11" fill="#ff9800"/>
-    <circle cx="20" cy="20" r="9" fill="#ffb74d"/>
-    <circle cx="24" cy="16" r="3" fill="#fff5e1"/>
-  </svg><span class="brand-name">Sunspot</span>
-</a>
+<a href="index.html" class="brand" aria-label="Sunspot home"><svg class="brand-mark ss-brand-mark-anim" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true"><g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6"><line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/><line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/><line x1="7" y1="7" x2="10" y2="10"/><line x1="30" y1="30" x2="33" y2="33"/><line x1="33" y1="7" x2="30" y2="10"/><line x1="10" y1="30" x2="7" y2="33"/></g><circle cx="20" cy="20" r="11" fill="#ff9800"/><circle cx="20" cy="20" r="9" fill="#ffb74d"/><circle cx="24" cy="16" r="3" fill="#fff5e1"/></svg><span class="brand-name">Sunspot</span></a>
 <nav aria-label="Main navigation">
-  <a href="index.html">Beaches</a>
-  <a href="experiences.html">Experiences</a>
-  <a href="charters.html">Charters</a>
-  <a href="watersports.html" class="active" aria-current="page">Watersports</a>
-  <a href="guides.html">Field guide</a>
-  <a href="about.html">About</a>
-  <a href="signin.html" class="btn-ghost">Sign in</a>
+<a href="index.html" data-i18n="nav.beaches">Beaches</a>
+<a href="experiences.html" data-i18n="nav.experiences">Experiences</a>
+<a href="guides.html" data-i18n="nav.guides">Field guide</a>
+<a href="about.html" data-i18n="nav.about">About</a>
+<a href="rates.html" data-i18n="nav.operators">For operators</a>
+<a href="bookings.html" data-i18n="nav.bookings">My bookings</a>
+<a href="signin.html" class="btn-ghost" data-i18n="nav.signin">Sign in</a>
 </nav>
 </div>
 </header>
@@ -299,32 +287,85 @@
 
 <main class="ws-page">
 
-  <!-- Category strip — scrolls horizontally on mobile, 6-col on desktop.
-       JS will set is-on and update the heading + grid. Counts pre-set
-       to 0 and updated after experiences-data.js loads. -->
-  <div class="ws-cats" id="ws-cats" role="tablist" aria-label="Watersport categories">
-    <button class="ws-cat is-on" data-c="all"     role="tab" aria-selected="true">
-      <span class="label">Everything</span><span class="sub">All watersports</span><span class="count">—</span>
-    </button>
-    <button class="ws-cat" data-c="jetski"     role="tab">
-      <span class="label">Jetski</span><span class="sub">15 min to safaris</span><span class="count">—</span>
-    </button>
-    <button class="ws-cat" data-c="kayak"      role="tab">
-      <span class="label">Kayak &amp; SUP</span><span class="sub">Rental + tours</span><span class="count">—</span>
-    </button>
-    <button class="ws-cat" data-c="scuba"      role="tab">
-      <span class="label">Scuba &amp; Snorkel</span><span class="sub">Try-dives, courses</span><span class="count">—</span>
-    </button>
-    <button class="ws-cat" data-c="wind"       role="tab">
-      <span class="label">Wind &amp; Kite</span><span class="sub">Rental + lessons</span><span class="count">—</span>
-    </button>
-    <button class="ws-cat" data-c="adrenalin"  role="tab">
-      <span class="label">Adrenalin</span><span class="sub">Flyboard · Parasail · Cliff · Wake</span><span class="count">—</span>
-    </button>
-    <button class="ws-cat" data-c="family"     role="tab">
-      <span class="label">Family rides</span><span class="sub">Banana · Donut · Pedalo</span><span class="count">—</span>
-    </button>
-  </div>
+  <!-- Finder bar — shared design with homepage -->
+  <section class="ss-finder" style="padding:0 0 18px;background:transparent">
+    <form class="ss-finder-bar" id="ws-finder" onsubmit="return false;" role="search">
+      <label class="ss-finder-search" aria-label="Search">
+        <svg class="ss-finder-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+        </svg>
+        <input type="search" id="ws-q" placeholder="Search watersports — activity, operator, hub…" aria-label="Search watersports">
+        <button type="button" class="ss-finder-filters-btn" aria-label="Show filters"
+          onclick="document.body.classList.toggle('ss-filters-open')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M4 6h7M16 6h4M4 12h2M11 12h9M4 18h13M19 18h1"/>
+            <circle cx="13" cy="6" r="1.6" fill="currentColor"/><circle cx="8" cy="12" r="1.6" fill="currentColor"/><circle cx="18" cy="18" r="1.6" fill="currentColor"/>
+          </svg>
+          <span class="ss-finder-filters-label">Filters</span>
+        </button>
+      </label>
+
+      <span class="ss-finder-sep"></span>
+
+      <details class="ss-finder-multi" id="ws-type-multi">
+        <summary class="ss-finder-segment">
+          <span class="ss-finder-segment-label">Type</span>
+          <span class="ss-finder-multi-value" data-default="All watersports">All watersports</span>
+        </summary>
+        <div class="ss-finder-multi-panel">
+          <div class="ss-finder-multi-header"><strong>Pick activity types</strong><button type="button" class="ss-finder-multi-clear" data-multi-clear="type">Clear</button></div>
+          <label><input type="checkbox" value="jetski"    data-multi="type"> Jetski</label>
+          <label><input type="checkbox" value="kayak"     data-multi="type"> Kayak &amp; SUP</label>
+          <label><input type="checkbox" value="scuba"     data-multi="type"> Scuba &amp; Snorkel</label>
+          <label><input type="checkbox" value="wind"      data-multi="type"> Wind &amp; Kite</label>
+          <label><input type="checkbox" value="adrenalin" data-multi="type"> Adrenalin</label>
+          <label><input type="checkbox" value="family"    data-multi="type"> Family rides</label>
+        </div>
+      </details>
+
+      <span class="ss-finder-sep"></span>
+
+      <details class="ss-finder-multi" id="ws-region-multi">
+        <summary class="ss-finder-segment">
+          <span class="ss-finder-segment-label">Region</span>
+          <span class="ss-finder-multi-value" data-default="Malta &amp; Gozo">Malta &amp; Gozo</span>
+        </summary>
+        <div class="ss-finder-multi-panel">
+          <div class="ss-finder-multi-header"><strong>Pick a hub region</strong><button type="button" class="ss-finder-multi-clear" data-multi-clear="region">Clear</button></div>
+          <label><input type="checkbox" value="north"   data-multi="region"> North coast</label>
+          <label><input type="checkbox" value="central" data-multi="region"> Central (Sliema, St Julian's)</label>
+          <label><input type="checkbox" value="south"   data-multi="region"> South coast</label>
+          <label><input type="checkbox" value="gozo"    data-multi="region"> Gozo</label>
+          <label><input type="checkbox" value="comino"  data-multi="region"> Comino</label>
+        </div>
+      </details>
+
+      <span class="ss-finder-sep"></span>
+
+      <label class="ss-finder-segment">
+        <span class="ss-finder-segment-label">Duration</span>
+        <select id="ws-dur" class="ss-finder-select">
+          <option value="any">Any length</option>
+          <option value="short">≤ 30 min</option>
+          <option value="med">30 min – 2 h</option>
+          <option value="long">2 h+</option>
+        </select>
+      </label>
+
+      <span class="ss-finder-sep"></span>
+
+      <label class="ss-finder-segment">
+        <span class="ss-finder-segment-label">Guests</span>
+        <select id="ws-pax" class="ss-finder-select">
+          <option value="any">Any size</option>
+          <option value="1">Solo</option>
+          <option value="2">Pair</option>
+          <option value="4">Up to 4</option>
+          <option value="6">6+</option>
+        </select>
+      </label>
+    </form>
+  </section>
 
   <header class="ws-section-head">
     <h2 id="ws-heading">All watersports</h2>
@@ -405,32 +446,66 @@
   ready(function () {
     const all  = (window.SUNSPOT_EXPERIENCES || []).filter(isWatersport);
     const cats = window.SUNSPOT_EXPERIENCE_CATEGORIES || {};
-
-    // Pre-compute counts per category so every tile shows real number
-    function countFor(cat) {
-      const filter = CATS[cat];
-      if (!filter) return all.length;
-      return all.filter(e => filter.includes(e.cat)).length;
-    }
-    document.querySelectorAll('.ws-cat').forEach(btn => {
-      const c = btn.dataset.c;
-      const span = btn.querySelector('.count');
-      if (span) span.textContent = countFor(c);
-    });
-
     const grid    = document.getElementById('ws-grid');
     const heading = document.getElementById('ws-heading');
     const meta    = document.getElementById('ws-count');
-    const tabs    = document.querySelectorAll('.ws-cat');
+    const qEl     = document.getElementById('ws-q');
+    const durEl   = document.getElementById('ws-dur');
+    const paxEl   = document.getElementById('ws-pax');
 
-    function render(cat) {
-      const filter = CATS[cat];
-      const items  = filter ? all.filter(e => filter.includes(e.cat)) : all;
-      heading.textContent = HEADINGS[cat] || HEADINGS.all;
+    function selected(name) {
+      return Array.from(document.querySelectorAll('input[data-multi="' + name + '"]:checked')).map(i => i.value);
+    }
+    function updateMultiLabel(detailsId, defaultLabel, labels) {
+      const det = document.getElementById(detailsId);
+      const valEl = det.querySelector('.ss-finder-multi-value');
+      if (!labels.length) { valEl.textContent = defaultLabel; return; }
+      if (labels.length === 1) { valEl.textContent = labels[0]; return; }
+      valEl.textContent = labels.length + ' selected';
+    }
+    function matchDuration(e, k) {
+      const h = e.duration_h || 0;
+      if (k === 'short') return h > 0 && h <= 0.5;
+      if (k === 'med')   return h > 0.5 && h <= 2;
+      if (k === 'long')  return h > 2;
+      return true;
+    }
+    function matchPax(e, k) {
+      const p = e.max_pax || 0;
+      if (k === 'any') return true;
+      const n = Number(k);
+      if (k === '6') return p >= 6;
+      return p > 0 && p <= n;
+    }
+    function apply() {
+      const q = (qEl.value || '').trim().toLowerCase();
+      const types   = selected('type');
+      const regions = selected('region');
+      const dur = durEl.value;
+      const pax = paxEl.value;
+      updateMultiLabel('ws-type-multi',   'All watersports', types.map(t => HEADINGS[t] || t));
+      updateMultiLabel('ws-region-multi', 'Malta & Gozo',    regions.map(r => r.charAt(0).toUpperCase() + r.slice(1)));
+
+      const items = all.filter(e => {
+        if (q && !((e.name||'') + ' ' + (e.operator||'') + ' ' + (e.hub||'') + ' ' + (e.summary||'')).toLowerCase().includes(q)) return false;
+        if (regions.length && !regions.includes(e.region)) return false;
+        if (types.length) {
+          const ok = types.some(t => {
+            const allowed = CATS[t];
+            return allowed && allowed.includes(e.cat);
+          });
+          if (!ok) return false;
+        }
+        if (!matchDuration(e, dur)) return false;
+        if (!matchPax(e, pax)) return false;
+        return true;
+      });
+
+      heading.textContent = (types.length === 1) ? (HEADINGS[types[0]] || 'Watersports') : 'All watersports';
       meta.textContent = items.length + ' available';
 
       if (!items.length) {
-        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0;">Nothing in this category yet.</p>';
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0;">No watersports match these filters. Clear one to widen the search.</p>';
         return;
       }
       grid.innerHTML = items.map(e => {
@@ -457,18 +532,17 @@
       }).join('');
     }
 
-    tabs.forEach(b => b.addEventListener('click', function () {
-      tabs.forEach(x => {
-        const on = x === b;
-        x.classList.toggle('is-on', on);
-        x.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
-      render(b.dataset.c);
-      // Scroll the section heading into view (so user sees the new heading on mobile)
-      heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    qEl.addEventListener('input', apply);
+    durEl.addEventListener('change', apply);
+    paxEl.addEventListener('change', apply);
+    document.querySelectorAll('input[data-multi]').forEach(inp => inp.addEventListener('change', apply));
+    document.querySelectorAll('[data-multi-clear]').forEach(btn => btn.addEventListener('click', () => {
+      const name = btn.dataset.multiClear;
+      document.querySelectorAll('input[data-multi="' + name + '"]').forEach(i => i.checked = false);
+      apply();
     }));
 
-    render('all');
+    apply();
   });
 })();
 </script>

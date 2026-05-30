@@ -260,27 +260,15 @@
 
 <header class="site-header">
 <div class="container">
-<a href="index.html" class="brand" aria-label="Sunspot home">
-  <svg class="brand-mark ss-brand-mark-anim" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true">
-    <g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6">
-      <line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/>
-      <line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/>
-      <line x1="7" y1="7" x2="10" y2="10"/><line x1="30" y1="30" x2="33" y2="33"/>
-      <line x1="33" y1="7" x2="30" y2="10"/><line x1="10" y1="30" x2="7" y2="33"/>
-    </g>
-    <circle cx="20" cy="20" r="11" fill="#ff9800"/>
-    <circle cx="20" cy="20" r="9" fill="#ffb74d"/>
-    <circle cx="24" cy="16" r="3" fill="#fff5e1"/>
-  </svg><span class="brand-name">Sunspot</span>
-</a>
+<a href="index.html" class="brand" aria-label="Sunspot home"><svg class="brand-mark ss-brand-mark-anim" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true"><g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.6"><line x1="20" y1="2" x2="20" y2="6"/><line x1="20" y1="34" x2="20" y2="38"/><line x1="2" y1="20" x2="6" y2="20"/><line x1="34" y1="20" x2="38" y2="20"/><line x1="7" y1="7" x2="10" y2="10"/><line x1="30" y1="30" x2="33" y2="33"/><line x1="33" y1="7" x2="30" y2="10"/><line x1="10" y1="30" x2="7" y2="33"/></g><circle cx="20" cy="20" r="11" fill="#ff9800"/><circle cx="20" cy="20" r="9" fill="#ffb74d"/><circle cx="24" cy="16" r="3" fill="#fff5e1"/></svg><span class="brand-name">Sunspot</span></a>
 <nav aria-label="Main navigation">
-  <a href="index.html">Beaches</a>
-  <a href="experiences.html">Experiences</a>
-  <a href="charters.html" class="active" aria-current="page">Charters</a>
-  <a href="watersports.html">Watersports</a>
-  <a href="guides.html">Field guide</a>
-  <a href="about.html">About</a>
-  <a href="signin.html" class="btn-ghost">Sign in</a>
+<a href="index.html" data-i18n="nav.beaches">Beaches</a>
+<a href="experiences.html" data-i18n="nav.experiences">Experiences</a>
+<a href="guides.html" data-i18n="nav.guides">Field guide</a>
+<a href="about.html" data-i18n="nav.about">About</a>
+<a href="rates.html" data-i18n="nav.operators">For operators</a>
+<a href="bookings.html" data-i18n="nav.bookings">My bookings</a>
+<a href="signin.html" class="btn-ghost" data-i18n="nav.signin">Sign in</a>
 </nav>
 </div>
 </header>
@@ -298,30 +286,85 @@
 
 <main class="ch-page">
 
-  <!-- Category strip -->
-  <div class="ch-cats" id="ch-cats" role="tablist" aria-label="Charter categories">
-    <button class="ch-cat is-on" data-c="all"       role="tab" aria-selected="true">
-      <span class="label">All boats</span><span class="sub">Every charter</span><span class="count">—</span>
-    </button>
-    <button class="ch-cat" data-c="sailing"     role="tab">
-      <span class="label">Sailing</span><span class="sub">Bavaria + Lagoon</span><span class="count">—</span>
-    </button>
-    <button class="ch-cat" data-c="catamaran"   role="tab">
-      <span class="label">Catamaran</span><span class="sub">Big-group day cats</span><span class="count">—</span>
-    </button>
-    <button class="ch-cat" data-c="power"       role="tab">
-      <span class="label">Power yacht</span><span class="sub">Princess + Sunseeker</span><span class="count">—</span>
-    </button>
-    <button class="ch-cat" data-c="rib"         role="tab">
-      <span class="label">RIB</span><span class="sub">Speedboats</span><span class="count">—</span>
-    </button>
-    <button class="ch-cat" data-c="sunset"      role="tab">
-      <span class="label">Sunset</span><span class="sub">Evening cruises</span><span class="count">—</span>
-    </button>
-    <button class="ch-cat" data-c="multi-day"   role="tab">
-      <span class="label">Multi-day</span><span class="sub">Sleep aboard</span><span class="count">—</span>
-    </button>
-  </div>
+  <!-- Finder bar — shared design with homepage -->
+  <section class="ss-finder" style="padding:0 0 18px;background:transparent">
+    <form class="ss-finder-bar" id="ch-finder" onsubmit="return false;" role="search">
+      <label class="ss-finder-search" aria-label="Search">
+        <svg class="ss-finder-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+        </svg>
+        <input type="search" id="ch-q" placeholder="Search charters — boat, operator, hub…" aria-label="Search charters">
+        <button type="button" class="ss-finder-filters-btn" aria-label="Show filters"
+          onclick="document.body.classList.toggle('ss-filters-open')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M4 6h7M16 6h4M4 12h2M11 12h9M4 18h13M19 18h1"/>
+            <circle cx="13" cy="6" r="1.6" fill="currentColor"/><circle cx="8" cy="12" r="1.6" fill="currentColor"/><circle cx="18" cy="18" r="1.6" fill="currentColor"/>
+          </svg>
+          <span class="ss-finder-filters-label">Filters</span>
+        </button>
+      </label>
+
+      <span class="ss-finder-sep"></span>
+
+      <details class="ss-finder-multi" id="ch-type-multi">
+        <summary class="ss-finder-segment">
+          <span class="ss-finder-segment-label">Type</span>
+          <span class="ss-finder-multi-value" data-default="All boats">All boats</span>
+        </summary>
+        <div class="ss-finder-multi-panel">
+          <div class="ss-finder-multi-header"><strong>Pick boat types</strong><button type="button" class="ss-finder-multi-clear" data-multi-clear="type">Clear</button></div>
+          <label><input type="checkbox" value="sailing"   data-multi="type"> Sailing yachts</label>
+          <label><input type="checkbox" value="catamaran" data-multi="type"> Catamarans</label>
+          <label><input type="checkbox" value="power"     data-multi="type"> Power yachts</label>
+          <label><input type="checkbox" value="rib"       data-multi="type"> RIBs &amp; speedboats</label>
+          <label><input type="checkbox" value="sunset"    data-multi="type"> Sunset cruises</label>
+          <label><input type="checkbox" value="multi-day" data-multi="type"> Multi-day (sleep aboard)</label>
+        </div>
+      </details>
+
+      <span class="ss-finder-sep"></span>
+
+      <details class="ss-finder-multi" id="ch-region-multi">
+        <summary class="ss-finder-segment">
+          <span class="ss-finder-segment-label">Region</span>
+          <span class="ss-finder-multi-value" data-default="Malta &amp; Gozo">Malta &amp; Gozo</span>
+        </summary>
+        <div class="ss-finder-multi-panel">
+          <div class="ss-finder-multi-header"><strong>Pick a hub region</strong><button type="button" class="ss-finder-multi-clear" data-multi-clear="region">Clear</button></div>
+          <label><input type="checkbox" value="north"   data-multi="region"> North coast</label>
+          <label><input type="checkbox" value="central" data-multi="region"> Central (Sliema, St Julian's)</label>
+          <label><input type="checkbox" value="south"   data-multi="region"> South coast</label>
+          <label><input type="checkbox" value="gozo"    data-multi="region"> Gozo</label>
+          <label><input type="checkbox" value="comino"  data-multi="region"> Comino</label>
+        </div>
+      </details>
+
+      <span class="ss-finder-sep"></span>
+
+      <label class="ss-finder-segment">
+        <span class="ss-finder-segment-label">Duration</span>
+        <select id="ch-dur" class="ss-finder-select">
+          <option value="any">Any length</option>
+          <option value="half">Half-day (≤4h)</option>
+          <option value="full">Full-day (4–10h)</option>
+          <option value="multi">Multi-day</option>
+        </select>
+      </label>
+
+      <span class="ss-finder-sep"></span>
+
+      <label class="ss-finder-segment">
+        <span class="ss-finder-segment-label">Guests</span>
+        <select id="ch-pax" class="ss-finder-select">
+          <option value="any">Any size</option>
+          <option value="2">Up to 2</option>
+          <option value="4">Up to 4</option>
+          <option value="6">Up to 6</option>
+          <option value="8">8+</option>
+        </select>
+      </label>
+    </form>
+  </section>
 
   <header class="ch-section-head">
     <h2 id="ch-heading">All boats</h2>
@@ -380,9 +423,8 @@
       || e.id === 'yacht-day-charter'
       || (e.cat === 'rib' && e.id.indexOf('rib-rental') === 0);
   }
-  // Every category MAPS to a predicate. None empty.
-  const FILTERS = {
-    all:        () => true,
+  // Per-type predicate.
+  const TYPE_PRED = {
     sailing:    e => /sailing-yacht|cabin-cat|sailing-lessons/i.test(e.id) || /\bsailing\b/i.test(e.name),
     catamaran:  e => /catamaran|cabin-cat|booze-cruise-comino|sunset-catamaran|sicily-day-cat/i.test(e.id),
     power:      e => /power-yacht|corporate|princess/i.test(e.id) || /Sunseeker|Princess/.test(e.name),
@@ -390,14 +432,9 @@
     sunset:     e => e.cat === 'sunset',
     'multi-day':e => (e.duration_h || 0) >= 24,
   };
-  const HEADINGS = {
-    all:        'All boats',
-    sailing:    'Sailing yachts',
-    catamaran:  'Catamarans',
-    power:      'Power yachts',
-    rib:        'RIBs & speedboats',
-    sunset:     'Sunset cruises',
-    'multi-day':'Multi-day (sleep aboard)',
+  const TYPE_LABEL = {
+    sailing:'Sailing yachts', catamaran:'Catamarans', power:'Power yachts',
+    rib:'RIBs & speedboats', sunset:'Sunset cruises', 'multi-day':'Multi-day'
   };
 
   function escapeHtml(s) {
@@ -413,29 +450,60 @@
 
   ready(function () {
     const all = (window.SUNSPOT_EXPERIENCES || []).filter(isCharter);
-
-    function countFor(c) {
-      const f = FILTERS[c]; if (!f) return 0;
-      return all.filter(f).length;
-    }
-    document.querySelectorAll('.ch-cat').forEach(btn => {
-      const span = btn.querySelector('.count');
-      if (span) span.textContent = countFor(btn.dataset.c);
-    });
-
     const grid    = document.getElementById('ch-grid');
     const heading = document.getElementById('ch-heading');
     const meta    = document.getElementById('ch-count');
-    const tabs    = document.querySelectorAll('.ch-cat');
+    const qEl     = document.getElementById('ch-q');
+    const durEl   = document.getElementById('ch-dur');
+    const paxEl   = document.getElementById('ch-pax');
 
-    function render(cat) {
-      const f = FILTERS[cat] || FILTERS.all;
-      const items = all.filter(f);
-      heading.textContent = HEADINGS[cat] || HEADINGS.all;
-      meta.textContent = items.length + ' available';
+    function selected(name) {
+      return Array.from(document.querySelectorAll('input[data-multi="' + name + '"]:checked')).map(i => i.value);
+    }
+    function updateMultiLabel(detailsId, defaultLabel, labels) {
+      const det = document.getElementById(detailsId);
+      const valEl = det.querySelector('.ss-finder-multi-value');
+      if (!labels.length) { valEl.textContent = defaultLabel; return; }
+      if (labels.length === 1) { valEl.textContent = labels[0]; return; }
+      valEl.textContent = labels.length + ' selected';
+    }
+    function matchDuration(e, k) {
+      const h = e.duration_h || 0;
+      if (k === 'half')  return h > 0 && h <= 4;
+      if (k === 'full')  return h > 4  && h < 24;
+      if (k === 'multi') return h >= 24;
+      return true;
+    }
+    function matchPax(e, k) {
+      const p = e.max_pax || 0;
+      if (k === 'any') return true;
+      const n = Number(k);
+      if (k === '8') return p >= 8;
+      return p > 0 && p <= n;
+    }
+    function apply() {
+      const q = (qEl.value || '').trim().toLowerCase();
+      const types = selected('type');
+      const regions = selected('region');
+      const dur = durEl.value;
+      const pax = paxEl.value;
+      updateMultiLabel('ch-type-multi',  'All boats',     types.map(t => TYPE_LABEL[t] || t));
+      updateMultiLabel('ch-region-multi','Malta & Gozo',  regions.map(r => r.charAt(0).toUpperCase() + r.slice(1)));
+
+      const items = all.filter(e => {
+        if (q && !((e.name||'') + ' ' + (e.operator||'') + ' ' + (e.hub||'') + ' ' + (e.summary||'')).toLowerCase().includes(q)) return false;
+        if (regions.length && !regions.includes(e.region)) return false;
+        if (types.length && !types.some(t => (TYPE_PRED[t]||(()=>false))(e))) return false;
+        if (!matchDuration(e, dur)) return false;
+        if (!matchPax(e, pax)) return false;
+        return true;
+      });
+
+      heading.textContent = (types.length === 1) ? (TYPE_LABEL[types[0]] || 'Boats') : 'All boats';
+      meta.textContent = items.length + (items.length === 1 ? ' available' : ' available');
 
       if (!items.length) {
-        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0;">No charters in this category yet — pick another tab.</p>';
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0;">No charters match these filters. Clear one to widen the search.</p>';
         return;
       }
       grid.innerHTML = items.map(e => {
@@ -464,17 +532,18 @@
       }).join('');
     }
 
-    tabs.forEach(b => b.addEventListener('click', function () {
-      tabs.forEach(x => {
-        const on = x === b;
-        x.classList.toggle('is-on', on);
-        x.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
-      render(b.dataset.c);
-      heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Wire change events
+    qEl.addEventListener('input', apply);
+    durEl.addEventListener('change', apply);
+    paxEl.addEventListener('change', apply);
+    document.querySelectorAll('input[data-multi]').forEach(inp => inp.addEventListener('change', apply));
+    document.querySelectorAll('[data-multi-clear]').forEach(btn => btn.addEventListener('click', () => {
+      const name = btn.dataset.multiClear;
+      document.querySelectorAll('input[data-multi="' + name + '"]').forEach(i => i.checked = false);
+      apply();
     }));
 
-    render('all');
+    apply();
   });
 })();
 </script>

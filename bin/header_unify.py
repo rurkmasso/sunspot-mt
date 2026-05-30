@@ -12,14 +12,15 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES = sorted(p for p in ROOT.glob("*.html"))
 
 # Canonical nav: kept short. Reader-first ordering, not feature-first.
-# Each tuple = (href, label, classification key for active-marking).
+# Each tuple = (href, label, classification key for active-marking, i18n key).
+# The i18n key feeds i18n.js / Polylang — see data/i18n/*.json.
 NAV = [
-    ("index.html",       "Beaches",       "browse"),
-    ("experiences.html", "Experiences",   "experiences"),
-    ("guides.html",      "Field guide",   "guides"),
-    ("about.html",       "About",         "about"),
-    ("rates.html",       "For operators", "operators"),
-    ("bookings.html",    "My bookings",   "bookings"),
+    ("index.html",       "Beaches",       "browse",      "nav.beaches"),
+    ("experiences.html", "Experiences",   "experiences", "nav.experiences"),
+    ("guides.html",      "Field guide",   "guides",      "nav.guides"),
+    ("about.html",       "About",         "about",       "nav.about"),
+    ("rates.html",       "For operators", "operators",   "nav.operators"),
+    ("bookings.html",    "My bookings",   "bookings",    "nav.bookings"),
 ]
 
 # Which page → which nav key gets the active class
@@ -66,10 +67,10 @@ BRAND_SVG = (
 def build_header(filename):
     active_key = ACTIVE_MAP.get(filename, None)
     nav_html = []
-    for href, label, key in NAV:
+    for href, label, key, i18n in NAV:
         cls = ' class="active" aria-current="page"' if key == active_key else ""
-        nav_html.append(f'<a href="{href}"{cls}>{label}</a>')
-    nav_html.append('<a href="signin.html" class="btn-ghost">Sign in</a>')
+        nav_html.append(f'<a href="{href}"{cls} data-i18n="{i18n}">{label}</a>')
+    nav_html.append('<a href="signin.html" class="btn-ghost" data-i18n="nav.signin">Sign in</a>')
     return (
         '<header class="site-header">\n'
         '<div class="container">\n'

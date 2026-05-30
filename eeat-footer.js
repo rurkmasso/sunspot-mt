@@ -16,6 +16,30 @@
 (function () {
  'use strict';
 
+ // ─── Chrome helper ─
+ // Reads window.SUNSPOT_CHROME (hydrated by site-chrome.js from the WP
+ // REST endpoint). Returns the value at `path` (dot-delimited) if present,
+ // else returns `fallback` so the hardcoded defaults below still render.
+ function chrome(path, fallback) {
+   try {
+     const parts = path.split('.');
+     let v = window.SUNSPOT_CHROME || {};
+     for (const k of parts) {
+       if (v == null || typeof v !== 'object') return fallback;
+       v = v[k];
+     }
+     return v == null ? fallback : v;
+   } catch (e) { return fallback; }
+ }
+
+ // Re-render when chrome arrives mid-page (after the initial paint).
+ // Safe — boot() guards on existing .ss-eeat to avoid double-injecting.
+ document.addEventListener('sunspot:chrome-updated', () => {
+   const existing = document.querySelector('.ss-eeat');
+   if (existing) existing.remove();
+   boot();
+ });
+
  function boot() {
    const footer = document.querySelector('footer');
    if (!footer) return;
@@ -83,28 +107,35 @@
    );
  }
 
- // ─── 1) Newsletter ───
+ // ─── 1) Newsletter — copy from chrome.footer.newsletter ───
  function newsletterRow() {
+   const eyebrow = chrome('footer.newsletter.eyebrow', 'Sunspot Weekly');
+   const heading = chrome('footer.newsletter.heading',
+     "One email, every Thursday. The week's sunbeds, sea-state, quiet pools.");
+   const lede    = chrome('footer.newsletter.lede',
+     'Short, signed, and no marketing fluff. Unsubscribe in one click.');
+   const cta     = chrome('footer.newsletter.cta', 'Subscribe');
    return (
      '<section style="background:#0a1f3a;color:#fff;padding:48px 0;position:relative;overflow:hidden;">' +
        '<div aria-hidden="true" style="position:absolute;right:-60px;top:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(255,183,77,.22) 0%,transparent 65%);pointer-events:none;"></div>' +
        '<div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr;gap:18px;position:relative;">' +
          '<div style="max-width:560px;">' +
-           '<div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#ffd190;font-weight:800;margin-bottom:10px;">Sunspot Weekly</div>' +
-           '<h2 style="font-family:Fraunces,Georgia,serif;font-size:clamp(20px,2.4vw,26px);font-weight:600;letter-spacing:-0.015em;line-height:1.2;margin:0 0 8px;color:#fff;">' +
-             "One email, every Thursday. The week's sunbeds, sea-state, quiet pools." +
-           '</h2>' +
-           '<p style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.5;margin:0 0 16px;max-width:50ch;">Short, signed, and no marketing fluff. Unsubscribe in one click.</p>' +
+           '<div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#ffd190;font-weight:800;margin-bottom:10px;">' + esc(eyebrow) + '</div>' +
+           '<h2 style="font-family:Fraunces,Georgia,serif;font-size:clamp(20px,2.4vw,26px);font-weight:600;letter-spacing:-0.015em;line-height:1.2;margin:0 0 8px;color:#fff;">' + esc(heading) + '</h2>' +
+           '<p style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.5;margin:0 0 16px;max-width:50ch;">' + esc(lede) + '</p>' +
            '<form id="ss-newsletter-form" style="display:flex;gap:8px;flex-wrap:wrap;max-width:520px;">' +
              '<input type="email" required placeholder="you@example.com" aria-label="Email address" ' +
                'style="flex:1;min-width:200px;padding:11px 16px;border-radius:999px;border:0;font-size:14px;background:#fff;color:#0a1f3a;outline:none;font-family:inherit;">' +
-             '<button type="submit" style="background:linear-gradient(135deg,#ffb74d,#f57c00);color:#fff;border:0;padding:11px 22px;border-radius:999px;font-weight:700;cursor:pointer;font-family:inherit;font-size:14px;box-shadow:0 4px 14px rgba(232,108,0,.32);">Subscribe</button>' +
+             '<button type="submit" style="background:linear-gradient(135deg,#ffb74d,#f57c00);color:#fff;border:0;padding:11px 22px;border-radius:999px;font-weight:700;cursor:pointer;font-family:inherit;font-size:14px;box-shadow:0 4px 14px rgba(232,108,0,.32);">' + esc(cta) + '</button>' +
            '</form>' +
            '<div id="ss-newsletter-msg" style="margin-top:10px;font-size:13px;color:#ffd190;min-height:18px;"></div>' +
          '</div>' +
        '</div>' +
      '</section>'
    );
+ }
+ function esc(s) {
+   return String(s).replace(/[&<>"']/g, m => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[m]));
  }
 
  // ─── 2) Press strip — infinite marquee ───
